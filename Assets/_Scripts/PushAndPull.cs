@@ -30,7 +30,7 @@ public class PushAndPull : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if(_pushing){
 			if(Input.GetAxis("Vertical") > _deadZone || Input.GetAxis("Vertical") < -_deadZone){ //Joystick or WASD input
 				_speed = Mathf.Sign(Input.GetAxis("Vertical")); 
