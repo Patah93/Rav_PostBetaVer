@@ -71,12 +71,23 @@ public class FoxAI : MonoBehaviour {
 		if (_targetNode != null) {
 			if (reachedTarget()) {
 				transform.position = new Vector3(_targetNode.transform.position.x, transform.position.y, _targetNode.transform.position.z);
-				_fleeing = false;
-				_currentNode = _targetNode;
-				_targetNode = null;
-				_pathSafe = false;
+				if(_targetNode._isWayPointNode){
+					if(_targetNode._nextNode != _currentNode && !_fleeing){
+						_currentNode = _targetNode;
+						_targetNode = _currentNode._nextNode;
+					}
+					else{
+						_currentNode = _targetNode;
+						_targetNode = _currentNode._prevNode;
+					}
+				}else{
+					_fleeing = false;
+					_currentNode = _targetNode;
+					_targetNode = null;
+					_pathSafe = false;
 
-				_ani.SetBool("Walking", false);
+					_ani.SetBool("Walking", false);
+				}
 			} else {
 				if(!_pathSafe){
 					//checkPathForShadows();

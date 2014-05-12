@@ -6,6 +6,8 @@ public class FoxNode : MonoBehaviour {
 	public FoxNode _nextNode;
 	public FoxNode _prevNode;
 
+	public bool _isWayPointNode = false;
+
 	// Use this for initialization
 	void Start () {
 		if(GetComponent<Renderer>() != null)
