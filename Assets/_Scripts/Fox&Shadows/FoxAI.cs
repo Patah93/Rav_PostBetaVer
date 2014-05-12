@@ -8,6 +8,8 @@ public class FoxAI : MonoBehaviour {
 
 	ShadowDetection _shadowDetect;
 
+	Animator _ani;
+
 	GameObject _derp;
 
 	bool _pathSafe;
@@ -57,24 +59,40 @@ public class FoxAI : MonoBehaviour {
 		_box = GetComponent<BoxCollider>();
 
 		_fallVec = Vector3.down * _fallAcc;
+
+		_ani = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		//Debug.DrawLine(transform.position + transform.forward * 0.28f + Vector3.up * 0.5f, transform.position + transform.forward * 0.28f + Vector3.up * 0.5f + Vector3.down * 1, Color.red);
-		//Debug.DrawLine(transform.position - transform.forward * 0.28f + Vector3.up * 0.5f, transform.position - transform.forward * 0.28f + Vector3.up * 0.5f + Vector3.down * 1, Color.red);
+		//Debug.DrawLine(transform.position + transform.forward * 0.22f + Vector3.up * 0.5f, transform.position + transform.forward * 0.22f + Vector3.up * 0.5f + Vector3.down * 1, Color.red);
+		//Debug.DrawLine(transform.position - transform.forward * 0.22f + Vector3.up * 0.5f, transform.position - transform.forward * 0.22f + Vector3.up * 0.5f + Vector3.down * 1, Color.red);
 		if (_targetNode != null) {
 			if (reachedTarget()) {
 				transform.position = new Vector3(_targetNode.transform.position.x, transform.position.y, _targetNode.transform.position.z);
-				_fleeing = false;
-				_currentNode = _targetNode;
-				_targetNode = null;
-				_pathSafe = false;
+				if(_targetNode._isWayPointNode){
+					if(_targetNode._nextNode != _currentNode && !_fleeing){
+						_currentNode = _targetNode;
+						_targetNode = _currentNode._nextNode;
+					}
+					else{
+						_currentNode = _targetNode;
+						_targetNode = _currentNode._prevNode;
+					}
+				}else{
+					_fleeing = false;
+					_currentNode = _targetNode;
+					_targetNode = null;
+					_pathSafe = false;
+
+					_ani.SetBool("Walking", false);
+				}
 			} else {
 				if(!_pathSafe){
 					//checkPathForShadows();
 					_pathSafe = true;
+					_ani.SetBool("Walking", true);
 				}
 				if(_pathSafe || !_refuseMoveIfLight){
 					move ();
@@ -101,8 +119,8 @@ public class FoxAI : MonoBehaviour {
 
 			RaycastHit rayInfoFront, rayInfoBack;
 
-			Vector3 frontFeetRayPoint = transform.position + transform.forward * 0.28f + Vector3.up * 0.5f;
-			Vector3 backFeetRayPoint = transform.position - transform.forward * 0.28f + Vector3.up * 0.5f;
+			Vector3 frontFeetRayPoint = transform.position + transform.forward * 0.22f + Vector3.up * 0.5f;
+			Vector3 backFeetRayPoint = transform.position - transform.forward * 0.22f + Vector3.up * 0.5f;
 			
 			bool frontCast = Physics.Raycast(frontFeetRayPoint, Vector3.down, out rayInfoFront, 1.0f);
 			bool backCast = Physics.Raycast(backFeetRayPoint, Vector3.down, out rayInfoBack, 1.0f);
@@ -116,11 +134,11 @@ public class FoxAI : MonoBehaviour {
 				_fallVec = Vector3.down * _fallAcc;
 			}
 
-			if(Physics.Raycast(transform.position + transform.forward * 0.28f + Vector3.up * 0.5f, Vector3.down, out rayInfoFront, 1.0f)){
+			if(Physics.Raycast(transform.position + transform.forward * 0.22f + Vector3.up * 0.5f, Vector3.down, out rayInfoFront, 1.0f)){
 				Vector3 yOffset = new Vector3(0, -(rayInfoFront.distance - 0.5f), 0);
 				transform.position += yOffset;
 			}
-			else if(Physics.Raycast(transform.position - transform.forward * 0.28f + Vector3.up * 0.5f, Vector3.down, out rayInfoBack, 1.0f)){
+			else if(Physics.Raycast(transform.position - transform.forward * 0.22f + Vector3.up * 0.5f, Vector3.down, out rayInfoBack, 1.0f)){
 				Vector3 yOffset = new Vector3(0, -(rayInfoBack.distance - 0.5f), 0);
 				transform.position += yOffset;
 			}
@@ -142,6 +160,7 @@ public class FoxAI : MonoBehaviour {
 					if(_targetNode == null){
 						_targetNode = _currentNode._prevNode;
 						_pathSafe = true;
+						_ani.SetBool("Walking", true);
 					}else{
 						_targetNode = _currentNode;
 					}
@@ -213,8 +232,8 @@ public class FoxAI : MonoBehaviour {
 
 		transform.rotation = Quaternion.LookRotation(_direction);
 
-		Vector3 frontFeetRayPoint = transform.position + transform.forward * 0.28f + Vector3.up * 0.5f;
-		Vector3 backFeetRayPoint = transform.position - transform.forward * 0.28f + Vector3.up * 0.5f;
+		Vector3 frontFeetRayPoint = transform.position + transform.forward * 0.22f + Vector3.up * 0.5f;
+		Vector3 backFeetRayPoint = transform.position - transform.forward * 0.22f + Vector3.up * 0.5f;
 
 		bool frontCast = Physics.Raycast(frontFeetRayPoint, Vector3.down, out rayInfoFront, 1.0f);
 		bool backCast = Physics.Raycast(backFeetRayPoint, Vector3.down, out rayInfoBack, 1.0f);
@@ -259,11 +278,11 @@ public class FoxAI : MonoBehaviour {
 			transform.position += transform.forward * 4 * Time.deltaTime;
 		}	
 		
-		if(Physics.Raycast(transform.position + transform.forward * 0.28f + Vector3.up * 0.5f, Vector3.down, out rayInfoFront, 1.0f)){
+		if(Physics.Raycast(transform.position + transform.forward * 0.22f + Vector3.up * 0.5f, Vector3.down, out rayInfoFront, 1.0f)){
 			Vector3 yOffset = new Vector3(0, -(rayInfoFront.distance - 0.5f), 0);
 			transform.position += yOffset;
 		}
-		else if(Physics.Raycast(transform.position - transform.forward * 0.28f + Vector3.up * 0.5f, Vector3.down, out rayInfoBack, 1.0f)){
+		else if(Physics.Raycast(transform.position - transform.forward * 0.22f + Vector3.up * 0.5f, Vector3.down, out rayInfoBack, 1.0f)){
 			Vector3 yOffset = new Vector3(0, -(rayInfoBack.distance - 0.5f), 0);
 			transform.position += yOffset;
 		}

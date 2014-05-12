@@ -313,17 +313,23 @@ public class ShadowDetection : MonoBehaviour {
 		Ray theRay = new Ray(point, _sunDirection);
 
 		//Debug.DrawRay (point, _sunDirection, Color.cyan, 100f);
-		//Debug.DrawLine (point, point + _sunDirection * 10000, Color.cyan, 10);
-
+		//Debug.DrawLine (point, point + _sunDirection * 100, Color.cyan, 1);
+		/*
 		for(int i = 0; i < shadowCasters.Length; i++){
 			if(shadowCasters[i].collider.bounds.IntersectRay(theRay)){
 				//Debug.Log ("Blocked by: " + shadowCasters[i].name);
-				//Debug.DrawLine (point, shadowCasters[i].transform.position, Color.red, 10);
+				RaycastHit bajskorv;
+				Physics.Raycast(theRay, out bajskorv);
+				//Debug.DrawLine (point, shadowCasters[i].transform.position, Color.red, 1);
+				Debug.DrawLine (point, bajskorv.point, Color.red, 1);
 				return false;
 			}
 		}
+		*/
 
-		return true;
+		return !Physics.Raycast(theRay);
+
+		//return true;
 	}
 
 	bool isPointInLampLight(GameObject[] lamps, Vector3 point, ref GameObject[] shadowCasters){
@@ -343,7 +349,7 @@ public class ShadowDetection : MonoBehaviour {
 
 				return_value = true;
 
-				for(int j = 0; j < shadowCasters.Length; j++){
+				/*for(int j = 0; j < shadowCasters.Length; j++){
 					float length;
 					if(shadowCasters[j].collider.bounds.IntersectRay(theRay, out length)){
 						if(length * length  <= (point - lamps[i].transform.position).sqrMagnitude){
@@ -352,6 +358,9 @@ public class ShadowDetection : MonoBehaviour {
 						}
 					}
 				}
+				*/
+
+				return_value = !Physics.Raycast(theRay, (point - lamps[i].transform.position).magnitude);
 
 				if(return_value){
 					return true;
@@ -382,7 +391,8 @@ public class ShadowDetection : MonoBehaviour {
 				if(Vector3.Angle(spotLights[i].transform.forward, (theRay.direction*-1)) <= spotLights[i].light.spotAngle/2.0f){
 					//Debug.Log ("In cone...");
 					return_value = true;
-					
+
+					/*
 					for(int j = 0; j < shadowCasters.Length; j++){
 						float length;
 						if(shadowCasters[j].collider.bounds.IntersectRay(theRay, out length)){
@@ -392,6 +402,13 @@ public class ShadowDetection : MonoBehaviour {
 							}
 						}
 					}
+					*/
+					int layerMask = 1 << 11;
+					layerMask = ~layerMask;
+					if(Physics.Raycast(theRay, (point - spotLights[i].transform.position).magnitude, layerMask)){
+						return_value = false;
+					}
+					//Debug.DrawLine(point, point + theRay.direction * (point - spotLights[i].transform.position).magnitude, Color.red, 1);
 					
 					if(return_value){
 						return true;
