@@ -7,6 +7,9 @@ public class ParticleSwitch : TriggerAction {
 	private bool _counterStart;
 	private bool _triggered;
 
+	public GameObject _from;
+	public GameObject _to;
+
 	// Use this for initialization
 	void Start () {
 		//_countDown = 20;
@@ -27,14 +30,14 @@ public class ParticleSwitch : TriggerAction {
 
 	public override void onActive(){
 
-		if (gameObject.name.Equals ("ParticleTo") && _triggered == false) { 
+		if (_to && _triggered == false) { 
 			_triggered = true;
 			gameObject.particleSystem.Play ();
 			_counterStart = true;
 
 		}
 
-		if(gameObject.name.Equals ("ParticleFrom") && _triggered == false) {
+		if(_from && _triggered == false) {
 			_triggered = true;
 			gameObject.particleSystem.loop = false;
 			_counterStart = true;
