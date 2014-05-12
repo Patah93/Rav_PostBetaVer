@@ -372,6 +372,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _countDown: 5
+  _from: {fileID: 0}
+  _to: {fileID: 975311528}
 --- !u!199 &975311530
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -1597,6 +1599,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _countDown: 5
+  _from: {fileID: 1359026166}
+  _to: {fileID: 0}
 --- !u!199 &1359026168
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
