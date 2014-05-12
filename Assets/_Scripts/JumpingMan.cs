@@ -13,6 +13,7 @@ public class JumpingMan : MonoBehaviour {
 	//float _startPosition;
 	bool _jump = false;
 	RaycastHit _rayHit;
+	//AnimationMan _animan;
 	
 
 	//FUNGERAR HELT OKEJ MEN BEHÖVER KASTA RAYS FRÅN KANTERNA PÅ GUBBEN
@@ -20,6 +21,7 @@ public class JumpingMan : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_animator = GetComponent<Animator>();
+	//	_animan = GetComponent<AnimationMan>();
 		//_startPosition = transform.position.y;
 	}
 	
@@ -29,6 +31,7 @@ public class JumpingMan : MonoBehaviour {
 		if(Input.GetButtonDown("Jump")){	//Aktiverar hoppet
 			Debug.Log("you pressed jump)");
 			if(!_jump){
+				//_animan.enabled = false;
 				//transform.rigidbody.constraints = RigidbodyConstraints.FreezeRotationX|RigidbodyConstraints.FreezeRotationZ; //hindrar den från att snörra cp
 
 				/* TODO Plz ta bort desa två superdåliga rader kod, my bad */
@@ -60,8 +63,11 @@ public class JumpingMan : MonoBehaviour {
 */
 		if(Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f ,Vector3.down,out _rayHit,1.1f)){
 			_animator.SetBool("Falling", false);
-		} else
+			//_animan.enabled = true;
+		} else{
 			_animator.SetBool("Falling", true);
+			//_animan.enabled = false;
+		}
 
 		if(_jump){
 			Vector3 temp = new Vector3(_offsetX,_offsetY,_offsetZ);
@@ -78,7 +84,7 @@ public class JumpingMan : MonoBehaviour {
 						_jump = false;
 						_animator.SetBool("Jump", false);
 						//rigidbody.constraints = ; 
-
+						//_animan.enabled = true;
 
 
 						/* TODO Plz ta bort desa två superdåliga rader kod, my bad */
