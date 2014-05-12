@@ -20,6 +20,8 @@ public class FoxAI : MonoBehaviour {
 
 	public bool _refuseMoveIfLight = false;
 
+	public bool _controlled = false;
+
 	public float CHECK_LIGHT_INTERVAL = 0.625f;
 
 	int _updateTick = 0;
@@ -68,11 +70,12 @@ public class FoxAI : MonoBehaviour {
 
 		//Debug.DrawLine(transform.position + transform.forward * 0.22f + Vector3.up * 0.5f, transform.position + transform.forward * 0.22f + Vector3.up * 0.5f + Vector3.down * 1, Color.red);
 		//Debug.DrawLine(transform.position - transform.forward * 0.22f + Vector3.up * 0.5f, transform.position - transform.forward * 0.22f + Vector3.up * 0.5f + Vector3.down * 1, Color.red);
+
 		if (_targetNode != null) {
 			if (reachedTarget()) {
 				transform.position = new Vector3(_targetNode.transform.position.x, transform.position.y, _targetNode.transform.position.z);
-				if(_targetNode._isWayPointNode){
-					if(_targetNode._nextNode != _currentNode && !_fleeing){
+				if(_targetNode._isWayPointNode && !_fleeing){
+					if(_targetNode._nextNode != _currentNode){
 						_currentNode = _targetNode;
 						_targetNode = _currentNode._nextNode;
 					}
@@ -90,9 +93,7 @@ public class FoxAI : MonoBehaviour {
 				}
 			} else {
 				if(!_pathSafe){
-					//checkPathForShadows();
-					_pathSafe = true;
-					_ani.SetBool("Walking", true);
+					checkPathForShadows();
 				}
 				if(_pathSafe || !_refuseMoveIfLight){
 					move ();
@@ -103,17 +104,18 @@ public class FoxAI : MonoBehaviour {
 				}
 			}
 		} else {
-			if (Input.GetButtonDown ("FoxForward") || Input.GetAxis("FoxCall") > 0){
-				if (_currentNode._nextNode != null) {
-					_targetNode = _currentNode._nextNode;
+			if(_controlled){
+				if (Input.GetButtonDown ("FoxForward") || Input.GetAxis("FoxCall") > 0){
+					if (_currentNode._nextNode != null) {
+						_targetNode = _currentNode._nextNode;
+					}
+				}
+				if (Input.GetButtonDown ("FoxBackward") || Input.GetAxis("FoxCall") < 0) {
+					if (_currentNode != null) {
+						_targetNode = _currentNode._prevNode;
+					}
 				}
 			}
-			if (Input.GetButtonDown ("FoxBackward") || Input.GetAxis("FoxCall") < 0) {
-				if (_currentNode != null) {
-					_targetNode = _currentNode._prevNode;
-				}
-			}
-
 
 			/* Fall-kod */
 
@@ -167,6 +169,10 @@ public class FoxAI : MonoBehaviour {
 					_fleeing = true;
 				}
 			}
+
+			if(_targetNode == null && !_controlled){
+				_targetNode = _currentNode._nextNode;
+			}
 		}
 
 		_updateTick++;
@@ -218,6 +224,7 @@ public class FoxAI : MonoBehaviour {
 		//Debug.Log(count + ": lightchecks!"); 
 
 		_pathSafe = true;
+		_ani.SetBool("Walking", true);
 		_testing = false;
 	}
 
