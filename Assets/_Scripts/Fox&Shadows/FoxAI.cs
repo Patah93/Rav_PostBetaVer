@@ -18,9 +18,13 @@ public class FoxAI : MonoBehaviour {
 
 	bool _fleeing = false;
 
-	public bool _refuseMoveIfLight = false;
+	public bool _refuseMoveIfLight = true;
 
 	public bool _controlled = false;
+
+	public bool _moveWhenBoyIsClose = true;
+
+	bool _boyClose = false;
 
 	public float CHECK_LIGHT_INTERVAL = 0.625f;
 
@@ -170,7 +174,7 @@ public class FoxAI : MonoBehaviour {
 				}
 			}
 
-			if(_targetNode == null && !_controlled){
+			if(_targetNode == null && !_controlled && (!_moveWhenBoyIsClose || _boyClose)){
 				_targetNode = _currentNode._nextNode;
 			}
 		}
@@ -293,5 +297,9 @@ public class FoxAI : MonoBehaviour {
 			Vector3 yOffset = new Vector3(0, -(rayInfoBack.distance - 0.5f), 0);
 			transform.position += yOffset;
 		}
+	}
+
+	public void setBoyClose(bool boyClose){
+		_boyClose = boyClose;
 	}
 }
