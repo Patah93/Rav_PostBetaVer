@@ -67,7 +67,7 @@ public class Throw : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		float rightY = -Input.GetAxis("Vertical");
+		float rightY = -Input.GetAxis("RightStickVertical");
 
 
 

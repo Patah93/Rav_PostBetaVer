@@ -49,8 +49,6 @@ public class AnimationMan : MonoBehaviour {
 		//Debug.Log (gameObject.GetComponent<CharacterController>().velocity);
 			
 			float lerpit = _lerpTime;
-			if(Input.GetButtonDown("Fire3"))
-				_animator.SetBool("ThrowMode", !_animator.GetBool("ThrowMode"));
 
 			if(!_animator.GetBool("ThrowMode")){
 				_length = Mathf.Sqrt(Mathf.Pow (Mathf.Abs(Input.GetAxis("Horizontal")),2) + Mathf.Pow (Mathf.Abs(Input.GetAxis("Vertical")),2));	
@@ -91,7 +89,7 @@ public class AnimationMan : MonoBehaviour {
 	private void joystickConvert(){
 
 		if(_animator.GetBool("ThrowMode"))
-			_targetRotation = (Mathf.Clamp(Input.GetAxis("Vertical"),0,1) * _cameraRotationForward) + (Input.GetAxis("Horizontal") * _cameraRotationRight);
+			_targetRotation = (Mathf.Clamp(Input.GetAxis("Vertical"),0.1f,1f) * _cameraRotationForward) + (Input.GetAxis("Horizontal") * _cameraRotationRight);
 		else
 			_targetRotation = (Input.GetAxis("Vertical") * _cameraRotationForward) + (Input.GetAxis("Horizontal") * _cameraRotationRight);
 
