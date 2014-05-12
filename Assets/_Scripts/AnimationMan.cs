@@ -57,28 +57,22 @@ public class AnimationMan : MonoBehaviour {
 			} else
 				lerpit = _lerpThrowTime;
 
-			if (camera.camState != ThirdPersonCamera.CamStates.FirstPerston) {
+			
+			
+				if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0 || Mathf.Abs(Input.GetAxis("Vertical")) > 0){
+					if(!_animator.GetBool("Falling") && !_animator.GetBool("Jump")){
 
-				if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0 || Mathf.Abs(Input.GetAxis("Vertical")) > 0 && !_animator.GetBool("ThrowMode")){
+							_angle = Vector2.Angle (_cameraRotationForward, _targetRotation) * Mathf.Sign(Input.GetAxis ("Horizontal"));
 
-					_angle = Vector2.Angle (_cameraRotationForward, _targetRotation) * Mathf.Sign(Input.GetAxis ("Horizontal"));
-
-					Quaternion targetRot = Quaternion.Slerp (transform.rotation, Camera.main.transform.rotation * Quaternion.Euler(0, _angle, 0), Time.deltaTime * lerpit);
-					transform.rotation = new Quaternion(transform.rotation.x, targetRot.y, transform.rotation.z, targetRot.w);
-
+							Quaternion targetRot = Quaternion.Slerp (transform.rotation, Camera.main.transform.rotation * Quaternion.Euler(0, _angle, 0), Time.deltaTime * lerpit);
+							transform.rotation = new Quaternion(transform.rotation.x, targetRot.y, transform.rotation.z, targetRot.w);
+					}
 				}
 				else
 				{
 					_length = Mathf.Lerp(_length, 0, _lerpTime);
 
 				}
-				_angle = Vector2.Angle (_cameraRotationForward, _targetRotation) * Mathf.Sign(Input.GetAxis ("Horizontal"));
-
-			}
-			else
-			{
-				_length = Mathf.Lerp(_length, 0, _lerpTime);
-			}
 
 			
 			_animator.SetFloat("Speed", _length);
