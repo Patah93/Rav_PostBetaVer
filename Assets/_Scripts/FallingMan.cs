@@ -26,12 +26,12 @@ public class FallingMan : MonoBehaviour {
 		}
 
 		if(_ani.GetCurrentAnimatorStateInfo(0).IsName("Jump")){
-			_controller.Move(_fallVelocity*_length);	
+			_controller.Move(_fallVelocity*_length*Time.deltaTime);	
 		}
 
 		if(_ani.GetCurrentAnimatorStateInfo(0).IsName("Fallin'")){
 		//	Debug.Log ("FallVelocity: " + _fallVelocity);
-			_controller.Move(_fallVelocity*_length);
+			_controller.Move(_fallVelocity*_length*Time.deltaTime);
 			 
 		}
 
@@ -39,7 +39,7 @@ public class FallingMan : MonoBehaviour {
 			_fallVelocity.x = _controller.velocity.x;
 			_fallVelocity.z = _controller.velocity.z;	
 		}
-
+	
 
 	}
 }
