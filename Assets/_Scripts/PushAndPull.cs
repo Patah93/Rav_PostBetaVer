@@ -101,9 +101,9 @@ public class PushAndPull : MonoBehaviour {
 			//_obj.rigidbody.MovePosition(new Vector3(transform.position.x,_objposy,transform.position.z) + _distance*_direction*-1);			//
 			_obj.position = new Vector3(transform.position.x,_objposy,transform.position.z) + _distance*_direction*-1;
 
-			if(!_charContr.isGrounded){			//Gravity on player
+			/*if(!_charContr.isGrounded){			//Gravity on player
 				_boystate.enterWalkMode();
-			}
+			}*/
 		}
 	}
 	
