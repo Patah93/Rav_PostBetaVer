@@ -16,7 +16,7 @@ public class ElevatorMan : TriggerAction {
 
 	// Use this for initialization
 	void Start () {
-		_triggered = true;
+		_triggered = false;
 		_goingUp = true;
 		_offSet = 0.01f;
 	}
