@@ -32,10 +32,10 @@ public class AnimationMan : MonoBehaviour {
 		m_LocomotionId = Animator.StringToHash ("Base Layer.Run");
 		camera = Camera.main.GetComponent<ThirdPersonCamera> ();
 
-		if (camera == null)
+		//if (camera == null)
 						//Debug.Log ("no camera detected");
 
-		if (_animator == null)
+		//if (_animator == null)
 			//Debug.LogError ("No animator!");
 	}
 	
