@@ -78,7 +78,7 @@ public class BoyStateManager : MonoBehaviour {
 					if(_rayHit.collider.transform.tag == "Interactive"&& !_jump.isJumping()){ //If that object is Interactive
 						_drawInteract = true;
 						if(Input.GetButtonDown("Interact")){	//Enter pushmode	
-							Debug.Log("du tryckte på e");
+							//Debug.Log("du tryckte på e");
 							enterPushMode();
 							_pathfinding = true;
 						}
@@ -172,7 +172,7 @@ public class BoyStateManager : MonoBehaviour {
 		_ani.applyRootMotion = false;
 
 		_wtpp.enabled = true;
-		Debug.Log("Objside is "+_objside);
+		//Debug.Log("Objside is "+_objside);
 		_wtpp.setDestination(transform.position,_dudepos,_direction);
 	}
 	

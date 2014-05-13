@@ -133,7 +133,7 @@ public class FoxAI : MonoBehaviour {
 			
 			if(!(frontCast || backCast)){
 				/* TODO HANDLE BOTH FEET IN DAT AIR! */
-				//Debug.Log("I'M FLYYING :D");
+				////Debug.Log("I'M FLYYING :D");
 				_fallVec += Vector3.down * _fallAcc;
 				transform.position += _fallVec;
 			}else{
@@ -160,7 +160,7 @@ public class FoxAI : MonoBehaviour {
 		if(_updateTick == 0 && !_testing){
 
 			if(_shadowDetect.isObjectInLight()){
-				Debug.Log("DIEDIEDIEDIE POOR FOXIE! >='[");
+				//Debug.Log("DIEDIEDIEDIE POOR FOXIE! >='[");
 
 				if(!_fleeing){
 					if(_targetNode == null){
@@ -225,7 +225,7 @@ public class FoxAI : MonoBehaviour {
 		transform.position = originalPos;
 		transform.rotation = originalRotation;
 		_desiredRotation = originalRotation;
-		//Debug.Log(count + ": lightchecks!"); 
+		////Debug.Log(count + ": lightchecks!"); 
 
 		_pathSafe = true;
 		_ani.SetBool("Walking", true);
@@ -234,7 +234,7 @@ public class FoxAI : MonoBehaviour {
 
 	void move(){
 
-		//Debug.Log("HERP");
+		////Debug.Log("HERP");
 
 		RaycastHit rayInfoFront, rayInfoBack;
 
@@ -251,7 +251,7 @@ public class FoxAI : MonoBehaviour {
 
 		if(!(frontCast || backCast)){
 				/* TODO HANDLE BOTH FEET IN DAT AIR! */
-				//Debug.Log("I'M FLYYING :D");
+				////Debug.Log("I'M FLYYING :D");
 
 			_fallVec += Vector3.down * _fallAcc;
 			transform.position += _fallVec;
@@ -261,7 +261,7 @@ public class FoxAI : MonoBehaviour {
 
 			_fallVec = Vector3.down * _fallAcc;
 
-			//Debug.Log("I'M GROUNDED D:");
+			////Debug.Log("I'M GROUNDED D:");
 
 			if(frontCast && backCast){
 
@@ -269,11 +269,11 @@ public class FoxAI : MonoBehaviour {
 
 				if(rayInfoFront.distance > rayInfoBack.distance){
 					transform.rotation = Quaternion.Euler(transform.localEulerAngles.x + angle, transform.localEulerAngles.y, transform.localEulerAngles.z);
-					//Debug.Log("LUTNING! =D");
+					////Debug.Log("LUTNING! =D");
 				}
 				else if(rayInfoFront.distance < rayInfoBack.distance){
 					transform.rotation = Quaternion.Euler(transform.localEulerAngles.x - angle, transform.localEulerAngles.y, transform.localEulerAngles.z);
-					//Debug.Log("LUTNING! =D");
+					////Debug.Log("LUTNING! =D");
 				}else{
 					transform.rotation = Quaternion.Euler(transform.localEulerAngles.x + angle, transform.localEulerAngles.y, transform.localEulerAngles.z);
 				}

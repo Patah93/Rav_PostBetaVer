@@ -40,7 +40,7 @@ public class Throw : MonoBehaviour {
 	void Start () {
 		PlayerXForm = GameObject.FindWithTag ("Player").transform;
 		if (PlayerXForm == null)
-						Debug.Log ("Could not find player transform");
+						//Debug.Log ("Could not find player transform");
 
 		//arcLine = new LineRenderer ();
 		arcLine.SetVertexCount (180);
@@ -49,7 +49,7 @@ public class Throw : MonoBehaviour {
 		camera = Camera.main.GetComponent<ThirdPersonCamera> ();
 
 		if (arcLine == null)
-						Debug.Log ("arcLine");
+						//Debug.Log ("arcLine");
 
 		_anim = GameObject.FindWithTag ("Player").GetComponent<Animator>();
 		target = GameObject.CreatePrimitive (PrimitiveType.Sphere);

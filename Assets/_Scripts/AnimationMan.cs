@@ -33,10 +33,10 @@ public class AnimationMan : MonoBehaviour {
 		camera = Camera.main.GetComponent<ThirdPersonCamera> ();
 
 		if (camera == null)
-						Debug.Log ("no camera detected");
+						//Debug.Log ("no camera detected");
 
 		if (_animator == null)
-			Debug.LogError ("No animator!");
+			//Debug.LogError ("No animator!");
 	}
 	
 	// Update is called once per frame
@@ -46,7 +46,7 @@ public class AnimationMan : MonoBehaviour {
 			joystickConvert ();
 			updateCharacterRotation();
 			
-		//Debug.Log (gameObject.GetComponent<CharacterController>().velocity);
+		////Debug.Log (gameObject.GetComponent<CharacterController>().velocity);
 			
 			float lerpit = _lerpTime;
 

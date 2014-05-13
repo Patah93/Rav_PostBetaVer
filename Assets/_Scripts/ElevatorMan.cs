@@ -57,7 +57,7 @@ public class ElevatorMan : TriggerAction {
 	
 	public override void onActive(){
 
-		Debug.Log("ACTIVE?!");
+		//Debug.Log("ACTIVE?!");
 
 		_triggered = true;
 		if(gameObject.CompareTag("Player")){

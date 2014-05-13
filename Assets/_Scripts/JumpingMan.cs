@@ -29,7 +29,7 @@ public class JumpingMan : MonoBehaviour {
 	void Update () {
 
 		if(Input.GetButtonDown("Jump")){	//Aktiverar hoppet
-			Debug.Log("you pressed jump)");
+			//Debug.Log("you pressed jump)");
 			if(!_jump){
 				//_animan.enabled = false;
 				//transform.rigidbody.constraints = RigidbodyConstraints.FreezeRotationX|RigidbodyConstraints.FreezeRotationZ; //hindrar den från att snörra cp
@@ -42,7 +42,7 @@ public class JumpingMan : MonoBehaviour {
 				//Vector3 temp = rigidbody.velocity;
 				//transform.rigidbody.velocity = new Vector3(temp.x,0,temp.z);
 				//transform.rigidbody.AddForce(Vector3.up*_jumpForce);
-				Debug.Log("jumping");
+				//Debug.Log("jumping");
 				_jump = true;
 
 				//gameObject.GetComponent<CapsuleCollider>().enabled = true;
@@ -56,7 +56,7 @@ public class JumpingMan : MonoBehaviour {
 
 
 	/*	if(_jump && transform.position.y - _startPosition > _jumpHeight){	//Hoppat så högt den klarar, kör en cooldown
-			//Debug.Log("cooldown");
+			////Debug.Log("cooldown");
 			_cooldown = true;
 		}
 		
@@ -76,10 +76,10 @@ public class JumpingMan : MonoBehaviour {
 				if(Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f + temp.y ,Vector3.down,out _rayHit,1.1f)){	//Nuddat marken och kan hoppa igen
 					Debug.DrawRay(transform.position + temp,Vector3.down,Color.blue,1 + temp.y,true);
 					Debug.DrawRay(transform.position, _rayHit.transform.position);
-					Debug.Log("Collided with "+ _rayHit.collider.name);
+					//Debug.Log("Collided with "+ _rayHit.collider.name);
 					if(!_rayHit.collider.name.Equals(this.name)){
 						//transform.rigidbody.constraints &= ~ RigidbodyConstraints.FreezeRotationX|~RigidbodyConstraints.FreezeRotationZ;
-						Debug.Log ("hit something"); 
+						//Debug.Log ("hit something"); 
 						//_startPosition = transform.position.y;
 						_jump = false;
 						_animator.SetBool("Jump", false);
@@ -95,7 +95,7 @@ public class JumpingMan : MonoBehaviour {
 				}
 			}
 		}
-		//Debug.Log("cooldown is" + _cooldown);
+		////Debug.Log("cooldown is" + _cooldown);
 	}
 
 	public bool isJumping(){
