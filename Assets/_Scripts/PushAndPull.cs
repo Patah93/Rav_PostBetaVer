@@ -21,6 +21,7 @@ public class PushAndPull : MonoBehaviour {
 	bool _collidedf = false;
 	bool _collidedb = false;
 	bool _sideZ;
+	bool _audioPlaying = false;
 
 	
 	void Start () {
@@ -28,7 +29,7 @@ public class PushAndPull : MonoBehaviour {
 		_boystate = GetComponent<BoyStateManager>();
 		_charContr = GetComponent<CharacterController> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if(_pushing){
@@ -53,7 +54,7 @@ public class PushAndPull : MonoBehaviour {
 				}
 				_collidedf = true;
 
-				Debug.Log (_derp.transform.name + " har jag krockat med " + _derp.point + " är där jag krockade i saken. " + _derp.transform.position + " är objektets position");
+				//Debug.Log (_derp.transform.name + " har jag krockat med " + _derp.point + " är där jag krockade i saken. " + _derp.transform.position + " är objektets position");
 			}
 			else if(_obj.rigidbody.SweepTest(_direction, out _derp, 0.1f)){ //Box collided backwards
 				if(!_derp.collider.CompareTag("Player")){
@@ -70,7 +71,7 @@ public class PushAndPull : MonoBehaviour {
 					}
 					_collidedb = true;
 
-					Debug.Log (_derp.transform.name + " har jag krockat med " + _derp.point + " är där jag krockade i saken. " + _derp.transform.position + " är objektets position");
+					//Debug.Log (_derp.transform.name + " har jag krockat med " + _derp.point + " är där jag krockade i saken. " + _derp.transform.position + " är objektets position");
 				}
 			}
 			else{	//Box didn't collide with anything
@@ -78,11 +79,20 @@ public class PushAndPull : MonoBehaviour {
 				_collidedb = false;
 			}
 
+		/*	if(!_obj.audio.isPlaying){
+				_audioPlaying = false;
+			}*/
+
 			_ani.SetFloat("Speed", _speed);		
 			if(_speed == 0){					//Prevents box from gliding through walls because of animations
 				transform.position = _position;
+				//_obj.audio.Stop();
 			}
-			
+		/*	else if(!_audioPlaying){
+				_obj.audio.Play();
+				_audioPlaying = true;
+			}*/
+
 			if(_sideZ){ 
 				transform.position = new Vector3(_position.x,transform.position.y,transform.position.z);
 			}
@@ -101,9 +111,9 @@ public class PushAndPull : MonoBehaviour {
 			//_obj.rigidbody.MovePosition(new Vector3(transform.position.x,_objposy,transform.position.z) + _distance*_direction*-1);			//
 			_obj.position = new Vector3(transform.position.x,_objposy,transform.position.z) + _distance*_direction*-1;
 
-			if(!_charContr.isGrounded){			//Gravity on player
+			/*if(!_charContr.isGrounded){			//Gravity on player
 				_boystate.enterWalkMode();
-			}
+			}*/
 		}
 	}
 	
