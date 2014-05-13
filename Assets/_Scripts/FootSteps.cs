@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FotSteps : MonoBehaviour {
+public class FootSteps : MonoBehaviour {
 
 	public AudioClip[][] _audios;
 	
