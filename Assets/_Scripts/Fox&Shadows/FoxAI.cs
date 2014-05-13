@@ -110,7 +110,7 @@ public class FoxAI : MonoBehaviour {
 		} else {
 			if(_controlled){
 				if (Input.GetButtonDown ("FoxForward") || Input.GetAxis("FoxCall") > 0){
-					if (_currentNode._nextNode != null) {
+					if (_currentNode._nextNode != null && !_currentNode._isWaitingForAction) {
 						_targetNode = _currentNode._nextNode;
 					}
 				}
@@ -174,7 +174,7 @@ public class FoxAI : MonoBehaviour {
 				}
 			}
 
-			if(_targetNode == null && !_controlled && (!_moveWhenBoyIsClose || _boyClose)){
+			if(_targetNode == null && !_currentNode._isWaitingForAction && !_controlled && (!_moveWhenBoyIsClose || _boyClose)){
 				_targetNode = _currentNode._nextNode;
 			}
 		}
