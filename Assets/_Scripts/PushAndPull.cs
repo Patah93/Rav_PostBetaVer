@@ -21,6 +21,7 @@ public class PushAndPull : MonoBehaviour {
 	bool _collidedf = false;
 	bool _collidedb = false;
 	bool _sideZ;
+	bool _audioPlaying = false;
 
 	
 	void Start () {
@@ -28,7 +29,7 @@ public class PushAndPull : MonoBehaviour {
 		_boystate = GetComponent<BoyStateManager>();
 		_charContr = GetComponent<CharacterController> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if(_pushing){
@@ -78,11 +79,20 @@ public class PushAndPull : MonoBehaviour {
 				_collidedb = false;
 			}
 
+		/*	if(!_obj.audio.isPlaying){
+				_audioPlaying = false;
+			}*/
+
 			_ani.SetFloat("Speed", _speed);		
 			if(_speed == 0){					//Prevents box from gliding through walls because of animations
 				transform.position = _position;
+				//_obj.audio.Stop();
 			}
-			
+		/*	else if(!_audioPlaying){
+				_obj.audio.Play();
+				_audioPlaying = true;
+			}*/
+
 			if(_sideZ){ 
 				transform.position = new Vector3(_position.x,transform.position.y,transform.position.z);
 			}
