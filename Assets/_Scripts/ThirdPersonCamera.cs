@@ -312,12 +312,12 @@ public class ThirdPersonCamera : MonoBehaviour {
 			//grabbing the higest pos form the throw arc
 			Vector3 higestpos = referenceToThrow.highestPos;
 			//Vector3 higestpos = Vector3.zero;
-			Debug.Log(higestpos);
+			//Debug.Log(higestpos);
 			
 			//angle between the camera to the target
 			pitch = Vector3.Dot(Vector3.Normalize(higestpos - this.transform.position), PlayerXform.transform.forward);
 			pitch = Mathf.Acos(pitch) * Mathf.Rad2Deg;
-			Debug.Log(pitch);
+			//Debug.Log(pitch);
 			
 			//set camerea to right pos
 			targetPosistion =
@@ -367,22 +367,22 @@ public class ThirdPersonCamera : MonoBehaviour {
 			//left
 			if(Physics.Linecast(this.transform.position,Camera.main.ViewportToWorldPoint(new Vector3(0.0f,0.5f,Camera.main.nearClipPlane)),out wallHit)) {
 				offset += wallHit.normal;
-				Debug.Log("Left");
+				//Debug.Log("Left");
 			}
 			//right
 			if(Physics.Linecast(this.transform.position,Camera.main.ViewportToWorldPoint(new Vector3(1.0f,0.5f,Camera.main.nearClipPlane)),out wallHit)) {
 				offset += wallHit.normal;
-				Debug.Log("Right");
+				//Debug.Log("Right");
 			}
 			//down
 			if(Physics.Linecast(this.transform.position,Camera.main.ViewportToWorldPoint(new Vector3(0.5f,0.0f,Camera.main.nearClipPlane)),out wallHit)) {
 				offset += wallHit.normal;
-				Debug.Log("down");
+				//Debug.Log("down");
 			}
 			//up
 			if(Physics.Linecast(this.transform.position,Camera.main.ViewportToWorldPoint(new Vector3(0.5f,1.0f,Camera.main.nearClipPlane)),out wallHit)) {
 				offset += wallHit.normal;
-				Debug.Log("Up");
+				//Debug.Log("Up");
 			}
 
 			toTarget = toTarget + offset.normalized * ScalingNormalCompenstation;

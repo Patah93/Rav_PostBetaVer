@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FoxNode : MonoBehaviour {
+public class FoxNode  : TriggerAction {
 
 	public FoxNode _nextNode;
 	public FoxNode _prevNode;
 
 	public bool _isWayPointNode = false;
+	public bool _isWaitingForAction = false;
 
 	// Use this for initialization
 	void Start () {
@@ -26,5 +27,14 @@ public class FoxNode : MonoBehaviour {
 		if (_nextNode != null && _nextNode._prevNode == null) {
 			_nextNode.setPrevNode (this);
 		}
+	}
+
+	public override void onActive(){
+		_isWaitingForAction = false;
+		
+	}
+	
+	public override void onInactive(){
+		_isWaitingForAction = true;
 	}
 }

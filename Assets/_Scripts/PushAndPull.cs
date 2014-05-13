@@ -54,7 +54,7 @@ public class PushAndPull : MonoBehaviour {
 				}
 				_collidedf = true;
 
-				Debug.Log (_derp.transform.name + " har jag krockat med " + _derp.point + " är där jag krockade i saken. " + _derp.transform.position + " är objektets position");
+				//Debug.Log (_derp.transform.name + " har jag krockat med " + _derp.point + " är där jag krockade i saken. " + _derp.transform.position + " är objektets position");
 			}
 			else if(_obj.rigidbody.SweepTest(_direction, out _derp, 0.1f)){ //Box collided backwards
 				if(!_derp.collider.CompareTag("Player")){
@@ -71,7 +71,7 @@ public class PushAndPull : MonoBehaviour {
 					}
 					_collidedb = true;
 
-					Debug.Log (_derp.transform.name + " har jag krockat med " + _derp.point + " är där jag krockade i saken. " + _derp.transform.position + " är objektets position");
+					//Debug.Log (_derp.transform.name + " har jag krockat med " + _derp.point + " är där jag krockade i saken. " + _derp.transform.position + " är objektets position");
 				}
 			}
 			else{	//Box didn't collide with anything
@@ -111,9 +111,9 @@ public class PushAndPull : MonoBehaviour {
 			//_obj.rigidbody.MovePosition(new Vector3(transform.position.x,_objposy,transform.position.z) + _distance*_direction*-1);			//
 			_obj.position = new Vector3(transform.position.x,_objposy,transform.position.z) + _distance*_direction*-1;
 
-			if(!_charContr.isGrounded){			//Gravity on player
+			/*if(!_charContr.isGrounded){			//Gravity on player
 				_boystate.enterWalkMode();
-			}
+			}*/
 		}
 	}
 	
