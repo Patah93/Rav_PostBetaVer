@@ -258,7 +258,7 @@ ModelImporter:
       name: Run_01
       takeName: Take 001
       firstFrame: 2
-      lastFrame: 32
+      lastFrame: 31
       wrapMode: 0
       orientationOffsetY: -10.5200005
       level: 1.14999998
