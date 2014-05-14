@@ -10,7 +10,11 @@ public class ShadowDetection : MonoBehaviour {
 
 	private Vector3[] _pointsOfInterest;
 
+	private Vector3[] _moreSpreadPoints;
+
 	private Vector3[] _localPointsOfInterest;
+
+	private Vector3[] _localMoreSpreadPoints;
 
 	private bool temp_isLighted;
 
@@ -79,30 +83,9 @@ public class ShadowDetection : MonoBehaviour {
 		float maxX = boxColl.center.x + boxColl.size.x/2.0f;
 		float minY = boxColl.center.y - boxColl.size.y/2.0f;
 		float maxY = boxColl.center.y + boxColl.size.y/2.0f;
-		
-		/* These should be the corners of the kollisionsbox så att sägaah */
-		
-		//MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
-		
-		//Vector3[] temp  = meshFilter.sharedMesh.vertices;
-		
-		//_pointsOfInterest = new Vector3[1];
-		//_pointsOfInterest[0] = gameObject.transform.TransformPoint(temp[0]);
-		//Mesh mesh = meshCollider.GetComponent<MeshFilter>().mesh;
-		
-		//_pointsOfInterest = mesh.vertices;
-		
-		//_pointsOfInterest = new Vector3[Mathf.FloorToInt(((float)temp.Length) / 20f)+1]; 
-		//int j = 0;
+
 		_localPointsOfInterest = new Vector3[21];
 		_pointsOfInterest = new Vector3[21];
-		//for(int i = 0; i < 4; i++){
-		
-		/*if(i%20 == 0){
-				_pointsOfInterest[j] = gameObject.transform.TransformPoint(temp[i]);
-				j++;
-			}*/
-		//}
 		
 		_localPointsOfInterest[0] = new Vector3(minX, minY, boxColl.center.z + boxColl.size.z/2.0f);
 		_localPointsOfInterest[1] = new Vector3(minX, maxY, boxColl.center.z + boxColl.size.z/2.0f);
@@ -111,134 +94,260 @@ public class ShadowDetection : MonoBehaviour {
 		
 		_localPointsOfInterest[4] = new Vector3(minX/2.0f, maxY, boxColl.center.z + boxColl.size.z/2.0f);
 		_localPointsOfInterest[5] = new Vector3(maxX/2.0f, maxY, boxColl.center.z + boxColl.size.z/2.0f);
-		
-		//_localPointsOfInterest[6] = new Vector3(boxColl.center.x, maxY, boxColl.center.z + boxColl.size.z/2.0f);
-		
+
 		_localPointsOfInterest[6] = new Vector3(minX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z + boxColl.size.z/2.0f);
-		//_localPointsOfInterest[8] = new Vector3(minX, maxY/3.0f, boxColl.center.z + boxColl.size.z/2.0f);
-		//_localPointsOfInterest[9] = new Vector3(maxX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z + boxColl.size.z/2.0f);
+
 		_localPointsOfInterest[7] = new Vector3(maxX, maxY/3.0f, boxColl.center.z + boxColl.size.z/2.0f);
 		
 		_localPointsOfInterest[8] = new Vector3(minX, maxY/3.0f/2.0f, boxColl.center.z + boxColl.size.z/2.0f);
-		//_localPointsOfInterest[12] = new Vector3(minX, maxY/3.0f*2.0f, boxColl.center.z + boxColl.size.z/2.0f);
-		//_localPointsOfInterest[13] = new Vector3(maxX, maxY/3.0f/2.0f, boxColl.center.z + boxColl.size.z/2.0f);
+
 		_localPointsOfInterest[9] = new Vector3(maxX, maxY/3.0f*2.0f, boxColl.center.z + boxColl.size.z/2.0f);
 		
 		_localPointsOfInterest[10] = new Vector3(minX, boxColl.center.y, boxColl.center.z + boxColl.size.z/2.0f);
-		//_localPointsOfInterest[16] = new Vector3(maxX, boxColl.center.y, boxColl.center.z + boxColl.size.z/2.0f);
-		
+
 		_localPointsOfInterest[11] = new Vector3(minX, minY, boxColl.center.z - boxColl.size.z/2.0f);
 		_localPointsOfInterest[12] = new Vector3(minX, maxY, boxColl.center.z - boxColl.size.z/2.0f);
 		_localPointsOfInterest[13] = new Vector3(maxX, minY, boxColl.center.z - boxColl.size.z/2.0f);
 		_localPointsOfInterest[14] = new Vector3(maxX, maxY, boxColl.center.z - boxColl.size.z/2.0f);
 		
-		//_localPointsOfInterest[21] = new Vector3(minX/2.0f, maxY, boxColl.center.z - boxColl.size.z/2.0f);
-		//_localPointsOfInterest[22] = new Vector3(maxX/2.0f, maxY, boxColl.center.z - boxColl.size.z/2.0f);
-		
 		_localPointsOfInterest[15] = new Vector3(boxColl.center.x, maxY, boxColl.center.z - boxColl.size.z/2.0f);
-		
-		//_localPointsOfInterest[24] = new Vector3(minX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z - boxColl.size.z/2.0f);
+
 		_localPointsOfInterest[16] = new Vector3(minX, maxY/3.0f, boxColl.center.z - boxColl.size.z/2.0f);
 		_localPointsOfInterest[17] = new Vector3(maxX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z - boxColl.size.z/2.0f);
-		//_localPointsOfInterest[27] = new Vector3(maxX, maxY/3.0f, boxColl.center.z - boxColl.size.z/2.0f);
-		
-		//_localPointsOfInterest[28] = new Vector3(minX, maxY/3.0f/2.0f, boxColl.center.z - boxColl.size.z/2.0f);
+
 		_localPointsOfInterest[18] = new Vector3(minX, maxY/3.0f*2.0f, boxColl.center.z - boxColl.size.z/2.0f);
 		_localPointsOfInterest[19] = new Vector3(maxX, maxY/3.0f/2.0f, boxColl.center.z - boxColl.size.z/2.0f);
-		//_localPointsOfInterest[31] = new Vector3(maxX, maxY/3.0f*2.0f, boxColl.center.z - boxColl.size.z/2.0f);
-		
-		//_localPointsOfInterest[32] = new Vector3(minX, boxColl.center.y, boxColl.center.z - boxColl.size.z/2.0f);
+
 		_localPointsOfInterest[20] = new Vector3(maxX, boxColl.center.y, boxColl.center.z - boxColl.size.z/2.0f);
+
+		/* ------------------------------------------------------------------------------------------------ */
+
+		_localMoreSpreadPoints = new Vector3[119];
+		_moreSpreadPoints = new Vector3[119];
+		
+		_localMoreSpreadPoints[0] = new Vector3(minX, minY, boxColl.center.z + boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[1] = new Vector3(minX, maxY, boxColl.center.z + boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[2] = new Vector3(maxX, minY, boxColl.center.z + boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[3] = new Vector3(maxX, maxY, boxColl.center.z + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[4] = new Vector3(minX/2.0f, maxY, boxColl.center.z + boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[5] = new Vector3(maxX/2.0f, maxY, boxColl.center.z + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[6] = new Vector3(minX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[7] = new Vector3(maxX, maxY/3.0f, boxColl.center.z + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[8] = new Vector3(minX, maxY/3.0f/2.0f, boxColl.center.z + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[9] = new Vector3(maxX, maxY/3.0f*2.0f, boxColl.center.z + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[10] = new Vector3(minX, boxColl.center.y, boxColl.center.z + boxColl.size.z/8.0f);
+
+		_localMoreSpreadPoints[11] = new Vector3(boxColl.center.x, maxY, boxColl.center.z + boxColl.size.z/8.0f);
+
+		_localMoreSpreadPoints[12] = new Vector3(minX, maxY/3.0f, boxColl.center.z + boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[13] = new Vector3(maxX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[14] = new Vector3(minX, maxY/3.0f*2.0f, boxColl.center.z + boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[15] = new Vector3(maxX, maxY/3.0f/2.0f, boxColl.center.z + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[16] = new Vector3(maxX, boxColl.center.y, boxColl.center.z + boxColl.size.z/8.0f);
+
+		/* ------------ */
+		
+		_localMoreSpreadPoints[17] = new Vector3(minX, minY, boxColl.center.z - boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[18] = new Vector3(minX, maxY, boxColl.center.z - boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[19] = new Vector3(maxX, minY, boxColl.center.z - boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[20] = new Vector3(maxX, maxY, boxColl.center.z - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[21] = new Vector3(minX/2.0f, maxY, boxColl.center.z - boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[22] = new Vector3(maxX/2.0f, maxY, boxColl.center.z - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[23] = new Vector3(minX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[24] = new Vector3(maxX, maxY/3.0f, boxColl.center.z - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[25] = new Vector3(minX, maxY/3.0f/2.0f, boxColl.center.z - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[26] = new Vector3(maxX, maxY/3.0f*2.0f, boxColl.center.z - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[27] = new Vector3(minX, boxColl.center.y, boxColl.center.z - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[28] = new Vector3(boxColl.center.x, maxY, boxColl.center.z - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[29] = new Vector3(minX, maxY/3.0f, boxColl.center.z - boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[30] = new Vector3(maxX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[31] = new Vector3(minX, maxY/3.0f*2.0f, boxColl.center.z - boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[32] = new Vector3(maxX, maxY/3.0f/2.0f, boxColl.center.z - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[33] = new Vector3(maxX, boxColl.center.y, boxColl.center.z - boxColl.size.z/8.0f);
+		
+		/* ------------ */
+
+		_localMoreSpreadPoints[34] = new Vector3(minX, minY, boxColl.center.z + boxColl.size.z/4.0f);
+		_localMoreSpreadPoints[35] = new Vector3(minX, maxY, boxColl.center.z + boxColl.size.z/4.0f);
+		_localMoreSpreadPoints[36] = new Vector3(maxX, minY, boxColl.center.z + boxColl.size.z/4.0f);
+		_localMoreSpreadPoints[37] = new Vector3(maxX, maxY, boxColl.center.z + boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[38] = new Vector3(minX/2.0f, maxY, boxColl.center.z + boxColl.size.z/4.0f);
+		_localMoreSpreadPoints[39] = new Vector3(maxX/2.0f, maxY, boxColl.center.z + boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[40] = new Vector3(minX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z + boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[41] = new Vector3(maxX, maxY/3.0f, boxColl.center.z + boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[42] = new Vector3(minX, maxY/3.0f/2.0f, boxColl.center.z + boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[43] = new Vector3(maxX, maxY/3.0f*2.0f, boxColl.center.z + boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[44] = new Vector3(minX, boxColl.center.y, boxColl.center.z + boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[45] = new Vector3(boxColl.center.x, maxY, boxColl.center.z + boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[46] = new Vector3(minX, maxY/3.0f, boxColl.center.z + boxColl.size.z/4.0f);
+		_localMoreSpreadPoints[47] = new Vector3(maxX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z + boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[48] = new Vector3(minX, maxY/3.0f*2.0f, boxColl.center.z + boxColl.size.z/4.0f);
+		_localMoreSpreadPoints[49] = new Vector3(maxX, maxY/3.0f/2.0f, boxColl.center.z + boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[50] = new Vector3(maxX, boxColl.center.y, boxColl.center.z + boxColl.size.z/4.0f);
+		
+		/* ------------ */
+
+		_localMoreSpreadPoints[51] = new Vector3(minX, minY, boxColl.center.z - boxColl.size.z/4.0f);
+		_localMoreSpreadPoints[52] = new Vector3(minX, maxY, boxColl.center.z - boxColl.size.z/4.0f);
+		_localMoreSpreadPoints[53] = new Vector3(maxX, minY, boxColl.center.z - boxColl.size.z/4.0f);
+		_localMoreSpreadPoints[54] = new Vector3(maxX, maxY, boxColl.center.z - boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[55] = new Vector3(minX/2.0f, maxY, boxColl.center.z - boxColl.size.z/4.0f);
+		_localMoreSpreadPoints[56] = new Vector3(maxX/2.0f, maxY, boxColl.center.z - boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[57] = new Vector3(minX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z - boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[58] = new Vector3(maxX, maxY/3.0f, boxColl.center.z - boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[59] = new Vector3(minX, maxY/3.0f/2.0f, boxColl.center.z - boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[60] = new Vector3(maxX, maxY/3.0f*2.0f, boxColl.center.z - boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[61] = new Vector3(minX, boxColl.center.y, boxColl.center.z - boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[62] = new Vector3(boxColl.center.x, maxY, boxColl.center.z - boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[63] = new Vector3(minX, maxY/3.0f, boxColl.center.z - boxColl.size.z/4.0f);
+		_localMoreSpreadPoints[64] = new Vector3(maxX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z - boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[65] = new Vector3(minX, maxY/3.0f*2.0f, boxColl.center.z - boxColl.size.z/4.0f);
+		_localMoreSpreadPoints[66] = new Vector3(maxX, maxY/3.0f/2.0f, boxColl.center.z - boxColl.size.z/4.0f);
+		
+		_localMoreSpreadPoints[67] = new Vector3(maxX, boxColl.center.y, boxColl.center.z - boxColl.size.z/4.0f);
+		
+		/* ------------ */
+
+		float minZ = boxColl.center.z - boxColl.size.z/2.0f;
+		float maxZ = boxColl.center.z + boxColl.size.z/2.0f;
+
+		/* ------------ */
+
+		_localMoreSpreadPoints[68] = new Vector3(minX, minY, minZ + boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[69] = new Vector3(minX, maxY, minZ + boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[70] = new Vector3(maxX, minY, minZ + boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[71] = new Vector3(maxX, maxY, minZ + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[72] = new Vector3(minX/2.0f, maxY, minZ + boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[73] = new Vector3(maxX/2.0f, maxY, minZ + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[74] = new Vector3(minX, maxY/3.0f*2.0f+maxY/6.0f, minZ + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[75] = new Vector3(maxX, maxY/3.0f, minZ + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[76] = new Vector3(minX, maxY/3.0f/2.0f, minZ + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[77] = new Vector3(maxX, maxY/3.0f*2.0f, minZ + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[78] = new Vector3(minX, boxColl.center.y, minZ + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[79] = new Vector3(boxColl.center.x, maxY, minZ + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[80] = new Vector3(minX, maxY/3.0f, minZ + boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[81] = new Vector3(maxX, maxY/3.0f*2.0f+maxY/6.0f, minZ + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[82] = new Vector3(minX, maxY/3.0f*2.0f, minZ + boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[83] = new Vector3(maxX, maxY/3.0f/2.0f, minZ + boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[84] = new Vector3(maxX, boxColl.center.y, minZ + boxColl.size.z/8.0f);
+		
+		/* ------------ */
+		
+		_localMoreSpreadPoints[85] = new Vector3(minX, minY, maxZ - boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[86] = new Vector3(minX, maxY, maxZ - boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[87] = new Vector3(maxX, minY, maxZ - boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[88] = new Vector3(maxX, maxY, maxZ - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[89] = new Vector3(minX/2.0f, maxY, maxZ - boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[90] = new Vector3(maxX/2.0f, maxY, maxZ - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[91] = new Vector3(minX, maxY/3.0f*2.0f+maxY/6.0f, maxZ - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[92] = new Vector3(maxX, maxY/3.0f, maxZ - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[93] = new Vector3(minX, maxY/3.0f/2.0f, maxZ - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[94] = new Vector3(maxX, maxY/3.0f*2.0f, maxZ - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[95] = new Vector3(minX, boxColl.center.y, maxZ - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[96] = new Vector3(boxColl.center.x, maxY, maxZ - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[97] = new Vector3(minX, maxY/3.0f, maxZ - boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[98] = new Vector3(maxX, maxY/3.0f*2.0f+maxY/6.0f, maxZ - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[99] = new Vector3(minX, maxY/3.0f*2.0f, maxZ - boxColl.size.z/8.0f);
+		_localMoreSpreadPoints[100] = new Vector3(maxX, maxY/3.0f/2.0f, maxZ - boxColl.size.z/8.0f);
+		
+		_localMoreSpreadPoints[101] = new Vector3(maxX, boxColl.center.y, maxZ - boxColl.size.z/8.0f);
+		
+		/* ------------ */
+		
+		_localMoreSpreadPoints[102] = new Vector3(minX, minY, boxColl.center.z);
+		_localMoreSpreadPoints[103] = new Vector3(minX, maxY, boxColl.center.z);
+		_localMoreSpreadPoints[104] = new Vector3(maxX, minY, boxColl.center.z);
+		_localMoreSpreadPoints[105] = new Vector3(maxX, maxY, boxColl.center.z);
+		
+		_localMoreSpreadPoints[106] = new Vector3(minX/2.0f, maxY, boxColl.center.z);
+		_localMoreSpreadPoints[107] = new Vector3(maxX/2.0f, maxY, boxColl.center.z);
+		
+		_localMoreSpreadPoints[108] = new Vector3(minX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z);
+		
+		_localMoreSpreadPoints[109] = new Vector3(maxX, maxY/3.0f, boxColl.center.z);
+		
+		_localMoreSpreadPoints[110] = new Vector3(minX, maxY/3.0f/2.0f, boxColl.center.z);
+		
+		_localMoreSpreadPoints[111] = new Vector3(maxX, maxY/3.0f*2.0f, boxColl.center.z);
+		
+		_localMoreSpreadPoints[112] = new Vector3(minX, boxColl.center.y, boxColl.center.z);
+		
+		_localMoreSpreadPoints[113] = new Vector3(boxColl.center.x, maxY, boxColl.center.z);
+		
+		_localMoreSpreadPoints[114] = new Vector3(minX, maxY/3.0f, boxColl.center.z);
+		_localMoreSpreadPoints[115] = new Vector3(maxX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z);
+		
+		_localMoreSpreadPoints[116] = new Vector3(minX, maxY/3.0f*2.0f, boxColl.center.z);
+		_localMoreSpreadPoints[117] = new Vector3(maxX, maxY/3.0f/2.0f, boxColl.center.z);
+		
+		_localMoreSpreadPoints[118] = new Vector3(maxX, boxColl.center.y, boxColl.center.z);
 	}
 
-	void updatePointsOfInterest(){
-		if(_lastPosition == null || (_lastPosition-transform.position).sqrMagnitude > 0.1f){
-			for(int i = 0; i < _pointsOfInterest.Length; i++){
-				_pointsOfInterest[i] = gameObject.transform.TransformPoint(_localPointsOfInterest[i]);
+	bool updatePointsOfInterest(){
+		if (_lastPosition == null || (_lastPosition - transform.position).sqrMagnitude > 0.1f) {
+			for (int i = 0; i < _pointsOfInterest.Length; i++) {
+				_pointsOfInterest [i] = gameObject.transform.TransformPoint (_localPointsOfInterest [i]);
 			}
 			_lastPosition = transform.position;
+		} else {
+			return false;
 		}
-		/*
-		BoxCollider boxColl = GetComponent<BoxCollider>();
-
-		float minX = boxColl.center.x - boxColl.size.x/2.0f;
-		float maxX = boxColl.center.x + boxColl.size.x/2.0f;
-		float minY = boxColl.center.y - boxColl.size.y/2.0f;
-		float maxY = boxColl.center.y + boxColl.size.y/2.0f;
-		*/
-		/* These should be the corners of the kollisionsbox så att sägaah */
-
-		//MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
-
-		//Vector3[] temp  = meshFilter.sharedMesh.vertices;
-
-		//_pointsOfInterest = new Vector3[1];
-		//_pointsOfInterest[0] = gameObject.transform.TransformPoint(temp[0]);
-		//Mesh mesh = meshCollider.GetComponent<MeshFilter>().mesh;
-
-		//_pointsOfInterest = mesh.vertices;
-
-		//_pointsOfInterest = new Vector3[Mathf.FloorToInt(((float)temp.Length) / 20f)+1]; 
-		//int j = 0;
-		//_pointsOfInterest = new Vector3[34];
-		//for(int i = 0; i < 4; i++){
-
-			/*if(i%20 == 0){
-				_pointsOfInterest[j] = gameObject.transform.TransformPoint(temp[i]);
-				j++;
-			}*/
-		//}
-		/*
-		_pointsOfInterest[0] = gameObject.transform.TransformPoint(new Vector3(minX, minY, boxColl.center.z + boxColl.size.z/2.0f));
-		_pointsOfInterest[1] = gameObject.transform.TransformPoint(new Vector3(minX, maxY, boxColl.center.z + boxColl.size.z/2.0f));
-		_pointsOfInterest[2] = gameObject.transform.TransformPoint(new Vector3(maxX, minY, boxColl.center.z + boxColl.size.z/2.0f));
-		_pointsOfInterest[3] = gameObject.transform.TransformPoint(new Vector3(maxX, maxY, boxColl.center.z + boxColl.size.z/2.0f));
-		
-		_pointsOfInterest[4] = gameObject.transform.TransformPoint(new Vector3(minX/2.0f, maxY, boxColl.center.z + boxColl.size.z/2.0f));
-		_pointsOfInterest[5] = gameObject.transform.TransformPoint(new Vector3(maxX/2.0f, maxY, boxColl.center.z + boxColl.size.z/2.0f));
-
-		_pointsOfInterest[6] = gameObject.transform.TransformPoint(new Vector3(boxColl.center.x, maxY, boxColl.center.z + boxColl.size.z/2.0f));
-		_pointsOfInterest[0] = gameObject.transform.TransformPoint(new Vector3(minX, minY, boxColl.center.z - boxColl.size.z/2.0f));
-		_pointsOfInterest[1] = gameObject.transform.TransformPoint(new Vector3(minX, maxY, boxColl.center.z - boxColl.size.z/2.0f));
-		_pointsOfInterest[2] = gameObject.transform.TransformPoint(new Vector3(maxX, minY, boxColl.center.z - boxColl.size.z/2.0f));
-		_pointsOfInterest[3] = gameObject.transform.TransformPoint(new Vector3(maxX, maxY, boxColl.center.z - boxColl.size.z/2.0f));
-
-		_pointsOfInterest[7] = gameObject.transform.TransformPoint(new Vector3(minX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z + boxColl.size.z/2.0f));
-		_pointsOfInterest[8] = gameObject.transform.TransformPoint(new Vector3(minX, maxY/3.0f, boxColl.center.z + boxColl.size.z/2.0f));
-		_pointsOfInterest[9] = gameObject.transform.TransformPoint(new Vector3(maxX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z + boxColl.size.z/2.0f));
-		_pointsOfInterest[10] = gameObject.transform.TransformPoint(new Vector3(maxX, maxY/3.0f, boxColl.center.z + boxColl.size.z/2.0f));
-
-		_pointsOfInterest[11] = gameObject.transform.TransformPoint(new Vector3(minX, maxY/3.0f/2.0f, boxColl.center.z + boxColl.size.z/2.0f));
-		_pointsOfInterest[12] = gameObject.transform.TransformPoint(new Vector3(minX, maxY/3.0f*2.0f, boxColl.center.z + boxColl.size.z/2.0f));
-		_pointsOfInterest[13] = gameObject.transform.TransformPoint(new Vector3(maxX, maxY/3.0f/2.0f, boxColl.center.z + boxColl.size.z/2.0f));
-		_pointsOfInterest[14] = gameObject.transform.TransformPoint(new Vector3(maxX, maxY/3.0f*2.0f, boxColl.center.z + boxColl.size.z/2.0f));
-
-		_pointsOfInterest[15] = gameObject.transform.TransformPoint(new Vector3(minX, boxColl.center.y, boxColl.center.z + boxColl.size.z/2.0f));
-		_pointsOfInterest[16] = gameObject.transform.TransformPoint(new Vector3(maxX, boxColl.center.y, boxColl.center.z + boxColl.size.z/2.0f));
-
-		_pointsOfInterest[17] = gameObject.transform.TransformPoint(new Vector3(minX, minY, boxColl.center.z - boxColl.size.z/2.0f));
-		_pointsOfInterest[18] = gameObject.transform.TransformPoint(new Vector3(minX, maxY, boxColl.center.z - boxColl.size.z/2.0f));
-		_pointsOfInterest[19] = gameObject.transform.TransformPoint(new Vector3(maxX, minY, boxColl.center.z - boxColl.size.z/2.0f));
-		_pointsOfInterest[20] = gameObject.transform.TransformPoint(new Vector3(maxX, maxY, boxColl.center.z - boxColl.size.z/2.0f));
-
-		_pointsOfInterest[21] = gameObject.transform.TransformPoint(new Vector3(minX/2.0f, maxY, boxColl.center.z - boxColl.size.z/2.0f));
-		_pointsOfInterest[22] = gameObject.transform.TransformPoint(new Vector3(maxX/2.0f, maxY, boxColl.center.z - boxColl.size.z/2.0f));
-		
-		_pointsOfInterest[23] = gameObject.transform.TransformPoint(new Vector3(boxColl.center.x, maxY, boxColl.center.z - boxColl.size.z/2.0f));
-		
-		_pointsOfInterest[24] = gameObject.transform.TransformPoint(new Vector3(minX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z - boxColl.size.z/2.0f));
-		_pointsOfInterest[25] = gameObject.transform.TransformPoint(new Vector3(minX, maxY/3.0f*2.0f, boxColl.center.z - boxColl.size.z/2.0f));
-		_pointsOfInterest[26] = gameObject.transform.TransformPoint(new Vector3(maxX, maxY/3.0f*2.0f+maxY/6.0f, boxColl.center.z - boxColl.size.z/2.0f));
-		_pointsOfInterest[27] = gameObject.transform.TransformPoint(new Vector3(maxX, maxY/3.0f*2.0f, boxColl.center.z - boxColl.size.z/2.0f));
-		
-		_pointsOfInterest[28] = gameObject.transform.TransformPoint(new Vector3(minX, maxY/3.0f/2.0f, boxColl.center.z - boxColl.size.z/2.0f));
-		_pointsOfInterest[29] = gameObject.transform.TransformPoint(new Vector3(minX, maxY/3.0f*2.0f, boxColl.center.z - boxColl.size.z/2.0f));
-		_pointsOfInterest[30] = gameObject.transform.TransformPoint(new Vector3(maxX, maxY/3.0f/2.0f, boxColl.center.z - boxColl.size.z/2.0f));
-		_pointsOfInterest[31] = gameObject.transform.TransformPoint(new Vector3(maxX, maxY/3.0f*2.0f, boxColl.center.z - boxColl.size.z/2.0f));
-		
-		_pointsOfInterest[32] = gameObject.transform.TransformPoint(new Vector3(minX, boxColl.center.y, boxColl.center.z - boxColl.size.z/2.0f));
-		_pointsOfInterest[33] = gameObject.transform.TransformPoint(new Vector3(maxX, boxColl.center.y, boxColl.center.z - boxColl.size.z/2.0f));
-*/
 		/*
 		for(int i = 0; i < _pointsOfInterest.Length-1; i++){
 			for(int j = i+1; j < _pointsOfInterest.Length; j++){ 
@@ -246,30 +355,33 @@ public class ShadowDetection : MonoBehaviour {
 			}
 		}
 		*/
-		/*
-		_pointsOfInterest [0] = new Vector3 (gameObject.collider.bounds.max.x, gameObject.collider.bounds.max.y, gameObject.collider.bounds.max.z);
-		_pointsOfInterest [1] = new Vector3 (gameObject.collider.bounds.max.x, gameObject.collider.bounds.max.y, gameObject.collider.bounds.min.z);
-		_pointsOfInterest [2] = new Vector3 (gameObject.collider.bounds.max.x, gameObject.collider.bounds.min.y, gameObject.collider.bounds.max.z);
-		_pointsOfInterest [3] = new Vector3 (gameObject.collider.bounds.max.x, gameObject.collider.bounds.min.y, gameObject.collider.bounds.min.z);
-		_pointsOfInterest [4] = new Vector3 (gameObject.collider.bounds.min.x, gameObject.collider.bounds.max.y, gameObject.collider.bounds.max.z);
-		_pointsOfInterest [5] = new Vector3 (gameObject.collider.bounds.min.x, gameObject.collider.bounds.max.y, gameObject.collider.bounds.min.z);
-		_pointsOfInterest [6] = new Vector3 (gameObject.collider.bounds.min.x, gameObject.collider.bounds.min.y, gameObject.collider.bounds.max.z);
-		_pointsOfInterest [7] = new Vector3 (gameObject.collider.bounds.min.x, gameObject.collider.bounds.min.y, gameObject.collider.bounds.min.z);
+		return true;
+	}
 
-		Debug.DrawLine(_pointsOfInterest[0], _pointsOfInterest[1]);
-		Debug.DrawLine(_pointsOfInterest[1], _pointsOfInterest[2]);
-		Debug.DrawLine(_pointsOfInterest[2], _pointsOfInterest[3]);
-		Debug.DrawLine(_pointsOfInterest[3], _pointsOfInterest[4]);
-		Debug.DrawLine(_pointsOfInterest[4], _pointsOfInterest[5]);
-		Debug.DrawLine(_pointsOfInterest[5], _pointsOfInterest[6]);
-		Debug.DrawLine(_pointsOfInterest[6], _pointsOfInterest[7]);
-		Debug.DrawLine(_pointsOfInterest[7], _pointsOfInterest[0]);
+	bool updateMoreSpreadPointsOfInterest(){
+		if (_lastPosition == null || (_lastPosition - transform.position).sqrMagnitude > 0.1f) {
+			for (int i = 0; i < _moreSpreadPoints.Length; i++) {
+				_moreSpreadPoints [i] = gameObject.transform.TransformPoint (_localMoreSpreadPoints [i]);
+			}
+			_lastPosition = transform.position;
+		} else {
+			return false;
+		}
+		/*
+		for(int i = 0; i < _moreSpreadPoints.Length-1; i++){
+			for(int j = i+1; j < _moreSpreadPoints.Length; j++){ 
+				Debug.DrawLine(_moreSpreadPoints[i], _moreSpreadPoints[j]);
+			}
+		}
 		*/
+		return true;
 	}
 
 	public bool isObjectInLight(){
 
-		updatePointsOfInterest ();
+		if (!updatePointsOfInterest ()) {
+			return false;
+		}
 
 		GameObject[] shadowCasters = getPotentialShadowCasters ();
 
@@ -280,32 +392,75 @@ public class ShadowDetection : MonoBehaviour {
 
 			/* Solen */
 			if(isPointInLight(_pointsOfInterest[i], ref shadowCasters)){
-				//return true;
-				return_value = true;
+				return true;
+				//return_value = true;
 				////Debug.Log("OMG SOLEN");
 				_numberLightedVertices++;
 			}
 
 			/* SpotLights */
 			else if(isPointInSpotLight(/*getLamps()*/ spotLights, _pointsOfInterest[i], ref shadowCasters)){
-				//return true;
-				return_value = true;
+				return true;
+				//return_value = true;
 				////Debug.Log("OMG SPOTLIGHT");
 				_numberLightedVertices++;
 			}
 
 			/* Lampor */
 			else if(isPointInLampLight(/*getLamps()*/ lamps, _pointsOfInterest[i], ref shadowCasters)){
-				//return true;
-				return_value = true;
+				return true;
+				//return_value = true;
 				////Debug.Log("OMG LAMPA");
 				_numberLightedVertices++;
 			}
 
 		}
 
-		//return false;
-		return return_value;
+		return false;
+		//return return_value;
+	}
+
+	public bool isObjectInLightMorePoints(){
+		
+		if(!updateMoreSpreadPointsOfInterest ()){
+			return false;
+		}
+		
+		GameObject[] shadowCasters = getPotentialShadowCasters ();
+		
+		bool return_value = false;
+		_numberLightedVertices = 0;
+		
+		for (int i = 0; i < _moreSpreadPoints.Length; i++) {
+			
+			/* Solen */
+			if(isPointInLight(_moreSpreadPoints[i], ref shadowCasters)){
+				return true;
+				//return_value = true;
+				////Debug.Log("OMG SOLEN");
+				_numberLightedVertices++;
+			}
+			
+			/* SpotLights */
+			else if(isPointInSpotLight(/*getLamps()*/ spotLights, _moreSpreadPoints[i], ref shadowCasters)){
+				return true;
+				//return_value = true;
+				////Debug.Log("OMG SPOTLIGHT");
+				_numberLightedVertices++;
+			}
+			
+			/* Lampor */
+			else if(isPointInLampLight(/*getLamps()*/ lamps, _moreSpreadPoints[i], ref shadowCasters)){
+				return true;
+				//return_value = true;
+				////Debug.Log("OMG LAMPA");
+				_numberLightedVertices++;
+			}
+			
+		}
+		
+		return false;
+		//return return_value;
 	}
 
 	bool isPointInLight(Vector3 point, ref GameObject[] shadowCasters){

@@ -18,7 +18,9 @@ public class KillThrowObject : MonoBehaviour {
 	void OnCollisionEnter(Collision deadthing){
 
 		if(deadthing.gameObject.tag == "Destructable" || deadthing.gameObject.light != null){
-			Destroy(deadthing.gameObject);
+			deadthing.gameObject.light.enabled = false;
+			deadthing.gameObject.audio.Play();
+			Destroy(deadthing.gameObject,deadthing.gameObject.audio.clip.length);
 		}
 		Destroy (gameObject);
 	}

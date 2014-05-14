@@ -159,7 +159,7 @@ public class FoxAI : MonoBehaviour {
 			 */
 		if(_updateTick == 0 && !_testing){
 
-			if(_shadowDetect.isObjectInLight()){
+			if(_shadowDetect.isObjectInLightMorePoints()){
 				//Debug.Log("DIEDIEDIEDIE POOR FOXIE! >='[");
 
 				if(!_fleeing){
