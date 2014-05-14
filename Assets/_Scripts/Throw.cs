@@ -83,7 +83,7 @@ public class Throw : MonoBehaviour {
 		force = ((PlayerXForm.forward + PlayerXForm.up) * 5);
 		force = force + ((PlayerXForm.forward + PlayerXForm.up) * forceStick);
 		//if (camera.camState == ThirdPersonCamera.CamStates.FirstPerston) {
-		if (_anim.GetBool ("ThrowMode")) {
+		if (GetComponent<Animator>().GetBool ("ThrowMode")) {
 			if(throbject == null && Time.time > clock){
 				throbject = Instantiate(throwObj, GameObject.Find("L_wrist_ctrl").transform.position/*PlayerXForm.position + (PlayerXForm.forward * 1) + new Vector3(0f,1f,0f)*/,Quaternion.identity) as Rigidbody;
 				throbject.transform.parent = GameObject.Find("L_wrist_ctrl").transform;
@@ -93,7 +93,7 @@ public class Throw : MonoBehaviour {
 			//if (Input.GetKeyDown (KeyCode.H))
 			target.renderer.enabled = true;
 			UpdatePredictionLine ();
-			if (Input.GetButtonDown ("Fire1") && !throwing && _anim.GetCurrentAnimatorStateInfo (0).IsName ("Throw Idle")) {
+			if (Input.GetButtonDown ("Fire1") && !throwing && GetComponent<Animator>().GetCurrentAnimatorStateInfo (0).IsName ("Throw Idle")) {
 					throwClock = Time.time + throwOffset;
 					changeThrowStatus();
 			}
@@ -180,7 +180,7 @@ public class Throw : MonoBehaviour {
 
 	void changeThrowStatus(){
 		throwing = !throwing;
-		_anim.SetBool ("Throw", !_anim.GetBool ("Throw"));
+		GetComponent<Animator>().SetBool ("Throw", !GetComponent<Animator>().GetBool ("Throw"));
 	}
 
 	public void deActivateThrow(){
@@ -190,7 +190,7 @@ public class Throw : MonoBehaviour {
 			throbject.rigidbody.useGravity = true;
 		target.renderer.enabled = false;
 		
-		if(_anim.GetBool("Throw"))
+		if(GetComponent<Animator>().GetBool("Throw"))
 			changeThrowStatus();						
 	}
 }
