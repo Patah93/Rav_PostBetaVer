@@ -17,12 +17,16 @@ public class KillThrowObject : MonoBehaviour {
 
 	void OnCollisionEnter(Collision deadthing){
 
+		Debug.Log("Collided with:" + deadthing.transform.name);
+
 		if(deadthing.gameObject.tag == "Destructable" || deadthing.gameObject.light != null){
 			deadthing.gameObject.light.enabled = false;
 			deadthing.gameObject.audio.Play();
 			Destroy(deadthing.gameObject,deadthing.gameObject.audio.clip.length);
 		}
-		Destroy (gameObject);
+		if(deadthing.gameObject.tag != "Player")
+			audio.Play ();
+		Destroy (gameObject, 1);
 	}
 
 }
