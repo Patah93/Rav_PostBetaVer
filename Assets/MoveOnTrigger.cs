@@ -9,7 +9,11 @@ public class MoveOnTrigger : TriggerAction {
 
 	public float _moveTime = 0.02f;
 
-	bool _isMoving = false;
+	public Vector3 _rotateAngles;
+	public float _rotateSpeed;
+
+
+	public bool _isMoving = false;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +24,7 @@ public class MoveOnTrigger : TriggerAction {
 	void Update () {
 
 		if(_isMoving){
+			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(_rotateAngles), _rotateSpeed);
 			transform.position = Vector3.Lerp(gameObject.transform.position, _offset + _originalPos, _moveTime);
 		}
 		else{
