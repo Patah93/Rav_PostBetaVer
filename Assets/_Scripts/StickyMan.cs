@@ -36,13 +36,12 @@ public class StickyMan : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		_OnPlatform = true;
 		_Thing = other;
-		//Vector3 tempScale = other.transform.localScale;
-		//other.transform.parent = transform;
+
 	}
 
 	void OnTriggerExit(Collider other) {
 		_OnPlatform = false;
-		//other.transform.parent = null;
+
 	}
 
 }
