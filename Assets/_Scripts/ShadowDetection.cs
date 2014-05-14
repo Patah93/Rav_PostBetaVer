@@ -339,12 +339,14 @@ public class ShadowDetection : MonoBehaviour {
 		_localMoreSpreadPoints[118] = new Vector3(maxX, boxColl.center.y, boxColl.center.z);
 	}
 
-	void updatePointsOfInterest(){
-		if(_lastPosition == null || (_lastPosition-transform.position).sqrMagnitude > 0.1f){
-			for(int i = 0; i < _pointsOfInterest.Length; i++){
-				_pointsOfInterest[i] = gameObject.transform.TransformPoint(_localPointsOfInterest[i]);
+	bool updatePointsOfInterest(){
+		if (_lastPosition == null || (_lastPosition - transform.position).sqrMagnitude > 0.1f) {
+			for (int i = 0; i < _pointsOfInterest.Length; i++) {
+				_pointsOfInterest [i] = gameObject.transform.TransformPoint (_localPointsOfInterest [i]);
 			}
 			_lastPosition = transform.position;
+		} else {
+			return false;
 		}
 		/*
 		for(int i = 0; i < _pointsOfInterest.Length-1; i++){
@@ -353,14 +355,17 @@ public class ShadowDetection : MonoBehaviour {
 			}
 		}
 		*/
+		return true;
 	}
 
-	void updateMoreSpreadPointsOfInterest(){
-		if(_lastPosition == null || (_lastPosition-transform.position).sqrMagnitude > 0.1f){
-			for(int i = 0; i < _moreSpreadPoints.Length; i++){
-				_moreSpreadPoints[i] = gameObject.transform.TransformPoint(_localMoreSpreadPoints[i]);
+	bool updateMoreSpreadPointsOfInterest(){
+		if (_lastPosition == null || (_lastPosition - transform.position).sqrMagnitude > 0.1f) {
+			for (int i = 0; i < _moreSpreadPoints.Length; i++) {
+				_moreSpreadPoints [i] = gameObject.transform.TransformPoint (_localMoreSpreadPoints [i]);
 			}
 			_lastPosition = transform.position;
+		} else {
+			return false;
 		}
 
 		for(int i = 0; i < _moreSpreadPoints.Length-1; i++){
@@ -368,12 +373,14 @@ public class ShadowDetection : MonoBehaviour {
 				Debug.DrawLine(_moreSpreadPoints[i], _moreSpreadPoints[j]);
 			}
 		}
-
+		return true;
 	}
 
 	public bool isObjectInLight(){
 
-		updatePointsOfInterest ();
+		if (!updatePointsOfInterest ()) {
+			return false;
+		}
 
 		GameObject[] shadowCasters = getPotentialShadowCasters ();
 
@@ -414,7 +421,9 @@ public class ShadowDetection : MonoBehaviour {
 
 	public bool isObjectInLightMorePoints(){
 		
-		updateMoreSpreadPointsOfInterest ();
+		if(!updateMoreSpreadPointsOfInterest ()){
+			return false;
+		}
 		
 		GameObject[] shadowCasters = getPotentialShadowCasters ();
 		
