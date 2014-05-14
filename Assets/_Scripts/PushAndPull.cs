@@ -21,8 +21,6 @@ public class PushAndPull : MonoBehaviour {
 	bool _collidedf = false;
 	bool _collidedb = false;
 	bool _sideZ;
-	bool _audioPlaying = false;
-
 	
 	void Start () {
 		_ani = GetComponent<Animator>();
@@ -79,19 +77,14 @@ public class PushAndPull : MonoBehaviour {
 				_collidedb = false;
 			}
 
-		/*	if(!_obj.audio.isPlaying){
-				_audioPlaying = false;
-			}*/
-
 			_ani.SetFloat("Speed", _speed);		
 			if(_speed == 0){					//Prevents box from gliding through walls because of animations
 				transform.position = _position;
-				//_obj.audio.Stop();
+				_obj.audio.Stop();
 			}
-		/*	else if(!_audioPlaying){
+			else if(!_obj.audio.isPlaying){
 				_obj.audio.Play();
-				_audioPlaying = true;
-			}*/
+			}
 
 			if(_sideZ){ 
 				transform.position = new Vector3(_position.x,transform.position.y,transform.position.z);
