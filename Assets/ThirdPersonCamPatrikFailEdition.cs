@@ -73,7 +73,7 @@ public class ThirdPersonCamPatrikFailEdition : MonoBehaviour {
 	[Range(0.0f, 5.0f)]
 	public float ScalingComenstationUpMovement = 1.0f;
 	[Range(0.0f, 2.0f)]
-	public float _wallDistance = 0.25f;
+	public float _wallDistance = 0.35f;
 	#endregion
 	
 	#region Private variables
@@ -369,12 +369,17 @@ public class ThirdPersonCamPatrikFailEdition : MonoBehaviour {
 		float _wallDistance = 0.25f;
 
 		if (Physics.Linecast(fromObject, toTarget, out wallHit)) {
-			Vector3 toPlayer = (wallHit.point - toTarget).normalized; 
-			float angle = 90.0f - Vector3.Angle(toPlayer, wallHit.normal);
-			if(angle < 0.1f)
-				toTarget = wallHit.point + toPlayer * _wallDistance;
-			else
-				toTarget = wallHit.point + toPlayer * (_wallDistance/Mathf.Sin((angle * Mathf.PI)/180.0f));
+			//if(wallHit.distance >= 0.5f){
+				Vector3 toPlayer = (wallHit.point - toTarget).normalized; 
+				float angle = 90.0f - Vector3.Angle(toPlayer, wallHit.normal);
+				if(angle < 0.1f){
+					toTarget = wallHit.point + toPlayer * _wallDistance;
+				}else{
+					toTarget = wallHit.point + toPlayer * (_wallDistance/Mathf.Sin((angle * Mathf.PI)/180.0f));
+				}
+			//}else{
+				//toTarget = transform.position;
+			//}
 		}
 
 		/*
