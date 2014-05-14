@@ -367,12 +367,13 @@ public class ShadowDetection : MonoBehaviour {
 		} else {
 			return false;
 		}
-
+		/*
 		for(int i = 0; i < _moreSpreadPoints.Length-1; i++){
 			for(int j = i+1; j < _moreSpreadPoints.Length; j++){ 
 				Debug.DrawLine(_moreSpreadPoints[i], _moreSpreadPoints[j]);
 			}
 		}
+		*/
 		return true;
 	}
 
