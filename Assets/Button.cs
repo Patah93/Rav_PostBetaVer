@@ -52,9 +52,9 @@ public class Button : MonoBehaviour {
 						}
 						_pressed = true;
 					}
-					Color temp = gameObject.renderer.materials[1].color;
-					gameObject.renderer.materials[1].color = gameObject.renderer.materials[0].color;
-					gameObject.renderer.materials[0].color = temp;
+					//Color temp = gameObject.renderer.materials[1].color;
+					//gameObject.renderer.materials[1].color = gameObject.renderer.materials[0].color;
+					//gameObject.renderer.materials[0].color = temp;
 				}
 			}
 		}

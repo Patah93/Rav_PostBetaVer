@@ -32,11 +32,11 @@ public class AnimationMan : MonoBehaviour {
 		m_LocomotionId = Animator.StringToHash ("Base Layer.Run");
 		camera = Camera.main.GetComponent<ThirdPersonCamera> ();
 
-		if (camera == null)
-						Debug.Log ("no camera detected");
+		//if (camera == null)
+						//Debug.Log ("no camera detected");
 
-		if (_animator == null)
-			Debug.LogError ("No animator!");
+		//if (_animator == null)
+			//Debug.LogError ("No animator!");
 	}
 	
 	// Update is called once per frame
@@ -46,11 +46,9 @@ public class AnimationMan : MonoBehaviour {
 			joystickConvert ();
 			updateCharacterRotation();
 			
-		//Debug.Log (gameObject.GetComponent<CharacterController>().velocity);
+		////Debug.Log (gameObject.GetComponent<CharacterController>().velocity);
 			
 			float lerpit = _lerpTime;
-			if(Input.GetButtonDown("Fire3"))
-				_animator.SetBool("ThrowMode", !_animator.GetBool("ThrowMode"));
 
 			if(!_animator.GetBool("ThrowMode")){
 				_length = Mathf.Sqrt(Mathf.Pow (Mathf.Abs(Input.GetAxis("Horizontal")),2) + Mathf.Pow (Mathf.Abs(Input.GetAxis("Vertical")),2));	
@@ -60,7 +58,7 @@ public class AnimationMan : MonoBehaviour {
 			
 			
 				if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0 || Mathf.Abs(Input.GetAxis("Vertical")) > 0){
-					if(!_animator.GetBool("Falling") && !_animator.GetBool("Jump")){
+					if(!_animator.GetBool("Falling") && !_animator.GetBool("Jump") && !_animator.GetCurrentAnimatorStateInfo(0).IsName("Land")){
 
 							_angle = Vector2.Angle (_cameraRotationForward, _targetRotation) * Mathf.Sign(Input.GetAxis ("Horizontal"));
 
@@ -91,7 +89,7 @@ public class AnimationMan : MonoBehaviour {
 	private void joystickConvert(){
 
 		if(_animator.GetBool("ThrowMode"))
-			_targetRotation = (Mathf.Clamp(Input.GetAxis("Vertical"),0,1) * _cameraRotationForward) + (Input.GetAxis("Horizontal") * _cameraRotationRight);
+			_targetRotation = (Mathf.Clamp(Input.GetAxis("Vertical"),0.1f,1f) * _cameraRotationForward) + (Input.GetAxis("Horizontal") * _cameraRotationRight);
 		else
 			_targetRotation = (Input.GetAxis("Vertical") * _cameraRotationForward) + (Input.GetAxis("Horizontal") * _cameraRotationRight);
 

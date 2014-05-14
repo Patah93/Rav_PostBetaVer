@@ -18,9 +18,13 @@ public class FoxAI : MonoBehaviour {
 
 	bool _fleeing = false;
 
-	public bool _refuseMoveIfLight = false;
+	public bool _refuseMoveIfLight = true;
 
 	public bool _controlled = false;
+
+	public bool _moveWhenBoyIsClose = true;
+
+	bool _boyClose = false;
 
 	public float CHECK_LIGHT_INTERVAL = 0.625f;
 
@@ -106,7 +110,7 @@ public class FoxAI : MonoBehaviour {
 		} else {
 			if(_controlled){
 				if (Input.GetButtonDown ("FoxForward") || Input.GetAxis("FoxCall") > 0){
-					if (_currentNode._nextNode != null) {
+					if (_currentNode._nextNode != null && !_currentNode._isWaitingForAction) {
 						_targetNode = _currentNode._nextNode;
 					}
 				}
@@ -129,7 +133,7 @@ public class FoxAI : MonoBehaviour {
 			
 			if(!(frontCast || backCast)){
 				/* TODO HANDLE BOTH FEET IN DAT AIR! */
-				//Debug.Log("I'M FLYYING :D");
+				////Debug.Log("I'M FLYYING :D");
 				_fallVec += Vector3.down * _fallAcc;
 				transform.position += _fallVec;
 			}else{
@@ -156,7 +160,7 @@ public class FoxAI : MonoBehaviour {
 		if(_updateTick == 0 && !_testing){
 
 			if(_shadowDetect.isObjectInLight()){
-				Debug.Log("DIEDIEDIEDIE POOR FOXIE! >='[");
+				//Debug.Log("DIEDIEDIEDIE POOR FOXIE! >='[");
 
 				if(!_fleeing){
 					if(_targetNode == null){
@@ -170,7 +174,7 @@ public class FoxAI : MonoBehaviour {
 				}
 			}
 
-			if(_targetNode == null && !_controlled){
+			if(_targetNode == null && !_currentNode._isWaitingForAction && !_controlled && (!_moveWhenBoyIsClose || _boyClose)){
 				_targetNode = _currentNode._nextNode;
 			}
 		}
@@ -221,7 +225,7 @@ public class FoxAI : MonoBehaviour {
 		transform.position = originalPos;
 		transform.rotation = originalRotation;
 		_desiredRotation = originalRotation;
-		//Debug.Log(count + ": lightchecks!"); 
+		////Debug.Log(count + ": lightchecks!"); 
 
 		_pathSafe = true;
 		_ani.SetBool("Walking", true);
@@ -230,7 +234,7 @@ public class FoxAI : MonoBehaviour {
 
 	void move(){
 
-		//Debug.Log("HERP");
+		////Debug.Log("HERP");
 
 		RaycastHit rayInfoFront, rayInfoBack;
 
@@ -247,7 +251,7 @@ public class FoxAI : MonoBehaviour {
 
 		if(!(frontCast || backCast)){
 				/* TODO HANDLE BOTH FEET IN DAT AIR! */
-				//Debug.Log("I'M FLYYING :D");
+				////Debug.Log("I'M FLYYING :D");
 
 			_fallVec += Vector3.down * _fallAcc;
 			transform.position += _fallVec;
@@ -257,7 +261,7 @@ public class FoxAI : MonoBehaviour {
 
 			_fallVec = Vector3.down * _fallAcc;
 
-			//Debug.Log("I'M GROUNDED D:");
+			////Debug.Log("I'M GROUNDED D:");
 
 			if(frontCast && backCast){
 
@@ -265,11 +269,11 @@ public class FoxAI : MonoBehaviour {
 
 				if(rayInfoFront.distance > rayInfoBack.distance){
 					transform.rotation = Quaternion.Euler(transform.localEulerAngles.x + angle, transform.localEulerAngles.y, transform.localEulerAngles.z);
-					//Debug.Log("LUTNING! =D");
+					////Debug.Log("LUTNING! =D");
 				}
 				else if(rayInfoFront.distance < rayInfoBack.distance){
 					transform.rotation = Quaternion.Euler(transform.localEulerAngles.x - angle, transform.localEulerAngles.y, transform.localEulerAngles.z);
-					//Debug.Log("LUTNING! =D");
+					////Debug.Log("LUTNING! =D");
 				}else{
 					transform.rotation = Quaternion.Euler(transform.localEulerAngles.x + angle, transform.localEulerAngles.y, transform.localEulerAngles.z);
 				}
@@ -293,5 +297,9 @@ public class FoxAI : MonoBehaviour {
 			Vector3 yOffset = new Vector3(0, -(rayInfoBack.distance - 0.5f), 0);
 			transform.position += yOffset;
 		}
+	}
+
+	public void setBoyClose(bool boyClose){
+		_boyClose = boyClose;
 	}
 }

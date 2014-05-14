@@ -18,7 +18,7 @@ public class ElevatorMan : TriggerAction {
 
 	// Use this for initialization
 	void Start () {
-		_triggered = true;
+		_triggered = false;
 		_goingUp = true;
 		_offSet = 0.01f;
 	}
@@ -59,7 +59,7 @@ public class ElevatorMan : TriggerAction {
 	
 	public override void onActive(){
 
-		Debug.Log("ACTIVE?!");
+		//Debug.Log("ACTIVE?!");
 
 		_triggered = true;
 		if(gameObject.CompareTag("Player")){

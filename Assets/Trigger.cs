@@ -18,6 +18,10 @@ public class Trigger : MonoBehaviour {
 
 	int _numberOfThings = 0;
 
+	public AudioClip _triggeredSound, _unTriggeredSound;
+
+	AudioSource _audioSource;
+
 	// Use this for initialization
 	void Start () {
 		_action = new TriggerAction[_actionObj.Length];
@@ -34,6 +38,8 @@ public class Trigger : MonoBehaviour {
 				_action[i] = _tAction[0];
 			}
 		}
+
+		_audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -46,6 +52,12 @@ public class Trigger : MonoBehaviour {
 			if(_numberOfThings == 0){
 				for(int i = 0; i < _action.Length; i++){
 					_action[i].onActive();
+				}
+
+				if(_triggeredSound != null){
+					_audioSource.Stop();
+					_audioSource.clip = _triggeredSound;
+					_audioSource.Play();
 				}
 				//gameObject.renderer.material.color = Color.red;
 			}
@@ -60,6 +72,12 @@ public class Trigger : MonoBehaviour {
 						_action[j].onActive();
 					}
 					//gameObject.renderer.material.color = Color.red;
+
+					if(_triggeredSound != null){
+						_audioSource.Stop();
+						_audioSource.clip = _triggeredSound;
+						_audioSource.Play();
+					}
 				}
 				_numberOfThings++;
 				return;
@@ -74,6 +92,12 @@ public class Trigger : MonoBehaviour {
 				for(int i = 0; i < _action.Length; i++){
 					_action[i].onInactive();
 				}
+
+				if(_unTriggeredSound != null){
+					_audioSource.Stop();
+					_audioSource.clip = _unTriggeredSound;
+					_audioSource.Play();
+				}
 				//gameObject.renderer.material.color = Color.green;
 				return;
 			}
@@ -85,6 +109,12 @@ public class Trigger : MonoBehaviour {
 				if(_numberOfThings <= 0){
 					for(int j = 0; j < _action.Length; j++){
 						_action[j].onInactive();
+					}
+
+					if(_unTriggeredSound != null){
+						_audioSource.Stop();
+						_audioSource.clip = _unTriggeredSound;
+						_audioSource.Play();
 					}
 					//gameObject.renderer.material.color = Color.green;
 					return;
