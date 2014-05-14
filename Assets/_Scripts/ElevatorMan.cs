@@ -5,6 +5,8 @@ public class ElevatorMan : TriggerAction {
 	
 	public GameObject _pos1;
 	public GameObject _pos2;
+
+	[Range(0, 1)]
 	public float _moveSpeed = 0.2f;
 
 	public bool _triggered;
