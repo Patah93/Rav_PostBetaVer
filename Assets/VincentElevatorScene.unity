@@ -111,6 +111,7 @@ GameObject:
   - 33: {fileID: 60361633}
   - 65: {fileID: 60361632}
   - 23: {fileID: 60361631}
+  - 114: {fileID: 60361635}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -169,6 +170,22 @@ Transform:
   m_LocalScale: {x: 14.7484951, y: 1, z: 6.10941315}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &60361635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 60361630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7906b2427fc0cf14ba3a9bef473635dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _offset: {x: 0, y: 0, z: 0}
+  _moveTime: .0199999996
+  _rotateAngles: {x: 0, y: 90, z: 0}
+  _rotateSpeed: 1
+  _isMoving: 1
 --- !u!1 &140487351
 GameObject:
   m_ObjectHideFlags: 0
