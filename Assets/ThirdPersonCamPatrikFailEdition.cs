@@ -258,9 +258,9 @@ public class ThirdPersonCamPatrikFailEdition : MonoBehaviour {
 			
 			CompenstaForWalls(LookAtNormal.position, ref targetPosistion);
 
-			Vector3 pos = transform.position;
-			CompenstaForWalls(LookAtNormal.position, ref pos);
-			transform.position = pos;
+			//Vector3 pos = transform.position;
+			//CompenstaForWalls(LookAtNormal.position, ref pos);
+			//transform.position = pos;
 
 			smoothPosistion(this.transform.position, targetPosistion);
 			
