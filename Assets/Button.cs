@@ -66,6 +66,7 @@ public class Button : MonoBehaviour {
 		if(_checkevent){
 			if(_button.isPressed()){
 				Debug.Log ("Registered pressed button");
+				transform.audio.Play();
 				if(_pressed){
 					for(int i = 0; i < _action.Length; i++){
 						_action[i].onInactive();
