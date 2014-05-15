@@ -5,6 +5,7 @@ public class Checkpoint : MonoBehaviour {
 
 	public GameObject[] _checkpointObjects;
 	public Vector3[] _objectPositions;
+	bool _used = false;
 
 	// Use this for initialization
 	void Start () {
@@ -20,10 +21,17 @@ public class Checkpoint : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider c){
-		if(c.gameObject.CompareTag("Player")){
+		if(c.gameObject.CompareTag("Player") && !_used){
+			_used = true;
 			for(int i = 0; i < _checkpointObjects.Length; i++){
 				_objectPositions[i] = _checkpointObjects[i].transform.position;
 			}
+		}
+	}
+
+	public void Rollback(){
+		for(int i = 0; i < _checkpointObjects.Length; i++){
+			_checkpointObjects[i].transform.position = _objectPositions[i];
 		}
 	}
 }

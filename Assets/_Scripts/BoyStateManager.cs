@@ -81,7 +81,8 @@ public class BoyStateManager : MonoBehaviour {
 						if(Input.GetButtonDown("Interact")){	//Enter pushmode	
 							//Debug.Log("du tryckte på e");
 							enterPushMode();
-							GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ThirdPersonCamPatrikFailEdition>().setPushMode( ref _obj);
+							if(_obj != null)
+							GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ThirdPersonCamera>().setPushMode( ref _obj);
 							_pathfinding = true;
 						}
 					}
