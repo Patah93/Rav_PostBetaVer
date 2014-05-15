@@ -54,6 +54,7 @@ public class BoyStateManager : MonoBehaviour {
 				_pathfinding = false;
 				_ani.applyRootMotion = true;
 				_enterPush = true;
+
 			}
 		}
 		else if(_walk.enabled && Input.GetButtonDown("Aim")){
@@ -80,6 +81,7 @@ public class BoyStateManager : MonoBehaviour {
 						if(Input.GetButtonDown("Interact")){	//Enter pushmode	
 							//Debug.Log("du tryckte på e");
 							enterPushMode();
+							GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ThirdPersonCamPatrikFailEdition>().setPushMode( ref _obj);
 							_pathfinding = true;
 						}
 					}
