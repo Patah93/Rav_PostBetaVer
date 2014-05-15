@@ -17,7 +17,6 @@ public class ThirdPersonCamera : MonoBehaviour {
 	//Camera posistion and look at variables
 	public Vector3 Offset = Vector3.zero;
 	public Transform LookAtNormal;
-	public Transform LookAtInside;
 	[Range(0.0f, 5.0f)]
 	public float CameraUp = 1.0f;
 	[Range(0.0f, 5.0f)]
@@ -48,7 +47,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 	
 	//Controller variables for rotation speed etc
 	[Range(1.0f, 200.0f)]
-	public float RotationSpeedX = 100.0f;
+	public float RotationSpeedX = 150.0f;
 	[Range(1.0f, 200.0f)]
 	public float RotationSpeedY = 100.0f;
 	public bool InvertedX = true;
@@ -68,10 +67,10 @@ public class ThirdPersonCamera : MonoBehaviour {
 	public float autoMoveSmooth = 80.0f;
 	
 	//Camera compenstation values
+	[Range(0.0f, 0.3f)]
+	public float ScalingNormalCompenstation = 0.1f;
 	[Range(0.0f, 1.0f)]
-	public float ScalingNormalCompenstation = 1.0f;
-	[Range(0.0f, 5.0f)]
-	public float ScalingComenstationUpMovement = 1.0f;
+	public float ScalingComenstationUpMovement = 0.0f;
 	#endregion
 	
 	#region Private variables
@@ -147,9 +146,6 @@ public class ThirdPersonCamera : MonoBehaviour {
 	public enum CamStates
 	{
 		Behind,
-		FirstPerston,
-		Target,
-		Free,
 		Throw,
 		Inside
 	}
@@ -169,6 +165,9 @@ public class ThirdPersonCamera : MonoBehaviour {
 		
 		//grabbing the reference to the throw component.
 		referenceToThrow = GameObject.FindWithTag("Player").GetComponent<Throw>();
+
+		//setting near clip plane.
+		Camera.main.nearClipPlane = 0.1f;
 	}
 	
 	//Called if script component is enabled
@@ -193,7 +192,9 @@ public class ThirdPersonCamera : MonoBehaviour {
 		rightY = Input.GetAxis("RightStickVertical");
 		leftX = Input.GetAxis("Horizontal");
 		leftY = Input.GetAxis("Vertical");
-		
+
+		Debug.Log (rightX);
+
 		//check for inputs so the camera does not auto move if we've not used the right stick
 		//TODO Needs to check for all inputs!
 		if (Mathf.Abs(leftX) >= 0.1 && Mathf.Abs(rightX) == 0.0 && Mathf.Abs(rightY) == 0.0)
@@ -259,50 +260,6 @@ public class ThirdPersonCamera : MonoBehaviour {
 			
 			transform.LookAt(LookAtNormal);
 			break;
-		case CamStates.Inside:
-			
-			//saving the rotation amount
-			if (Mathf.Abs(rightX) > deadZoneX)
-				rotationAmountX += rightX * Time.deltaTime * RotationSpeedX * ((InvertedX == true) ? -1 : 1);
-			if (Mathf.Abs(rightY) > deadZoneY)
-				rotationAmountY += rightY * Time.deltaTime * RotationSpeedY * ((InvertedY == true) ? -1 : 1);
-			
-			//clamping Y rotation
-			rotationAmountY = Mathf.Clamp(rotationAmountY, cameraClampingY.x, cameraClampingY.y);
-			//clamping X rotation
-			if (Mathf.Abs(rotationAmountX) > 360.0f)
-				rotationAmountX = 0.0f;
-			
-			//addding the rotations
-			currentLookDirection = Quaternion.Euler(rotationAmountY, rotationAmountX, 0.0f) * Vector3.forward;
-			
-			//now if we are not directly in front of the character we want to slowly move behind the character.
-			//if the conditon for start moving is met.
-			if (!(Vector3.Dot(PlayerXform.forward, this.transform.forward) <= -0.8f))
-			{
-				if (startMoving)
-				{
-					rotationAmountX += (Vector3.Angle(-PlayerXform.right, this.transform.forward) > 90 ? -1.0f : 1.0f) * Time.deltaTime * autoMoveSmooth;
-				}
-			}
-			if ((Vector3.Dot(PlayerXform.forward, this.transform.forward) >= 1.0f))
-			{
-				startMoving = false;
-				deltaLastInput = 0;
-			}
-			
-			targetPosistion =
-				//moving target pos up according to CameraUp variable 
-				(LookAtInside.position + (Vector3.Normalize(PlayerXform.up) * insideCameraUp)) -
-					//move the target a bit back according to the CameraAway variable
-					(Vector3.Normalize(currentLookDirection) * insideCameraAway);
-			
-			
-			CompenstaForWalls(LookAtInside.position, ref targetPosistion);
-			smoothPosistion(this.transform.position, targetPosistion);
-			
-			transform.LookAt(LookAtInside.position);
-			break;
 		case CamStates.Throw:
 			//find the lookAt posistion
 			float pitch = 0.0f;
@@ -345,12 +302,6 @@ public class ThirdPersonCamera : MonoBehaviour {
 	#region Private functions
 	private void smoothPosistion(Vector3 fromPos, Vector3 toPos) {
 		this.transform.position = Vector3.SmoothDamp (fromPos, toPos, ref followerVelocity, camSmoothDampTme);
-		//this.transform.position = Vector3.Lerp(fromPos,toPos,10f * Time.renderedFrameCount);
-	}
-	
-	Vector3 SuperSmoothLerp( Vector3 pastPosition, Vector3 pastTargetPosition, Vector3 targetPosition, float time, float speed ) {
-		Vector3 f = pastPosition - pastTargetPosition + (targetPosition - pastTargetPosition) / (speed * time);
-		return targetPosition - (targetPosition - pastTargetPosition) / (speed*time) + f * Mathf.Exp(-speed*time);
 	}
 	private void CompenstaForWalls(Vector3 fromObject, ref Vector3 toTarget) {
 		Debug.DrawLine (toTarget,Camera.main.ViewportToWorldPoint(new Vector3(0.5f,0.5f,Camera.main.nearClipPlane)));
@@ -363,29 +314,8 @@ public class ThirdPersonCamera : MonoBehaviour {
 			toTarget = new Vector3(wallHit.point.x, wallHit.point.y, wallHit.point.z) + Vector3.up * ScalingComenstationUpMovement;
 			offset += wallHit.normal;
 			}
-
-			//left
-			if(Physics.Linecast(this.transform.position,Camera.main.ViewportToWorldPoint(new Vector3(0.0f,0.5f,Camera.main.nearClipPlane)),out wallHit)) {
-				offset += wallHit.normal;
-				//Debug.Log("Left");
-			}
-			//right
-			if(Physics.Linecast(this.transform.position,Camera.main.ViewportToWorldPoint(new Vector3(1.0f,0.5f,Camera.main.nearClipPlane)),out wallHit)) {
-				offset += wallHit.normal;
-				//Debug.Log("Right");
-			}
-			//down
-			if(Physics.Linecast(this.transform.position,Camera.main.ViewportToWorldPoint(new Vector3(0.5f,0.0f,Camera.main.nearClipPlane)),out wallHit)) {
-				offset += wallHit.normal;
-				//Debug.Log("down");
-			}
-			//up
-			if(Physics.Linecast(this.transform.position,Camera.main.ViewportToWorldPoint(new Vector3(0.5f,1.0f,Camera.main.nearClipPlane)),out wallHit)) {
-				offset += wallHit.normal;
-				//Debug.Log("Up");
-			}
-
 			toTarget = toTarget + offset.normalized * ScalingNormalCompenstation;
+			//this.transform.position = toTarget;
 	}
 	#endregion
 	

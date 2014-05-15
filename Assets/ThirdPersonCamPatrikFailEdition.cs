@@ -72,8 +72,14 @@ public class ThirdPersonCamPatrikFailEdition : MonoBehaviour {
 	public float ScalingNormalCompenstation = 1.0f;
 	[Range(0.0f, 5.0f)]
 	public float ScalingComenstationUpMovement = 1.0f;
+
+
 	[Range(0.0f, 2.0f)]
 	public float _wallDistance = 0.35f;
+	[Range(1.0f, 5.0f)]
+	public float _pushDistanceFactorY = 3.0f;
+	[Range(1.0f, 3.0f)]
+	public float _pushDistanceFactorXZ = 1.5f;
 	#endregion
 	
 	#region Private variables
@@ -118,6 +124,10 @@ public class ThirdPersonCamPatrikFailEdition : MonoBehaviour {
 	public CamStates PrevCamstate { get { return this.prevCamstate; } set { this.prevCamstate = value; } }
 	
 	Vector3 followerVelocity;
+
+	private Transform _obj = null;
+	private Vector3 _pushDir;
+	private bool _exitPushMode = false;
 	#endregion
 	
 	#region Structs
@@ -153,7 +163,8 @@ public class ThirdPersonCamPatrikFailEdition : MonoBehaviour {
 		Target,
 		Free,
 		Throw,
-		Inside
+		Inside,
+		Push
 	}
 	#endregion
 	
@@ -339,6 +350,76 @@ public class ThirdPersonCamPatrikFailEdition : MonoBehaviour {
 			//set the new lookAt
 			transform.LookAt(higestpos);
 			break;
+
+		case CamStates.Push:
+			
+			//saving the rotation amount
+			if (Mathf.Abs(rightX) > deadZoneX)
+				rotationAmountX += rightX * Time.deltaTime * RotationSpeedX * ((InvertedX == true) ? -1 : 1);
+			if (Mathf.Abs(rightY) > deadZoneY)
+				rotationAmountY += rightY * Time.deltaTime * RotationSpeedY * ((InvertedY == true) ? -1 : 1);
+			
+			//clamping Y rotation
+			rotationAmountY = Mathf.Clamp(rotationAmountY, cameraClampingY.x, cameraClampingY.y);
+			//clamping X rotation
+			if (Mathf.Abs(rotationAmountX) > 360.0f)
+				rotationAmountX = 0.0f;
+			
+			//addding the rotations
+			currentLookDirection = Quaternion.Euler(rotationAmountY, rotationAmountX, 0.0f) * Vector3.forward;
+			
+			//now if we are not directly in front of the character we want to slowly move behind the character.
+			//if the conditon for start moving is met.
+
+			/*
+			Vector3 velocity = PlayerXform.gameObject.GetComponent<CharacterController>().velocity;
+			if(velocity.sqrMagnitude > 0.001f){
+				_pushDir = velocity.normalized;
+			}
+
+			if (!(Vector3.Dot(_pushDir, this.transform.forward) <= -0.8f))
+			{
+				if (startMoving)
+				{
+					rotationAmountX += (Vector3.Angle(_pushDir, this.transform.forward) > 90 ? -1.0f : 1.0f) * Time.deltaTime * autoMoveSmooth;
+				}
+			}
+			if ((Vector3.Dot(_pushDir, this.transform.forward) >= 1.0f))
+			{
+				startMoving = false;
+				deltaLastInput = 0;
+			}
+			*/
+			Vector3 lookPos = _obj.transform.position + (PlayerXform.position - _obj.transform.position)/2.0f + _obj.collider.bounds.extents.y*0.985f*Vector3.up; 
+			
+			targetPosistion =
+				//moving target pos up according to CameraUp variable 
+				(lookPos + (Vector3.Normalize(PlayerXform.up) * CameraUp * _pushDistanceFactorY)) -
+					//move the target a bit back according to the CameraAway variable
+					(Vector3.Normalize(currentLookDirection) * CameraAway * _pushDistanceFactorXZ);
+			
+			
+			CompenstaForWalls(lookPos, ref targetPosistion);
+			
+			//Vector3 pos = transform.position;
+			//CompenstaForWalls(LookAtNormal.position, ref pos);
+			//transform.position = pos;
+			
+			smoothPosistion(this.transform.position, targetPosistion);
+			
+			transform.LookAt(lookPos);
+
+			if (Input.GetButtonDown("Interact")){
+				if(_exitPushMode){
+					camState = prevCamstate;
+					_exitPushMode = false;
+				}else{
+					_exitPushMode = true;
+				}
+
+			}
+
+			break;
 		}
 		
 		
@@ -410,6 +491,12 @@ public class ThirdPersonCamPatrikFailEdition : MonoBehaviour {
 	#endregion
 	
 	#region Public functions
+
+	public void setPushMode(ref Transform obj){
+		camState = CamStates.Push;
+		_obj = obj;
+		_pushDir = PlayerXform.forward;
+	}
 	#endregion
 }
 
