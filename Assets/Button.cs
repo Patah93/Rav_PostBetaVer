@@ -10,9 +10,9 @@ public class Button : MonoBehaviour {
 	
 	TriggerAction[] _action;
 
-	const float _PRESS_DISTANCE = 4;
+	public float _PRESS_DISTANCE = 4;
 
-	const float _PRESS_ANGLE = 45;
+	public float _PRESS_ANGLE = 45;
 
 	bool _pressed = false;
 
