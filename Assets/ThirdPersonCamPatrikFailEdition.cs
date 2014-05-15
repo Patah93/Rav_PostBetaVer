@@ -390,7 +390,7 @@ public class ThirdPersonCamPatrikFailEdition : MonoBehaviour {
 				deltaLastInput = 0;
 			}
 			*/
-			Vector3 lookPos = _obj.transform.position + (PlayerXform.position - _obj.transform.position)/2.0f; 
+			Vector3 lookPos = _obj.transform.position + (PlayerXform.position - _obj.transform.position)/2.0f + _obj.collider.bounds.extents.y*0.985f*Vector3.up; 
 			
 			targetPosistion =
 				//moving target pos up according to CameraUp variable 
