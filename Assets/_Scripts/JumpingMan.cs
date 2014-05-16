@@ -86,12 +86,12 @@ public class JumpingMan : MonoBehaviour {
 		}
 		
 */
-		if(Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f ,Vector3.down,out _rayHit,1.1f)){
+		if(!_jump && Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f ,Vector3.down,out _rayHit,2.5f)){
 			_animator.SetBool("Falling", false);
 			_deadTimer = 0.0f;
 			//_animan.enabled = true;
 		} else{
-			_jumpingMove = _charCon.velocity*_speedScale;
+			//_jumpingMove = _charCon.velocity*_speedScale;
 			_animator.SetBool("Falling", true);
 			_deadTimer += Time.deltaTime;
 			//_animan.enabled = false;
@@ -102,6 +102,9 @@ public class JumpingMan : MonoBehaviour {
 		}
 
 		if(_jump){
+
+			_jumpingMove.y -= _gravity*Time.deltaTime;
+			_charCon.Move(_jumpingMove*Time.deltaTime);
 
 			Vector3 temp = new Vector3(_offsetX,_offsetY,_offsetZ);
 			if(Time.time - _clock > _maxTime){
@@ -129,8 +132,7 @@ public class JumpingMan : MonoBehaviour {
 					}
 				}
 			}
-			_jumpingMove.y -= _gravity*Time.deltaTime;
-			_charCon.Move(_jumpingMove*Time.deltaTime);
+
 		}
 		////Debug.Log("cooldown is" + _cooldown);
 		 

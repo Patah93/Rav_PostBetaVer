@@ -214,8 +214,8 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110249780}
   m_DstState: {fileID: 110221986}
-  m_TransitionDuration: .162586674
-  m_TransitionOffset: .15887922
+  m_TransitionDuration: .0355488062
+  m_TransitionOffset: .107884675
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: Falling
