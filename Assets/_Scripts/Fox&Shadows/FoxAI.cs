@@ -52,7 +52,7 @@ public class FoxAI : MonoBehaviour {
 	public float _moveSpeed = 4.0f;
 
 	[Range(1.0f, 3.0f)]
-	public float _turnspeedFactor = 1.2f;
+	public float _turnspeedFactor = 1.1f;
 
 	// Use this for initialization
 	void Start () {
@@ -110,12 +110,14 @@ public class FoxAI : MonoBehaviour {
 				}
 			} else {
 				if(!_pathSafe && _refuseMoveIfLight){
-					//checkPathForShadows();
+					checkPathForShadows();
+					//Debug.Log ("Checking path for shadows!");
 				}
 				if(_pathSafe || !_refuseMoveIfLight){
 					move ();
+					//Debug.Log ("Moving!");
 				}
-				else{
+				else if(!_pathSafe){
 					/* TODO Hantera "Oh no mr Boy, me no can walk!" */
 					_targetNode = null;
 				}
@@ -125,11 +127,13 @@ public class FoxAI : MonoBehaviour {
 				if (Input.GetButtonDown ("FoxForward") || Input.GetAxis("FoxCall") > 0){
 					if (_currentNode._nextNode != null && !_currentNode._isWaitingForAction) {
 						_targetNode = _currentNode._nextNode;
+						_ani.SetBool("Walking", true);
 					}
 				}
 				if (Input.GetButtonDown ("FoxBackward") || Input.GetAxis("FoxCall") < 0) {
 					if (_currentNode != null) {
 						_targetNode = _currentNode._prevNode;
+						_ani.SetBool("Walking", true);
 					}
 				}
 			}
@@ -189,6 +193,7 @@ public class FoxAI : MonoBehaviour {
 
 			if(_targetNode == null && !_currentNode._isWaitingForAction && !_controlled && (!_moveWhenBoyIsClose || _boyClose)){
 				_targetNode = _currentNode._nextNode;
+				_ani.SetBool("Walking", true);
 			}
 		}
 
@@ -198,7 +203,7 @@ public class FoxAI : MonoBehaviour {
 
 	bool reachedTarget(){
 		/* Magi */
-		return (new Vector2(transform.position.x, transform.position.z) - new Vector2(_targetNode.transform.position.x, _targetNode.transform.position.z)).sqrMagnitude < 0.01f;
+		return (new Vector2(transform.position.x, transform.position.z) - new Vector2(_targetNode.transform.position.x, _targetNode.transform.position.z)).sqrMagnitude < 0.1f;
 	}
 
 	void checkPathForShadows(){
@@ -276,7 +281,7 @@ public class FoxAI : MonoBehaviour {
 
 			float angle = Vector2.Angle (new Vector2(transform.right.x, transform.right.z).normalized, toNextNode.normalized);
 
-			if(angle < 89){
+			if(angle < 90){
 				turnDir = new Vector2(transform.right.x, transform.right.z).normalized;
 			}else{
 				turnDir = new Vector2(transform.right.x, transform.right.z).normalized * -1;
@@ -333,7 +338,7 @@ public class FoxAI : MonoBehaviour {
 					
 					Vector2 rightAngleVec = new Vector2(-1 * turnPointToPosition.y, turnPointToPosition.x);
 					
-					if(Vector2.Angle (rightAngleVec, new Vector2(transform.forward.x, transform.forward.z).normalized) > 91){
+					if(Vector2.Angle (rightAngleVec, new Vector2(transform.forward.x, transform.forward.z).normalized) > 90){
 						rightAngleVec *= -1;
 					}
 					
