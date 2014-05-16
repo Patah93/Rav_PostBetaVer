@@ -85,7 +85,9 @@ public class Throw : MonoBehaviour {
 		//if (camera.camState == ThirdPersonCamera.CamStates.FirstPerston) {
 		if (GetComponent<Animator>().GetBool ("ThrowMode")) {
 			if(throbject == null && Time.time > clock){
+				Debug.Log("BANAS: " + Time.deltaTime);
 				throbject = Instantiate(throwObj, GameObject.Find("L_wrist_ctrl").transform.position/*PlayerXForm.position + (PlayerXForm.forward * 1) + new Vector3(0f,1f,0f)*/,Quaternion.identity) as Rigidbody;
+				throbject.GetComponent<BoxCollider>().enabled = false;
 				throbject.transform.parent = GameObject.Find("L_wrist_ctrl").transform;
 				throbject.rigidbody.useGravity = false;
 
@@ -111,12 +113,7 @@ public class Throw : MonoBehaviour {
 		//clone = Instantiate(throwObj, GameObject.Find("L_wrist_ctrl").transform.position/*PlayerXForm.position + (PlayerXForm.forward * 1) + new Vector3(0f,1f,0f)*/,Quaternion.identity) as Rigidbody;
 
 
-		throbject.rigidbody.useGravity = true;
-		GameObject.Find("L_wrist_ctrl").transform.DetachChildren();
 
-		throbject.AddForce(force, ForceMode.Impulse);
-		throbject = null;
-		clock = Time.time + 1f;
 	}
 	/*
 	void UpdatePredictionLine() {
@@ -193,4 +190,17 @@ public class Throw : MonoBehaviour {
 		if(GetComponent<Animator>().GetBool("Throw"))
 			changeThrowStatus();						
 	}
+
+	void ThrowThing(){
+
+		throbject.rigidbody.useGravity = true;
+		GameObject.Find("L_wrist_ctrl").transform.DetachChildren();
+		throbject.GetComponent<BoxCollider>().enabled = true;
+		throbject.AddForce(force, ForceMode.Impulse);
+		throbject = null;
+		clock = Time.time + 1f;
+
+
+	}
+
 }

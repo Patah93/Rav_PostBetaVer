@@ -4,6 +4,7 @@ using System.Collections;
 public class JumpingMan : MonoBehaviour {
 
 	private Animator _animator;
+	private CharacterController _charCon;
 	public float _jumpForce = 300;
 	public float _offsetX = 0;
 	public float _offsetY = 0;
@@ -14,6 +15,12 @@ public class JumpingMan : MonoBehaviour {
 	bool _jump = false;
 	RaycastHit _rayHit;
 	//AnimationMan _animan;
+	private Vector3 _jumpingMove = Vector3.zero;
+	public float _gravity = 20.0f;
+	public float _jumpSpeed = 8.0f;
+	[Range(0.01f, 2.0f)]
+	public float _speedScale = 0.6f;
+
 	
 
 	//FUNGERAR HELT OKEJ MEN BEHÖVER KASTA RAYS FRÅN KANTERNA PÅ GUBBEN
@@ -21,12 +28,19 @@ public class JumpingMan : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_animator = GetComponent<Animator>();
+		_charCon = GetComponent<CharacterController> ();
 	//	_animan = GetComponent<AnimationMan>();
 		//_startPosition = transform.position.y;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+	
+		Debug.Log (_charCon.velocity);
+
+		if(_animator.applyRootMotion == false){
+			Debug.Log("NO MOTION FOR ME");
+		}
 
 		if(Input.GetButtonDown("Jump")){	//Aktiverar hoppet
 			//Debug.Log("you pressed jump)");
@@ -47,14 +61,18 @@ public class JumpingMan : MonoBehaviour {
 
 				//gameObject.GetComponent<CapsuleCollider>().enabled = true;
 
-
+				_jumpingMove = _charCon.velocity*_speedScale;
+				_jumpingMove.y = _jumpSpeed;
+				_animator.applyRootMotion = false;
 				_animator.SetBool("Jump", true);
 				_clock = Time.time;
 
 			}
+
 		}
+	
 
-
+		_animator.SetBool("Jump", false);
 	/*	if(_jump && transform.position.y - _startPosition > _jumpHeight){	//Hoppat så högt den klarar, kör en cooldown
 			////Debug.Log("cooldown");
 			_cooldown = true;
@@ -70,6 +88,11 @@ public class JumpingMan : MonoBehaviour {
 		}
 
 		if(_jump){
+
+			_jumpingMove.y -= _gravity*Time.deltaTime;
+			_charCon.Move(_jumpingMove*Time.deltaTime);
+
+
 			Vector3 temp = new Vector3(_offsetX,_offsetY,_offsetZ);
 			if(Time.time - _clock > _maxTime){
 
@@ -82,7 +105,9 @@ public class JumpingMan : MonoBehaviour {
 						//Debug.Log ("hit something"); 
 						//_startPosition = transform.position.y;
 						_jump = false;
-						_animator.SetBool("Jump", false);
+						//_animator.SetBool("Jump", false);
+						_animator.applyRootMotion = true;
+
 						//rigidbody.constraints = ; 
 						//_animan.enabled = true;
 
@@ -101,4 +126,6 @@ public class JumpingMan : MonoBehaviour {
 	public bool isJumping(){
 		return _jump;
 	}
+
+
 }

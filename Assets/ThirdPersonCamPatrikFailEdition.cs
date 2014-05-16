@@ -367,29 +367,7 @@ public class ThirdPersonCamPatrikFailEdition : MonoBehaviour {
 			
 			//addding the rotations
 			currentLookDirection = Quaternion.Euler(rotationAmountY, rotationAmountX, 0.0f) * Vector3.forward;
-			
-			//now if we are not directly in front of the character we want to slowly move behind the character.
-			//if the conditon for start moving is met.
 
-			/*
-			Vector3 velocity = PlayerXform.gameObject.GetComponent<CharacterController>().velocity;
-			if(velocity.sqrMagnitude > 0.001f){
-				_pushDir = velocity.normalized;
-			}
-
-			if (!(Vector3.Dot(_pushDir, this.transform.forward) <= -0.8f))
-			{
-				if (startMoving)
-				{
-					rotationAmountX += (Vector3.Angle(_pushDir, this.transform.forward) > 90 ? -1.0f : 1.0f) * Time.deltaTime * autoMoveSmooth;
-				}
-			}
-			if ((Vector3.Dot(_pushDir, this.transform.forward) >= 1.0f))
-			{
-				startMoving = false;
-				deltaLastInput = 0;
-			}
-			*/
 			Vector3 lookPos = _obj.transform.position + (PlayerXform.position - _obj.transform.position)/2.0f + _obj.collider.bounds.extents.y*0.985f*Vector3.up; 
 			
 			targetPosistion =
@@ -400,10 +378,6 @@ public class ThirdPersonCamPatrikFailEdition : MonoBehaviour {
 			
 			
 			CompenstaForWalls(lookPos, ref targetPosistion);
-			
-			//Vector3 pos = transform.position;
-			//CompenstaForWalls(LookAtNormal.position, ref pos);
-			//transform.position = pos;
 			
 			smoothPosistion(this.transform.position, targetPosistion);
 			
