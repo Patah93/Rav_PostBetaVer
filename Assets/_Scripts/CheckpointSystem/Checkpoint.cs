@@ -2,10 +2,11 @@
 using System.Collections;
 
 public class Checkpoint : MonoBehaviour {
-
+	public GameObject ScreenFade;
 	public GameObject[] _checkpointObjects;
 	public Vector3[] _objectPositions;
 	bool _used = false;
+	bool _rollback = false;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,12 @@ public class Checkpoint : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+		if(_rollback){
+			ScreenFade.GetComponent<FadeCamera>().Fading(false);
+		} else if(!_rollback){
+			ScreenFade.GetComponent<FadeCamera>().Fading(true);
+		}
 	}
 
 	void OnTriggerEnter(Collider c){
@@ -33,5 +39,9 @@ public class Checkpoint : MonoBehaviour {
 		for(int i = 0; i < _checkpointObjects.Length; i++){
 			_checkpointObjects[i].transform.position = _objectPositions[i];
 		}
+	}
+
+	public void StartRollback(bool b){
+		_rollback = b;
 	}
 }
