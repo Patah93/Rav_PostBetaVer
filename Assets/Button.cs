@@ -54,7 +54,7 @@ public class Button : MonoBehaviour {
 			if((_boy.transform.position - gameObject.transform.position).sqrMagnitude <= _PRESS_DISTANCE){
 				if(Vector2.Angle((new Vector2(gameObject.transform.position.x, gameObject.transform.position.z) - new Vector2(_boy.transform.position.x, _boy.transform.position.z)).normalized, new Vector2(_boy.transform.forward.x, _boy.transform.forward.z))  <= _PRESS_ANGLE){
 					_ani.SetBool("PushButton",true);
-					_ani.applyRootMotion = false;
+				//	_ani.applyRootMotion = false;
 					_checkevent = true;
 
 					//Color temp = gameObject.renderer.materials[1].color;
@@ -83,7 +83,7 @@ public class Button : MonoBehaviour {
 			}
 		}
 		if(_ani.GetCurrentAnimatorStateInfo(0).IsName("Idle")){
-			_ani.applyRootMotion = true;
+			//_ani.applyRootMotion = true;
 		}
 	}
 	/*

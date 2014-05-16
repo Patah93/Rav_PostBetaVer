@@ -9,6 +9,10 @@ public class FoxNode  : TriggerAction {
 	public bool _isWayPointNode = false;
 	public bool _isWaitingForAction = false;
 
+	public bool _isTurningNode = false;
+
+	public bool _isTeleportNode = false;
+
 	// Use this for initialization
 	void Start () {
 		if(GetComponent<Renderer>() != null)
