@@ -18,7 +18,7 @@ public class FoxAI : MonoBehaviour {
 
 	bool _fleeing = false;
 
-	public bool _refuseMoveIfLight = true;
+	public bool _refuseMoveIfLight = false;
 
 	public bool _controlled = false;
 
@@ -103,9 +103,8 @@ public class FoxAI : MonoBehaviour {
 					_ani.SetBool("Walking", false);
 				}
 			} else {
-				if(!_pathSafe){
+				if(!_pathSafe && _refuseMoveIfLight){
 					//checkPathForShadows();
-					_pathSafe = true;
 				}
 				if(_pathSafe || !_refuseMoveIfLight){
 					move ();
@@ -238,6 +237,8 @@ public class FoxAI : MonoBehaviour {
 		_pathSafe = true;
 		_ani.SetBool("Walking", true);
 		_testing = false;
+
+		Debug.Log ("TESTAR VÄGEN EFTER SKUGGOR");
 	}
 
 	void move(){
@@ -259,23 +260,27 @@ public class FoxAI : MonoBehaviour {
 
 		RaycastHit rayInfoFront, rayInfoBack;
 
-		if (!_turning && ((_currentNode._isTurningNode && _targetNode == _currentNode._nextNode) || (_targetNode._isTurningNode && _targetNode._nextNode == _currentNode))) {
+		if (!_turning && ((_currentNode._isTurningNode && _targetNode == _currentNode._nextNode) || (_targetNode._isTurningNode && _currentNode._prevNode == _targetNode))) {
 
 			_turning = true;
 
-			Vector2 toNextNode = new Vector2(_targetNode.transform.position.x, _targetNode.transform.position.z) - new Vector2(_targetNode.transform.position.x, _targetNode.transform.position.z);
+			Vector2 toNextNode = new Vector2(_targetNode.transform.position.x, _targetNode.transform.position.z) - new Vector2(_currentNode.transform.position.x, _currentNode.transform.position.z);
 
 			Vector2 turnDir;
 
-			float angle = Vector2.Angle (transform.right, toNextNode);
+			float angle = Vector2.Angle (new Vector2(transform.right.x, transform.right.z).normalized, toNextNode.normalized);
 
 			if(angle < 89){
-				turnDir = transform.right;
+				turnDir = new Vector2(transform.right.x, transform.right.z).normalized;
 			}else{
-				turnDir = transform.right * -1;
+				turnDir = new Vector2(transform.right.x, transform.right.z).normalized * -1;
 			}
 
-			_distanceToTurnPoint = toNextNode.magnitude/Mathf.Cos((angle * Mathf.PI)/180.0f)/2.0f;
+			Debug.DrawLine (transform.position, transform.position + new Vector3(turnDir.x, transform.position.y, turnDir.y), Color.red, 20.0f);
+
+			Debug.DrawLine (transform.position, transform.position + new Vector3(toNextNode.x, transform.position.y, toNextNode.y), Color.cyan, 20.0f);
+
+			_distanceToTurnPoint = toNextNode.magnitude/(Mathf.Cos((angle * Mathf.PI)/180.0f))/2.0f;
 
 			_turnPoint = new Vector2(_currentNode.transform.position.x, _currentNode.transform.position.z) + turnDir * _distanceToTurnPoint;
 
@@ -288,7 +293,7 @@ public class FoxAI : MonoBehaviour {
 
 			transform.rotation = Quaternion.LookRotation (_direction);
 		} else {
-			Debug.DrawLine (transform.position, _turnPoint, Color.green);
+			Debug.DrawLine (transform.position, new Vector3(_turnPoint.x, transform.position.y, _turnPoint.y), Color.green);
 		}
 
 		Vector3 frontFeetRayPoint = transform.position + transform.forward * 0.22f + Vector3.up * 0.5f;
@@ -309,8 +314,6 @@ public class FoxAI : MonoBehaviour {
 
 			_fallVec = Vector3.down * _fallAcc;
 
-			transform.position += transform.forward * 4 * Time.deltaTime;
-
 			////Debug.Log("I'M GROUNDED D:");
 
 			if(frontCast && backCast){
@@ -318,15 +321,17 @@ public class FoxAI : MonoBehaviour {
 				
 				if(_turning){
 					Vector2 turnPointToPosition = (new Vector2(transform.position.x, transform.position.z) - _turnPoint).normalized;
-					transform.position = new Vector3(_turnPoint.x, 0, _turnPoint.y) + (new Vector3(turnPointToPosition.x, 0, turnPointToPosition.y) * _distanceToTurnPoint);
+					transform.position = new Vector3(_turnPoint.x, transform.position.y, _turnPoint.y) + (new Vector3(turnPointToPosition.x, 0, turnPointToPosition.y) * _distanceToTurnPoint);
 					
 					Vector2 rightAngleVec = new Vector2(-1 * turnPointToPosition.y, turnPointToPosition.x);
 					
-					if(Vector2.Angle (rightAngleVec, transform.forward) > 91){
+					if(Vector2.Angle (rightAngleVec, new Vector2(transform.forward.x, transform.forward.z).normalized) > 91){
 						rightAngleVec *= -1;
 					}
 					
-					transform.rotation = Quaternion.LookRotation(new Vector3(rightAngleVec.x, 0, rightAngleVec.y));
+					_direction = new Vector3(rightAngleVec.x, 0, rightAngleVec.y).normalized;
+
+					transform.rotation = Quaternion.LookRotation (_direction);
 				}
 
 				float angle = Vector3.Angle(_direction, (rayInfoFront.point - rayInfoBack.point).normalized);
@@ -349,7 +354,7 @@ public class FoxAI : MonoBehaviour {
 
 			transform.position += yOffset + transform.forward * 4 * Time.deltaTime;
 			*/
-
+			transform.position += transform.forward * 4 * Time.deltaTime;
 
 		}	
 		
