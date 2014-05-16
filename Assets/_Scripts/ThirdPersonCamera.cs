@@ -15,27 +15,21 @@ public class ThirdPersonCamera : MonoBehaviour {
 	#region Public variables
 	
 	//Camera posistion and look at variables
-	public Vector3 Offset = Vector3.zero;
-	public Transform LookAtNormal;
+	public Transform LookAt;
 	[Range(0.0f, 5.0f)]
 	public float CameraUp = 1.0f;
 	[Range(0.0f, 5.0f)]
 	public float CameraAway = 3.0f;
 	[Range(0.0f, 5.0f)]
-	public float ThorowCameraUp = 0.0f;
+	public float ThrowCameraUp = 0.0f;
 	[Range(0.0f, 5.0f)]
 	public float ThrowCameraAway = 1.5f;
 	[Range(0.0f, 5.0f)]
 	public float ThrowCameraShoulderOffset = 1.0f;
 	
-	[Range(0.0f, 5.0f)]
-	public float insideCameraUp = .0f;
-	[Range(0.0f, 5.0f)]
-	public float insideCameraAway = 1.5f;
-	
 	//Camera max movement delta (Low value to create a moothing effect)
-	[Range(0.0f, 2.0f)]
-	public float camSmoothDampTme = 0.2f;
+	[Range(1.0f, 20.0f)]
+	public float camSmoothDampTme = 10.0f;
 	
 	//Controller Deadzone for rotating the camera. We only want to rotate camera when we move the stick far enough.
 	//values from 0 to 1
@@ -71,6 +65,12 @@ public class ThirdPersonCamera : MonoBehaviour {
 	public float ScalingNormalCompenstation = 0.1f;
 	[Range(0.0f, 1.0f)]
 	public float ScalingComenstationUpMovement = 0.0f;
+	
+	//Push mode variables
+	[Range(1.0f, 5.0f)]
+	public float _pushDistanceFactorY = 3.0f;
+	[Range(1.0f, 3.0f)]
+	public float _pushDistanceFactorXZ = 1.5f;
 	#endregion
 	
 	#region Private variables
@@ -115,6 +115,12 @@ public class ThirdPersonCamera : MonoBehaviour {
 	public CamStates PrevCamstate { get { return this.prevCamstate; } set { this.prevCamstate = value; } }
 	
 	Vector3 followerVelocity;
+	
+	//Push mode variables
+	private Transform _obj = null;
+	private Vector3 _pushDir;
+	private bool _exitPushMode = false;
+	
 	#endregion
 	
 	#region Structs
@@ -147,7 +153,8 @@ public class ThirdPersonCamera : MonoBehaviour {
 	{
 		Behind,
 		Throw,
-		Inside
+		Inside,
+		Push
 	}
 	#endregion
 	
@@ -165,7 +172,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 		
 		//grabbing the reference to the throw component.
 		referenceToThrow = GameObject.FindWithTag("Player").GetComponent<Throw>();
-
+		
 		//setting near clip plane.
 		Camera.main.nearClipPlane = 0.1f;
 	}
@@ -192,9 +199,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 		rightY = Input.GetAxis("RightStickVertical");
 		leftX = Input.GetAxis("Horizontal");
 		leftY = Input.GetAxis("Vertical");
-
-		Debug.Log (rightX);
-
+		
 		//check for inputs so the camera does not auto move if we've not used the right stick
 		//TODO Needs to check for all inputs!
 		if (Mathf.Abs(leftX) >= 0.1 && Mathf.Abs(rightX) == 0.0 && Mathf.Abs(rightY) == 0.0)
@@ -250,15 +255,15 @@ public class ThirdPersonCamera : MonoBehaviour {
 			
 			targetPosistion =
 				//moving target pos up according to CameraUp variable 
-				(LookAtNormal.position + (Vector3.Normalize(PlayerXform.up) * CameraUp)) -
+				(LookAt.position + (Vector3.Normalize(PlayerXform.up) * CameraUp)) -
 					//move the target a bit back according to the CameraAway variable
 					(Vector3.Normalize(currentLookDirection) * CameraAway);
 			
 			
-			CompenstaForWalls(LookAtNormal.position, ref targetPosistion);
+			CompenstaForWalls(LookAt.position, ref targetPosistion);
 			smoothPosistion(this.transform.position, targetPosistion);
 			
-			transform.LookAt(LookAtNormal);
+			transform.LookAt(LookAt);
 			break;
 		case CamStates.Throw:
 			//find the lookAt posistion
@@ -279,15 +284,52 @@ public class ThirdPersonCamera : MonoBehaviour {
 			//set camerea to right pos
 			targetPosistion =
 				//set it to be at the appropiate pos for over the shoulder.
-				LookAtNormal.position + PlayerXform.up * ThorowCameraUp -
+				LookAt.position + PlayerXform.up * ThrowCameraUp -
 					PlayerXform.forward * ThrowCameraAway - PlayerXform.right * ThrowCameraShoulderOffset;
 			
 			//compensate for ze walls
-			CompenstaForWalls(LookAtNormal.position, ref targetPosistion);
+			CompenstaForWalls(LookAt.position, ref targetPosistion);
 			//set the target to be smoothed
 			smoothPosistion(this.transform.position, targetPosistion);
 			//set the new lookAt
 			transform.LookAt(higestpos);
+			break;
+		case CamStates.Push:			
+			//saving the rotation amount
+			if (Mathf.Abs(rightX) > deadZoneX)
+				rotationAmountX += rightX * Time.deltaTime * RotationSpeedX * ((InvertedX == true) ? -1 : 1);
+			if (Mathf.Abs(rightY) > deadZoneY)
+				rotationAmountY += rightY * Time.deltaTime * RotationSpeedY * ((InvertedY == true) ? -1 : 1);
+			
+			//clamping Y rotation
+			rotationAmountY = Mathf.Clamp(rotationAmountY, cameraClampingY.x, cameraClampingY.y);
+			
+			//clamping X rotation
+			if (Mathf.Abs(rotationAmountX) > 360.0f)
+				rotationAmountX = 0.0f;
+			
+			//addding the rotations
+			currentLookDirection = Quaternion.Euler(rotationAmountY, rotationAmountX, 0.0f) * Vector3.forward;
+			Vector3 lookPos = _obj.transform.position + (PlayerXform.position - _obj.transform.position)/2.0f + _obj.collider.bounds.extents.y*0.985f*Vector3.up; 
+			
+			targetPosistion =
+				//moving target pos up according to CameraUp variable 
+				(lookPos + (Vector3.Normalize(PlayerXform.up) * CameraUp * _pushDistanceFactorY)) -
+					//move the target a bit back according to the CameraAway variable
+					(Vector3.Normalize(currentLookDirection) * CameraAway * _pushDistanceFactorXZ);
+			
+			CompenstaForWalls(lookPos, ref targetPosistion);
+			smoothPosistion(this.transform.position, targetPosistion);
+			transform.LookAt(lookPos);
+			
+			if (Input.GetButtonDown("Interact")){
+				if(_exitPushMode){
+					camState = prevCamstate;
+					_exitPushMode = false;
+				}else{
+					_exitPushMode = true;
+				}			
+			}
 			break;
 		}
 		
@@ -301,25 +343,35 @@ public class ThirdPersonCamera : MonoBehaviour {
 	
 	#region Private functions
 	private void smoothPosistion(Vector3 fromPos, Vector3 toPos) {
-		this.transform.position = Vector3.SmoothDamp (fromPos, toPos, ref followerVelocity, camSmoothDampTme);
+		this.transform.position = Vector3.SmoothDamp (fromPos, toPos, ref followerVelocity, Time.deltaTime * camSmoothDampTme);
 	}
 	private void CompenstaForWalls(Vector3 fromObject, ref Vector3 toTarget) {
 		Debug.DrawLine (toTarget,Camera.main.ViewportToWorldPoint(new Vector3(0.5f,0.5f,Camera.main.nearClipPlane)));
 		Debug.DrawLine (toTarget, Camera.main.ViewportToWorldPoint (new Vector3 (1.0f, 0.5f, Camera.main.nearClipPlane)),Color.red);
 		RaycastHit wallHit = new RaycastHit();
-
+		
 		Vector3 offset = Vector3.zero;
-
+		
 		if (Physics.Linecast(fromObject, toTarget, out wallHit)) {
 			toTarget = new Vector3(wallHit.point.x, wallHit.point.y, wallHit.point.z) + Vector3.up * ScalingComenstationUpMovement;
 			offset += wallHit.normal;
-			}
-			toTarget = toTarget + offset.normalized * ScalingNormalCompenstation;
-			//this.transform.position = toTarget;
+		}
+		toTarget = toTarget + offset.normalized * ScalingNormalCompenstation;
+		//this.transform.position = toTarget;
 	}
+	
+
+	
 	#endregion
 	
 	#region Public functions
+
+	public void setPushMode(ref Transform obj){
+		camState = CamStates.Push;		
+		_obj = obj;
+		_pushDir = PlayerXform.forward;	
+	}
+
 	#endregion
 }
 

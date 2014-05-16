@@ -6,7 +6,7 @@ public class BoyStateManager : MonoBehaviour {
 	public float _rayXOffset = 0.25f;
 	public float _rayYOffset = 0.6f;
 	public float _raylength = 3;
-	public float _pushOffset = 1;
+	public float _pushOffset = 0.25f;
 	public Rect _pos;
 
 	RaycastHit _rayHit;
@@ -81,7 +81,8 @@ public class BoyStateManager : MonoBehaviour {
 						if(Input.GetButtonDown("Interact")){	//Enter pushmode	
 							//Debug.Log("du tryckte på e");
 							enterPushMode();
-							GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ThirdPersonCamPatrikFailEdition>().setPushMode( ref _obj);
+							if(_obj != null)
+							GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ThirdPersonCamera>().setPushMode( ref _obj);
 							_pathfinding = true;
 						}
 					}
