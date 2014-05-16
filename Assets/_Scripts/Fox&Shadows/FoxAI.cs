@@ -277,14 +277,13 @@ public class FoxAI : MonoBehaviour {
 
 			Vector2 toNextNode = new Vector2(_targetNode.transform.position.x, _targetNode.transform.position.z) - new Vector2(_currentNode.transform.position.x, _currentNode.transform.position.z);
 
-			Vector2 turnDir;
-
 			float angle = Vector2.Angle (new Vector2(transform.right.x, transform.right.z).normalized, toNextNode.normalized);
 
-			if(angle < 90){
-				turnDir = new Vector2(transform.right.x, transform.right.z).normalized;
-			}else{
-				turnDir = new Vector2(transform.right.x, transform.right.z).normalized * -1;
+			Vector2 turnDir = new Vector2(transform.right.x, transform.right.z).normalized;
+
+			if(angle > 90){
+				turnDir *= -1;
+				angle = Vector2.Angle (turnDir, toNextNode.normalized);
 			}
 
 			//Debug.DrawLine (transform.position, transform.position + new Vector3(turnDir.x, transform.position.y, turnDir.y), Color.red, 20.0f);
