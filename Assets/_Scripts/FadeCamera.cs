@@ -4,17 +4,20 @@ using System.Collections;
 public class FadeCamera : MonoBehaviour {
 
 	public float _fadeSpeed = 1.0f;
-	public bool _fadeStart = true;
+	public bool[] _fadeStates;
 
 	void Awake(){
 		guiTexture.pixelInset = new Rect(-Screen.width/2f, -Screen.height/2f, Screen.width, Screen.height);
+		_fadeStates = new bool[2];
+		_fadeStates[0] = false;
+		_fadeStates[1] = false;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if(_fadeStart && guiTexture.color.a != 0.0f)
+		if(!_fadeStates[0] && guiTexture.color.a != 0.0f)
 			StartFadeIn();
-		else if(!_fadeStart && guiTexture.color.a != 1.0f)
+		else if(_fadeStates[0] && guiTexture.color.a != 1.0f)
 			StartFadeOut(); 
 	}
 
@@ -24,6 +27,7 @@ public class FadeCamera : MonoBehaviour {
 		FadeIn ();
 		
 		if(guiTexture.color.a < 0.05f){
+			_fadeStates[1] = false;
 			guiTexture.color = Color.clear;
 			guiTexture.enabled = false;
 		}
@@ -35,6 +39,7 @@ public class FadeCamera : MonoBehaviour {
 		FadeOut ();
 
 		if(guiTexture.color.a > 0.95f){
+			_fadeStates[1] = true;
 			guiTexture.color = Color.black;
 		}
 	}
@@ -48,14 +53,10 @@ public class FadeCamera : MonoBehaviour {
 	}
 
 	public void Fading(bool b){
-		_fadeStart = b;
+		_fadeStates[0] = b;
 	}
 
-	//*-*-*-*-*-*-*-*-*-*-*-*-*-* TO-DO *-*-*-*-*-*-*-*-*-*-*-*-*//
-	//   Returnera state så man kan köra rollback i Checkpoint	 //
-	//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
-
 	public bool FadeState(){
-		return true;
+		return _fadeStates[0] && _fadeStates[1];
 	}
 }
