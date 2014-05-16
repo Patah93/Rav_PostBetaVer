@@ -6,7 +6,7 @@ public class BoyStateManager : MonoBehaviour {
 	public float _rayXOffset = 0.25f;
 	public float _rayYOffset = 0.6f;
 	public float _raylength = 3;
-	public float _pushOffset = 1;
+	public float _pushOffset = 0.25f;
 	public Rect _pos;
 
 	RaycastHit _rayHit;
@@ -45,6 +45,8 @@ public class BoyStateManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		_drawInteract = false;
+
 		if(_pathfinding){
 			if(_wtpp.hasFinished()){
 				_ani.SetFloat("Speed",0);
@@ -52,7 +54,6 @@ public class BoyStateManager : MonoBehaviour {
 				_cooldown = true;	
 				_wtpp.enabled = false;
 				_pathfinding = false;
-				_ani.applyRootMotion = true;
 				_enterPush = true;
 			}
 		}
@@ -78,8 +79,10 @@ public class BoyStateManager : MonoBehaviour {
 					if(_rayHit.collider.transform.tag == "Interactive"&& !_jump.isJumping()){ //If that object is Interactive
 						_drawInteract = true;
 						if(Input.GetButtonDown("Interact")){	//Enter pushmode	
-							Debug.Log("du tryckte på e");
+							//Debug.Log("du tryckte på e");
 							enterPushMode();
+							if(_obj != null)
+							GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ThirdPersonCamera>().setPushMode( ref _obj);
 							_pathfinding = true;
 						}
 					}
@@ -90,9 +93,6 @@ public class BoyStateManager : MonoBehaviour {
 				if(Input.GetButtonDown("Interact")){		//Enter walk mode	
 					enterWalkMode();
 				}
-			}
-			else{
-				_drawInteract = false;
 			}
 			
 			if(_ani.GetCurrentAnimatorStateInfo(0).IsName("Push/Pull Idle") && _enterPush){	//Makes sure enterpush animation finishes before activating push
@@ -107,13 +107,14 @@ public class BoyStateManager : MonoBehaviour {
 				if(!_sideZ){
 					transform.position = new Vector3(transform.position.x,transform.position.y,_dudepos.z);
 				}
+				_ani.applyRootMotion = true;
 				_push.enabled = true;
 				_push.Activate(true, _obj,_direction*-1,_sideZ,_distance);
 			}
 
 			else if(!_ani.GetCurrentAnimatorStateInfo(0).IsName("Push/Pull Prepare") && _cooldown){ //Prevents player from gliding through box with animation
 				transform.position = _dudepos;
-			}
+			} 
 			
 			if(_ani.GetCurrentAnimatorStateInfo(0).IsName("Idle") && _leavePush){	//Makes sure leavepush animation finishes before activating walk
 				Physics.IgnoreCollision(transform.collider,_obj.collider,false);
@@ -172,7 +173,7 @@ public class BoyStateManager : MonoBehaviour {
 		_ani.applyRootMotion = false;
 
 		_wtpp.enabled = true;
-		Debug.Log("Objside is "+_objside);
+		//Debug.Log("Objside is "+_objside);
 		_wtpp.setDestination(transform.position,_dudepos,_direction);
 	}
 	

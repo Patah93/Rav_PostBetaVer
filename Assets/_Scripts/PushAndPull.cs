@@ -21,16 +21,15 @@ public class PushAndPull : MonoBehaviour {
 	bool _collidedf = false;
 	bool _collidedb = false;
 	bool _sideZ;
-
 	
 	void Start () {
 		_ani = GetComponent<Animator>();
 		_boystate = GetComponent<BoyStateManager>();
 		_charContr = GetComponent<CharacterController> ();
 	}
-	
+
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		if(_pushing){
 			if(Input.GetAxis("Vertical") > _deadZone || Input.GetAxis("Vertical") < -_deadZone){ //Joystick or WASD input
 				_speed = Mathf.Sign(Input.GetAxis("Vertical")); 
@@ -52,6 +51,8 @@ public class PushAndPull : MonoBehaviour {
 					}
 				}
 				_collidedf = true;
+
+				//Debug.Log (_derp.transform.name + " har jag krockat med " + _derp.point + " är där jag krockade i saken. " + _derp.transform.position + " är objektets position");
 			}
 			else if(_obj.rigidbody.SweepTest(_direction, out _derp, 0.1f)){ //Box collided backwards
 				if(!_derp.collider.CompareTag("Player")){
@@ -67,6 +68,8 @@ public class PushAndPull : MonoBehaviour {
 						}
 					}
 					_collidedb = true;
+
+					//Debug.Log (_derp.transform.name + " har jag krockat med " + _derp.point + " är där jag krockade i saken. " + _derp.transform.position + " är objektets position");
 				}
 			}
 			else{	//Box didn't collide with anything
@@ -77,8 +80,12 @@ public class PushAndPull : MonoBehaviour {
 			_ani.SetFloat("Speed", _speed);		
 			if(_speed == 0){					//Prevents box from gliding through walls because of animations
 				transform.position = _position;
+				_obj.audio.Stop();
 			}
-			
+			else if(!_obj.audio.isPlaying){
+				_obj.audio.Play();
+			}
+
 			if(_sideZ){ 
 				transform.position = new Vector3(_position.x,transform.position.y,transform.position.z);
 			}
@@ -88,15 +95,18 @@ public class PushAndPull : MonoBehaviour {
 
 			transform.forward = -_direction;	//Prevents character from rotating or moving sideways
 			_position = transform.position;		//
-			_obj.rigidbody.MovePosition(new Vector3(transform.position.x,_objposy + 0.5f,transform.position.z) + _distance*_direction*-1); //Moves box twice to make gravity work
+			_obj.position = new Vector3(transform.position.x,_objposy + 0.5f,transform.position.z) + _distance*_direction*-1;
+			//_obj.rigidbody.MovePosition(new Vector3(transform.position.x,_objposy + 0.5f,transform.position.z) + _distance*_direction*-1); //Moves box twice to make gravity work
 			if(!_obj.rigidbody.SweepTest(Vector3.down,out _derp,0.55f)){																	//
 				_boystate.enterWalkMode();																									//		
-			}																																//
-			_obj.rigidbody.MovePosition(new Vector3(transform.position.x,_objposy,transform.position.z) + _distance*_direction*-1);			//
-			
-			if(!_charContr.isGrounded){			//Gravity on player
-				_boystate.enterWalkMode();
 			}
+			//
+			//_obj.rigidbody.MovePosition(new Vector3(transform.position.x,_objposy,transform.position.z) + _distance*_direction*-1);			//
+			_obj.position = new Vector3(transform.position.x,_objposy,transform.position.z) + _distance*_direction*-1;
+
+			/*if(!_charContr.isGrounded){			//Gravity on player
+				_boystate.enterWalkMode();
+			}*/
 		}
 	}
 	

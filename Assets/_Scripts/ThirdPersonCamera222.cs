@@ -209,7 +209,7 @@ public class ThirdPersonCamera222 : MonoBehaviour {
                     //move the target a bit back according to the CameraAway variable
                     (Vector3.Normalize(currentLookDirection) * CameraAway);                
 
-                //Debug.Log("RightX: " + rightX + " " + "RightY: " + rightY + " " + "Distance: " + Vector3.Distance(this.transform.position, LookAt.position));
+                ////Debug.Log("RightX: " + rightX + " " + "RightY: " + rightY + " " + "Distance: " + Vector3.Distance(this.transform.position, LookAt.position));
                 break;
         }
 

@@ -20,6 +20,12 @@ public class FoxAI : MonoBehaviour {
 
 	public bool _refuseMoveIfLight = false;
 
+	public bool _controlled = false;
+
+	public bool _moveWhenBoyIsClose = true;
+
+	bool _boyClose = false;
+
 	public float CHECK_LIGHT_INTERVAL = 0.625f;
 
 	int _updateTick = 0;
@@ -35,6 +41,18 @@ public class FoxAI : MonoBehaviour {
 	public float _fallAcc = 0.01f;
 
 	private Vector3 _fallVec;
+
+	private float _distanceToTurnPoint;
+	
+	private Vector2 _turnPoint;
+
+	private bool _turning = false;
+
+	[Range(2.0f, 8.0f)]
+	public float _moveSpeed = 4.0f;
+
+	[Range(1.0f, 3.0f)]
+	public float _turnspeedFactor = 1.1f;
 
 	// Use this for initialization
 	void Start () {
@@ -66,43 +84,59 @@ public class FoxAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//Debug.DrawLine(transform.position + transform.forward * 0.22f + Vector3.up * 0.5f, transform.position + transform.forward * 0.22f + Vector3.up * 0.5f + Vector3.down * 1, Color.red);
-		//Debug.DrawLine(transform.position - transform.forward * 0.22f + Vector3.up * 0.5f, transform.position - transform.forward * 0.22f + Vector3.up * 0.5f + Vector3.down * 1, Color.red);
+		////Debug.DrawLine(transform.position + transform.forward * 0.22f + Vector3.up * 0.5f, transform.position + transform.forward * 0.22f + Vector3.up * 0.5f + Vector3.down * 1, Color.red);
+		////Debug.DrawLine(transform.position - transform.forward * 0.22f + Vector3.up * 0.5f, transform.position - transform.forward * 0.22f + Vector3.up * 0.5f + Vector3.down * 1, Color.red);
+
 		if (_targetNode != null) {
 			if (reachedTarget()) {
+				_turning = false;
 				transform.position = new Vector3(_targetNode.transform.position.x, transform.position.y, _targetNode.transform.position.z);
-				_fleeing = false;
-				_currentNode = _targetNode;
-				_targetNode = null;
-				_pathSafe = false;
+				if(_targetNode._isWayPointNode && !_fleeing){
+					if(_targetNode._nextNode != _currentNode){
+						_currentNode = _targetNode;
+						_targetNode = _currentNode._nextNode;
+					}
+					else{
+						_currentNode = _targetNode;
+						_targetNode = _currentNode._prevNode;
+					}
+				}else{
+					_fleeing = false;
+					_currentNode = _targetNode;
+					_targetNode = null;
+					_pathSafe = false;
 
-				_ani.SetBool("Walking", false);
+					_ani.SetBool("Walking", false);
+				}
 			} else {
-				if(!_pathSafe){
-					//checkPathForShadows();
-					_pathSafe = true;
-					_ani.SetBool("Walking", true);
+				if(!_pathSafe && _refuseMoveIfLight){
+					checkPathForShadows();
+					//Debug.Log ("Checking path for shadows!");
 				}
 				if(_pathSafe || !_refuseMoveIfLight){
 					move ();
+					//Debug.Log ("Moving!");
 				}
-				else{
+				else if(!_pathSafe){
 					/* TODO Hantera "Oh no mr Boy, me no can walk!" */
 					_targetNode = null;
 				}
 			}
 		} else {
-			if (Input.GetButtonDown ("FoxForward") || Input.GetAxis("FoxCall") > 0){
-				if (_currentNode._nextNode != null) {
-					_targetNode = _currentNode._nextNode;
+			if(_controlled){
+				if (Input.GetButtonDown ("FoxForward") || Input.GetAxis("FoxCall") > 0){
+					if (_currentNode._nextNode != null && !_currentNode._isWaitingForAction) {
+						_targetNode = _currentNode._nextNode;
+						_ani.SetBool("Walking", true);
+					}
+				}
+				if (Input.GetButtonDown ("FoxBackward") || Input.GetAxis("FoxCall") < 0) {
+					if (_currentNode != null) {
+						_targetNode = _currentNode._prevNode;
+						_ani.SetBool("Walking", true);
+					}
 				}
 			}
-			if (Input.GetButtonDown ("FoxBackward") || Input.GetAxis("FoxCall") < 0) {
-				if (_currentNode != null) {
-					_targetNode = _currentNode._prevNode;
-				}
-			}
-
 
 			/* Fall-kod */
 
@@ -116,7 +150,7 @@ public class FoxAI : MonoBehaviour {
 			
 			if(!(frontCast || backCast)){
 				/* TODO HANDLE BOTH FEET IN DAT AIR! */
-				//Debug.Log("I'M FLYYING :D");
+				//////Debug.Log("I'M FLYYING :D");
 				_fallVec += Vector3.down * _fallAcc;
 				transform.position += _fallVec;
 			}else{
@@ -142,8 +176,8 @@ public class FoxAI : MonoBehaviour {
 			 */
 		if(_updateTick == 0 && !_testing){
 
-			if(_shadowDetect.isObjectInLight()){
-				Debug.Log("DIEDIEDIEDIE POOR FOXIE! >='[");
+			if(_shadowDetect.isObjectInLightMorePoints()){
+				////Debug.Log("DIEDIEDIEDIE POOR FOXIE! >='[");
 
 				if(!_fleeing){
 					if(_targetNode == null){
@@ -156,6 +190,11 @@ public class FoxAI : MonoBehaviour {
 					_fleeing = true;
 				}
 			}
+
+			if(_targetNode == null && !_currentNode._isWaitingForAction && !_controlled && (!_moveWhenBoyIsClose || _boyClose)){
+				_targetNode = _currentNode._nextNode;
+				_ani.SetBool("Walking", true);
+			}
 		}
 
 		_updateTick++;
@@ -164,7 +203,7 @@ public class FoxAI : MonoBehaviour {
 
 	bool reachedTarget(){
 		/* Magi */
-		return (new Vector2(transform.position.x, transform.position.z) - new Vector2(_targetNode.transform.position.x, _targetNode.transform.position.z)).sqrMagnitude < 0.01f;
+		return (new Vector2(transform.position.x, transform.position.z) - new Vector2(_targetNode.transform.position.x, _targetNode.transform.position.z)).sqrMagnitude < 0.1f;
 	}
 
 	void checkPathForShadows(){
@@ -204,22 +243,69 @@ public class FoxAI : MonoBehaviour {
 		transform.position = originalPos;
 		transform.rotation = originalRotation;
 		_desiredRotation = originalRotation;
-		//Debug.Log(count + ": lightchecks!"); 
+		//////Debug.Log(count + ": lightchecks!"); 
 
 		_pathSafe = true;
+		_ani.SetBool("Walking", true);
 		_testing = false;
+
+		//Debug.Log ("TESTAR VÄGEN EFTER SKUGGOR");
 	}
 
 	void move(){
 
-		//Debug.Log("HERP");
+		//////Debug.Log("HERP");
+
+		if ((_currentNode._isTeleportNode && !_fleeing) || (_fleeing && _targetNode._isTeleportNode)) {
+			transform.position = _targetNode.transform.position;
+
+			if(!_fleeing){
+				transform.forward = (_targetNode._nextNode.transform.position - _targetNode.transform.position).normalized;
+			}
+			else{
+				transform.forward = (_targetNode._prevNode.transform.position - _targetNode.transform.position).normalized;
+			}
+			transform.forward = new Vector3(transform.forward.x, 0, transform.forward.z).normalized;
+			return;
+		}
 
 		RaycastHit rayInfoFront, rayInfoBack;
 
-		_direction = new Vector3((_targetNode.transform.position - transform.position).x, 0, (_targetNode.transform.position - transform.position).z);
-		_direction.Normalize();
+		if (!_turning && ((_currentNode._isTurningNode && _targetNode == _currentNode._nextNode) || (_targetNode._isTurningNode && _currentNode._prevNode == _targetNode))) {
 
-		transform.rotation = Quaternion.LookRotation(_direction);
+			_turning = true;
+
+			Vector2 toNextNode = new Vector2(_targetNode.transform.position.x, _targetNode.transform.position.z) - new Vector2(_currentNode.transform.position.x, _currentNode.transform.position.z);
+
+			Vector2 turnDir;
+
+			float angle = Vector2.Angle (new Vector2(transform.right.x, transform.right.z).normalized, toNextNode.normalized);
+
+			if(angle < 90){
+				turnDir = new Vector2(transform.right.x, transform.right.z).normalized;
+			}else{
+				turnDir = new Vector2(transform.right.x, transform.right.z).normalized * -1;
+			}
+
+			//Debug.DrawLine (transform.position, transform.position + new Vector3(turnDir.x, transform.position.y, turnDir.y), Color.red, 20.0f);
+
+			//Debug.DrawLine (transform.position, transform.position + new Vector3(toNextNode.x, transform.position.y, toNextNode.y), Color.cyan, 20.0f);
+
+			_distanceToTurnPoint = toNextNode.magnitude/(Mathf.Cos((angle * Mathf.PI)/180.0f))/2.0f;
+
+			_turnPoint = new Vector2(_currentNode.transform.position.x, _currentNode.transform.position.z) + turnDir * _distanceToTurnPoint;
+
+			//Debug.Log (_turnPoint + ": is turnpoint" );
+		} 
+
+		if (!_turning) {
+			_direction = new Vector3 ((_targetNode.transform.position - transform.position).x, 0, (_targetNode.transform.position - transform.position).z);
+			_direction.Normalize ();
+
+			transform.rotation = Quaternion.LookRotation (_direction);
+		} else {
+			//Debug.DrawLine (transform.position, new Vector3(_turnPoint.x, transform.position.y, _turnPoint.y), Color.green);
+		}
 
 		Vector3 frontFeetRayPoint = transform.position + transform.forward * 0.22f + Vector3.up * 0.5f;
 		Vector3 backFeetRayPoint = transform.position - transform.forward * 0.22f + Vector3.up * 0.5f;
@@ -229,7 +315,7 @@ public class FoxAI : MonoBehaviour {
 
 		if(!(frontCast || backCast)){
 				/* TODO HANDLE BOTH FEET IN DAT AIR! */
-				//Debug.Log("I'M FLYYING :D");
+				//////Debug.Log("I'M FLYYING :D");
 
 			_fallVec += Vector3.down * _fallAcc;
 			transform.position += _fallVec;
@@ -239,19 +325,43 @@ public class FoxAI : MonoBehaviour {
 
 			_fallVec = Vector3.down * _fallAcc;
 
-			//Debug.Log("I'M GROUNDED D:");
+			//////Debug.Log("I'M GROUNDED D:");
 
 			if(frontCast && backCast){
+
+				
+				if(_turning){
+					transform.position += transform.forward * Time.deltaTime * _turnspeedFactor;
+
+					Vector2 turnPointToPosition = (new Vector2(transform.position.x, transform.position.z) - _turnPoint).normalized;
+					transform.position = new Vector3(_turnPoint.x, transform.position.y, _turnPoint.y) + (new Vector3(turnPointToPosition.x, 0, turnPointToPosition.y) * _distanceToTurnPoint);
+					
+					Vector2 rightAngleVec = new Vector2(-1 * turnPointToPosition.y, turnPointToPosition.x);
+					
+					if(Vector2.Angle (rightAngleVec, new Vector2(transform.forward.x, transform.forward.z).normalized) > 90){
+						rightAngleVec *= -1;
+					}
+					
+					_direction = new Vector3(rightAngleVec.x, 0, rightAngleVec.y).normalized;
+
+					transform.rotation = Quaternion.LookRotation (_direction);
+
+					frontFeetRayPoint = transform.position + transform.forward * 0.22f + Vector3.up * 0.5f;
+					backFeetRayPoint = transform.position - transform.forward * 0.22f + Vector3.up * 0.5f;
+					
+					frontCast = Physics.Raycast(frontFeetRayPoint, Vector3.down, out rayInfoFront, 1.0f);
+					backCast = Physics.Raycast(backFeetRayPoint, Vector3.down, out rayInfoBack, 1.0f);
+				}
 
 				float angle = Vector3.Angle(_direction, (rayInfoFront.point - rayInfoBack.point).normalized);
 
 				if(rayInfoFront.distance > rayInfoBack.distance){
 					transform.rotation = Quaternion.Euler(transform.localEulerAngles.x + angle, transform.localEulerAngles.y, transform.localEulerAngles.z);
-					//Debug.Log("LUTNING! =D");
+					//////Debug.Log("LUTNING! =D");
 				}
 				else if(rayInfoFront.distance < rayInfoBack.distance){
 					transform.rotation = Quaternion.Euler(transform.localEulerAngles.x - angle, transform.localEulerAngles.y, transform.localEulerAngles.z);
-					//Debug.Log("LUTNING! =D");
+					//////Debug.Log("LUTNING! =D");
 				}else{
 					transform.rotation = Quaternion.Euler(transform.localEulerAngles.x + angle, transform.localEulerAngles.y, transform.localEulerAngles.z);
 				}
@@ -263,8 +373,8 @@ public class FoxAI : MonoBehaviour {
 
 			transform.position += yOffset + transform.forward * 4 * Time.deltaTime;
 			*/
+			transform.position += transform.forward * _moveSpeed * Time.deltaTime;
 
-			transform.position += transform.forward * 4 * Time.deltaTime;
 		}	
 		
 		if(Physics.Raycast(transform.position + transform.forward * 0.22f + Vector3.up * 0.5f, Vector3.down, out rayInfoFront, 1.0f)){
@@ -275,5 +385,9 @@ public class FoxAI : MonoBehaviour {
 			Vector3 yOffset = new Vector3(0, -(rayInfoBack.distance - 0.5f), 0);
 			transform.position += yOffset;
 		}
+	}
+
+	public void setBoyClose(bool boyClose){
+		_boyClose = boyClose;
 	}
 }
