@@ -45,6 +45,8 @@ public class BoyStateManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		_drawInteract = false;
+
 		if(_pathfinding){
 			if(_wtpp.hasFinished()){
 				_ani.SetFloat("Speed",0);
@@ -52,9 +54,7 @@ public class BoyStateManager : MonoBehaviour {
 				_cooldown = true;	
 				_wtpp.enabled = false;
 				_pathfinding = false;
-				_ani.applyRootMotion = true;
 				_enterPush = true;
-
 			}
 		}
 		else if(_walk.enabled && Input.GetButtonDown("Aim")){
@@ -94,9 +94,6 @@ public class BoyStateManager : MonoBehaviour {
 					enterWalkMode();
 				}
 			}
-			else{
-				_drawInteract = false;
-			}
 			
 			if(_ani.GetCurrentAnimatorStateInfo(0).IsName("Push/Pull Idle") && _enterPush){	//Makes sure enterpush animation finishes before activating push
 				transform.position = _dudepos;
@@ -110,13 +107,14 @@ public class BoyStateManager : MonoBehaviour {
 				if(!_sideZ){
 					transform.position = new Vector3(transform.position.x,transform.position.y,_dudepos.z);
 				}
+				_ani.applyRootMotion = true;
 				_push.enabled = true;
 				_push.Activate(true, _obj,_direction*-1,_sideZ,_distance);
 			}
 
 			else if(!_ani.GetCurrentAnimatorStateInfo(0).IsName("Push/Pull Prepare") && _cooldown){ //Prevents player from gliding through box with animation
 				transform.position = _dudepos;
-			}
+			} 
 			
 			if(_ani.GetCurrentAnimatorStateInfo(0).IsName("Idle") && _leavePush){	//Makes sure leavepush animation finishes before activating walk
 				Physics.IgnoreCollision(transform.collider,_obj.collider,false);
