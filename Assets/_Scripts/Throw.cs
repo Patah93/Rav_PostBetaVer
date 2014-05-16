@@ -115,6 +115,7 @@ public class Throw : MonoBehaviour {
 
 
 	}
+
 	/*
 	void UpdatePredictionLine() {
 		arcLine.SetVertexCount(180);
@@ -192,15 +193,13 @@ public class Throw : MonoBehaviour {
 	}
 
 	void ThrowThing(){
-
+		Debug.Log ("SHIT");
+		throbject.GetComponent<BoxCollider>().enabled = true;
 		throbject.rigidbody.useGravity = true;
 		GameObject.Find("L_wrist_ctrl").transform.DetachChildren();
-		throbject.GetComponent<BoxCollider>().enabled = true;
 		throbject.AddForce(force, ForceMode.Impulse);
 		throbject = null;
 		clock = Time.time + 1f;
-
-
 	}
 
 }

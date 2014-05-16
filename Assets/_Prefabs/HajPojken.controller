@@ -323,7 +323,7 @@ Transition:
   m_SrcState: {fileID: 110206798}
   m_DstState: {fileID: 110268223}
   m_TransitionDuration: .441176474
-  m_TransitionOffset: 0
+  m_TransitionOffset: .647855759
   m_Conditions:
   - m_ConditionMode: 5
     m_ConditionEvent: PushButton
