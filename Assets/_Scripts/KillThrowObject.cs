@@ -8,7 +8,7 @@ public class KillThrowObject : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_isThrown = false;
-		Physics.IgnoreCollision (transform.collider, GameObject.FindWithTag("Player").collider, true); 
+		//Physics.IgnoreCollision (transform.collider, GameObject.FindWithTag("Player").collider, true); 
 		audio.Stop();
 	}
 	

@@ -5,21 +5,33 @@ public class JumpingMan : MonoBehaviour {
 
 	private Animator _animator;
 	private CharacterController _charCon;
+	private Vector3 _jumpingMove = Vector3.zero;
+	private float _clock;
+	private float _maxTime = 1f;
+	private bool _jump = false;
+
+	public bool _dead = false;
+
 	public float _jumpForce = 300;
 	public float _offsetX = 0;
 	public float _offsetY = 0;
 	public float _offsetZ = 0;
-	float _clock;
-	float _maxTime = 1f;
-	//float _startPosition;
-	bool _jump = false;
-	RaycastHit _rayHit;
-	//AnimationMan _animan;
-	private Vector3 _jumpingMove = Vector3.zero;
 	public float _gravity = 20.0f;
 	public float _jumpSpeed = 8.0f;
 	[Range(0.01f, 2.0f)]
 	public float _speedScale = 0.6f;
+	public float _maxDeadTime = 10.0f;
+	public float _deadTimer = 0;
+
+
+	//float _startPosition;
+
+	RaycastHit _rayHit;
+	//AnimationMan _animan;
+
+
+
+
 
 	
 
@@ -35,12 +47,7 @@ public class JumpingMan : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-		Debug.Log (_charCon.velocity);
 
-		if(_animator.applyRootMotion == false){
-			Debug.Log("NO MOTION FOR ME");
-		}
 
 		if(Input.GetButtonDown("Jump")){	//Aktiverar hoppet
 			//Debug.Log("you pressed jump)");
@@ -81,17 +88,20 @@ public class JumpingMan : MonoBehaviour {
 */
 		if(Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f ,Vector3.down,out _rayHit,1.1f)){
 			_animator.SetBool("Falling", false);
+			_deadTimer = 0.0f;
 			//_animan.enabled = true;
 		} else{
+			_jumpingMove = _charCon.velocity*_speedScale;
 			_animator.SetBool("Falling", true);
+			_deadTimer += Time.deltaTime;
 			//_animan.enabled = false;
 		}
 
+		if(_deadTimer >= _maxDeadTime){
+			_dead = true;
+		}
+
 		if(_jump){
-
-			_jumpingMove.y -= _gravity*Time.deltaTime;
-			_charCon.Move(_jumpingMove*Time.deltaTime);
-
 
 			Vector3 temp = new Vector3(_offsetX,_offsetY,_offsetZ);
 			if(Time.time - _clock > _maxTime){
@@ -119,9 +129,14 @@ public class JumpingMan : MonoBehaviour {
 					}
 				}
 			}
+			_jumpingMove.y -= _gravity*Time.deltaTime;
+			_charCon.Move(_jumpingMove*Time.deltaTime);
 		}
 		////Debug.Log("cooldown is" + _cooldown);
+		 
+
 	}
+
 
 	public bool isJumping(){
 		return _jump;
