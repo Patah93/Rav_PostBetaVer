@@ -2403,9 +2403,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetNode: {fileID: 0}
   _refuseMoveIfLight: 0
+  _controlled: 0
+  _moveWhenBoyIsClose: 0
   CHECK_LIGHT_INTERVAL: .625
   _sleep_updates_shadowDet: 8
   _fallAcc: .0199999996
+  _moveSpeed: 4
+  _turnspeedFactor: 1.20000005
+  _rotationSpeed: 7
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
