@@ -199,7 +199,7 @@ public class FoxAI : MonoBehaviour {
 
 			if(_targetNode == null && !_currentNode._isWaitingForAction && !_controlled && (!_moveWhenBoyIsClose || _boyClose)){
 				_targetNode = _currentNode._nextNode;
-				if(_targetNode != null){
+				if(_targetNode != null && !_refuseMoveIfLight){
 					_ani.SetBool("Walking", true);
 				}
 			}
