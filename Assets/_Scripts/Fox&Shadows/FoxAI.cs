@@ -54,7 +54,7 @@ public class FoxAI : MonoBehaviour {
 	[Range(1.0f, 3.0f)]
 	public float _turnspeedFactor = 1.1f;
 
-	[Range(1.0f, 12.0f)]
+	[Range(1.0f, 30.0f)]
 	public float  _rotationSpeed = 7.0f;
 
 	// Use this for initialization
@@ -104,6 +104,9 @@ public class FoxAI : MonoBehaviour {
 						_targetNode = _currentNode._prevNode;
 					}
 				}else{
+					if(_fleeing){
+						transform.forward *= -1;
+					}
 					_fleeing = false;
 					_currentNode = _targetNode;
 					_targetNode = null;
@@ -199,7 +202,7 @@ public class FoxAI : MonoBehaviour {
 
 			if(_targetNode == null && !_currentNode._isWaitingForAction && !_controlled && (!_moveWhenBoyIsClose || _boyClose)){
 				_targetNode = _currentNode._nextNode;
-				if(_targetNode != null){
+				if(_targetNode != null && !_refuseMoveIfLight){
 					_ani.SetBool("Walking", true);
 				}
 			}
@@ -321,7 +324,7 @@ public class FoxAI : MonoBehaviour {
 				transform.rotation = Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y + _rotationSpeed, transform.localEulerAngles.z);
 
 				if(Vector2.Angle (new Vector2(transform.right.x, transform.right.z).normalized, targetDirection) >= 88){
-					transform.rotation = Quaternion.LookRotation (transform.forward);
+					transform.rotation = Quaternion.LookRotation (new Vector3(targetDirection.x, 0, targetDirection.y).normalized);
 				}
 				_direction = transform.forward;
 
@@ -329,7 +332,7 @@ public class FoxAI : MonoBehaviour {
 				transform.rotation = Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y - _rotationSpeed, transform.localEulerAngles.z);
 
 				if(Vector2.Angle (new Vector2(transform.right.x, transform.right.z).normalized, targetDirection) <= 90){
-					transform.rotation = Quaternion.LookRotation (transform.forward);
+					transform.rotation = Quaternion.LookRotation (new Vector3(targetDirection.x, 0, targetDirection.y).normalized);
 				}
 				_direction = transform.forward;
 			}

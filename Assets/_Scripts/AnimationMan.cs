@@ -13,6 +13,8 @@ public class AnimationMan : MonoBehaviour {
 	float _clock;
 
 	bool _active = true;
+	bool _spawn;
+	Vector3 _stopPos;
 
 
 	public Animator Animator {get{return this._animator;} }
@@ -31,6 +33,7 @@ public class AnimationMan : MonoBehaviour {
 		_animator = GetComponent<Animator>();
 		m_LocomotionId = Animator.StringToHash ("Base Layer.Run");
 		camera = Camera.main.GetComponent<ThirdPersonCamera> ();
+		_spawn = true;
 
 		//if (camera == null)
 						//Debug.Log ("no camera detected");
@@ -52,9 +55,10 @@ public class AnimationMan : MonoBehaviour {
 
 			if(!_animator.GetBool("ThrowMode")){
 				_length = Mathf.Sqrt(Mathf.Pow (Mathf.Abs(Input.GetAxis("Horizontal")),2) + Mathf.Pow (Mathf.Abs(Input.GetAxis("Vertical")),2));	
-			} else
+			} else{
 				lerpit = _lerpThrowTime;
-
+				_length = Mathf.Lerp(_length, 0, _lerpTime);
+			}
 			
 			
 				if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0 || Mathf.Abs(Input.GetAxis("Vertical")) > 0){
@@ -69,11 +73,26 @@ public class AnimationMan : MonoBehaviour {
 				else
 				{
 					_length = Mathf.Lerp(_length, 0, _lerpTime);
+					//_stop = true;
 
 				}
+				
 
 			
 			_animator.SetFloat("Speed", _length);
+			if(_length == 0){
+				_animator.applyRootMotion = false;
+			}
+			else{
+				_animator.applyRootMotion = true;
+			}
+		/*	if(_length == 0 && !_spawn){
+				transform.position = new Vector3(_stopPos.x,transform.position.y,_stopPos.z);
+			}
+
+		_stopPos = transform.position;
+		_spawn = false;
+		*/
 
 	}
 

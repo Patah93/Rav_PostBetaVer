@@ -7,8 +7,9 @@ public class JumpingMan : MonoBehaviour {
 	private CharacterController _charCon;
 	private Vector3 _jumpingMove = Vector3.zero;
 	private float _clock;
-	private float _maxTime = 1f;
+	public float _maxTime = 1f;
 	private bool _jump = false;
+	private float _stickLength;
 
 	public bool _dead = false;
 
@@ -22,6 +23,7 @@ public class JumpingMan : MonoBehaviour {
 	public float _speedScale = 0.6f;
 	public float _maxDeadTime = 10.0f;
 	public float _deadTimer = 0;
+	public float _rayLength = 1.0f;
 
 
 	//float _startPosition;
@@ -48,6 +50,7 @@ public class JumpingMan : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		_stickLength = (Mathf.Abs (Input.GetAxis ("Horizontal")) + Mathf.Abs (Input.GetAxis ("Vertical")));
 
 		if(Input.GetButtonDown("Jump")){	//Aktiverar hoppet
 			//Debug.Log("you pressed jump)");
@@ -68,11 +71,13 @@ public class JumpingMan : MonoBehaviour {
 
 				//gameObject.GetComponent<CapsuleCollider>().enabled = true;
 
-				_jumpingMove = _charCon.velocity*_speedScale;
+				_jumpingMove = _charCon.velocity*_speedScale*Mathf.Clamp(_stickLength,0, 1);
 				_jumpingMove.y = _jumpSpeed;
 				_animator.applyRootMotion = false;
 				_animator.SetBool("Jump", true);
 				_clock = Time.time;
+
+				Debug.Log(Mathf.Clamp(_stickLength,0, 1));
 
 			}
 
@@ -108,15 +113,19 @@ public class JumpingMan : MonoBehaviour {
 
 			Vector3 temp = new Vector3(_offsetX,_offsetY,_offsetZ);
 			if(Time.time - _clock > _maxTime){
-
-				if(Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f + temp.y ,Vector3.down,out _rayHit,1.1f)){	//Nuddat marken och kan hoppa igen
+				Debug.Log("NO LONGER FALLING");
+				if(Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f + temp.y ,Vector3.down,out _rayHit, _rayLength)){	//Nuddat marken och kan hoppa igen
 					Debug.DrawRay(transform.position + temp,Vector3.down,Color.blue,1 + temp.y,true);
 					Debug.DrawRay(transform.position, _rayHit.transform.position);
+
+					_animator.SetBool("Falling", false);
+
 					//Debug.Log("Collided with "+ _rayHit.collider.name);
 					if(!_rayHit.collider.name.Equals(this.name)){
 						//transform.rigidbody.constraints &= ~ RigidbodyConstraints.FreezeRotationX|~RigidbodyConstraints.FreezeRotationZ;
 						//Debug.Log ("hit something"); 
 						//_startPosition = transform.position.y;
+
 						_jump = false;
 						//_animator.SetBool("Jump", false);
 						_animator.applyRootMotion = true;
