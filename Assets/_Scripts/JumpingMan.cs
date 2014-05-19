@@ -9,6 +9,7 @@ public class JumpingMan : MonoBehaviour {
 	private float _clock;
 	public float _maxTime = 1f;
 	private bool _jump = false;
+	private float _stickLength;
 
 	public bool _dead = false;
 
@@ -49,6 +50,7 @@ public class JumpingMan : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		_stickLength = (Mathf.Abs (Input.GetAxis ("Horizontal")) + Mathf.Abs (Input.GetAxis ("Vertical")));
 
 		if(Input.GetButtonDown("Jump")){	//Aktiverar hoppet
 			//Debug.Log("you pressed jump)");
@@ -69,11 +71,13 @@ public class JumpingMan : MonoBehaviour {
 
 				//gameObject.GetComponent<CapsuleCollider>().enabled = true;
 
-				_jumpingMove = _charCon.velocity*_speedScale;
+				_jumpingMove = _charCon.velocity*_speedScale*Mathf.Clamp(_stickLength,0, 1);
 				_jumpingMove.y = _jumpSpeed;
 				_animator.applyRootMotion = false;
 				_animator.SetBool("Jump", true);
 				_clock = Time.time;
+
+				Debug.Log(Mathf.Clamp(_stickLength,0, 1));
 
 			}
 
