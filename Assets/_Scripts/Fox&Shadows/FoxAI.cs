@@ -54,6 +54,9 @@ public class FoxAI : MonoBehaviour {
 	[Range(1.0f, 3.0f)]
 	public float _turnspeedFactor = 1.1f;
 
+	[Range(1.0f, 12.0f)]
+	public float  _rotationSpeed = 7.0f;
+
 	// Use this for initialization
 	void Start () {
 
@@ -180,7 +183,7 @@ public class FoxAI : MonoBehaviour {
 				////Debug.Log("DIEDIEDIEDIE POOR FOXIE! >='[");
 
 				if(!_fleeing){
-					if(_targetNode == null){
+					if(_targetNode == null && _currentNode._prevNode != null){
 						_targetNode = _currentNode._prevNode;
 						_pathSafe = true;
 						_ani.SetBool("Walking", true);
@@ -188,12 +191,17 @@ public class FoxAI : MonoBehaviour {
 						_targetNode = _currentNode;
 					}
 					_fleeing = true;
+
+					/* TODO Ta bort när det finns en fin snabb rotation */
+					transform.forward *= -1;
 				}
 			}
 
 			if(_targetNode == null && !_currentNode._isWaitingForAction && !_controlled && (!_moveWhenBoyIsClose || _boyClose)){
 				_targetNode = _currentNode._nextNode;
-				_ani.SetBool("Walking", true);
+				if(_targetNode != null){
+					_ani.SetBool("Walking", true);
+				}
 			}
 		}
 
@@ -298,10 +306,37 @@ public class FoxAI : MonoBehaviour {
 		} 
 
 		if (!_turning) {
+			/*
 			_direction = new Vector3 ((_targetNode.transform.position - transform.position).x, 0, (_targetNode.transform.position - transform.position).z);
 			_direction.Normalize ();
 
 			transform.rotation = Quaternion.LookRotation (_direction);
+			*/
+
+			Vector2 targetDirection = new Vector2 ((_targetNode.transform.position - transform.position).x, (_targetNode.transform.position - transform.position).z).normalized;
+
+			float angle = Vector2.Angle (new Vector2(transform.right.x, transform.right.z).normalized, targetDirection);
+			if(angle < 89){
+
+				transform.rotation = Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y + _rotationSpeed, transform.localEulerAngles.z);
+
+				if(Vector2.Angle (new Vector2(transform.right.x, transform.right.z).normalized, targetDirection) >= 88){
+					transform.rotation = Quaternion.LookRotation (transform.forward);
+				}
+				_direction = transform.forward;
+
+			}else if(angle > 91){
+				transform.rotation = Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y - _rotationSpeed, transform.localEulerAngles.z);
+
+				if(Vector2.Angle (new Vector2(transform.right.x, transform.right.z).normalized, targetDirection) <= 90){
+					transform.rotation = Quaternion.LookRotation (transform.forward);
+				}
+				_direction = transform.forward;
+			}
+			else{
+				_direction = new Vector3(targetDirection.x, 0, targetDirection.y).normalized;
+				transform.rotation = Quaternion.LookRotation (_direction);
+			}
 		} else {
 			//Debug.DrawLine (transform.position, new Vector3(_turnPoint.x, transform.position.y, _turnPoint.y), Color.green);
 		}

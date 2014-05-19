@@ -46,15 +46,6 @@ public class FootSteps : MonoBehaviour {
 			}
 		}
 	}
-	// Use this for initialization
-	void Start () {
-		Debug.Log (_audios[0].Length);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	public AudioClip getRandomClip(int index){
 		if(index <= _audios.Length)
