@@ -104,6 +104,9 @@ public class FoxAI : MonoBehaviour {
 						_targetNode = _currentNode._prevNode;
 					}
 				}else{
+					if(_fleeing){
+						transform.forward *= -1;
+					}
 					_fleeing = false;
 					_currentNode = _targetNode;
 					_targetNode = null;
