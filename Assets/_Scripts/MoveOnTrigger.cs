@@ -6,27 +6,26 @@ public class MoveOnTrigger : TriggerAction {
 	Vector3 _originalPos;
 
 	public Vector3 _offset = new Vector3(0, 5, 0);
-
 	public float _moveTime = 0.02f;
-
 	public Vector3 _rotateAngles;
 	public float _rotateSpeed;
-
-
 	public bool _isMoving = false;
+
+	private Quaternion _startRotation;
 
 	bool _audioPlaying = false;
 
 	// Use this for initialization
 	void Start () {
 		_originalPos = transform.position;
+		_startRotation = transform.rotation;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 		if(_isMoving){
-			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(_rotateAngles), _rotateSpeed);
+			transform.rotation = Quaternion.Slerp(_startRotation, (_startRotation * Quaternion.Euler(_rotateAngles)), _rotateSpeed);
 			transform.position = Vector3.Lerp(gameObject.transform.position, _offset + _originalPos, _moveTime);
 			if(Mathf.Abs ((transform.position - (_offset + _originalPos)).magnitude) > 0.03){
 				if(!transform.audio.isPlaying){
