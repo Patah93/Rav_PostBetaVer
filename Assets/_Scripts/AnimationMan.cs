@@ -55,9 +55,10 @@ public class AnimationMan : MonoBehaviour {
 
 			if(!_animator.GetBool("ThrowMode")){
 				_length = Mathf.Sqrt(Mathf.Pow (Mathf.Abs(Input.GetAxis("Horizontal")),2) + Mathf.Pow (Mathf.Abs(Input.GetAxis("Vertical")),2));	
-			} else
+			} else{
 				lerpit = _lerpThrowTime;
-
+				_length = Mathf.Lerp(_length, 0, _lerpTime);
+			}
 			
 			
 				if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0 || Mathf.Abs(Input.GetAxis("Vertical")) > 0){
@@ -79,6 +80,12 @@ public class AnimationMan : MonoBehaviour {
 
 			
 			_animator.SetFloat("Speed", _length);
+			if(_length == 0){
+				_animator.applyRootMotion = false;
+			}
+			else{
+				_animator.applyRootMotion = true;
+			}
 		/*	if(_length == 0 && !_spawn){
 				transform.position = new Vector3(_stopPos.x,transform.position.y,_stopPos.z);
 			}
