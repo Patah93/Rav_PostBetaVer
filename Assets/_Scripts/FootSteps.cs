@@ -57,14 +57,14 @@ public class FootSteps : MonoBehaviour {
 		int a = i;
 		if(tag == "Player"){
 			GameObject sauce = (GameObject)Instantiate (_audioSauce, GameObject.Find ("L_foot_joint").transform.position, Quaternion.identity);
-			sauce.audio.clip = GetComponent<FootSteps> ().getRandomClip (a);
+			sauce.audio.clip = getRandomClip (a);
 			sauce.audio.Play ();
 		}
 
 		else if(tag == "Fox"){
 			Debug.Log ("FOX STEPS");
 			GameObject sauce = (GameObject)Instantiate (_audioSauce, GameObject.Find ("R_front_foot_joint").transform.position, Quaternion.identity);
-			sauce.audio.clip = GetComponent<FootSteps> ().getRandomClip (a);
+			sauce.audio.clip = getRandomClip (a);
 			sauce.audio.Play ();
 		}
 			
