@@ -194,8 +194,6 @@ public class ThirdPersonCamPatrikFailEdition : MonoBehaviour {
 	#region Update funtions
 	void Update()
 	{
-		if (Input.GetButtonDown("Aim"))
-			camState = (camState != CamStates.Throw) ? CamStates.Throw : prevCamstate;
 		
 		//We need to update the players transform so we always have the correct values.
 		PlayerXform = GameObject.FindWithTag("Player").transform;
@@ -471,6 +469,12 @@ public class ThirdPersonCamPatrikFailEdition : MonoBehaviour {
 		_obj = obj;
 		_pushDir = PlayerXform.forward;
 	}
+
+	public void setCameraState(string s){
+		if(s.Equals("Throw"))
+			camState = (camState != CamStates.Throw) ? CamStates.Throw : prevCamstate;
+	}
+
 	#endregion
 }
 

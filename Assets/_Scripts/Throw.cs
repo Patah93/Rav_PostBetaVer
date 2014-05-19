@@ -184,10 +184,13 @@ public class Throw : MonoBehaviour {
 	public void deActivateThrow(){
 		arcLine.SetVertexCount (0); 
 		GameObject.Find("L_wrist_ctrl").transform.DetachChildren();
+		throbject.collider.enabled = true;
 		if(throbject != null)			
 			throbject.rigidbody.useGravity = true;
 		target.renderer.enabled = false;
-		
+
+		//Destroy(throbject);
+
 		if(GetComponent<Animator>().GetBool("Throw"))
 			changeThrowStatus();						
 	}
