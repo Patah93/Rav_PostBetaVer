@@ -120,7 +120,9 @@ public class ThirdPersonCamera : MonoBehaviour {
 	private Transform _obj = null;
 	private Vector3 _pushDir;
 	private bool _exitPushMode = false;
-	
+
+	//bug fix for "clone" player objects
+	GameObject[] playerObjects;
 	#endregion
 	
 	#region Structs
@@ -163,6 +165,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 	//best used for references between scripts and Inits
 	void Awake()
 	{
+		playerObjects = GameObject.FindGameObjectsWithTag("Player");
 		//grabbing the transform from the character.
 		PlayerXform = GameObject.FindWithTag("Player").transform;
 		
@@ -190,9 +193,6 @@ public class ThirdPersonCamera : MonoBehaviour {
 		if (Input.GetButtonDown("Aim"))
 			camState = (camState != CamStates.Throw) ? CamStates.Throw : prevCamstate;
 		
-		//We need to update the players transform so we always have the correct values.
-		PlayerXform = GameObject.FindWithTag("Player").transform;
-		
 		//TODO : add more controller input grabs
 		//We need to grab the controller input values
 		rightX = Input.GetAxis("RightStickHorizontal");
@@ -213,6 +213,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 			startMoving = true;
 		else
 			startMoving = false;
+
 	}
 	void LateUpdate()
 	{
@@ -234,24 +235,32 @@ public class ThirdPersonCamera : MonoBehaviour {
 			//clamping X rotation
 			if (Mathf.Abs(rotationAmountX) > 360.0f)
 				rotationAmountX = 0.0f;
-			
+			 
 			//addding the rotations
 			currentLookDirection = Quaternion.Euler(rotationAmountY, rotationAmountX, 0.0f) * Vector3.forward;
 			
 			//now if we are not directly in front of the character we want to slowly move behind the character.
 			//if the conditon for start moving is met.
-			if (!(Vector3.Dot(PlayerXform.forward, this.transform.forward) <= -0.8f))
-			{
-				if (startMoving)
-				{
-					rotationAmountX += (Vector3.Angle(-PlayerXform.right, this.transform.forward) > 90 ? -1.0f : 1.0f) * Time.deltaTime * autoMoveSmooth;
-				}
-			}
-			if ((Vector3.Dot(PlayerXform.forward, this.transform.forward) >= 1.0f))
+
+			//player clone bug fix
+			if(playerObjects.Length > 1)
+			for(int i = 0; i < playerObjects.Length; i++)
+				if(playerObjects[i].name != "0 HajPojken(Clone)")
+					Destroy(playerObjects[i]);
+
+			if(startMoving)
+			if(Vector3.Dot(playerObjects[0].transform.forward,this.transform.forward) < .8f)
+				if(Vector3.Angle(playerObjects[0].transform.right, this.transform.forward) < 90)
+						rotationAmountX += Time.deltaTime * autoMoveSmooth * ((InvertedX == true) ? -1 : 1);
+				else if(Vector3.Angle(playerObjects[0].transform.right, this.transform.forward) > 90)
+						rotationAmountX -= Time.deltaTime * autoMoveSmooth * ((InvertedX == true) ? -1 : 1);
+
+			if ((Vector3.Dot(playerObjects[0].transform.forward, this.transform.forward) >= .8f))
 			{
 				startMoving = false;
 				deltaLastInput = 0;
 			}
+
 			
 			targetPosistion =
 				//moving target pos up according to CameraUp variable 
@@ -272,14 +281,11 @@ public class ThirdPersonCamera : MonoBehaviour {
 			
 			
 			//grabbing the higest pos form the throw arc
-			Vector3 higestpos = referenceToThrow.highestPos;
-			//Vector3 higestpos = Vector3.zero;
-			//Debug.Log(higestpos);
-			
+			Vector3 higestpos = referenceToThrow.highestPos;			
+
 			//angle between the camera to the target
 			pitch = Vector3.Dot(Vector3.Normalize(higestpos - this.transform.position), PlayerXform.transform.forward);
 			pitch = Mathf.Acos(pitch) * Mathf.Rad2Deg;
-			//Debug.Log(pitch);
 			
 			//set camerea to right pos
 			targetPosistion =
@@ -346,8 +352,6 @@ public class ThirdPersonCamera : MonoBehaviour {
 		this.transform.position = Vector3.SmoothDamp (fromPos, toPos, ref followerVelocity, Time.deltaTime * camSmoothDampTme);
 	}
 	private void CompenstaForWalls(Vector3 fromObject, ref Vector3 toTarget) {
-		Debug.DrawLine (toTarget,Camera.main.ViewportToWorldPoint(new Vector3(0.5f,0.5f,Camera.main.nearClipPlane)));
-		Debug.DrawLine (toTarget, Camera.main.ViewportToWorldPoint (new Vector3 (1.0f, 0.5f, Camera.main.nearClipPlane)),Color.red);
 		RaycastHit wallHit = new RaycastHit();
 		
 		Vector3 offset = Vector3.zero;
@@ -356,8 +360,6 @@ public class ThirdPersonCamera : MonoBehaviour {
 			toTarget = new Vector3(wallHit.point.x, wallHit.point.y, wallHit.point.z) + Vector3.up * ScalingComenstationUpMovement;
 			offset += wallHit.normal;
 		}
-		toTarget = toTarget + offset.normalized * ScalingNormalCompenstation;
-		//this.transform.position = toTarget;
 	}
 	
 
