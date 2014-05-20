@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class MoveOnTrigger : TriggerAction {
 
 	Vector3 _originalPos;
