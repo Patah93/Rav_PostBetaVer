@@ -16,9 +16,9 @@ public class ShadowDetection : MonoBehaviour {
 
 	private Vector3[] _localMoreSpreadPoints;
 
-	private bool temp_isLighted;
+	//private bool temp_isLighted;
 
-	private int _numberLightedVertices;
+	//private int _numberLightedVertices;
 
 	GameObject[] lamps;
 
@@ -30,9 +30,11 @@ public class ShadowDetection : MonoBehaviour {
 	void Start () {
 		_sunDirection = GameObject.FindGameObjectWithTag("Sun").transform.forward * -1;
 
-		temp_isLighted = false;
+		//temp_isLighted = false;
 
-		_numberLightedVertices = 0;
+		//_numberLightedVertices = 0;
+
+		_lastPosition = transform.position - new Vector3(100, 100, 100);
 
 		lamps = GameObject.FindGameObjectsWithTag("Lamp");
 
@@ -340,7 +342,7 @@ public class ShadowDetection : MonoBehaviour {
 	}
 
 	bool updatePointsOfInterest(){
-		if (_lastPosition == null || (_lastPosition - transform.position).sqrMagnitude > 0.1f) {
+		if ((_lastPosition - transform.position).sqrMagnitude > 0.1f) {
 			for (int i = 0; i < _pointsOfInterest.Length; i++) {
 				_pointsOfInterest [i] = gameObject.transform.TransformPoint (_localPointsOfInterest [i]);
 			}
@@ -359,7 +361,7 @@ public class ShadowDetection : MonoBehaviour {
 	}
 
 	bool updateMoreSpreadPointsOfInterest(){
-		if (_lastPosition == null || (_lastPosition - transform.position).sqrMagnitude > 0.1f) {
+		if ((_lastPosition - transform.position).sqrMagnitude > 0.1f) {
 			for (int i = 0; i < _moreSpreadPoints.Length; i++) {
 				_moreSpreadPoints [i] = gameObject.transform.TransformPoint (_localMoreSpreadPoints [i]);
 			}
@@ -385,8 +387,8 @@ public class ShadowDetection : MonoBehaviour {
 
 		GameObject[] shadowCasters = getPotentialShadowCasters ();
 
-		bool return_value = false;
-		_numberLightedVertices = 0;
+		//bool return_value = false;
+		//_numberLightedVertices = 0;
 
 		for (int i = 0; i < _pointsOfInterest.Length; i++) {
 
@@ -395,7 +397,7 @@ public class ShadowDetection : MonoBehaviour {
 				return true;
 				//return_value = true;
 				////Debug.Log("OMG SOLEN");
-				_numberLightedVertices++;
+				//_numberLightedVertices++;
 			}
 
 			/* SpotLights */
@@ -403,7 +405,7 @@ public class ShadowDetection : MonoBehaviour {
 				return true;
 				//return_value = true;
 				////Debug.Log("OMG SPOTLIGHT");
-				_numberLightedVertices++;
+				//_numberLightedVertices++;
 			}
 
 			/* Lampor */
@@ -411,7 +413,7 @@ public class ShadowDetection : MonoBehaviour {
 				return true;
 				//return_value = true;
 				////Debug.Log("OMG LAMPA");
-				_numberLightedVertices++;
+				//_numberLightedVertices++;
 			}
 
 		}
@@ -428,8 +430,8 @@ public class ShadowDetection : MonoBehaviour {
 		
 		GameObject[] shadowCasters = getPotentialShadowCasters ();
 		
-		bool return_value = false;
-		_numberLightedVertices = 0;
+		//bool return_value = false;
+		//_numberLightedVertices = 0;
 		
 		for (int i = 0; i < _moreSpreadPoints.Length; i++) {
 			
@@ -438,7 +440,7 @@ public class ShadowDetection : MonoBehaviour {
 				return true;
 				//return_value = true;
 				////Debug.Log("OMG SOLEN");
-				_numberLightedVertices++;
+				//_numberLightedVertices++;
 			}
 			
 			/* SpotLights */
@@ -446,7 +448,7 @@ public class ShadowDetection : MonoBehaviour {
 				return true;
 				//return_value = true;
 				////Debug.Log("OMG SPOTLIGHT");
-				_numberLightedVertices++;
+				//_numberLightedVertices++;
 			}
 			
 			/* Lampor */
@@ -454,7 +456,7 @@ public class ShadowDetection : MonoBehaviour {
 				return true;
 				//return_value = true;
 				////Debug.Log("OMG LAMPA");
-				_numberLightedVertices++;
+				//_numberLightedVertices++;
 			}
 			
 		}

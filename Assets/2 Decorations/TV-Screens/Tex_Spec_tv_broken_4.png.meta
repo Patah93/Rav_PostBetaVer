@@ -5,7 +5,11 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+<<<<<<< HEAD
+    linearTexture: 1
+=======
     linearTexture: 0
+>>>>>>> e5a0d727cf3999936a0491fd7359faef6c57f60a
     correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
@@ -13,7 +17,11 @@ TextureImporter:
     mipMapFadeDistanceEnd: 3
   bumpmap:
     convertToNormalMap: 0
+<<<<<<< HEAD
+    externalNormalMap: 1
+=======
     externalNormalMap: 0
+>>>>>>> e5a0d727cf3999936a0491fd7359faef6c57f60a
     heightScale: .25
     normalMapFilter: 0
   isReadable: 0
@@ -37,7 +45,11 @@ TextureImporter:
   spritePivot: {x: .5, y: .5}
   spritePixelsToUnits: 100
   alphaIsTransparency: 0
+<<<<<<< HEAD
+  textureType: 1
+=======
   textureType: -1
+>>>>>>> e5a0d727cf3999936a0491fd7359faef6c57f60a
   buildTargetSettings: []
   spriteSheet:
     sprites: []

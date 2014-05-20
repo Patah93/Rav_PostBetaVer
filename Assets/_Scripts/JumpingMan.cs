@@ -12,15 +12,15 @@ public class JumpingMan : MonoBehaviour {
 	private float _stickLength;
 
 	public bool _dead = false;
-
+	public Vector3 _jumpLength;
 	public float _jumpForce = 300;
 	public float _offsetX = 0;
 	public float _offsetY = 0;
 	public float _offsetZ = 0;
 	public float _gravity = 20.0f;
-	public float _jumpSpeed = 8.0f;
+	public float _jumpHeight = 10.0f;
 	[Range(0.01f, 2.0f)]
-	public float _speedScale = 0.6f;
+	public float _speedScale = 1.0f;
 	public float _maxDeadTime = 10.0f;
 	public float _deadTimer = 0;
 	public float _rayLength = 1.0f;
@@ -55,27 +55,28 @@ public class JumpingMan : MonoBehaviour {
 		if(Input.GetButtonDown("Jump")){	//Aktiverar hoppet
 			//Debug.Log("you pressed jump)");
 			if(!_jump){
-				//_animan.enabled = false;
-				//transform.rigidbody.constraints = RigidbodyConstraints.FreezeRotationX|RigidbodyConstraints.FreezeRotationZ; //hindrar den från att snörra cp
 
-				/* TODO Plz ta bort desa två superdåliga rader kod, my bad */
-				//gameObject.GetComponent<CharacterController>().enabled = false;
-				//gameObject.GetComponent<CapsuleCollider>().enabled = true;
-
-
-				//Vector3 temp = rigidbody.velocity;
-				//transform.rigidbody.velocity = new Vector3(temp.x,0,temp.z);
-				//transform.rigidbody.AddForce(Vector3.up*_jumpForce);
-				//Debug.Log("jumping");
 				_jump = true;
 
-				//gameObject.GetComponent<CapsuleCollider>().enabled = true;
+				Debug.Log ("JUMPLENGTH PRODUCT: " + _jumpLength);
+				Debug.Log ("FORWARD PRODUCT: " + transform.forward);
 
-				_jumpingMove = _charCon.velocity*_speedScale*Mathf.Clamp(_stickLength,0, 1);
-				_jumpingMove.y = _jumpSpeed;
+				if(_stickLength != 0){
+					_jumpingMove.x = transform.forward.x * _jumpLength.x;
+					_jumpingMove.z = transform.forward.z * _jumpLength.z;
+					//_jumpingMove = _charCon.velocity*_speedScale*Mathf.Clamp(_stickLength,0, 1);
+					_animator.SetBool("Jump", true);
+				}else{
+					_jumpingMove = Vector3.zero;
+					_animator.SetBool("Jump", true);
+				}
+					
+
+				_jumpingMove.y = _jumpHeight;
 				_animator.applyRootMotion = false;
 				_animator.SetBool("Jump", true);
 				_clock = Time.time;
+
 
 				Debug.Log(Mathf.Clamp(_stickLength,0, 1));
 
@@ -84,7 +85,7 @@ public class JumpingMan : MonoBehaviour {
 		}
 	
 
-		_animator.SetBool("Jump", false);
+		//_animator.SetBool("Jump", false);
 	/*	if(_jump && transform.position.y - _startPosition > _jumpHeight){	//Hoppat så högt den klarar, kör en cooldown
 			////Debug.Log("cooldown");
 			_cooldown = true;
@@ -108,8 +109,12 @@ public class JumpingMan : MonoBehaviour {
 
 		if(_jump){
 
+
 			_jumpingMove.y -= _gravity*Time.deltaTime;
 			_charCon.Move(_jumpingMove*Time.deltaTime);
+
+			//Debug.Log("Forward: " + transform.forward);
+			//Debug.Log("JumpMove: " +_jumpingMove);
 
 			Vector3 temp = new Vector3(_offsetX,_offsetY,_offsetZ);
 			if(Time.time - _clock > _maxTime){
@@ -125,7 +130,7 @@ public class JumpingMan : MonoBehaviour {
 						//transform.rigidbody.constraints &= ~ RigidbodyConstraints.FreezeRotationX|~RigidbodyConstraints.FreezeRotationZ;
 						//Debug.Log ("hit something"); 
 						//_startPosition = transform.position.y;
-
+						_animator.SetBool("Jump", false);
 						_jump = false;
 						//_animator.SetBool("Jump", false);
 						_animator.applyRootMotion = true;
