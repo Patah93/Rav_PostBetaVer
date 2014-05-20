@@ -16,7 +16,7 @@ public class BoyStateManager : MonoBehaviour {
 	AnimationMan _walk;
 	JumpingMan _jump;
 	WalkToPushPos _wtpp;
-	ThirdPersonCamPatrikFailEdition cameroon;
+	ThirdPersonCamera cameroon;
 	bool _drawInteract = false;
 	string _text = "Press E to push";
 	Animator _ani;
@@ -43,7 +43,7 @@ public class BoyStateManager : MonoBehaviour {
 		_wtpp = gameObject.GetComponent<WalkToPushPos>();
 		_throw = gameObject.GetComponent<Throw>();
 		
-		cameroon = Camera.main.GetComponent<ThirdPersonCamPatrikFailEdition>();
+		cameroon = Camera.main.GetComponent<ThirdPersonCamera>();
 	}
 	
 	// Update is called once per frame
@@ -65,10 +65,10 @@ public class BoyStateManager : MonoBehaviour {
 			if(_throw.enabled){
 				_throw.deActivateThrow();
 			}
-			cameroon.setCameraState("Throw");
+			
 			_throw.enabled = !_throw.enabled;
 			_ani.SetBool("ThrowMode", !_ani.GetBool("ThrowMode"));
-			
+			cameroon.setCameraState("Throw");
 		}
 		else{
 			ray1 = transform.position + transform.right * _rayXOffset;
