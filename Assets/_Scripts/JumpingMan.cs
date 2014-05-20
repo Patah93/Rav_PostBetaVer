@@ -52,7 +52,8 @@ public class JumpingMan : MonoBehaviour {
 
 		_stickLength = (Mathf.Abs (Input.GetAxis ("Horizontal")) + Mathf.Abs (Input.GetAxis ("Vertical")));
 
-		if(Input.GetButtonDown("Jump")){	//Aktiverar hoppet
+        if (Input.GetButtonDown("Jump") && (_animator.GetCurrentAnimatorStateInfo(0).IsName("Run") || _animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")))
+        {	//Aktiverar hoppet
 			//Debug.Log("you pressed jump)");
 			if(!_jump){
 

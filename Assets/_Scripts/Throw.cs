@@ -39,7 +39,7 @@ public class Throw : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		PlayerXForm = GameObject.FindWithTag ("Player").transform;
-		if (PlayerXForm == null)
+		//if (PlayerXForm == null)
 						//Debug.Log ("Could not find player transform");
 
 		//arcLine = new LineRenderer ();
@@ -48,7 +48,7 @@ public class Throw : MonoBehaviour {
 
 		camera = Camera.main.GetComponent<ThirdPersonCamera> ();
 
-		if (arcLine == null)
+		//if (arcLine == null)
 						//Debug.Log ("arcLine");
 
 		_anim = GameObject.FindWithTag ("Player").GetComponent<Animator>();
@@ -80,7 +80,7 @@ public class Throw : MonoBehaviour {
 		else if (forceStick < -1)
 			forceStick = -1.0f;
 
-		force = ((PlayerXForm.forward + PlayerXForm.up) * 5);
+		force = ((PlayerXForm.forward + PlayerXForm.up).normalized * 5);
 		force = force + ((PlayerXForm.forward + PlayerXForm.up) * forceStick);
 		//if (camera.camState == ThirdPersonCamera.CamStates.FirstPerston) {
 		if (GetComponent<Animator>().GetBool ("ThrowMode")) {
