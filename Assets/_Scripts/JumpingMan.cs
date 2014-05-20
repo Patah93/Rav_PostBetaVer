@@ -109,9 +109,10 @@ public class JumpingMan : MonoBehaviour {
 
 		if(_jump){
 
-
-			_jumpingMove.y -= _gravity*Time.deltaTime;
-			_charCon.Move(_jumpingMove*Time.deltaTime);
+			if(Vector3.Angle(Vector3.up, _rayHit.normal) < 45){
+				_jumpingMove.y -= _gravity*Time.deltaTime;
+				_charCon.Move(_jumpingMove*Time.deltaTime);
+			}
 
 			//Debug.Log("Forward: " + transform.forward);
 			//Debug.Log("JumpMove: " +_jumpingMove);
@@ -123,6 +124,10 @@ public class JumpingMan : MonoBehaviour {
 					Debug.DrawRay(transform.position + temp,Vector3.down,Color.blue,1 + temp.y,true);
 					Debug.DrawRay(transform.position, _rayHit.transform.position);
 
+
+			
+		
+
 					_animator.SetBool("Falling", false);
 
 					//Debug.Log("Collided with "+ _rayHit.collider.name);
@@ -131,7 +136,9 @@ public class JumpingMan : MonoBehaviour {
 						//Debug.Log ("hit something"); 
 						//_startPosition = transform.position.y;
 						_animator.SetBool("Jump", false);
-						_jump = false;
+						if(Vector3.Angle(Vector3.up, _rayHit.normal) < 45){
+							_jump = false;
+						}
 						//_animator.SetBool("Jump", false);
 						_animator.applyRootMotion = true;
 
