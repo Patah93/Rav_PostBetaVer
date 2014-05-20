@@ -18,8 +18,8 @@ public class Throw : MonoBehaviour {
 	public Vector3 highestPos;
 	public Vector3 lastPos;
 
-
 	GameObject target;
+	public GameObject _spawnPosition;
 
 	Rigidbody throbject;
 
@@ -39,6 +39,7 @@ public class Throw : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		PlayerXForm = GameObject.FindWithTag ("Player").transform;
+		_anim = GetComponent<Animator>();
 		//if (PlayerXForm == null)
 						//Debug.Log ("Could not find player transform");
 
@@ -51,7 +52,6 @@ public class Throw : MonoBehaviour {
 		//if (arcLine == null)
 						//Debug.Log ("arcLine");
 
-		_anim = GameObject.FindWithTag ("Player").GetComponent<Animator>();
 		target = GameObject.CreatePrimitive (PrimitiveType.Sphere);
 		target.transform.localScale.Set (10f, 10f, 10f);
 		target.renderer.enabled = false;
@@ -83,19 +83,19 @@ public class Throw : MonoBehaviour {
 		force = ((PlayerXForm.forward + PlayerXForm.up) * 5);
 		force = force + ((PlayerXForm.forward + PlayerXForm.up) * forceStick);
 		//if (camera.camState == ThirdPersonCamera.CamStates.FirstPerston) {
-		if (GetComponent<Animator>().GetBool ("ThrowMode")) {
+		if (_anim.GetBool ("ThrowMode")) {
 			if(throbject == null && Time.time > clock){
 				Debug.Log("BANAS: " + Time.deltaTime);
-				throbject = Instantiate(throwObj, GameObject.Find("L_wrist_ctrl").transform.position/*PlayerXForm.position + (PlayerXForm.forward * 1) + new Vector3(0f,1f,0f)*/,Quaternion.identity) as Rigidbody;
+				throbject = Instantiate(throwObj, _spawnPosition.transform.position, Quaternion.identity) as Rigidbody;
 				throbject.GetComponent<BoxCollider>().enabled = false;
-				throbject.transform.parent = GameObject.Find("L_wrist_ctrl").transform;
+				throbject.transform.parent = _spawnPosition.transform;
 				throbject.rigidbody.useGravity = false;
 
 			}	
 			//if (Input.GetKeyDown (KeyCode.H))
 			target.renderer.enabled = true;
 			UpdatePredictionLine ();
-			if (Input.GetButtonDown ("Fire1") && !throwing && GetComponent<Animator>().GetCurrentAnimatorStateInfo (0).IsName ("Throw Idle")) {
+			if (Input.GetButtonDown ("Fire1") && !throwing && _anim.GetCurrentAnimatorStateInfo (0).IsName ("Throw Idle")) {
 					throwClock = Time.time + throwOffset;
 					changeThrowStatus();
 			}
@@ -178,12 +178,13 @@ public class Throw : MonoBehaviour {
 
 	void changeThrowStatus(){
 		throwing = !throwing;
-		GetComponent<Animator>().SetBool ("Throw", !GetComponent<Animator>().GetBool ("Throw"));
+		_anim.SetBool ("Throw", !_anim.GetBool ("Throw"));
 	}
 
 	public void deActivateThrow(){
 		arcLine.SetVertexCount (0); 
-		GameObject.Find("L_wrist_ctrl").transform.DetachChildren();
+		throbject.transform.parent = null;
+		//_spawnPosition.transform.DetachChildren();
 		throbject.collider.enabled = true;
 		if(throbject != null)			
 			throbject.rigidbody.useGravity = true;
@@ -191,7 +192,7 @@ public class Throw : MonoBehaviour {
 
 		//Destroy(throbject);
 
-		if(GetComponent<Animator>().GetBool("Throw"))
+		if(_anim.GetBool("Throw"))
 			changeThrowStatus();						
 	}
 
@@ -199,7 +200,7 @@ public class Throw : MonoBehaviour {
 		Debug.Log ("SHIT");
 		throbject.GetComponent<BoxCollider>().enabled = true;
 		throbject.rigidbody.useGravity = true;
-		GameObject.Find("L_wrist_ctrl").transform.DetachChildren();
+		throbject.transform.parent = null;
 		throbject.AddForce(force, ForceMode.Impulse);
 		throbject = null;
 		clock = Time.time + 1f;

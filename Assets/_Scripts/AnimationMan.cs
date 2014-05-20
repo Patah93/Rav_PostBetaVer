@@ -82,9 +82,9 @@ public class AnimationMan : MonoBehaviour {
 				}
 				
 
-			
+			_length = (_length > 1) ? 1 : _length;
 			_animator.SetFloat("Speed", _length);
-			_animator.speed = (_length == 0) ? 1 : _length;
+			_animator.speed = (_length == 0f) ? Mathf.Lerp( _animator.speed, 1f, 0.5f) : _length;
 			if(_length == 0){
 				_animator.applyRootMotion = false;
 			}

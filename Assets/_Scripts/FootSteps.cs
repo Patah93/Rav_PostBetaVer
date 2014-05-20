@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class FootSteps : MonoBehaviour {
@@ -57,10 +57,17 @@ public class FootSteps : MonoBehaviour {
 		int a = i;
 		if(tag == "Player"){
 			GameObject sauce = (GameObject)Instantiate (_audioSauce, GameObject.Find ("L_foot_joint").transform.position, Quaternion.identity);
+			RaycastHit outHit;
+			if(Physics.Raycast(transform.position + transform.up * 0.5f, Vector3.down, out outHit, 2f)){
+				GroundType ground = outHit.transform.GetComponent<GroundType>();
+				if(ground != null)
+					a += (ground.GetType());
+			}
+			Debug.Log(outHit.collider.name);
 			sauce.audio.clip = getRandomClip (a);
 			sauce.audio.Play ();
 		}
-
+		
 		else if(tag == "Fox"){
 			Debug.Log ("FOX STEPS");
 			GameObject sauce = (GameObject)Instantiate (_audioSauce, GameObject.Find ("R_front_foot_joint").transform.position, Quaternion.identity);

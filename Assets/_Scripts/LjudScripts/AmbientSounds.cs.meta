@@ -2,7 +2,8 @@ fileFormatVersion: 2
 guid: 63e20574e644fda44989ee6e8d5cd72c
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _audioSauce: {fileID: 100000, guid: 15d732b64d19bf549a1eb297b32281c0, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
