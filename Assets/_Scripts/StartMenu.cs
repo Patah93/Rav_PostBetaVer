@@ -35,12 +35,14 @@ public class StartMenu : MonoBehaviour {
 			GUI.DrawTexture(scaleRect(_buttonSizes),_buttontexture,ScaleMode.StretchToFill,false,0);
 			if(GUI.Button(scaleRect(_buttonSizes),"")){
 				_loadlevel = true;
-				Application.LoadLevelAsync(_firstSceneName);
 			}
 		}
 		if(_loadlevel){
 //			Color _col = _startScreen;
-		//	GUI.color = Color.Lerp(_background,Color.black,Time.time);
+			//guiTexture.color = Color.Lerp
+			GUI.color = Color.Lerp(Color.white,Color.blue,0.1f);
+			Application.LoadLevelAsync(_firstSceneName);
+			//_background = Color.Lerp(Color.white,Color.black,Time.deltaTime);
 			_background = _loadingScreen;
 			_drawButtons = false;
 		}
