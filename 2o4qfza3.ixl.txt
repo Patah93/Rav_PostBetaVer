@@ -1,0 +1,70 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is behind 'origin/master' by 8 commits, and can be fast-forwarded.
+#   (use "git pull" to update your local branch)
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   Assets/0 Animations/Boy/Clothes/Materials/lambert2.mat
+#	renamed:    Assets/3 Buildings (final/Byggnad 1/Meshes/Materials/UV_Mapping_Grid_by_Cymae 1.mat.meta -> Assets/0 Animations/Boy/Clothes/Materials/lambert2.mat.meta
+#	new file:   Assets/0 Animations/Boy/Materials/lambert2.mat
+#	renamed:    Assets/2 Decorations/SkyDome.mat.meta -> Assets/0 Animations/Boy/Materials/lambert2.mat.meta
+#	deleted:    Assets/3 Buildings (final.meta
+#	deleted:    Assets/3 Buildings (final/Byggnad 1.meta
+#	modified:   Assets/3 Buildings/Byggnad 1/Materials/Tex_Alpha_Module_1_Window_Broken_Glas.mat
+#	renamed:    Assets/2 Decorations/SkyDome.mat -> Assets/3 Buildings/Byggnad 1/Meshes/Materials/UV_Mapping_Grid_by_Cymae 5.mat
+#	renamed:    Assets/3 Buildings (final/Byggnad 1/Meshes/Materials/UV_Mapping_Grid_by_Cymae 2.mat.meta -> Assets/3 Buildings/Byggnad 1/Meshes/Materials/UV_Mapping_Grid_by_Cymae 5.mat.meta
+#	renamed:    Assets/Texture/Materials/Skydome_TEX 1.mat -> Assets/3 Buildings/Byggnad 1/Meshes/Materials/UV_Mapping_Grid_by_Cymae 6.mat
+#	renamed:    Assets/Texture/Materials/Skydome finished 2.mat.meta -> Assets/3 Buildings/Byggnad 1/Meshes/Materials/UV_Mapping_Grid_by_Cymae 6.mat.meta
+#	renamed:    Assets/3 Buildings (final/Byggnad 1/Meshes/Materials/UV_Mapping_Grid_by_Cymae 1.mat -> Assets/3 Buildings/Byggnad 1/Meshes/Materials/UV_Mapping_Grid_by_Cymae 7.mat
+#	new file:   Assets/3 Buildings/Byggnad 1/Meshes/Materials/UV_Mapping_Grid_by_Cymae 7.mat.meta
+#	renamed:    Assets/3 Buildings (final/Byggnad 1/Meshes/Materials/UV_Mapping_Grid_by_Cymae 2.mat -> Assets/3 Buildings/Byggnad 1/Meshes/Materials/UV_Mapping_Grid_by_Cymae 8.mat
+#	new file:   Assets/3 Buildings/Byggnad 1/Meshes/Materials/UV_Mapping_Grid_by_Cymae 8.mat.meta
+#	new file:   "Assets/Allt \303\244r Bajs.unity"
+#	new file:   "Assets/Allt \303\244r Bajs.unity.meta"
+#	new file:   Assets/DataPlatform.unity
+#	new file:   Assets/DataPlatform.unity.meta
+#	new file:   Assets/DataPlatformImport.dll
+#	new file:   Assets/DataPlatformImport.dll.meta
+#	new file:   Assets/DataPlatformImport.pdb
+#	new file:   Assets/DataPlatformImport.pdb.meta
+#	new file:   Assets/DemoUtils.dll
+#	new file:   Assets/DemoUtils.dll.meta
+#	new file:   Assets/DemoUtils.pdb
+#	new file:   Assets/DemoUtils.pdb.meta
+#	new file:   Assets/MainMenu.cs
+#	new file:   Assets/MainMenu.cs.meta
+#	renamed:    Assets/3 Buildings (final/Byggnad 1/Meshes.meta -> Assets/Plugins.meta
+#	renamed:    Assets/3 Buildings (final/Byggnad 1/Meshes/Materials.meta -> Assets/Plugins/XboxOne.meta
+#	new file:   Assets/Plugins/XboxOne/DataPlatform.dll
+#	new file:   Assets/Plugins/XboxOne/DataPlatform.dll.meta
+#	new file:   Assets/Plugins/XboxOne/DataPlatform.pdb
+#	new file:   Assets/Plugins/XboxOne/DataPlatform.pdb.meta
+#	deleted:    Assets/Texture/Materials/Skydome finished 2.mat
+#	deleted:    Assets/Texture/Materials/Skydome_TEX 1.mat.meta
+#	deleted:    Assets/Texture/Materials/Skydome_finished.mat
+#	deleted:    Assets/Texture/Materials/Skydome_finished.mat.meta
+#	deleted:    Assets/Texture/Materials/Skydome_finished3.mat
+#	deleted:    Assets/Texture/Materials/Skydome_finished3.mat.meta
+#	deleted:    Assets/Texture/Materials/Skydome_finished_sun.mat
+#	deleted:    Assets/Texture/Materials/Skydome_finished_sun.mat.meta
+#	deleted:    Assets/Texture/Textures/Skydome finished 2.png
+#	deleted:    Assets/Texture/Textures/Skydome finished 2.png.meta
+#	deleted:    Assets/Texture/Textures/Skydome finished 3.png
+#	deleted:    Assets/Texture/Textures/Skydome finished 3.png.meta
+#	deleted:    Assets/Texture/Textures/Skydome finished 4.png
+#	deleted:    Assets/Texture/Textures/Skydome finished 4.png.meta
+#	deleted:    Assets/Texture/Textures/Skydome_finished3.png
+#	deleted:    Assets/Texture/Textures/Skydome_finished3.png.meta
+#	new file:   Assets/V3 terrain.raw
+#	new file:   Assets/V3 terrain.raw.meta
+#	new file:   Assets/XboxOneCommonImport.dll
+#	new file:   Assets/XboxOneCommonImport.dll.meta
+#	new file:   Assets/XboxOneCommonImport.pdb
+#	new file:   Assets/XboxOneCommonImport.pdb.meta
+#	modified:   Assets/newSceneTerrain.asset
+#
+
