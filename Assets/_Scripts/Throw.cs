@@ -80,7 +80,7 @@ public class Throw : MonoBehaviour {
 		else if (forceStick < -1)
 			forceStick = -1.0f;
 
-		force = ((PlayerXForm.forward + PlayerXForm.up).normalized * 5);
+		force = ((PlayerXForm.forward + PlayerXForm.up) * 5);
 		force = force + ((PlayerXForm.forward + PlayerXForm.up) * forceStick);
 		//if (camera.camState == ThirdPersonCamera.CamStates.FirstPerston) {
 		if (GetComponent<Animator>().GetBool ("ThrowMode")) {
