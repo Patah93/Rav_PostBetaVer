@@ -22,11 +22,11 @@ public class Button : MonoBehaviour {
 
 	bool _checkevent = false;
 
-	AnimationMan _man;
+	//AnimationMan _man;
 	
 	// Use this for initialization
 	void Start () {
-		_man = gameObject.GetComponent<AnimationMan>();
+		//_man = gameObject.GetComponent<AnimationMan>();
 		_button = GameObject.FindWithTag("Player").GetComponent<ButtonMan>();
 		_ani = gameObject.GetComponent<Animator>();
 		_action = new TriggerAction[_actionObj.Length];

@@ -34,9 +34,9 @@ public class FoxAI : MonoBehaviour {
 
 	Vector3 _direction;
 
-	Quaternion _desiredRotation;
+	//Quaternion _desiredRotation;
 
-	BoxCollider _box;
+	//BoxCollider _box;
 
 	public float _fallAcc = 0.01f;
 
@@ -80,9 +80,9 @@ public class FoxAI : MonoBehaviour {
 
 		_shadowDetect = GetComponent<ShadowDetection>();
 
-		_desiredRotation = transform.rotation;
+		//_desiredRotation = transform.rotation;
 
-		_box = GetComponent<BoxCollider>();
+		//_box = GetComponent<BoxCollider>();
 
 		_fallVec = Vector3.down * _fallAcc;
 
@@ -238,7 +238,7 @@ public class FoxAI : MonoBehaviour {
 					_pathSafe = false;
 					transform.position = originalPos;
 					transform.rotation = originalRotation;
-					_desiredRotation = originalRotation;
+					//_desiredRotation = originalRotation;
 					_testing = false;
 					return;
 				}
@@ -249,7 +249,7 @@ public class FoxAI : MonoBehaviour {
 				_pathSafe = false;
 				transform.position = originalPos;
 				transform.rotation = originalRotation;
-				_desiredRotation = originalRotation;
+				//_desiredRotation = originalRotation;
 				_testing = false;
 				return;
 			}
@@ -258,7 +258,7 @@ public class FoxAI : MonoBehaviour {
 		
 		transform.position = originalPos;
 		transform.rotation = originalRotation;
-		_desiredRotation = originalRotation;
+		//_desiredRotation = originalRotation;
 		//////Debug.Log(count + ": lightchecks!"); 
 
 		_pathSafe = true;
