@@ -190,8 +190,8 @@ public class ThirdPersonCamera : MonoBehaviour {
 	#region Update funtions
 	void Update()
 	{
-		if (Input.GetButtonDown("Aim"))
-			camState = (camState != CamStates.Throw) ? CamStates.Throw : prevCamstate;
+		//if (Input.GetButtonDown("Aim"))
+			//camState = (camState != CamStates.Throw) ? CamStates.Throw : prevCamstate;
 		
 		//TODO : add more controller input grabs
 		//We need to grab the controller input values
@@ -373,6 +373,12 @@ public class ThirdPersonCamera : MonoBehaviour {
 		_obj = obj;
 		_pushDir = PlayerXform.forward;	
 	}
+
+    public void setCameraState(string s)
+    {
+        if (s.Equals("Throw"))
+            camState = (camState != CamStates.Throw) ? CamStates.Throw : prevCamstate;
+    }
 
 	#endregion
 }
