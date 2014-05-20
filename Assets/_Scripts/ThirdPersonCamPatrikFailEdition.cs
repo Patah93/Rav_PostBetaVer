@@ -417,7 +417,7 @@ public class ThirdPersonCamPatrikFailEdition : MonoBehaviour {
 		//Debug.DrawLine (toTarget, Camera.main.ViewportToWorldPoint (new Vector3 (1.0f, 0.5f, Camera.main.nearClipPlane)),Color.red);
 		RaycastHit wallHit = new RaycastHit();
 		
-		Vector3 offset = Vector3.zero;
+		//Vector3 offset = Vector3.zero;
 
 		float _wallDistance = 0.25f;
 
