@@ -48,6 +48,8 @@ public class FoxAI : MonoBehaviour {
 
 	private bool _turning = false;
 
+	private float _animationDirection = 0;
+
 	[Range(2.0f, 8.0f)]
 	public float _moveSpeed = 4.0f;
 
@@ -56,6 +58,9 @@ public class FoxAI : MonoBehaviour {
 
 	[Range(1.0f, 30.0f)]
 	public float  _rotationSpeed = 7.0f;
+
+	[Range(0.25f, 3.0f)]
+	public float _ANIMATION_CHANGE_SPEED = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -322,26 +327,30 @@ public class FoxAI : MonoBehaviour {
 			if(angle < 89){
 
 				transform.rotation = Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y + _rotationSpeed, transform.localEulerAngles.z);
+				setAnimationDirection(1);
 
 				if(Vector2.Angle (new Vector2(transform.right.x, transform.right.z).normalized, targetDirection) >= 88){
 					transform.rotation = Quaternion.LookRotation (new Vector3(targetDirection.x, 0, targetDirection.y).normalized);
+					setAnimationDirection(0);
 				}
 				_direction = transform.forward;
 
 			}else if(angle > 91){
 				transform.rotation = Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y - _rotationSpeed, transform.localEulerAngles.z);
+				setAnimationDirection(-1);
 
 				if(Vector2.Angle (new Vector2(transform.right.x, transform.right.z).normalized, targetDirection) <= 90){
 					transform.rotation = Quaternion.LookRotation (new Vector3(targetDirection.x, 0, targetDirection.y).normalized);
+					setAnimationDirection(0);
 				}
 				_direction = transform.forward;
 			}
 			else{
 				_direction = new Vector3(targetDirection.x, 0, targetDirection.y).normalized;
 				transform.rotation = Quaternion.LookRotation (_direction);
+
+				setAnimationDirection(0);
 			}
-		} else {
-			//Debug.DrawLine (transform.position, new Vector3(_turnPoint.x, transform.position.y, _turnPoint.y), Color.green);
 		}
 
 		Vector3 frontFeetRayPoint = transform.position + transform.forward * 0.22f + Vector3.up * 0.5f;
@@ -374,9 +383,12 @@ public class FoxAI : MonoBehaviour {
 					transform.position = new Vector3(_turnPoint.x, transform.position.y, _turnPoint.y) + (new Vector3(turnPointToPosition.x, 0, turnPointToPosition.y) * _distanceToTurnPoint);
 					
 					Vector2 rightAngleVec = new Vector2(-1 * turnPointToPosition.y, turnPointToPosition.x);
-					
+
 					if(Vector2.Angle (rightAngleVec, new Vector2(transform.forward.x, transform.forward.z).normalized) > 90){
 						rightAngleVec *= -1;
+						setAnimationDirection(1);
+					}else{
+						setAnimationDirection(-1);
 					}
 					
 					_direction = new Vector3(rightAngleVec.x, 0, rightAngleVec.y).normalized;
@@ -426,5 +438,22 @@ public class FoxAI : MonoBehaviour {
 
 	public void setBoyClose(bool boyClose){
 		_boyClose = boyClose;
+	}
+
+	private void setAnimationDirection(float direction){
+		if(_animationDirection > direction){
+			_animationDirection -= _ANIMATION_CHANGE_SPEED * Time.deltaTime;
+			if(_animationDirection < direction){
+				_animationDirection = direction;
+			}
+		}
+		else if(_animationDirection < direction){
+			_animationDirection += _ANIMATION_CHANGE_SPEED * Time.deltaTime;
+			if(_animationDirection > direction){
+				_animationDirection = direction;
+			}
+		}
+
+		_ani.SetFloat("Direction", _animationDirection);
 	}
 }

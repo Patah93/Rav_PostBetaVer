@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _position: {x: 0, y: 0}
-  _background: {fileID: 2800000, guid: c7fe509b50f51214a89b705bc219c1af, type: 3}
+  _startScreen: {fileID: 2800000, guid: c7fe509b50f51214a89b705bc219c1af, type: 3}
   _buttonSizes:
     serializedVersion: 2
     x: 3
@@ -115,6 +115,7 @@ MonoBehaviour:
     height: 5
   _buttontexture: {fileID: 2800000, guid: ae2209ea2ac27ff4cb4382f9e122f502, type: 3}
   _firstSceneName: JessicaScene
+  _loadingScreen: {fileID: 2800000, guid: d51475d654114ae48bdf1385a0aaadf5, type: 3}
 --- !u!81 &1855724043
 AudioListener:
   m_ObjectHideFlags: 0
