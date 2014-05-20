@@ -7,7 +7,11 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Tex_Diff_tv_broken_2
+<<<<<<< HEAD
+  m_Shader: {fileID: 10, guid: 0000000000000000f000000000000000, type: 0}
+=======
   m_Shader: {fileID: 2, guid: 0000000000000000f000000000000000, type: 0}
+>>>>>>> 7fd0abd32f6d1e9991bf1ef8cb64b547aaa89e0f
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -27,9 +31,35 @@ Material:
           m_Texture: {fileID: 2800000, guid: a005b6ddb7b6d8541970b5a2f7244c90, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD
+      data:
+        first:
+          name: _Illum
+        second:
+          m_Texture: {fileID: 2800000, guid: 1f601f7716327ae4a904ad9e4923efef, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Shininess
+        second: .078125
+      data:
+        first:
+          name: _EmissionLM
+        second: 1
+=======
     m_Floats: {}
+>>>>>>> 7fd0abd32f6d1e9991bf1ef8cb64b547aaa89e0f
     m_Colors:
       data:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< HEAD
+      data:
+        first:
+          name: _SpecColor
+        second: {r: .5, g: .5, b: .5, a: 1}
+=======
+>>>>>>> 7fd0abd32f6d1e9991bf1ef8cb64b547aaa89e0f
