@@ -44,6 +44,10 @@ public class AnimationMan : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+       // RaycastHit bajs;
+        //Physics.Raycast(new Ray(transform.position, Vector3.down), out bajs);
+        //gameObject.transform.up = bajs.normal;
+            
 			stateInfo = _animator.GetCurrentAnimatorStateInfo (0);
 			updateCameraRotation();
 			joystickConvert ();

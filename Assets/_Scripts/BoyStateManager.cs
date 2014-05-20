@@ -61,7 +61,9 @@ public class BoyStateManager : MonoBehaviour {
 				_enterPush = true;
 			}
 		}
-		else if(_walk.enabled && Input.GetButtonDown("Aim") && !_ani.GetCurrentAnimatorStateInfo(0).IsName("Run")){
+        else if (_walk.enabled && Input.GetButtonDown("Aim") && (_ani.GetCurrentAnimatorStateInfo(0).IsName("Run") || _ani.GetCurrentAnimatorStateInfo(0).IsName("Idle") || _throw.enabled))
+        {
+            
 			if(_throw.enabled){
 				_throw.deActivateThrow();
 			}
