@@ -39,8 +39,10 @@ public class StartMenu : MonoBehaviour {
 		}
 		if(_loadlevel){
 //			Color _col = _startScreen;
+			//guiTexture.color = Color.Lerp
+			GUI.color = Color.Lerp(Color.white,Color.blue,0.1f);
 			Application.LoadLevelAsync(_firstSceneName);
-			GUI.color = Color.Lerp(Color.white,Color.black,0.1f);
+			//_background = Color.Lerp(Color.white,Color.black,Time.deltaTime);
 			_background = _loadingScreen;
 			_drawButtons = false;
 		}
