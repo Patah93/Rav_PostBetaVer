@@ -26,8 +26,11 @@ public class FadeSound : MonoBehaviour {
 	
 	}
 
-	public void ChangeState(){
-		_activated = !_activated;
+	public void ChangeState(bool b){
+		_activated = b;
 	}
 
+	public bool GetBool(){
+		return _activated;
+	} 
 }
