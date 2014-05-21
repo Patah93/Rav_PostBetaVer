@@ -24,6 +24,8 @@ public class JumpingMan : MonoBehaviour {
 	public float _maxDeadTime = 10.0f;
 	public float _deadTimer = 0;
 	public float _rayLength = 1.0f;
+	[Range(0, 25)]
+	public float _jumpOffsetDistanceFuckers;
 
 
 	//float _startPosition;
@@ -57,15 +59,11 @@ public class JumpingMan : MonoBehaviour {
 			//Debug.Log("you pressed jump)");
 			if(!_jump){
 
-				_jump = true;
-
-				Debug.Log ("JUMPLENGTH PRODUCT: " + _jumpLength);
-				Debug.Log ("FORWARD PRODUCT: " + transform.forward);
 
 				if(_stickLength != 0){
 					_jumpingMove.x = transform.forward.x * _jumpLength.x;
 					_jumpingMove.z = transform.forward.z * _jumpLength.z;
-					//_jumpingMove = _charCon.velocity*_speedScale*Mathf.Clamp(_stickLength,0, 1);
+					_jumpingMove *= Mathf.Clamp(_stickLength,0, 1);
 					_animator.SetBool("Jump", true);
 				}else{
 					_jumpingMove = Vector3.zero;
@@ -79,7 +77,7 @@ public class JumpingMan : MonoBehaviour {
 				_clock = Time.time;
 
 
-				Debug.Log(Mathf.Clamp(_stickLength,0, 1));
+
 
 			}
 
@@ -111,12 +109,26 @@ public class JumpingMan : MonoBehaviour {
 		if(_jump){
 
 			if(Vector3.Angle(Vector3.up, _rayHit.normal) < 45){
+
+				Vector3 latjo1 = (transform.forward * _jumpOffsetDistanceFuckers * Input.GetAxis ("Vertical"));
+				latjo1 += (transform.right * _jumpOffsetDistanceFuckers * Input.GetAxis ("Horizontal"));
+
+				if(Mathf.Abs(_jumpingMove.x) < _jumpOffsetDistanceFuckers){
+					_jumpingMove.x = latjo1.x;
+					Debug.Log("JUMPING FORWARD");
+				}
+				else if(Mathf.Abs(_jumpingMove.z) < _jumpOffsetDistanceFuckers){
+					_jumpingMove.z = latjo1.z;
+					Debug.Log("JUMPING SIDEWAYS");
+				}
+
+
 				_jumpingMove.y -= _gravity*Time.deltaTime;
 				_charCon.Move(_jumpingMove*Time.deltaTime);
 			}
 
 			//Debug.Log("Forward: " + transform.forward);
-			//Debug.Log("JumpMove: " +_jumpingMove);
+			Debug.Log("JumpMove: " +_jumpingMove);
 
 			Vector3 temp = new Vector3(_offsetX,_offsetY,_offsetZ);
 			if(Time.time - _clock > _maxTime){
@@ -166,5 +178,9 @@ public class JumpingMan : MonoBehaviour {
 		return _jump;
 	}
 
+	public void Jumpy(){
+		_jump = true;
+
+	}
 
 }
