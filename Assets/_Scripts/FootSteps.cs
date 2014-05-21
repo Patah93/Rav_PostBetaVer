@@ -63,8 +63,10 @@ public class FootSteps : MonoBehaviour {
 				if(ground != null)
 					a += (ground.GetType());
 			}
-			Debug.Log(outHit.collider.name);
+			Debug.Log(a);
 			sauce.audio.clip = getRandomClip (a);
+			if(a == 0)
+				sauce.audio.volume = 0.5f;
 			sauce.audio.Play ();
 		}
 		
