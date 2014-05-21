@@ -27,9 +27,9 @@ public class MoveOnTrigger : TriggerAction {
 	void Update () {
 
 		if(_isMoving){
-			transform.rotation = Quaternion.Slerp(_startRotation, (_startRotation * Quaternion.Euler(_rotateAngles)), _rotateSpeed);
+			transform.rotation = Quaternion.Slerp(transform.rotation, (_startRotation * Quaternion.Euler(_rotateAngles)), _rotateSpeed);
 			transform.position = Vector3.Lerp(gameObject.transform.position, _offset + _originalPos, _moveTime);
-			if(Mathf.Abs ((transform.position - (_offset + _originalPos)).magnitude) > 0.03){
+			if(Mathf.Abs ((transform.position - (_offset + _originalPos)).magnitude) > 0.03 || Quaternion.Angle(transform.rotation, _startRotation) > 2){
 				if(!transform.audio.isPlaying){
 					transform.audio.Play();
 				}
@@ -39,8 +39,11 @@ public class MoveOnTrigger : TriggerAction {
 			}
 		}
 		else{
+			transform.rotation = Quaternion.Slerp(transform.rotation, _startRotation, _rotateSpeed);
 			transform.position = Vector3.Lerp(gameObject.transform.position, _originalPos, _moveTime);
-			if(Mathf.Abs ((transform.position -  _originalPos).magnitude) > 0.03){
+
+			/* TODO Ljud för rotation här... FIND THE DERP CHALLNGE ;) */
+			if(Mathf.Abs ((transform.position -  _originalPos).magnitude) > 0.03  || Quaternion.Angle(transform.rotation, _startRotation) > 2){
 				if(!transform.audio.isPlaying){
 					transform.audio.Play();
 				}
