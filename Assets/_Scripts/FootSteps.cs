@@ -65,6 +65,8 @@ public class FootSteps : MonoBehaviour {
 			}
 			Debug.Log(a);
 			sauce.audio.clip = getRandomClip (a);
+			if(a == 0)
+				sauce.audio.volume = 0.5f;
 			sauce.audio.Play ();
 		}
 		
