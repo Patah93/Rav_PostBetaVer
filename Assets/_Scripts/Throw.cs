@@ -28,6 +28,19 @@ public class Throw : MonoBehaviour {
 
 	[Range (1f,50f)]
 	public float maxForce = 10.0f;
+	[Range (0.0f,50f)]
+	public float minForce = 4.5f;
+
+	[Range (0.0f,Mathf.PI/2.0f)]
+	public float maxAngle = Mathf.PI/3.0f;
+	[Range (-Mathf.PI/2.0f, Mathf.PI/4.0f)]
+	public float minAngle = -Mathf.PI/6.0f;
+
+	[Range (0.05f, 1.0f)]
+	public float _forceSensitivity = 0.5f;
+
+	[Range (0.005f, 0.5f)]
+	public float _angleSensitivity = 0.05f;
 	
 
 	private bool throwing = false;
@@ -72,21 +85,21 @@ public class Throw : MonoBehaviour {
 		float leftY = Input.GetAxis("Vertical");
 
 		if (rightY > 0.0f || rightY < 0.0f)
-			forceStick += -rightY * 0.5f;
+			forceStick += -rightY * _forceSensitivity;
 
 		if (leftY != 0)
-			angleStick += leftY * 0.05f;
+			angleStick += leftY * _angleSensitivity;
 		
 
 		if (forceStick > maxForce)
 			forceStick = maxForce;
-		else if (forceStick < -1)
-			forceStick = -1.0f;
+		else if (forceStick < minForce)
+			forceStick = minForce;
 
-		if(angleStick > Mathf.PI/2.5f)
-			angleStick = Mathf.PI/2.5f;
-		else if(angleStick < -Mathf.PI/4.0f)
-			angleStick = -Mathf.PI/4.0f;
+		if(angleStick > maxAngle)
+			angleStick = maxAngle;
+		else if(angleStick < minAngle)
+			angleStick = minAngle;
 
 		//force = ((PlayerXForm.forward + PlayerXForm.up) * 5);
 		//force = force + ((PlayerXForm.forward + PlayerXForm.up) * forceStick);
