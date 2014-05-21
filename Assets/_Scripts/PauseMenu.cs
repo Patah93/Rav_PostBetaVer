@@ -7,9 +7,10 @@ public class PauseMenu : MonoBehaviour {
 	public Texture2D _pauseWindowTexture;
 	public Rect _exitButton = new Rect(4,2.5f,6,7);
 	public Texture2D _exitButtonTexture;
+	public Rect _resumeButton = new Rect(1,2.5f,6,7);
+	public Texture2D _resumeButtonTexture;
 
 	bool _paused;
-	float _delay;
 
 	// Use this for initialization
 	void Start () {
@@ -45,8 +46,13 @@ public class PauseMenu : MonoBehaviour {
 	void PauseWindow(int id){
 
 		GUI.DrawTexture(scaleRect(_exitButton),_exitButtonTexture,ScaleMode.StretchToFill,false,0);
+		GUI.DrawTexture (scaleRect (_resumeButton),_resumeButtonTexture,ScaleMode.StretchToFill,false,0);
 		if(GUI.Button(scaleRect(_exitButton),"")){
 			Application.Quit();
+		}
+		if(GUI.Button (scaleRect(_resumeButton),"")){
+			_paused = false;
+			Time.timeScale = 1;
 		}
 	}
 }
