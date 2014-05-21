@@ -101,7 +101,7 @@ public class StartMenu : MonoBehaviour {
 					_fadeScreen.SetPixel(1,1,Color.Lerp((_fadeScreen.GetPixel(1,1)),Color.black,Time.time*_fadeSpeed));
 					_fadeScreen.Apply();
 
-					if(_fadeScreen.GetPixel(1,1).a <= 0.95f){
+					if(_fadeScreen.GetPixel(1,1).a <= 0.97f){
 						Debug.Log("if-sats");
 						StartCoroutine("wait");
 						Debug.Log("hallå");
