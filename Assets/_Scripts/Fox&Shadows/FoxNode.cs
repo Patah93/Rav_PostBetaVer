@@ -13,6 +13,9 @@ public class FoxNode  : TriggerAction {
 
 	public bool _isTeleportNode = false;
 
+	[Range(1.0f, 30.0f)]
+	public float _turnSpeed = 0.0f;
+
 	// Use this for initialization
 	void Start () {
 		if(GetComponent<Renderer>() != null)
