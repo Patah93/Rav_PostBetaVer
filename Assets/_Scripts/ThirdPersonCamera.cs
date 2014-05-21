@@ -245,7 +245,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 			//player clone bug fix
 			if(playerObjects.Length > 1)
 			for(int i = 0; i < playerObjects.Length; i++)
-				if(playerObjects[i].name != "0 HajPojken(Clone)")
+				if(playerObjects[i].name == "0 HajPojken(Clone)")
 					Destroy(playerObjects[i]);
 
 			if(startMoving)
