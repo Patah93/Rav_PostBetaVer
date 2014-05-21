@@ -57,7 +57,9 @@ public class FoxAI : MonoBehaviour {
 	public float _turnspeedFactor = 1.1f;
 
 	[Range(1.0f, 30.0f)]
-	public float  _rotationSpeed = 7.0f;
+	public float  _defaultRotationSpeed = 7.0f;
+
+	private float _rotationSpeed;
 
 	[Range(0.25f, 3.0f)]
 	public float _ANIMATION_CHANGE_SPEED = 1.0f;
@@ -87,6 +89,8 @@ public class FoxAI : MonoBehaviour {
 		_fallVec = Vector3.down * _fallAcc;
 
 		_ani = GetComponent<Animator>();
+
+		_rotationSpeed = _defaultRotationSpeed;
 	}
 	
 	// Update is called once per frame
@@ -138,12 +142,22 @@ public class FoxAI : MonoBehaviour {
 				if (Input.GetButtonDown ("FoxForward") || Input.GetAxis("FoxCall") > 0){
 					if (_currentNode._nextNode != null && !_currentNode._isWaitingForAction) {
 						_targetNode = _currentNode._nextNode;
+						if(_currentNode._turnSpeed == 0.0f){
+							_rotationSpeed = _defaultRotationSpeed;
+						}else{
+							_rotationSpeed = _currentNode._turnSpeed;
+						}
 						_ani.SetBool("Walking", true);
 					}
 				}
 				if (Input.GetButtonDown ("FoxBackward") || Input.GetAxis("FoxCall") < 0) {
 					if (_currentNode != null) {
 						_targetNode = _currentNode._prevNode;
+						if(_targetNode._turnSpeed == 0.0f){
+							_rotationSpeed = _defaultRotationSpeed;
+						}else{
+							_rotationSpeed = _targetNode._turnSpeed;
+						}
 						_ani.SetBool("Walking", true);
 					}
 				}
@@ -194,6 +208,11 @@ public class FoxAI : MonoBehaviour {
 					if(_targetNode == null && _currentNode._prevNode != null){
 						_targetNode = _currentNode._prevNode;
 						_pathSafe = true;
+						if(_targetNode._turnSpeed == 0.0f){
+							_rotationSpeed = _defaultRotationSpeed;
+						}else{
+							_rotationSpeed = _targetNode._turnSpeed;
+						}
 						_ani.SetBool("Walking", true);
 					}else{
 						_targetNode = _currentNode;
@@ -207,6 +226,11 @@ public class FoxAI : MonoBehaviour {
 
 			if(_targetNode == null && !_currentNode._isWaitingForAction && !_controlled && (!_moveWhenBoyIsClose || _boyClose)){
 				_targetNode = _currentNode._nextNode;
+				if(_currentNode._turnSpeed == 0.0f){
+					_rotationSpeed = _defaultRotationSpeed;
+				}else{
+					_rotationSpeed = _currentNode._turnSpeed;
+				}
 				if(_targetNode != null && !_refuseMoveIfLight){
 					_ani.SetBool("Walking", true);
 				}
