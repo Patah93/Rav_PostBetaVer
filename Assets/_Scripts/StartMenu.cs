@@ -13,9 +13,12 @@ public class StartMenu : MonoBehaviour {
 	Texture2D _background;
 	bool _drawButtons;
 	bool _loadlevel;
+	FadeCamera _fade;
 
 	// Use this for initialization
 	void Start () {
+		_fade = gameObject.GetComponent<FadeCamera>();
+		_fade.guiTexture.texture = _background;
 		_background = _startScreen;
 		_drawButtons = true;
 		_loadlevel = false;
@@ -35,8 +38,10 @@ public class StartMenu : MonoBehaviour {
 			GUI.DrawTexture(scaleRect(_buttonSizes),_buttontexture,ScaleMode.StretchToFill,false,0);
 			if(GUI.Button(scaleRect(_buttonSizes),"")){
 				_loadlevel = true;
+				_fade.FadeOut();
+
 			}
-		}
+		} 
 		if(_loadlevel){
 //			Color _col = _startScreen;
 			//guiTexture.color = Color.Lerp
