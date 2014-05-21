@@ -14,6 +14,7 @@ public class Throw : MonoBehaviour {
 	private Animator _anim;
 	Vector3 force;
 	float forceStick = 0;
+	float angleStick = 0;
 
 	public Vector3 highestPos;
 	public Vector3 lastPos;
@@ -27,6 +28,19 @@ public class Throw : MonoBehaviour {
 
 	[Range (1f,50f)]
 	public float maxForce = 10.0f;
+	[Range (0.0f,50f)]
+	public float minForce = 4.5f;
+
+	[Range (0.0f,Mathf.PI/2.0f)]
+	public float maxAngle = Mathf.PI/3.0f;
+	[Range (-Mathf.PI/2.0f, Mathf.PI/4.0f)]
+	public float minAngle = -Mathf.PI/6.0f;
+
+	[Range (0.05f, 1.0f)]
+	public float _forceSensitivity = 0.5f;
+
+	[Range (0.005f, 0.5f)]
+	public float _angleSensitivity = 0.05f;
 	
 
 	private bool throwing = false;
@@ -68,20 +82,31 @@ public class Throw : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float rightY = -Input.GetAxis("RightStickVertical");
-
-
+		float leftY = Input.GetAxis("Vertical");
 
 		if (rightY > 0.0f || rightY < 0.0f)
-			forceStick += -rightY * 0.5f;
+			forceStick += -rightY * _forceSensitivity;
+
+		if (leftY != 0)
+			angleStick += leftY * _angleSensitivity;
 		
 
 		if (forceStick > maxForce)
 			forceStick = maxForce;
-		else if (forceStick < -1)
-			forceStick = -1.0f;
+		else if (forceStick < minForce)
+			forceStick = minForce;
 
-		force = ((PlayerXForm.forward + PlayerXForm.up) * 5);
-		force = force + ((PlayerXForm.forward + PlayerXForm.up) * forceStick);
+		if(angleStick > maxAngle)
+			angleStick = maxAngle;
+		else if(angleStick < minAngle)
+			angleStick = minAngle;
+
+		//force = ((PlayerXForm.forward + PlayerXForm.up) * 5);
+		//force = force + ((PlayerXForm.forward + PlayerXForm.up) * forceStick);
+
+		force = ((PlayerXForm.forward * Mathf.Cos(angleStick) + PlayerXForm.up * Mathf.Sin (angleStick)) * forceStick);
+
+
 		//if (camera.camState == ThirdPersonCamera.CamStates.FirstPerston) {
 		if (_anim.GetBool ("ThrowMode")) {
 			if(throbject == null && Time.time > clock){
@@ -94,7 +119,9 @@ public class Throw : MonoBehaviour {
 			}	
 			//if (Input.GetKeyDown (KeyCode.H))
 			target.renderer.enabled = true;
-			UpdatePredictionLine ();
+			//if(_anim.GetCurrentAnimatorStateInfo (0).IsName("Throw Idle")){
+				UpdatePredictionLine ();
+			//}
 			if (Input.GetButtonDown ("Fire1") && !throwing && _anim.GetCurrentAnimatorStateInfo (0).IsName ("Throw Idle")) {
 					throwClock = Time.time + throwOffset;
 					changeThrowStatus();
@@ -130,13 +157,13 @@ public class Throw : MonoBehaviour {
 	void UpdatePredictionLine()
 	{
 		arcLine.SetVertexCount(180);
-		Vector3 previousPosition = PlayerXForm.position + (PlayerXForm.forward * 1) + new Vector3(0f,1f,0f);
+		Vector3 previousPosition = transform.position + transform.TransformDirection(new Vector3(-0.4f, 1.2f, 0.15f));
 
 		highestPos = previousPosition;
 		
 		for(int i = 0; i < 180; i++)
 		{
-			Vector3 posN = GetTrajectoryPoint(PlayerXForm.position + (PlayerXForm.forward * 1) + new Vector3(0f,1f,0f), force, i, Physics.gravity);
+			Vector3 posN = GetTrajectoryPoint(transform.position + transform.TransformDirection(new Vector3(-0.4f, 1.2f, 0.15f)), force, i, Physics.gravity);
 			Vector3 direction = posN - previousPosition;
 			direction.Normalize();
 			
