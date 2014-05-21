@@ -48,7 +48,7 @@ public class FadeCamera : MonoBehaviour {
 		guiTexture.color = Color.Lerp (guiTexture.color, Color.clear, _fadeSpeed * Time.deltaTime);
 	}
 	
-	private void FadeOut(){
+	public void FadeOut(){
 		guiTexture.color = Color.Lerp (guiTexture.color, Color.black, _fadeSpeed * Time.deltaTime);
 	}
 

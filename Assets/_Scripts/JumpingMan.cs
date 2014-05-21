@@ -57,15 +57,11 @@ public class JumpingMan : MonoBehaviour {
 			//Debug.Log("you pressed jump)");
 			if(!_jump){
 
-				_jump = true;
-
-				Debug.Log ("JUMPLENGTH PRODUCT: " + _jumpLength);
-				Debug.Log ("FORWARD PRODUCT: " + transform.forward);
 
 				if(_stickLength != 0){
 					_jumpingMove.x = transform.forward.x * _jumpLength.x;
 					_jumpingMove.z = transform.forward.z * _jumpLength.z;
-					//_jumpingMove = _charCon.velocity*_speedScale*Mathf.Clamp(_stickLength,0, 1);
+					_jumpingMove *= Mathf.Clamp(_stickLength,0, 1);
 					_animator.SetBool("Jump", true);
 				}else{
 					_jumpingMove = Vector3.zero;
@@ -79,7 +75,7 @@ public class JumpingMan : MonoBehaviour {
 				_clock = Time.time;
 
 
-				Debug.Log(Mathf.Clamp(_stickLength,0, 1));
+
 
 			}
 
@@ -166,5 +162,9 @@ public class JumpingMan : MonoBehaviour {
 		return _jump;
 	}
 
+	public void Jumpy(){
+		_jump = true;
+
+	}
 
 }
