@@ -15,7 +15,7 @@ public class Button : MonoBehaviour {
 
 	public float _PRESS_ANGLE = 45;
 
-	bool _pressed = false;
+	public bool _pressed = false;
 
 	Animator _ani;
 
@@ -35,13 +35,19 @@ public class Button : MonoBehaviour {
 			TriggerAction[] _tAction = _actionObj[i].GetComponents<TriggerAction>();
 			if(_tAction.Length > 1){
 				if(_tAction[0].GetType() != typeof(triggerGroup)){
-					_action[i] = _tAction[0];
+					_action[i] = _tAction[1];
 				}
 				else{
-					_action[i] = _tAction[1];
+					_action[i] = _tAction[0];
 				}
 			}else{
 				_action[i] = _tAction[0];
+			}
+		}
+
+		if(_pressed){
+			for(int i = 0; i < _action.Length; i++){
+				_action[i].onActive();
 			}
 		}
 
