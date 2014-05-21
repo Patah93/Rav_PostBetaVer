@@ -27,7 +27,7 @@ public class MoveOnTrigger : TriggerAction {
 	void Update () {
 
 		if(_isMoving){
-			transform.rotation = Quaternion.Slerp(_startRotation, (_startRotation * Quaternion.Euler(_rotateAngles)), _rotateSpeed);
+			transform.rotation = Quaternion.Slerp(transform.rotation, (_startRotation * Quaternion.Euler(_rotateAngles)), _rotateSpeed);
 			transform.position = Vector3.Lerp(gameObject.transform.position, _offset + _originalPos, _moveTime);
 			if(Mathf.Abs ((transform.position - (_offset + _originalPos)).magnitude) > 0.03){
 				if(!transform.audio.isPlaying){
