@@ -298,6 +298,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 			//set the target to be smoothed
 			smoothPosistion(this.transform.position, targetPosistion);
 			//set the new lookAt
+			higestpos = new Vector3(higestpos.x, higestpos.y - (higestpos.y - PlayerXform.position.y)/2.0f, higestpos.z);
 			transform.LookAt(higestpos);
 			break;
 		case CamStates.Push:			
