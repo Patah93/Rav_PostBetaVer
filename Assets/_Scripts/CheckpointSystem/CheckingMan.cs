@@ -21,20 +21,21 @@ public class CheckingMan : MonoBehaviour {
 
 	void Update(){
 
-		if(_jumpM._dead){
+		if(_checkpointScript != null){
 
-			if(!_fading){
-				_checkpointScript.StartRollback(true);
-				_fading = true;
+			if(_jumpM._dead && !_fading){
+
+					_checkpointScript.StartRollback(true);
+					_fading = true;
+
+			} else if(!_jumpM._dead && _fading) {
+
+				_checkpointScript.StartRollback(false);
+				_fading = false;
+
 			}
 
-		} else {
-
-			_checkpointScript.StartRollback(false);
-			_fading = false;
-
 		}
-
 
 	}
 
