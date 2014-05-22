@@ -9,12 +9,23 @@ public class PauseMenu : MonoBehaviour {
 	public Texture2D _exitButtonTexture;
 	public Rect _resumeButton = new Rect(1,2.5f,6,7);
 	public Texture2D _resumeButtonTexture;
+	public Rect _settingsButton = new Rect(1,2.5f,6,7);
+	public Texture2D _settingsButtonTexture;
+
+	public Rect _volumeButtonPos = new Rect(4,10,6,7);
+	public Texture2D _volumeButtonTexture;
+	public Rect _volumeSliderPos = new Rect(1,4,6,7);
+
+	public Rect _returnToOptionsButton = new Rect(4,2.5f,6,7);
+	public Texture2D _returnToOptionsButtonTexture;
 
 	bool _paused;
+	bool _settings;
 
 	// Use this for initialization
 	void Start () {
 		_paused = false;
+		_settings = false;
 	}
 	
 	// Update is called once per frame
@@ -27,6 +38,7 @@ public class PauseMenu : MonoBehaviour {
 			}
 			else{
 				_paused = false;
+				_settings = false;
 				Time.timeScale = 1;
 			}
 		}
@@ -38,8 +50,14 @@ public class PauseMenu : MonoBehaviour {
 
 	void OnGUI(){
 		if(_paused){
-			GUI.Window(0,scaleRect(_pauseWindow),PauseWindow,"Game Paused");
-			GUI.DrawTexture(scaleRect(_pauseWindow),_pauseWindowTexture,ScaleMode.StretchToFill,false,0);
+			if(_settings){
+				GUI.Window(1,scaleRect(_pauseWindow),SettingsWindow,"Settings");
+				GUI.DrawTexture(scaleRect(_pauseWindow),_settingsButtonTexture,ScaleMode.StretchToFill,false,0);
+			}
+			else{
+				GUI.Window(0,scaleRect(_pauseWindow),PauseWindow,"Game Paused");
+				GUI.DrawTexture(scaleRect(_pauseWindow),_pauseWindowTexture,ScaleMode.StretchToFill,false,0);
+			}
 		}
 	}
 
@@ -47,6 +65,7 @@ public class PauseMenu : MonoBehaviour {
 
 		GUI.DrawTexture(scaleRect(_exitButton),_exitButtonTexture,ScaleMode.StretchToFill,false,0);
 		GUI.DrawTexture (scaleRect (_resumeButton),_resumeButtonTexture,ScaleMode.StretchToFill,false,0);
+		GUI.DrawTexture(scaleRect(_settingsButton),_settingsButtonTexture,ScaleMode.StretchToFill,false,0);
 		if(GUI.Button(scaleRect(_exitButton),"")){
 			Application.Quit();
 		}
@@ -54,5 +73,18 @@ public class PauseMenu : MonoBehaviour {
 			_paused = false;
 			Time.timeScale = 1;
 		}
+		if(GUI.Button (scaleRect(_settingsButton),"")){
+			_settings = true;
+		}
+	}
+
+	void SettingsWindow(int id){
+		GUI.DrawTexture(scaleRect(_returnToOptionsButton),_returnToOptionsButtonTexture,ScaleMode.StretchToFill,false,0);
+		GUI.DrawTexture(scaleRect (_volumeButtonPos),_volumeButtonTexture,ScaleMode.ScaleToFit,false,0);
+		if(GUI.Button (scaleRect(_returnToOptionsButton),"")){
+			_settings = false;
+		}
+
+		AudioListener.volume = GUI.HorizontalSlider(scaleRect(_volumeSliderPos),AudioListener.volume,0,1);
 	}
 }
