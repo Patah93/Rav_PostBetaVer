@@ -3,23 +3,34 @@ using System.Collections;
 
 public class CheckingMan : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public CheckpointSystem _CheckpointSystem;
+
+	public GameObject _currentCheckpoint;
+
+	JumpingMan _jumpM;
+
+	void Start(){
+
+		_jumpM = GetComponent<JumpingMan>();
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void Update(){
+
+		if(_jumpM._dead)
+			Debug.Log("Test");
+
 	}
 
 	void OnTriggerEnter(Collider c){
 
-		Debug.Log(c.tag);
-
 		if(c.CompareTag("Checkpoint")){
 
-
+			if(_currentCheckpoint != null && _currentCheckpoint != c.gameObject){
+				_currentCheckpoint = _CheckpointSystem.CompareCheckpoints(_currentCheckpoint, c.gameObject);
+			}
+			else 
+				_currentCheckpoint = c.gameObject;
 
 		}
 

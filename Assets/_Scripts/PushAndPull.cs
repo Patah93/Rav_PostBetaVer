@@ -97,9 +97,11 @@ public class PushAndPull : MonoBehaviour {
 			_position = transform.position;		//
 			_obj.position = new Vector3(transform.position.x,_objposy + 0.5f,transform.position.z) + _distance*_direction*-1;
 			//_obj.rigidbody.MovePosition(new Vector3(transform.position.x,_objposy + 0.5f,transform.position.z) + _distance*_direction*-1); //Moves box twice to make gravity work
-			if(!_obj.rigidbody.SweepTest(Vector3.down,out _derp,0.55f)){																	//
+			if(!_obj.rigidbody.SweepTest(Vector3.down,out _derp,0.55f) || !rigidbody.SweepTest(Vector3.down,out _derp,0.55f)){																	//
+				Debug.Log ("HERPADERP");
 				_boystate.enterWalkMode();																									//		
 			}
+
 			//
 			//_obj.rigidbody.MovePosition(new Vector3(transform.position.x,_objposy,transform.position.z) + _distance*_direction*-1);			//
 			_obj.position = new Vector3(transform.position.x,_objposy,transform.position.z) + _distance*_direction*-1;
