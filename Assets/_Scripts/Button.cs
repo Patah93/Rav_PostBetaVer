@@ -17,6 +17,8 @@ public class Button : MonoBehaviour {
 
 	public bool _pressed = false;
 
+	public int _scriptNumber = 0;
+
 	Animator _ani;
 
 	ButtonMan _button;
@@ -33,16 +35,8 @@ public class Button : MonoBehaviour {
 		_action = new TriggerAction[_actionObj.Length];
 		for(int i = 0; i < _action.Length; i++){
 			TriggerAction[] _tAction = _actionObj[i].GetComponents<TriggerAction>();
-			if(_tAction.Length > 1){
-				if(_tAction[0].GetType() != typeof(triggerGroup)){
-					_action[i] = _tAction[1];
-				}
-				else{
-					_action[i] = _tAction[0];
-				}
-			}else{
-				_action[i] = _tAction[0];
-			}
+
+			_action[i] = _tAction[_scriptNumber];
 		}
 
 		if(_pressed){
