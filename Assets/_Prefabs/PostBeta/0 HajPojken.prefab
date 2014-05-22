@@ -332,6 +332,8 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   - 120: {fileID: 12000000}
+  - 114: {fileID: 11400014}
+  - 114: {fileID: 11400012}
   m_Layer: 2
   m_Name: 0 HajPojken
   m_TagString: Player
@@ -1814,7 +1816,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100042}
   m_LocalRotation: {x: -0, y: .0599302687, z: -0, w: .998202562}
-  m_LocalPosition: {x: 38.7716751, y: -.0111104846, z: -6.92868853}
+  m_LocalPosition: {x: 45.1051064, y: 2.95161724, z: -14.1054468}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400114}
@@ -2289,7 +2291,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100122}
-  m_LocalRotation: {x: .359163195, y: .625238955, z: -.170066044, w: .671681106}
+  m_LocalRotation: {x: .359163225, y: .625239015, z: -.170066059, w: .671681166}
   m_LocalPosition: {x: -.0171180386, y: -1.2938445e-08, z: 8.59153637e-09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2834,7 +2836,13 @@ MonoBehaviour:
   offSet: {x: 0, y: 0, z: 0}
   highestPos: {x: 0, y: 0, z: 0}
   lastPos: {x: 0, y: 0, z: 0}
+  _spawnPosition: {fileID: 0}
   maxForce: 8
+  minForce: 4.5
+  maxAngle: 1.04719758
+  minAngle: -.52359879
+  _forceSensitivity: .5
+  _angleSensitivity: .0500000007
   throwOffset: .600000024
   arcLine: {fileID: 12000000}
 --- !u!114 &11400004
@@ -2860,16 +2868,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1223b1d4cf5f00348af5d3b38d217b0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxTime: 1
   _dead: 0
+  _jumpLength: {x: 5, y: 0, z: 5}
   _jumpForce: 300
   _offsetX: 0
   _offsetY: 0
   _offsetZ: 0
   _gravity: 20
-  _jumpSpeed: 8
+  _jumpHeight: 10
   _speedScale: 1.01100004
   _maxDeadTime: 5
   _deadTimer: 0
+  _rayLength: 1
+  _jumpOffsetDistanceFuckers: 2
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2905,6 +2917,30 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a70448358ba32042885f1322e7b7f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deathClock: 0
+  _maxTime: 10
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164222539c291cf4ab39fc8d0ae184d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!120 &12000000
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -2989,7 +3025,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 0a31e8b16015acb40b005325d8ebcf58, type: 2}
+  - {fileID: 2100000, guid: 76c67dab1ac67754997d8307bc16b2af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3092,7 +3128,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 0b4ca87508a0ffd46add20b8b0b8cc1c, type: 2}
+  - {fileID: 2100000, guid: be3f52c39a1dcaf4a860dc678f8bcf02, type: 2}
   - {fileID: 2100000, guid: 42b40a91b395d0d45915bcca4f9aa468, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}

@@ -20,7 +20,6 @@ public class AmbientSounds : MonoBehaviour {
 			sauce.audio.Play ();
 			
 			clock = 0;
-			Debug.Log("PRRrrfthhhhpppttrrhfhh");
 		} 
 	}
 
