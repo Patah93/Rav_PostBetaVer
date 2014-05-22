@@ -7,10 +7,13 @@ public class randomOffset : MonoBehaviour {
 	public float frequency = 24.0f;
 	public int offsetX = 10;
 	public int offsetY = 10;
+	public Texture2D[] textures;
+	public float timeForSwap = 1.0f;
     #endregion
 
     #region Private variables
-
+	private float count = 0;
+	private int index = 0;
     #endregion
 
     #region Structs 
@@ -29,8 +32,9 @@ public class randomOffset : MonoBehaviour {
     //Called if script component is enabled
 	IEnumerator Start () {
 		float customtime = manualTime / frequency;
-		//print(customtime + " < customtime");
+		renderer.materials[0].SetTexture("_MainTex",textures[index]);
 		yield return StartCoroutine("UpdateTexture", customtime);
+		
 	}
     #endregion
 
@@ -54,8 +58,16 @@ public class randomOffset : MonoBehaviour {
     #region Private functions
 	IEnumerator UpdateTexture ( float waitTime ){
 		while(true){
+			count += Time.deltaTime;
+			if(count>timeForSwap) {
+				count = 0;
+				index++;
+				
+				index = index%(textures.Length);
+				renderer.materials[0].SetTexture("_MainTex",textures[index]);
+			}
 			Vector2 offset = new Vector2(offsetX * Random.value,offsetY * Random.value);
-			renderer.material.SetTextureOffset ("_GrainTex", offset);
+			renderer.materials[0].SetTextureOffset ("_GrainTex", offset);
 			//print(renderer.material + " < material");
 			yield return new WaitForSeconds(waitTime);
 		}
