@@ -7,13 +7,13 @@ public class Respawn : MonoBehaviour {
 
 	void OnTriggerEnter(Collider c){
 		if(c.gameObject.CompareTag("Player")){
-			_checkpointZone.GetComponent<Checkpoint>().StartRollback(true);
+			c.GetComponent<CheckingMan>()._currentCheckpoint.GetComponent<Checkpoint>().StartRollback(true);
 		}
 	}
 
 	void OnTriggerExit(Collider c){
 		if(c.gameObject.CompareTag("Player")){
-			_checkpointZone.GetComponent<Checkpoint>().StartRollback(false);
+			c.GetComponent<CheckingMan>()._currentCheckpoint.GetComponent<Checkpoint>().StartRollback(false);
 		}
 	}
 
