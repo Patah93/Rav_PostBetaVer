@@ -20,7 +20,7 @@ public class InactivateScriptOnTrigger : TriggerAction {
 	public override void onActive(){
 		_theScript.enabled = !_inactivateWhenActive;
 	}
-	
+
 	public override void onInactive(){
 		_theScript.enabled = _inactivateWhenActive;
 	}
