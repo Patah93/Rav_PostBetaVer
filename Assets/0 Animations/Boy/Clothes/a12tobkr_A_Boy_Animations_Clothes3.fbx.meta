@@ -1,0 +1,1940 @@
+fileFormatVersion: 2
+guid: 6cb2d75c20555564faaa46052c8543d2
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl
+    100004: a12tobkr_A_Boy_Animations_Clothes3:Clothes
+    100006: a12tobkr_A_Boy_Animations_Clothes3:Hair
+    100008: a12tobkr_A_Boy_Animations_Clothes3:head_joint
+    100010: a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl
+    100012: a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group
+    100014: a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint
+    100016: a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint
+    100018: a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint
+    100020: a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint
+    100022: a12tobkr_A_Boy_Animations_Clothes3:L_hip_joint
+    100024: a12tobkr_A_Boy_Animations_Clothes3:L_knee_joint
+    100026: a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint
+    100028: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint
+    100030: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_02_joint
+    100032: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_03_joint
+    100034: a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint
+    100036: a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint
+    100038: a12tobkr_A_Boy_Animations_Clothes3:neck_02_joint
+    100040: a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint
+    100042: a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint
+    100044: a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint
+    100046: a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint
+    100048: a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint
+    100050: a12tobkr_A_Boy_Animations_Clothes3:R_hip_joint
+    100052: a12tobkr_A_Boy_Animations_Clothes3:R_knee_joint
+    100054: a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint
+    100056: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint
+    100058: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_02_joint
+    100060: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_03_joint
+    100062: a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint
+    100064: a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint
+    100066: a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint
+    100068: a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint
+    100070: Body_ctrl
+    100072: Boy
+    100074: head_joint
+    100076: Hip_ctrl
+    100078: Hip_ctrl_group
+    100080: L_ball_joint
+    100082: L_collar_joint
+    100084: L_elbow_joint
+    100086: L_foot_joint
+    100088: L_forearm_joint
+    100090: L_hand_joint
+    100092: L_hip_joint
+    100094: L_indexfinger_01_joint
+    100096: L_indexfinger_02_joint
+    100098: L_indexfinger_03_joint
+    100100: L_indexfinger_04_joint
+    100102: L_knee_joint
+    100104: L_longfinger_01_joint
+    100106: L_longfinger_02_joint
+    100108: L_longfinger_03_joint
+    100110: L_longfinger_04_joint
+    100112: L_pinkyfinger04_joint
+    100114: L_pinkyfinger_01_joint
+    100116: L_pinkyfinger_02_joint
+    100118: L_pinkyfinger_03_joint
+    100120: L_ringfinger_01_joint
+    100122: L_ringfinger_02_joint
+    100124: L_ringfinger_03_joint
+    100126: L_ringfinger_04_joint
+    100128: L_shoulder_joint
+    100130: L_thumbfinger_01_joint
+    100132: L_thumbfinger_02_joint
+    100134: L_thumbfinger_03_joint
+    100136: L_toe_joint
+    100138: L_wrist_joint
+    100140: neck_01_joint
+    100142: neck_02_joint
+    100144: pelvis_joint
+    100146: R_ball_joint
+    100148: R_collar_joint
+    100150: R_elbow_joint
+    100152: R_foot_joint
+    100154: R_forearm_joint
+    100156: R_hand_joint
+    100158: R_hip_joint
+    100160: R_indexfinger_01_joint
+    100162: R_indexfinger_02_joint
+    100164: R_indexfinger_03_joint
+    100166: R_indexfinger_04_joint
+    100168: R_knee_joint
+    100170: R_longfinger_01_joint
+    100172: R_longfinger_02_joint
+    100174: R_longfinger_03_joint
+    100176: R_longfinger_04_joint
+    100178: R_pinkyfinger04_joint
+    100180: R_pinkyfinger_01_joint
+    100182: R_pinkyfinger_02_joint
+    100184: R_pinkyfinger_03_joint
+    100186: R_ringfinger_01_joint
+    100188: R_ringfinger_02_joint
+    100190: R_ringfinger_03_joint
+    100192: R_ringfinger_04_joint
+    100194: R_shoulder_joint
+    100196: R_thumbfinger_01_joint
+    100198: R_thumbfinger_02_joint
+    100200: R_thumbfinger_03_joint
+    100202: R_toe_joint
+    100204: R_wrist_joint
+    100206: spine_02_joint
+    100208: spine_05_joint
+    100210: spine_06_joint
+    400000: //RootNode
+    400002: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl
+    400004: a12tobkr_A_Boy_Animations_Clothes3:Clothes
+    400006: a12tobkr_A_Boy_Animations_Clothes3:Hair
+    400008: a12tobkr_A_Boy_Animations_Clothes3:head_joint
+    400010: a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl
+    400012: a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group
+    400014: a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint
+    400016: a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint
+    400018: a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint
+    400020: a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint
+    400022: a12tobkr_A_Boy_Animations_Clothes3:L_hip_joint
+    400024: a12tobkr_A_Boy_Animations_Clothes3:L_knee_joint
+    400026: a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint
+    400028: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint
+    400030: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_02_joint
+    400032: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_03_joint
+    400034: a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint
+    400036: a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint
+    400038: a12tobkr_A_Boy_Animations_Clothes3:neck_02_joint
+    400040: a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint
+    400042: a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint
+    400044: a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint
+    400046: a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint
+    400048: a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint
+    400050: a12tobkr_A_Boy_Animations_Clothes3:R_hip_joint
+    400052: a12tobkr_A_Boy_Animations_Clothes3:R_knee_joint
+    400054: a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint
+    400056: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint
+    400058: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_02_joint
+    400060: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_03_joint
+    400062: a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint
+    400064: a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint
+    400066: a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint
+    400068: a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint
+    400070: Body_ctrl
+    400072: Boy
+    400074: head_joint
+    400076: Hip_ctrl
+    400078: Hip_ctrl_group
+    400080: L_ball_joint
+    400082: L_collar_joint
+    400084: L_elbow_joint
+    400086: L_foot_joint
+    400088: L_forearm_joint
+    400090: L_hand_joint
+    400092: L_hip_joint
+    400094: L_indexfinger_01_joint
+    400096: L_indexfinger_02_joint
+    400098: L_indexfinger_03_joint
+    400100: L_indexfinger_04_joint
+    400102: L_knee_joint
+    400104: L_longfinger_01_joint
+    400106: L_longfinger_02_joint
+    400108: L_longfinger_03_joint
+    400110: L_longfinger_04_joint
+    400112: L_pinkyfinger04_joint
+    400114: L_pinkyfinger_01_joint
+    400116: L_pinkyfinger_02_joint
+    400118: L_pinkyfinger_03_joint
+    400120: L_ringfinger_01_joint
+    400122: L_ringfinger_02_joint
+    400124: L_ringfinger_03_joint
+    400126: L_ringfinger_04_joint
+    400128: L_shoulder_joint
+    400130: L_thumbfinger_01_joint
+    400132: L_thumbfinger_02_joint
+    400134: L_thumbfinger_03_joint
+    400136: L_toe_joint
+    400138: L_wrist_joint
+    400140: neck_01_joint
+    400142: neck_02_joint
+    400144: pelvis_joint
+    400146: R_ball_joint
+    400148: R_collar_joint
+    400150: R_elbow_joint
+    400152: R_foot_joint
+    400154: R_forearm_joint
+    400156: R_hand_joint
+    400158: R_hip_joint
+    400160: R_indexfinger_01_joint
+    400162: R_indexfinger_02_joint
+    400164: R_indexfinger_03_joint
+    400166: R_indexfinger_04_joint
+    400168: R_knee_joint
+    400170: R_longfinger_01_joint
+    400172: R_longfinger_02_joint
+    400174: R_longfinger_03_joint
+    400176: R_longfinger_04_joint
+    400178: R_pinkyfinger04_joint
+    400180: R_pinkyfinger_01_joint
+    400182: R_pinkyfinger_02_joint
+    400184: R_pinkyfinger_03_joint
+    400186: R_ringfinger_01_joint
+    400188: R_ringfinger_02_joint
+    400190: R_ringfinger_03_joint
+    400192: R_ringfinger_04_joint
+    400194: R_shoulder_joint
+    400196: R_thumbfinger_01_joint
+    400198: R_thumbfinger_02_joint
+    400200: R_thumbfinger_03_joint
+    400202: R_toe_joint
+    400204: R_wrist_joint
+    400206: spine_02_joint
+    400208: spine_05_joint
+    400210: spine_06_joint
+    4300000: Boy
+    4300002: a12tobkr_A_Boy_Animations_Clothes3:Hair
+    4300004: a12tobkr_A_Boy_Animations_Clothes3:Clothes
+    7400000: Take 001
+    7400002: Final Run
+    7400004: Take 0011
+    9500000: //RootNode
+    13700000: a12tobkr_A_Boy_Animations_Clothes3:Clothes
+    13700002: a12tobkr_A_Boy_Animations_Clothes3:Hair
+    13700004: Boy
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 1072
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hip_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hip_joint/a12tobkr_A_Boy_Animations_Clothes3:L_knee_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hip_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hip_joint/a12tobkr_A_Boy_Animations_Clothes3:R_knee_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_02_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_02_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_03_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_02_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_02_joint/a12tobkr_A_Boy_Animations_Clothes3:head_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_02_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_02_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_03_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Clothes
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Hair
+        weight: 0
+      - path: Body_ctrl
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint/L_knee_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint/L_knee_joint/L_foot_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint/L_knee_joint/L_foot_joint/L_ball_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint/L_knee_joint/L_foot_joint/L_ball_joint/L_toe_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint/R_knee_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint/R_knee_joint/R_foot_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint/R_knee_joint/R_foot_joint/R_ball_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint/R_knee_joint/R_foot_joint/R_ball_joint/R_toe_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_indexfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_indexfinger_01_joint/L_indexfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_indexfinger_01_joint/L_indexfinger_02_joint/L_indexfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_indexfinger_01_joint/L_indexfinger_02_joint/L_indexfinger_03_joint/L_indexfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_longfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_longfinger_01_joint/L_longfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_longfinger_01_joint/L_longfinger_02_joint/L_longfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_longfinger_01_joint/L_longfinger_02_joint/L_longfinger_03_joint/L_longfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_pinkyfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_pinkyfinger_01_joint/L_pinkyfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_pinkyfinger_01_joint/L_pinkyfinger_02_joint/L_pinkyfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_pinkyfinger_01_joint/L_pinkyfinger_02_joint/L_pinkyfinger_03_joint/L_pinkyfinger04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_ringfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_ringfinger_01_joint/L_ringfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_ringfinger_01_joint/L_ringfinger_02_joint/L_ringfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_ringfinger_01_joint/L_ringfinger_02_joint/L_ringfinger_03_joint/L_ringfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_thumbfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_thumbfinger_01_joint/L_thumbfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_thumbfinger_01_joint/L_thumbfinger_02_joint/L_thumbfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/neck_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/neck_01_joint/neck_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/neck_01_joint/neck_02_joint/head_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_indexfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_indexfinger_01_joint/R_indexfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_indexfinger_01_joint/R_indexfinger_02_joint/R_indexfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_indexfinger_01_joint/R_indexfinger_02_joint/R_indexfinger_03_joint/R_indexfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_longfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_longfinger_01_joint/R_longfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_longfinger_01_joint/R_longfinger_02_joint/R_longfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_longfinger_01_joint/R_longfinger_02_joint/R_longfinger_03_joint/R_longfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_pinkyfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_pinkyfinger_01_joint/R_pinkyfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_pinkyfinger_01_joint/R_pinkyfinger_02_joint/R_pinkyfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_pinkyfinger_01_joint/R_pinkyfinger_02_joint/R_pinkyfinger_03_joint/R_pinkyfinger04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_ringfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_ringfinger_01_joint/R_ringfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_ringfinger_01_joint/R_ringfinger_02_joint/R_ringfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_ringfinger_01_joint/R_ringfinger_02_joint/R_ringfinger_03_joint/R_ringfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_thumbfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_thumbfinger_01_joint/R_thumbfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_thumbfinger_01_joint/R_thumbfinger_02_joint/R_thumbfinger_03_joint
+        weight: 1
+      - path: Boy
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Final Run
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hip_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hip_joint/a12tobkr_A_Boy_Animations_Clothes3:L_knee_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hip_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hip_joint/a12tobkr_A_Boy_Animations_Clothes3:R_knee_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_02_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_02_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_03_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_02_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_02_joint/a12tobkr_A_Boy_Animations_Clothes3:head_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_02_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_02_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_03_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Clothes
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Hair
+        weight: 0
+      - path: Body_ctrl
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint/L_knee_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint/L_knee_joint/L_foot_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint/L_knee_joint/L_foot_joint/L_ball_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint/L_knee_joint/L_foot_joint/L_ball_joint/L_toe_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint/R_knee_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint/R_knee_joint/R_foot_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint/R_knee_joint/R_foot_joint/R_ball_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint/R_knee_joint/R_foot_joint/R_ball_joint/R_toe_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_indexfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_indexfinger_01_joint/L_indexfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_indexfinger_01_joint/L_indexfinger_02_joint/L_indexfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_indexfinger_01_joint/L_indexfinger_02_joint/L_indexfinger_03_joint/L_indexfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_longfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_longfinger_01_joint/L_longfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_longfinger_01_joint/L_longfinger_02_joint/L_longfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_longfinger_01_joint/L_longfinger_02_joint/L_longfinger_03_joint/L_longfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_pinkyfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_pinkyfinger_01_joint/L_pinkyfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_pinkyfinger_01_joint/L_pinkyfinger_02_joint/L_pinkyfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_pinkyfinger_01_joint/L_pinkyfinger_02_joint/L_pinkyfinger_03_joint/L_pinkyfinger04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_ringfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_ringfinger_01_joint/L_ringfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_ringfinger_01_joint/L_ringfinger_02_joint/L_ringfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_ringfinger_01_joint/L_ringfinger_02_joint/L_ringfinger_03_joint/L_ringfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_thumbfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_thumbfinger_01_joint/L_thumbfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_thumbfinger_01_joint/L_thumbfinger_02_joint/L_thumbfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/neck_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/neck_01_joint/neck_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/neck_01_joint/neck_02_joint/head_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_indexfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_indexfinger_01_joint/R_indexfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_indexfinger_01_joint/R_indexfinger_02_joint/R_indexfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_indexfinger_01_joint/R_indexfinger_02_joint/R_indexfinger_03_joint/R_indexfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_longfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_longfinger_01_joint/R_longfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_longfinger_01_joint/R_longfinger_02_joint/R_longfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_longfinger_01_joint/R_longfinger_02_joint/R_longfinger_03_joint/R_longfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_pinkyfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_pinkyfinger_01_joint/R_pinkyfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_pinkyfinger_01_joint/R_pinkyfinger_02_joint/R_pinkyfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_pinkyfinger_01_joint/R_pinkyfinger_02_joint/R_pinkyfinger_03_joint/R_pinkyfinger04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_ringfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_ringfinger_01_joint/R_ringfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_ringfinger_01_joint/R_ringfinger_02_joint/R_ringfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_ringfinger_01_joint/R_ringfinger_02_joint/R_ringfinger_03_joint/R_ringfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_thumbfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_thumbfinger_01_joint/R_thumbfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_thumbfinger_01_joint/R_thumbfinger_02_joint/R_thumbfinger_03_joint
+        weight: 1
+      - path: Boy
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Take 0011
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 1072
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hip_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hip_joint/a12tobkr_A_Boy_Animations_Clothes3:L_knee_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hip_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hip_joint/a12tobkr_A_Boy_Animations_Clothes3:R_knee_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_02_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_02_joint/a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_03_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_02_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint/a12tobkr_A_Boy_Animations_Clothes3:neck_02_joint/a12tobkr_A_Boy_Animations_Clothes3:head_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_02_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group/a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl/a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint/a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint/a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint/a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint/a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint/a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint/a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint/a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_02_joint/a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_03_joint
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Clothes
+        weight: 0
+      - path: a12tobkr_A_Boy_Animations_Clothes3:Hair
+        weight: 0
+      - path: Body_ctrl
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint/L_knee_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint/L_knee_joint/L_foot_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint/L_knee_joint/L_foot_joint/L_ball_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/L_hip_joint/L_knee_joint/L_foot_joint/L_ball_joint/L_toe_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint/R_knee_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint/R_knee_joint/R_foot_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint/R_knee_joint/R_foot_joint/R_ball_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/R_hip_joint/R_knee_joint/R_foot_joint/R_ball_joint/R_toe_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_indexfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_indexfinger_01_joint/L_indexfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_indexfinger_01_joint/L_indexfinger_02_joint/L_indexfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_indexfinger_01_joint/L_indexfinger_02_joint/L_indexfinger_03_joint/L_indexfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_longfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_longfinger_01_joint/L_longfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_longfinger_01_joint/L_longfinger_02_joint/L_longfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_longfinger_01_joint/L_longfinger_02_joint/L_longfinger_03_joint/L_longfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_pinkyfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_pinkyfinger_01_joint/L_pinkyfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_pinkyfinger_01_joint/L_pinkyfinger_02_joint/L_pinkyfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_pinkyfinger_01_joint/L_pinkyfinger_02_joint/L_pinkyfinger_03_joint/L_pinkyfinger04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_ringfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_ringfinger_01_joint/L_ringfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_ringfinger_01_joint/L_ringfinger_02_joint/L_ringfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_ringfinger_01_joint/L_ringfinger_02_joint/L_ringfinger_03_joint/L_ringfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_thumbfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_thumbfinger_01_joint/L_thumbfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/L_collar_joint/L_shoulder_joint/L_elbow_joint/L_forearm_joint/L_wrist_joint/L_hand_joint/L_thumbfinger_01_joint/L_thumbfinger_02_joint/L_thumbfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/neck_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/neck_01_joint/neck_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/neck_01_joint/neck_02_joint/head_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_indexfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_indexfinger_01_joint/R_indexfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_indexfinger_01_joint/R_indexfinger_02_joint/R_indexfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_indexfinger_01_joint/R_indexfinger_02_joint/R_indexfinger_03_joint/R_indexfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_longfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_longfinger_01_joint/R_longfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_longfinger_01_joint/R_longfinger_02_joint/R_longfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_longfinger_01_joint/R_longfinger_02_joint/R_longfinger_03_joint/R_longfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_pinkyfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_pinkyfinger_01_joint/R_pinkyfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_pinkyfinger_01_joint/R_pinkyfinger_02_joint/R_pinkyfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_pinkyfinger_01_joint/R_pinkyfinger_02_joint/R_pinkyfinger_03_joint/R_pinkyfinger04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_ringfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_ringfinger_01_joint/R_ringfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_ringfinger_01_joint/R_ringfinger_02_joint/R_ringfinger_03_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_ringfinger_01_joint/R_ringfinger_02_joint/R_ringfinger_03_joint/R_ringfinger_04_joint
+        weight: 0
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_thumbfinger_01_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_thumbfinger_01_joint/R_thumbfinger_02_joint
+        weight: 1
+      - path: Body_ctrl/Hip_ctrl_group/Hip_ctrl/pelvis_joint/spine_02_joint/spine_05_joint/spine_06_joint/R_collar_joint/R_shoulder_joint/R_elbow_joint/R_forearm_joint/R_wrist_joint/R_hand_joint/R_thumbfinger_01_joint/R_thumbfinger_02_joint/R_thumbfinger_03_joint
+        weight: 1
+      - path: Boy
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: pelvis_joint
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_hip_joint
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_hip_joint
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_knee_joint
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_knee_joint
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_foot_joint
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_foot_joint
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: spine_02_joint
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: spine_05_joint
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: neck_01_joint
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: neck_02_joint
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_collar_joint
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_collar_joint
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_shoulder_joint
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_shoulder_joint
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_elbow_joint
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_elbow_joint
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_wrist_joint
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_wrist_joint
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_toe_joint
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_toe_joint
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: head_joint
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_thumbfinger_01_joint
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_thumbfinger_02_joint
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_thumbfinger_03_joint
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_indexfinger_01_joint
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_indexfinger_02_joint
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_indexfinger_03_joint
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_longfinger_01_joint
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_longfinger_02_joint
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_longfinger_03_joint
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_ringfinger_01_joint
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_ringfinger_02_joint
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_ringfinger_03_joint
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_pinkyfinger_01_joint
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_pinkyfinger_02_joint
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_pinkyfinger_03_joint
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_thumbfinger_01_joint
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_thumbfinger_02_joint
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_thumbfinger_03_joint
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_indexfinger_01_joint
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_indexfinger_02_joint
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_indexfinger_03_joint
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_longfinger_01_joint
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_longfinger_02_joint
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_longfinger_03_joint
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_ringfinger_01_joint
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_ringfinger_02_joint
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_ringfinger_03_joint
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_pinkyfinger_01_joint
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_pinkyfinger_02_joint
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_pinkyfinger_03_joint
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: a12tobkr_A_Boy_Animations_Clothes3(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl
+      position: {x: .00471581845, y: 1.81478299e-05, z: .00182758237}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 2.27600002, y: 2.27600002, z: 2.27600002}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group
+      position: {x: -.00471581845, y: -1.81478299e-05, z: -.00182758237}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl
+      position: {x: .00664887484, y: .305961788, z: .0285406224}
+      rotation: {x: .089598313, y: .0398288928, z: -.00358590437, w: .995174825}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint
+      position: {x: .000207950245, y: .0177385453, z: -.0304402523}
+      rotation: {x: .0608671978, y: .00576046295, z: -.699398339, w: .712112367}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_hip_joint
+      position: {x: .0190681536, y: -.0305533987, z: .0107933776}
+      rotation: {x: -.128588334, y: -.180056155, z: .975166857, w: .00972087588}
+      scale: {x: .999999881, y: .999999881, z: .999999762}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_knee_joint
+      position: {x: -.147403553, y: -.000305595313, z: .000419334625}
+      rotation: {x: -.000398390403, y: -.0251919404, z: -.00802970584, w: .999650359}
+      scale: {x: .999999583, y: 1.00000012, z: 1.00000048}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_hip_joint
+      position: {x: .019067416, y: .0305534098, z: .0107932175}
+      rotation: {x: .979173779, y: .0121752387, z: .128270522, w: .156899065}
+      scale: {x: .99999994, y: .999999523, z: .999999881}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_knee_joint
+      position: {x: .147403449, y: .00031357893, z: -.000388897664}
+      rotation: {x: -.000398412987, y: -.0251919609, z: -.00802986976, w: .9996503}
+      scale: {x: .999999881, y: .99999994, z: .999999881}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint
+      position: {x: -.0401105657, y: -5.49155699e-09, z: -.009005256}
+      rotation: {x: -4.63237093e-09, y: -.284018248, z: 8.2699998e-08, w: .958818913}
+      scale: {x: .999999821, y: .999999881, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint
+      position: {x: -.03354799, y: 3.41746254e-09, z: .0143408319}
+      rotation: {x: 1.47542458e-08, y: .248757884, z: -4.35228529e-08, w: .968565762}
+      scale: {x: .999999881, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint
+      position: {x: -.0357111953, y: -1.2587936e-08, z: -.0133434981}
+      rotation: {x: -.0673401877, y: -.0673401952, z: .703892946, w: .703893006}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint
+      position: {x: -.0232348088, y: .0232618675, z: .00608683098}
+      rotation: {x: -.0135270413, y: -.1314473, z: .101470269, w: .986023545}
+      scale: {x: 1.00000012, y: .999999821, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint
+      position: {x: -.0395343527, y: 7.56212671e-07, z: 8.03048806e-07}
+      rotation: {x: -.681503057, y: .174203962, z: .0725718513, w: .70706439}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint
+      position: {x: -.0815485269, y: 6.85381849e-08, z: 1.31511072e-07}
+      rotation: {x: .121413954, y: .0862524509, z: .0926337838, w: .984498978}
+      scale: {x: 1, y: .999999642, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint
+      position: {x: -.0391101688, y: 1.04053854e-07, z: -3.38280955e-07}
+      rotation: {x: .74172461, y: .0279750302, z: .037361782, w: .669078588}
+      scale: {x: .99999994, y: .999999821, z: .999999821}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint
+      position: {x: -.0375192985, y: -1.71134234e-19, z: 8.54722418e-18}
+      rotation: {x: -.435668677, y: -.0455219224, z: -.0398963839, w: .898069561}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint
+      position: {x: -.0171180572, y: 4.82636362e-17, z: 1.86199928e-17}
+      rotation: {x: .359163165, y: .625238955, z: -.170066059, w: .671681166}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint
+      position: {x: -.0151500963, y: 7.1054272e-17, z: -1.7763568e-17}
+      rotation: {x: .0559718236, y: -.111809574, z: .683940411, w: .718742847}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_02_joint
+      position: {x: -.0115745822, y: -.00259150076, z: .0199971497}
+      rotation: {x: .24061957, y: .366821349, z: -.0438515693, w: .897564173}
+      scale: {x: 1, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_03_joint
+      position: {x: -.0109255873, y: -1.43240896e-07, z: 2.97016044e-07}
+      rotation: {x: -.84101367, y: -.362527817, z: -.393007666, w: -.0825507119}
+      scale: {x: .99999994, y: 1.00000036, z: .999999881}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint
+      position: {x: 8.11592038e-09, y: .0417672284, z: .00242131879}
+      rotation: {x: -.0477809161, y: -5.68484682e-09, z: 2.80513106e-08, w: .998857915}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:neck_02_joint
+      position: {x: -2.72126188e-09, y: .023591483, z: 9.29952151e-08}
+      rotation: {x: -.441617638, y: .552244484, z: -.441617638, w: .552244425}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:head_joint
+      position: {x: -.0455190353, y: 4.41653896e-07, z: -4.91311036e-09}
+      rotation: {x: .432840019, y: -.555075288, z: .447839499, w: .551344454}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint
+      position: {x: .0232347623, y: .0232620127, z: .006086851}
+      rotation: {x: .986023605, y: -.101470187, z: -.13144733, w: .0135270869}
+      scale: {x: 1.00000012, y: .999999821, z: .999999642}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint
+      position: {x: .039533928, y: -3.07068831e-07, z: -4.4170551e-07}
+      rotation: {x: -.682246923, y: .181830853, z: .0652071685, w: .705141664}
+      scale: {x: .999999881, y: .999999702, z: .999999762}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint
+      position: {x: .0815486833, y: -5.24163397e-08, z: -2.39752922e-07}
+      rotation: {x: .121413991, y: .0862524137, z: .0926337615, w: .984498978}
+      scale: {x: 1.00000012, y: .999999881, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint
+      position: {x: .0391102806, y: -1.76815121e-07, z: 6.1833866e-08}
+      rotation: {x: .0513683483, y: -.00663733389, z: .046200145, w: .997588515}
+      scale: {x: 1, y: 1.00000036, z: 1.00000036}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint
+      position: {x: .037518505, y: 2.99619302e-07, z: -1.50282503e-07}
+      rotation: {x: -.106951311, y: .0408646427, z: .178000078, w: .977347195}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint
+      position: {x: .0171181094, y: -1.7318078e-07, z: -1.57676965e-07}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint
+      position: {x: .00242843735, y: .0145758474, z: .00334321242}
+      rotation: {x: .427835256, y: -.53213352, z: .0365827605, w: .729693532}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_02_joint
+      position: {x: .0128448382, y: .00146130542, z: -.00279488345}
+      rotation: {x: -.414209038, y: -.297493428, z: -.0709371716, w: -.857261062}
+      scale: {x: .999999702, y: 1.00000024, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_03_joint
+      position: {x: .0109261367, y: -2.74241074e-07, z: 2.55988596e-07}
+      rotation: {x: 4.51541986e-08, y: -1.25134179e-07, z: -3.56216781e-08, w: 1}
+      scale: {x: 1, y: .99999994, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:Clothes
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:Hair
+      position: {x: .0366737507, y: -.0694748089, z: .0925462693}
+      rotation: {x: .0439206101, y: -.00683830585, z: .00771430135, w: .998981833}
+      scale: {x: .99999994, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Body_ctrl
+      position: {x: .00471581845, y: 1.81478299e-05, z: .00182758237}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 2.27600002, y: 2.27600002, z: 2.27600002}
+      transformModified: 1
+    - name: Hip_ctrl_group
+      position: {x: -.00471581845, y: -1.81478299e-05, z: -.00182758237}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Hip_ctrl
+      position: {x: .00664887484, y: .305961788, z: .0285406224}
+      rotation: {x: .089598313, y: .0398288928, z: -.00358590437, w: .995174825}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pelvis_joint
+      position: {x: -.00193932897, y: .0179014374, z: -.0295996834}
+      rotation: {x: .0608676001, y: .00576087972, z: -.699398339, w: .712112367}
+      scale: {x: .99999994, y: .999999881, z: 1}
+      transformModified: 1
+    - name: L_hip_joint
+      position: {x: .019068053, y: -.0305533558, z: .0107929539}
+      rotation: {x: -.128588885, y: -.180056423, z: .975166738, w: .00972056575}
+      scale: {x: 1.00000048, y: 1.00000036, z: .999999881}
+      transformModified: 1
+    - name: L_knee_joint
+      position: {x: -.147403583, y: -.00030548955, z: .000419378339}
+      rotation: {x: -.000397685304, y: -.0251918249, z: -.00802999642, w: .999650359}
+      scale: {x: .999999523, y: 1, z: 1.00000036}
+      transformModified: 1
+    - name: L_foot_joint
+      position: {x: -.134662554, y: 3.35485056e-05, z: -.000390102097}
+      rotation: {x: .176859304, y: .00165767537, z: -.0046761753, w: .984223723}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: L_ball_joint
+      position: {x: -.0173406526, y: .00569650624, z: .0406487845}
+      rotation: {x: -8.58242699e-10, y: 7.22664062e-09, z: -4.67112216e-08, w: 1}
+      scale: {x: 1, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: L_toe_joint
+      position: {x: .00184354256, y: -.000871378812, z: .0254924111}
+      rotation: {x: -5.1280904e-09, y: -6.32741859e-09, z: 3.77450711e-08, w: 1}
+      scale: {x: 1, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: R_hip_joint
+      position: {x: .0190674551, y: .0305533838, z: .0107928328}
+      rotation: {x: .979173601, y: .0121751018, z: .128271058, w: .156899393}
+      scale: {x: 1.00000012, y: .999999762, z: 1}
+      transformModified: 1
+    - name: R_knee_joint
+      position: {x: .147403568, y: .000313534954, z: -.000388913206}
+      rotation: {x: -.000397744938, y: -.0251918528, z: -.00802990608, w: .999650359}
+      scale: {x: .99999994, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: R_foot_joint
+      position: {x: .134661794, y: -4.16320509e-05, z: .000359615951}
+      rotation: {x: .153559297, y: .00143928546, z: -.00406010868, w: .988130093}
+      scale: {x: 1.00000036, y: 1.00000024, z: 1.00000012}
+      transformModified: 1
+    - name: R_ball_joint
+      position: {x: .0173406638, y: -.0056964797, z: -.0406488329}
+      rotation: {x: .0507598147, y: -.0438332893, z: -.0059195077, w: .99773103}
+      scale: {x: .999999821, y: .999999881, z: .999999702}
+      transformModified: 1
+    - name: R_toe_joint
+      position: {x: -.00420683296, y: -.00180295575, z: -.0260679144}
+      rotation: {x: 1.90975538e-08, y: -2.88251267e-09, z: -1.50705333e-08, w: 1}
+      scale: {x: 1, y: .999999821, z: 1.00000012}
+      transformModified: 1
+    - name: spine_02_joint
+      position: {x: -.0401103348, y: -7.8713942e-09, z: -.00900630932}
+      rotation: {x: 1.73037993e-08, y: -.284019619, z: -8.77692141e-10, w: .958818555}
+      scale: {x: 1.00000012, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: spine_05_joint
+      position: {x: -.0335478559, y: -1.01564721e-08, z: .01434136}
+      rotation: {x: 9.85050153e-10, y: .248758525, z: 4.11420835e-08, w: .968565583}
+      scale: {x: .999999821, y: .999999881, z: 1.00000012}
+      transformModified: 1
+    - name: spine_06_joint
+      position: {x: -.03571105, y: -1.24985409e-08, z: -.0133433081}
+      rotation: {x: -.0673400685, y: -.0673400909, z: .703893006, w: .703892946}
+      scale: {x: 1.00000012, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: L_collar_joint
+      position: {x: -.0232346635, y: .0232621394, z: .00608691527}
+      rotation: {x: -.0135269575, y: -.131446615, z: .101470262, w: .986023664}
+      scale: {x: 1, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: L_shoulder_joint
+      position: {x: -.03953382, y: 1.50106331e-07, z: 6.16460412e-08}
+      rotation: {x: -.673279464, y: .153143704, z: .0317560621, w: .722657204}
+      scale: {x: 1.00000012, y: 1.00000024, z: .99999994}
+      transformModified: 1
+    - name: L_elbow_joint
+      position: {x: -.0815476701, y: -4.75498894e-08, z: 5.13807166e-08}
+      rotation: {x: .122142553, y: .0420538038, z: .00692338357, w: .991597056}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: L_forearm_joint
+      position: {x: -.0391109921, y: 6.70793128e-08, z: -9.70399299e-08}
+      rotation: {x: .74172473, y: .0279749185, z: .0373616479, w: .669078469}
+      scale: {x: .99999994, y: .999999821, z: .99999994}
+      transformModified: 1
+    - name: L_wrist_joint
+      position: {x: -.0375188775, y: 9.91181253e-08, z: -1.23675576e-08}
+      rotation: {x: .0319283679, y: .0305669326, z: -.037742313, w: .998309493}
+      scale: {x: .99999994, y: .999999702, z: .999999762}
+      transformModified: 1
+    - name: L_hand_joint
+      position: {x: -.0171183161, y: -2.46926078e-07, z: 2.45735237e-07}
+      rotation: {x: .359162927, y: .625239015, z: -.170065895, w: .671681404}
+      scale: {x: 1, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: L_indexfinger_01_joint
+      position: {x: -.0116366558, y: -.0103093348, z: -.0101163946}
+      rotation: {x: -.396665007, y: -.582600594, z: .217394456, w: .675257802}
+      scale: {x: .999999762, y: 1.00000012, z: .999999881}
+      transformModified: 1
+    - name: L_indexfinger_02_joint
+      position: {x: -.0104416702, y: 2.42717721e-08, z: -1.045819e-07}
+      rotation: {x: -.0529754199, y: -.00769029371, z: .0360079184, w: .997916818}
+      scale: {x: 1.00000012, y: 1.00000036, z: .999999821}
+      transformModified: 1
+    - name: L_indexfinger_03_joint
+      position: {x: -.00641095312, y: 1.61584026e-08, z: 1.07653491e-07}
+      rotation: {x: .141281977, y: .0144625111, z: .0357378088, w: .989218414}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: L_indexfinger_04_joint
+      position: {x: -.00682239886, y: 2.18731586e-07, z: -1.52039789e-07}
+      rotation: {x: -.767068088, y: .146697119, z: -.237621918, w: .577600598}
+      scale: {x: .99999994, y: .999999702, z: .999999583}
+      transformModified: 1
+    - name: L_longfinger_01_joint
+      position: {x: -.00602540188, y: -.00982428715, z: -.0119993854}
+      rotation: {x: -.420333922, y: -.587019861, z: .193869978, w: .664184928}
+      scale: {x: .999999881, y: 1.00000048, z: 1}
+      transformModified: 1
+    - name: L_longfinger_02_joint
+      position: {x: -.0121130301, y: 2.99416058e-07, z: 8.21635737e-08}
+      rotation: {x: -.0521710478, y: -.0104199788, z: .037903361, w: .997864246}
+      scale: {x: 1, y: .999999642, z: .999999762}
+      transformModified: 1
+    - name: L_longfinger_03_joint
+      position: {x: -.00836730935, y: 1.8460679e-07, z: -1.23270695e-07}
+      rotation: {x: -.0846115947, y: -.00579695962, z: .0372447371, w: .995700836}
+      scale: {x: 1.00000012, y: 1.00000012, z: .999999881}
+      transformModified: 1
+    - name: L_longfinger_04_joint
+      position: {x: -.00739532104, y: 2.57185917e-07, z: 3.50951019e-08}
+      rotation: {x: -.589033425, y: .251746505, z: -.18358849, w: .74562639}
+      scale: {x: .999999821, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: L_pinkyfinger_01_joint
+      position: {x: .00500630913, y: -.0127652651, z: -.0114062736}
+      rotation: {x: -.400416851, y: -.571519017, z: .212312683, w: .684072971}
+      scale: {x: .999999523, y: 1.00000024, z: .999999821}
+      transformModified: 1
+    - name: L_pinkyfinger_02_joint
+      position: {x: -.00763930893, y: -6.98642282e-08, z: -4.40145804e-08}
+      rotation: {x: .0612198673, y: .00630697701, z: .0366375707, w: .997431755}
+      scale: {x: 1.00000024, y: .999999821, z: 1.00000012}
+      transformModified: 1
+    - name: L_pinkyfinger_03_joint
+      position: {x: -.00610046554, y: -2.02679296e-08, z: 5.90097819e-08}
+      rotation: {x: .968637109, y: .0349459797, z: .00198813388, w: .246002108}
+      scale: {x: 1.00000024, y: .999999881, z: 1}
+      transformModified: 1
+    - name: L_pinkyfinger04_joint
+      position: {x: -.00567327952, y: -3.59040797e-07, z: -3.63909614e-08}
+      rotation: {x: -.715842247, y: -.26997, z: -.317131609, w: -.560458541}
+      scale: {x: .999999821, y: .999999642, z: .999999702}
+      transformModified: 1
+    - name: L_ringfinger_01_joint
+      position: {x: -.000354927208, y: -.0115758441, z: -.0112677859}
+      rotation: {x: -.401285022, y: -.573636293, z: .212357029, w: .681774378}
+      scale: {x: .999999881, y: 1.00000024, z: .999999762}
+      transformModified: 1
+    - name: L_ringfinger_02_joint
+      position: {x: -.0106732892, y: 1.38398036e-07, z: -1.30418471e-07}
+      rotation: {x: -.110249087, y: -.0144060208, z: .0348043554, w: .993189991}
+      scale: {x: .99999994, y: .999999642, z: 1}
+      transformModified: 1
+    - name: L_ringfinger_03_joint
+      position: {x: -.00658194022, y: -3.02705452e-08, z: 1.69647791e-07}
+      rotation: {x: .0203909054, y: .00184885634, z: .0392914228, w: .999018073}
+      scale: {x: 1.00000012, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: L_ringfinger_04_joint
+      position: {x: -.00661087176, y: 2.5199904e-07, z: -1.88418568e-07}
+      rotation: {x: -.65035975, y: .224703088, z: -.204348445, w: .696263194}
+      scale: {x: .999999821, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: L_thumbfinger_01_joint
+      position: {x: -.0151499063, y: -1.22261099e-08, z: 7.83319987e-09}
+      rotation: {x: -.179045126, y: -.326559156, z: -.0292358138, w: .927602947}
+      scale: {x: .999999821, y: 1, z: .999999702}
+      transformModified: 1
+    - name: L_thumbfinger_02_joint
+      position: {x: -.0100910747, y: 3.03780809e-07, z: 1.18543539e-07}
+      rotation: {x: .0112744849, y: .00224937103, z: .0340883322, w: .999352694}
+      scale: {x: .99999994, y: .999999762, z: 1}
+      transformModified: 1
+    - name: L_thumbfinger_03_joint
+      position: {x: -.0109252734, y: -3.26127349e-07, z: -8.16039574e-08}
+      rotation: {x: -.841013908, y: -.362527847, z: -.39300698, w: -.0825511441}
+      scale: {x: 1.00000012, y: 1.00000024, z: 1.00000024}
+      transformModified: 1
+    - name: neck_01_joint
+      position: {x: 1.42410883e-08, y: .0417671502, z: .00242137583}
+      rotation: {x: -.0477808639, y: 1.01021165e-08, z: -2.6671195e-08, w: .998857915}
+      scale: {x: 1, y: 1, z: 1.00000024}
+      transformModified: 1
+    - name: neck_02_joint
+      position: {x: 7.32114369e-09, y: .0235916935, z: -1.27049972e-07}
+      rotation: {x: -.441617727, y: .552244365, z: -.441617727, w: .552244306}
+      scale: {x: .999999642, y: .99999994, z: .999999881}
+      transformModified: 1
+    - name: head_joint
+      position: {x: -.0455187596, y: -9.52846051e-08, z: -1.15582144e-09}
+      rotation: {x: .467500001, y: -.53051275, z: .467500061, w: .530512691}
+      scale: {x: 1.00000036, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: R_collar_joint
+      position: {x: .0232346207, y: .0232624356, z: .0060869446}
+      rotation: {x: .986023664, y: -.101470247, z: -.131446645, w: .0135269556}
+      scale: {x: .99999994, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: R_shoulder_joint
+      position: {x: .0395340249, y: 1.89999398e-07, z: -6.08901658e-08}
+      rotation: {x: -.673279405, y: .153143987, z: .0317565128, w: .722657144}
+      scale: {x: .999999762, y: .999999881, z: .999999702}
+      transformModified: 1
+    - name: R_elbow_joint
+      position: {x: .0815479457, y: 7.68982034e-09, z: -3.23498384e-08}
+      rotation: {x: .122142501, y: .0420529097, z: .0069214846, w: .991597116}
+      scale: {x: 1.00000024, y: 1.00000012, z: 1.00000024}
+      transformModified: 1
+    - name: R_forearm_joint
+      position: {x: .0391112901, y: -1.62884731e-07, z: -9.31795867e-08}
+      rotation: {x: .0513685383, y: -.00663746893, z: .0461999215, w: .997588515}
+      scale: {x: .999999881, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: R_wrist_joint
+      position: {x: .0375180952, y: 3.35868862e-07, z: -1.02187556e-07}
+      rotation: {x: .0319285206, y: .0377424248, z: .0305668227, w: .998309493}
+      scale: {x: .999999881, y: .999999821, z: .999999881}
+      transformModified: 1
+    - name: R_hand_joint
+      position: {x: .0171181541, y: -1.68719438e-07, z: -1.96631561e-07}
+      rotation: {x: -2.53448444e-08, y: -1.38776013e-08, z: 3.5499518e-08, w: 1}
+      scale: {x: 1, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: R_indexfinger_01_joint
+      position: {x: .0161123108, y: .00881723408, z: .00258904789}
+      rotation: {x: -.00189125165, y: .0180760343, z: .00837958697, w: .999799788}
+      scale: {x: 1.00000048, y: 1.00000048, z: 1}
+      transformModified: 1
+    - name: R_indexfinger_02_joint
+      position: {x: .0102762543, y: .000224139716, z: .00183581084}
+      rotation: {x: -.00526175229, y: .0967141166, z: .0176464375, w: .995141864}
+      scale: {x: .999999762, y: .999999881, z: 1.00000036}
+      transformModified: 1
+    - name: R_indexfinger_03_joint
+      position: {x: .00578991883, y: -.000186132704, z: .00274652173}
+      rotation: {x: .010077605, y: .0598834455, z: -.0171861146, w: .998006582}
+      scale: {x: 1.00000012, y: .999999881, z: .999999762}
+      transformModified: 1
+    - name: R_indexfinger_04_joint
+      position: {x: .00548503036, y: .000239183355, z: .0040497412}
+      rotation: {x: -4.82912661e-08, y: 3.49045637e-09, z: 2.17055405e-08, w: 1}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: R_longfinger_01_joint
+      position: {x: .0162351821, y: .00362449931, z: -.000290535187}
+      rotation: {x: -.00880747195, y: .0837662369, z: .0338411778, w: .995871723}
+      scale: {x: 1.00000048, y: 1.00000048, z: 1}
+      transformModified: 1
+    - name: R_longfinger_02_joint
+      position: {x: .0115502626, y: -.000257036183, z: .00364228641}
+      rotation: {x: -.00155125803, y: .0459530614, z: .00816210546, w: .998909056}
+      scale: {x: .999999762, y: .999999881, z: 1.00000036}
+      transformModified: 1
+    - name: R_longfinger_03_joint
+      position: {x: .00743081979, y: -.00042800128, z: .00382193876}
+      rotation: {x: .00663906848, y: .080364272, z: -.0039082882, w: .996735871}
+      scale: {x: 1.00000012, y: .999999821, z: .999999523}
+      transformModified: 1
+    - name: R_longfinger_04_joint
+      position: {x: .00559910573, y: -.00022785418, z: .00482613919}
+      rotation: {x: 9.04678643e-09, y: 1.89494642e-08, z: 1.77924004e-08, w: 1}
+      scale: {x: .999999881, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: R_pinkyfinger_01_joint
+      position: {x: .0160336699, y: -.0078061074, z: -.000300057931}
+      rotation: {x: -.0099507533, y: .0934458897, z: .023355158, w: .995300651}
+      scale: {x: 1.00000048, y: 1.00000048, z: 1}
+      transformModified: 1
+    - name: R_pinkyfinger_02_joint
+      position: {x: .00722254859, y: .000147662751, z: .00248648529}
+      rotation: {x: .000452150387, y: .0907621682, z: -.00670342334, w: .995849967}
+      scale: {x: .999999642, y: .999999821, z: 1.00000012}
+      transformModified: 1
+    - name: R_pinkyfinger_03_joint
+      position: {x: .00507296296, y: .00022435392, z: .0033799042}
+      rotation: {x: -.00236931141, y: .13604933, z: -.00547371758, w: .990684152}
+      scale: {x: 1.00000024, y: .999999821, z: .999999642}
+      transformModified: 1
+    - name: R_pinkyfinger04_joint
+      position: {x: .00338392681, y: .00024191878, z: .00454778736}
+      rotation: {x: -3.34438148e-08, y: 6.02460026e-11, z: 3.26485292e-08, w: 1}
+      scale: {x: 1.00000012, y: 1.00000012, z: .999999821}
+      transformModified: 1
+    - name: R_ringfinger_01_joint
+      position: {x: .0159883369, y: -.00233275141, z: .000165676684}
+      rotation: {x: -.00822757464, y: .0774797425, z: .0220022332, w: .996717215}
+      scale: {x: 1.00000048, y: 1.00000048, z: 1}
+      transformModified: 1
+    - name: R_ringfinger_02_joint
+      position: {x: .0101966374, y: .000188516831, z: .00314914179}
+      rotation: {x: -.00866648834, y: .0769762918, z: .0234533343, w: .99671942}
+      scale: {x: .999999762, y: .999999881, z: 1.00000036}
+      transformModified: 1
+    - name: R_ringfinger_03_joint
+      position: {x: .00568478741, y: -.000364392326, z: .00329671102}
+      rotation: {x: .00730155036, y: .0456648096, z: -.00754339527, w: .998901725}
+      scale: {x: 1.00000012, y: .999999881, z: .999999762}
+      transformModified: 1
+    - name: R_ringfinger_04_joint
+      position: {x: .00508219982, y: -.000114355069, z: .00422689645}
+      rotation: {x: -4.82912661e-08, y: 3.49045637e-09, z: 2.17055405e-08, w: 1}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: R_thumbfinger_01_joint
+      position: {x: .0024284136, y: .0145757021, z: .00334286503}
+      rotation: {x: -.142648712, y: -.17616275, z: -.420651257, w: -.878447831}
+      scale: {x: 1.00000012, y: 1, z: .999999881}
+      transformModified: 1
+    - name: R_thumbfinger_02_joint
+      position: {x: .00982003938, y: -.000434242422, z: -.000104028688}
+      rotation: {x: .236343607, y: -.0338204727, z: -.0299755782, w: .970618069}
+      scale: {x: 1.00000024, y: 1.00000012, z: 1.00000083}
+      transformModified: 1
+    - name: R_thumbfinger_03_joint
+      position: {x: .0109260101, y: -3.00065722e-07, z: 2.22143683e-07}
+      rotation: {x: -3.3339248e-10, y: 7.75739721e-08, z: -1.00472839e-08, w: 1}
+      scale: {x: .999999762, y: 1, z: .999999881}
+      transformModified: 1
+    - name: Boy
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  additionalBone: 0
+  userData: 
