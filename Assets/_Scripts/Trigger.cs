@@ -16,6 +16,8 @@ public class Trigger : MonoBehaviour {
 
 	public bool _activatedByInteractables = true;
 
+	public bool _activatedByThrowables = false;
+
 	int _numberOfThings = 0;
 
 	public AudioClip _triggeredSound, _unTriggeredSound;
@@ -48,7 +50,7 @@ public class Trigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		if(_activatedByInteractables && other.tag == "Interactive"){
+		if(_activatedByInteractables && other.tag == "Interactive" || _activatedByThrowables && other.tag == "Throwable"){
 			if(_numberOfThings == 0){
 				for(int i = 0; i < _action.Length; i++){
 					_action[i].onActive();
@@ -86,7 +88,7 @@ public class Trigger : MonoBehaviour {
 	}
 
 	void OnTriggerExit(Collider other) {
-		if(_activatedByInteractables && other.tag == "Interactive"){
+		if(_activatedByInteractables && other.tag == "Interactive" || _activatedByThrowables && other.tag == "Throwable"){
 			_numberOfThings--;
 			if(_numberOfThings <= 0){
 				for(int i = 0; i < _action.Length; i++){

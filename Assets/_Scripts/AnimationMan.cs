@@ -85,7 +85,7 @@ public class AnimationMan : MonoBehaviour {
 			_length = (_length > 1) ? 1 : _length;
 			_animator.SetFloat("Speed", _length);
 			_animator.speed = (_animator.GetCurrentAnimatorStateInfo(0).IsName("Run")) ? ((_length == 0) ? 1 : _length) : Mathf.Lerp( _animator.speed, 1f, 0.5f);
-			if(_length == 0 || _animator.GetBool("Fallin'") || _animator.GetBool("Jump")){
+			if((_length == 0 || _animator.GetBool("Jump")) && !_animator.GetBool("Falling") && !_animator.GetCurrentAnimatorStateInfo(0).IsName("Land")){
 				_animator.applyRootMotion = false;
 			}
 			else{
