@@ -58,8 +58,6 @@ public class randomOffset : MonoBehaviour {
     #region Private functions
 	IEnumerator UpdateTexture ( float waitTime ){
 		while(true){
-			Debug.Log(index);
-			Debug.Log(count);
 			count += Time.deltaTime;
 			if(count>timeForSwap) {
 				count = 0;
