@@ -92,8 +92,10 @@ public class JumpingMan : MonoBehaviour {
 		
 */
 		if(!_jump && Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f ,Vector3.down,out _rayHit,2.5f)){
-			_animator.SetBool("Falling", false);
-			_deadTimer = 0.0f;
+			if(Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f + _offsetY ,Vector3.down,out _rayHit, _rayLength)){
+				_animator.SetBool("Falling", false);
+				_deadTimer = 0.0f;
+			}
 			//_animan.enabled = true;
 		} else{
 			//_jumpingMove = _charCon.velocity*_speedScale;
@@ -126,9 +128,6 @@ public class JumpingMan : MonoBehaviour {
 				_jumpingMove.y -= _gravity*Time.deltaTime;
 				_charCon.Move(_jumpingMove*Time.deltaTime);
 			}
-
-			//Debug.Log("Forward: " + transform.forward);
-			Debug.Log("JumpMove: " +_jumpingMove);
 
 			Vector3 temp = new Vector3(_offsetX,_offsetY,_offsetZ);
 			if(Time.time - _clock > _maxTime){
