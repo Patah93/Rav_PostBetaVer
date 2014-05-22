@@ -3,24 +3,54 @@ using System.Collections;
 
 public class CheckingMan : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public CheckpointSystem _CheckpointSystem;
+
+	public GameObject _currentCheckpoint;
+
+	Checkpoint _checkpointScript;
+
+	JumpingMan _jumpM;
+
+	bool _fading = false;
+
+	void Start(){
+
+		_jumpM = GetComponent<JumpingMan>();
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void Update(){
+
+		if(_checkpointScript != null){
+
+			if(_jumpM._dead && !_fading){
+
+					_checkpointScript.StartRollback(true);
+					_fading = true;
+
+			} else if(!_jumpM._dead && _fading) {
+
+				_checkpointScript.StartRollback(false);
+				_fading = false;
+
+			}
+
+		}
+
 	}
 
 	void OnTriggerEnter(Collider c){
 
-		Debug.Log(c.tag);
+		if(c.CompareTag("Checkpoint") && _currentCheckpoint != c.gameObject){
 
-		if(c.CompareTag("Checkpoint")){
+			if(_currentCheckpoint != null){
+				_currentCheckpoint = _CheckpointSystem.CompareCheckpoints(_currentCheckpoint, c.gameObject);
+			}
+			else {
+				_currentCheckpoint = c.gameObject;
+			}
 
-
-
+			_checkpointScript = _currentCheckpoint.GetComponent<Checkpoint>();
 		}
 
 	}
