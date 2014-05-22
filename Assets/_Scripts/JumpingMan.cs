@@ -10,9 +10,11 @@ public class JumpingMan : MonoBehaviour {
 	public float _maxTime = 1f;
 	private bool _jump = false;
 	private float _stickLength;
+	private float _mrHigh = 0;
 
 	public bool _dead = false;
 	public Vector3 _jumpLength;
+	public float _maxFallHigh = 5;
 	public float _jumpForce = 300;
 	public float _offsetX = 0;
 	public float _offsetY = 0;
@@ -94,18 +96,19 @@ public class JumpingMan : MonoBehaviour {
 		if(!_jump && Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f ,Vector3.down,out _rayHit,2.5f)){
 			if(Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f + _offsetY ,Vector3.down,out _rayHit, _rayLength)){
 				_animator.SetBool("Falling", false);
-				_deadTimer = 0.0f;
+				_mrHigh = transform.position.y;
 			}
 			//_animan.enabled = true;
 		} else{
 			//_jumpingMove = _charCon.velocity*_speedScale;
 			_animator.SetBool("Falling", true);
-			_deadTimer += Time.deltaTime;
+
 			//_animan.enabled = false;
 		}
 
-		if(_deadTimer >= _maxDeadTime){
+		if(_mrHigh - transform.position.y >= _maxFallHigh){
 			_dead = true;
+			_mrHigh = transform.position.y;
 		}
 
 		if(_jump){
@@ -180,6 +183,10 @@ public class JumpingMan : MonoBehaviour {
 	public void Jumpy(){
 		_jump = true;
 
+	}
+
+	public void setDead(bool status){
+		_dead = status;
 	}
 
 }

@@ -8,11 +8,11 @@ public abstract class TriggerAction : MonoBehaviour{
 
 public class Trigger : MonoBehaviour {
 
-	public GameObject[] _actionObj;
+	//public GameObject[] _actionObj;
 
 	public GameObject[] _triggerableObjects;
 
-	TriggerAction[] _action;
+	public TriggerAction[] _scripts;
 
 	public bool _activatedByInteractables = true;
 
@@ -26,21 +26,6 @@ public class Trigger : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		_action = new TriggerAction[_actionObj.Length];
-		for(int i = 0; i < _action.Length; i++){
-			TriggerAction[] _tAction = _actionObj[i].GetComponents<TriggerAction>();
-			if(_tAction.Length > 1){
-				if(_tAction[0].GetType() != typeof(triggerGroup)){
-					_action[i] = _tAction[1];
-				}
-				else{
-					_action[i] = _tAction[0];
-				}
-			}else{
-				_action[i] = _tAction[0];
-			}
-		}
-
 		_audioSource = GetComponent<AudioSource>();
 	}
 	
@@ -52,8 +37,8 @@ public class Trigger : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if(_activatedByInteractables && other.tag == "Interactive" || _activatedByThrowables && other.tag == "Throwable"){
 			if(_numberOfThings == 0){
-				for(int i = 0; i < _action.Length; i++){
-					_action[i].onActive();
+				for(int i = 0; i < _scripts.Length; i++){
+					_scripts[i].onActive();
 				}
 
 				if(_triggeredSound != null){
@@ -70,8 +55,8 @@ public class Trigger : MonoBehaviour {
 		for(int i = 0 ; i < _triggerableObjects.Length; i++){
 			if(_triggerableObjects[i] == other.gameObject){
 				if(_numberOfThings == 0){
-					for(int j = 0; j < _action.Length; j++){
-						_action[j].onActive();
+					for(int j = 0; j < _scripts.Length; j++){
+						_scripts[j].onActive();
 					}
 					//gameObject.renderer.material.color = Color.red;
 
@@ -91,8 +76,8 @@ public class Trigger : MonoBehaviour {
 		if(_activatedByInteractables && other.tag == "Interactive" || _activatedByThrowables && other.tag == "Throwable"){
 			_numberOfThings--;
 			if(_numberOfThings <= 0){
-				for(int i = 0; i < _action.Length; i++){
-					_action[i].onInactive();
+				for(int i = 0; i < _scripts.Length; i++){
+					_scripts[i].onInactive();
 				}
 
 				if(_unTriggeredSound != null){
@@ -109,8 +94,8 @@ public class Trigger : MonoBehaviour {
 			if(_triggerableObjects[i] == other.gameObject){
 				_numberOfThings--;
 				if(_numberOfThings <= 0){
-					for(int j = 0; j < _action.Length; j++){
-						_action[j].onInactive();
+					for(int j = 0; j < _scripts.Length; j++){
+						_scripts[j].onInactive();
 					}
 
 					if(_unTriggeredSound != null){
