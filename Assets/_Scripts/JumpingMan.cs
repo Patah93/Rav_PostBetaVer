@@ -182,4 +182,8 @@ public class JumpingMan : MonoBehaviour {
 
 	}
 
+	public void setDead(bool status){
+		_dead = status;
+	}
+
 }
