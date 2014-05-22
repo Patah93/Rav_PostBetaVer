@@ -21,28 +21,34 @@ public class ClothesSound : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		_ani.GetComponent<Animator>();
-		_audio =GetComponent<AudioSource>();
+		_ani = GetComponent<Animator>();
+		_audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		AnimatorStateInfo aniState = _ani.GetCurrentAnimatorStateInfo(0);
-		if(aniState.IsName("Run") || aniState.IsName("Jump")  || aniState.IsName("Fallin'")  || aniState.IsName("Jump")  || aniState.IsName("Idle Jump")  || aniState.IsName("Jump")){
+		if(aniState.IsName("Run")/* || aniState.IsName("Jump")  || aniState.IsName("Fallin'")  || aniState.IsName("Idle Jump")*/){
 			if(_audio.clip != _runSound){
 				/* TODO fade into runsound */
+				_audio.Stop();
 				_audio.clip = _runSound;
+			}
+			if(!_audio.isPlaying){
 				_audio.Play();
 			}
-		}else if(aniState.IsName("Push") || aniState.IsName("Pull")){
+		}else if(aniState.IsName("Push") || aniState.IsName("Pull") || aniState.IsName("Jump")  || aniState.IsName("Fallin'")  || aniState.IsName("Idle Jump")){
 			if(_audio.clip != _walkSound){
 				/* TODO fade into walksound */
+				_audio.Stop();
 				_audio.clip = _walkSound;
+			}
+			if(!_audio.isPlaying){
 				_audio.Play();
 			}
 		}else{
 			/* TODO fade out sound completely */
-			_audio.Stop();
+			_audio.Pause();
 		}
 	}
 }
