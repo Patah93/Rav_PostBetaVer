@@ -9,7 +9,9 @@ public class FoxBoyDeathTriggerMan : TriggerAction {
 	public float _maxTime = 10;
 	JumpingMan _mrJump;
 
+
 	void Start () {
+
 		_mrJump = GetComponent<JumpingMan>();
 	}
 	
@@ -23,7 +25,6 @@ public class FoxBoyDeathTriggerMan : TriggerAction {
 				_mrJump.setDead(true);
 			}
 		}
-
 	}
 	
 	public override void onActive(){
