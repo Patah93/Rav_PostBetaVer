@@ -329,7 +329,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 			smoothPosistion(this.transform.position, targetPosistion);
 			transform.LookAt(lookPos);
 			
-			if (Input.GetButtonDown("Interact")){
+			if (PlayerXform.gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Idle") || PlayerXform.gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Run")){
 				if(_exitPushMode){
 					camState = prevCamstate;
 					_exitPushMode = false;
