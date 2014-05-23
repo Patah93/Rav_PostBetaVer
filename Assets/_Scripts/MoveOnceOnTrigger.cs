@@ -20,12 +20,16 @@ public class MoveOnceOnTrigger : TriggerAction {
 	void Update () {
 		
 		if(_isMoving){
-			transform.position = Vector3.Lerp(gameObject.transform.position, _offset + _originalPos, _moveTime);
+			transform.position = Vector3.Lerp(_originalPos, _offset + _originalPos, _moveTime += _moveTime * Time.deltaTime);
+		}
+		if ((transform.position - (_offset + _originalPos)).sqrMagnitude < 0.1f) {
+			_isMoving = false;
 		}
 		
 	}
 	
 	public override void onActive(){
+		//_originalPos = transform.position;
 		_isMoving = true;
 		
 	}
