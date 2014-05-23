@@ -20,7 +20,18 @@ Material:
           m_Texture: {fileID: 2800000, guid: eac43cb635afc6146963b62fb419f4fe, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-    m_Floats: {}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .5
     m_Colors:
       data:
         first:
