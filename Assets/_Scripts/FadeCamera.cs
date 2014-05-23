@@ -6,19 +6,31 @@ public class FadeCamera : MonoBehaviour {
 	public float _fadeSpeed = 1.0f;
 	public bool[] _fadeStates;
 
+	Vector2 _screenSize;
+
 	void Awake(){
 		guiTexture.pixelInset = new Rect(-Screen.width/2f, -Screen.height/2f, Screen.width, Screen.height);
 		_fadeStates = new bool[2];
 		_fadeStates[0] = false;
 		_fadeStates[1] = false;
+
+		_screenSize = new Vector2(Screen.width, Screen.height);
+
 	}
 
-	// Update is called once per frame
 	void Update () {
 		if(!_fadeStates[0] && guiTexture.color.a != 0.0f)
 			StartFadeIn();
 		else if(_fadeStates[0] && guiTexture.color.a != 1.0f)
 			StartFadeOut(); 
+
+		if(_screenSize != new Vector2(Screen.width, Screen.height)){
+
+			_screenSize = new Vector2(Screen.width, Screen.height);
+			guiTexture.pixelInset = new Rect(-Screen.width/2f, -Screen.height/2f, Screen.width, Screen.height);
+
+		}
+
 	}
 
 	private void StartFadeIn(){
