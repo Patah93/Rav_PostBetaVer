@@ -135,6 +135,10 @@ ModelImporter:
     400128: Tail_joint_08
     4300000: Fox
     7400000: Take 001
+    7400002: Run
+    7400004: Idle
+    7400006: Left
+    7400008: Right
     9500000: //RootNode
     13700000: Fox
   materials:
@@ -151,7 +155,787 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 574
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Fox
+        weight: 1
+      - path: Full_body_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Bend_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Bend_ctrl/Middle_body_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint/L_back_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint/L_back_foot_joint/L_back_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint/R_back_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint/R_back_foot_joint/R_back_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_01_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_01_ctrl_group/Tail_01_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_02_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_02_ctrl_group/Tail_02_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_03_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_03_ctrl_group/Tail_03_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_04_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_04_ctrl_group/Tail_04_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_05_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_05_ctrl_group/Tail_05_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_06_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_06_ctrl_group/Tail_06_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_07_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_07_ctrl_group/Tail_07_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_joint_07
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_joint_07/Tail_joint_08
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint/L_front_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint/L_front_foot_joint/L_front_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_ctrl_group/Neck_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_ctrl_group/Head_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/Face_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_ctrl_group/L_ear_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_joint_01/L_ear_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_ctrl_group/R_ear_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_joint_01/R_ear_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint/R_front_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint/R_front_foot_joint/R_front_toe_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Fox
+        weight: 1
+      - path: Full_body_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Bend_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Bend_ctrl/Middle_body_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint/L_back_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint/L_back_foot_joint/L_back_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint/R_back_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint/R_back_foot_joint/R_back_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_01_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_01_ctrl_group/Tail_01_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_02_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_02_ctrl_group/Tail_02_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_03_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_03_ctrl_group/Tail_03_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_04_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_04_ctrl_group/Tail_04_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_05_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_05_ctrl_group/Tail_05_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_06_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_06_ctrl_group/Tail_06_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_07_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_07_ctrl_group/Tail_07_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_joint_07
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_joint_07/Tail_joint_08
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint/L_front_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint/L_front_foot_joint/L_front_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_ctrl_group/Neck_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_ctrl_group/Head_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/Face_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_ctrl_group/L_ear_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_joint_01/L_ear_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_ctrl_group/R_ear_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_joint_01/R_ear_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint/R_front_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint/R_front_foot_joint/R_front_toe_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 29
+      lastFrame: 517
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Fox
+        weight: 1
+      - path: Full_body_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Bend_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Bend_ctrl/Middle_body_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint/L_back_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint/L_back_foot_joint/L_back_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint/R_back_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint/R_back_foot_joint/R_back_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_01_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_01_ctrl_group/Tail_01_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_02_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_02_ctrl_group/Tail_02_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_03_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_03_ctrl_group/Tail_03_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_04_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_04_ctrl_group/Tail_04_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_05_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_05_ctrl_group/Tail_05_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_06_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_06_ctrl_group/Tail_06_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_07_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_07_ctrl_group/Tail_07_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_joint_07
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_joint_07/Tail_joint_08
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint/L_front_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint/L_front_foot_joint/L_front_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_ctrl_group/Neck_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_ctrl_group/Head_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/Face_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_ctrl_group/L_ear_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_joint_01/L_ear_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_ctrl_group/R_ear_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_joint_01/R_ear_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint/R_front_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint/R_front_foot_joint/R_front_toe_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Left
+      takeName: Take 001
+      firstFrame: 519
+      lastFrame: 544.5
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Fox
+        weight: 1
+      - path: Full_body_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Bend_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Bend_ctrl/Middle_body_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint/L_back_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint/L_back_foot_joint/L_back_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint/R_back_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint/R_back_foot_joint/R_back_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_01_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_01_ctrl_group/Tail_01_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_02_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_02_ctrl_group/Tail_02_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_03_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_03_ctrl_group/Tail_03_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_04_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_04_ctrl_group/Tail_04_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_05_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_05_ctrl_group/Tail_05_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_06_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_06_ctrl_group/Tail_06_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_07_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_07_ctrl_group/Tail_07_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_joint_07
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_joint_07/Tail_joint_08
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint/L_front_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint/L_front_foot_joint/L_front_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_ctrl_group/Neck_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_ctrl_group/Head_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/Face_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_ctrl_group/L_ear_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_joint_01/L_ear_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_ctrl_group/R_ear_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_joint_01/R_ear_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint/R_front_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint/R_front_foot_joint/R_front_toe_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Right
+      takeName: Take 001
+      firstFrame: 548
+      lastFrame: 574
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Fox
+        weight: 1
+      - path: Full_body_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Bend_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Bend_ctrl/Middle_body_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint/L_back_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/L_back_hip_joint/L_back_leg_joint/L_back_knee_joint/L_back_foot_joint/L_back_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint/R_back_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/R_back_hip_joint/R_back_leg_joint/R_back_knee_joint/R_back_foot_joint/R_back_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_01_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_01_ctrl_group/Tail_01_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_02_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_02_ctrl_group/Tail_02_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_03_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_03_ctrl_group/Tail_03_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_04_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_04_ctrl_group/Tail_04_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_05_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_05_ctrl_group/Tail_05_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_06_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_06_ctrl_group/Tail_06_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_07_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_07_ctrl_group/Tail_07_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_joint_07
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Butt_joint/Tail_joint_01/Tail_joint_02/Tail_joint_03/Tail_joint_04/Tail_joint_05/Tail_joint_06/Tail_joint_07/Tail_joint_08
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint/L_front_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/L_front_hip_joint/L_front_leg_joint/L_front_knee_joint/L_front_foot_joint/L_front_toe_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_ctrl_group/Neck_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_ctrl_group/Head_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/Face_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_ctrl_group/L_ear_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/L_ear_joint_01/L_ear_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_ctrl_group
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_ctrl_group/R_ear_ctrl
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_joint_01
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/Neck_joint/Head_joint/R_ear_joint_01/R_ear_joint_02
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint/R_front_foot_joint
+        weight: 1
+      - path: Full_body_ctrl/Body_joint/Chest_joint/R_front_hip_joint/R_front_leg_joint/R_front_knee_joint/R_front_foot_joint/R_front_toe_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
