@@ -4,8 +4,8 @@ using System.Collections;
 public class ParticleSwitch : TriggerAction {
 	
 	public float _countDown;
-	private bool _counterStart;
-	private bool _triggered;
+	public bool _counterStart;
+	public bool _triggered;
 
 	public GameObject _from;
 	public GameObject _to;
@@ -19,27 +19,33 @@ public class ParticleSwitch : TriggerAction {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
+		Debug.Log ("HEJ HEJ PARTIKELUPDATE");
+
 		if(_counterStart == true){
 			_countDown -= Time.deltaTime;
 			if(_countDown <= 0){
-				Destroy(gameObject);
+				Destroy(_to);
 			}
 		}
 	}
 
 	public override void onActive(){
 
-		if (_to && _triggered == false) { 
+
+
+		if (_to && _triggered == false) {
+
 			_triggered = true;
-			gameObject.particleSystem.Play ();
+			_to.particleSystem.Play ();
 			_counterStart = true;
 
 		}
 
 		if(_from && _triggered == false) {
+			Debug.Log ("NEJ NEJ NU HÄNDER SAKER");
 			_triggered = true;
-			gameObject.particleSystem.loop = false;
+			//_from.particleSystem.loop = false;
 			_counterStart = true;
 
 		}
