@@ -39,21 +39,21 @@ BlendTree:
   m_PrefabInternal: {fileID: 0}
   m_Name: Blend Tree
   m_Childs:
-  - m_Motion: {fileID: 7400006, guid: 6ea4cf1deb1d2f441bc478133e284992, type: 3}
+  - m_Motion: {fileID: 7400006, guid: 3f395131088b18645929673eaeae04da, type: 3}
     m_Threshold: -1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  - m_Motion: {fileID: 7400002, guid: 6ea4cf1deb1d2f441bc478133e284992, type: 3}
+  - m_Motion: {fileID: 7400002, guid: 3f395131088b18645929673eaeae04da, type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  - m_Motion: {fileID: 7400008, guid: 6ea4cf1deb1d2f441bc478133e284992, type: 3}
+  - m_Motion: {fileID: 7400008, guid: 3f395131088b18645929673eaeae04da, type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -111,7 +111,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400004, guid: 6ea4cf1deb1d2f441bc478133e284992, type: 3}
+  - {fileID: 7400004, guid: 3f395131088b18645929673eaeae04da, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 216, y: 120, z: 0}
   m_IKOnFeet: 0
@@ -147,13 +147,6 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110244499}
-      second:
-      - {fileID: 110180401}
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
       first: {fileID: 0}
       second: []
     data:
@@ -161,8 +154,9 @@ StateMachine:
       second:
       - {fileID: 110100000}
     data:
-      first: {fileID: 0}
-      second: []
+      first: {fileID: 110244499}
+      second:
+      - {fileID: 110180401}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -96, y: 48, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
