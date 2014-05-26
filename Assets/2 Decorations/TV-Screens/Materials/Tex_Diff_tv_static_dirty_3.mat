@@ -17,29 +17,29 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: ea73341c5747c7345b808223e0e10aef, type: 3}
+          m_Texture: {fileID: 2800000, guid: 17a8107425e7a5142a0623dce3792eb9, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: 87d6446292fa8ba4d92072a519d54f99, type: 3}
+          m_Texture: {fileID: 2800000, guid: 821c4b61def23bb49bedd7eedd6691c5, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _SpecMap
         second:
-          m_Texture: {fileID: 2800000, guid: a05bc49bd386faa43b21001ed06d4633, type: 3}
+          m_Texture: {fileID: 2800000, guid: 17a8107425e7a5142a0623dce3792eb9, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _GrainTex
         second:
-          m_Texture: {fileID: 2800000, guid: e80c3c84ea861404d8a427db8b7abf04, type: 3}
-          m_Scale: {x: 10, y: 10}
+          m_Texture: {fileID: 2800000, guid: ffa9c02760c2b4e8eb9814ec06c4b05b, type: 3}
+          m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
