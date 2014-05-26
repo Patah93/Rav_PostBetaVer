@@ -6,7 +6,7 @@ public class FootSteps : MonoBehaviour {
 	public GameObject _audioSauce;
 	public AudioClip[][] _audios;
 	
-	public AudioClip[] _audioClips1, _audioClips2, _audioClips3, _audioClips4, _audioClips5;
+	public AudioClip[] _audioClips1, _audioClips2, _audioClips3, _audioClips4, _audioClips5, _audioClips6, _audioClips7, _audioClips8, _audioClips9;
 	
 	void Awake () {
 		int count = 0;
@@ -19,7 +19,19 @@ public class FootSteps : MonoBehaviour {
 					if (_audioClips4.Length > 0) {
 						count++;
 						if (_audioClips5.Length > 0) {
-							count++;	
+							count++;
+							if (_audioClips6.Length > 0) {
+								count++;	
+								if (_audioClips7.Length > 0) {
+									count++;	
+									if (_audioClips8.Length > 0) {
+										count++;	
+										if (_audioClips9.Length > 0) {
+											count++;	
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -39,6 +51,18 @@ public class FootSteps : MonoBehaviour {
 							_audios[3] = _audioClips4;
 							if(count > 4){
 								_audios[4] = _audioClips5;
+								if(count > 5){
+									_audios[5] = _audioClips6;
+									if(count > 6){
+										_audios[6] = _audioClips7;
+										if(count > 7){
+											_audios[7] = _audioClips8;
+											if(count > 8){
+												_audios[8] = _audioClips9;
+											}
+										}
+									}
+								}
 							}
 						}
 					}
@@ -75,9 +99,5 @@ public class FootSteps : MonoBehaviour {
 			sauce.audio.clip = getRandomClip (a);
 			sauce.audio.Play ();
 		}
-			
-
-		
-
 	}
 }

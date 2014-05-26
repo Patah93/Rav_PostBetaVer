@@ -32,7 +32,7 @@ public class KillThrowObject : MonoBehaviour {
 			
 
 			//audio.Play();
-			if(!deadthing.gameObject.name.Equals("ThrowCube(Clone)")){
+			if(!deadthing.gameObject.name.Equals(transform.name)){
 				audio.Play();
 				Destroy (gameObject);
 				Debug.Log ("Kuben dog, gg");
