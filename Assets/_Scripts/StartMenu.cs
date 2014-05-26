@@ -9,7 +9,7 @@ public class StartMenu : MonoBehaviour {
 	public Texture2D _buttontexture;
 	public string _firstSceneName;
 	public Texture2D _loadingScreen;
-	public float _fadeSpeed = 0.1f;
+	public float _fadeSpeed = 0.05f;
 
 	Texture2D _background;
 	bool _drawButtons;

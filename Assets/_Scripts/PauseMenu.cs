@@ -5,16 +5,16 @@ public class PauseMenu : MonoBehaviour {
 
 	public Rect _pauseWindow = new Rect(7.5f,5.5f,1.5f,1.5f);
 	public Texture2D _pauseWindowTexture;
-	public Rect _exitButton = new Rect(4,2.5f,6,7);
+	public Rect _exitButton = new Rect(4,2.6f,6,7);
 	public Texture2D _exitButtonTexture;
-	public Rect _resumeButton = new Rect(1,2.5f,6,7);
+	public Rect _resumeButton = new Rect(4,13,6,7);
 	public Texture2D _resumeButtonTexture;
-	public Rect _settingsButton = new Rect(1,2.5f,6,7);
+	public Rect _settingsButton = new Rect(4,4.3f,6,7);
 	public Texture2D _settingsButtonTexture;
 
 	public Rect _volumeButtonPos = new Rect(4,10,6,7);
 	public Texture2D _volumeButtonTexture;
-	public Rect _volumeSliderPos = new Rect(1,4,6,7);
+	public Rect _volumeSliderPos = new Rect(4,4,6,7);
 
 	public Rect _returnToOptionsButton = new Rect(4,2.5f,6,7);
 	public Texture2D _returnToOptionsButtonTexture;
