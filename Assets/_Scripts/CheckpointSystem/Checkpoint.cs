@@ -38,8 +38,13 @@ public class Checkpoint : MonoBehaviour {
 		for(int i = 0; i < _checkpointObjects.Length; i++){
 			_checkpointObjects[i].transform.position = _objectPositions[i];
 		}
+
 		_player.transform.position = (_boyRespawnPosition != null) ? _boyRespawnPosition.transform.position : transform.position;
 		_player.GetComponent<JumpingMan>()._dead = false;
+
+		RaycastHit hit;
+		Physics.Raycast (transform.position, Vector3.down, out hit);
+		_player.transform.position = hit.point;
 	}
 
 	public void StartRollback(bool b){

@@ -223,7 +223,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -254,8 +254,934 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    human: []
-    skeleton: []
+    human:
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_hip_joint
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_hip_joint
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_knee_joint
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_knee_joint
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_foot_joint
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_foot_joint
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:neck_02_joint
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_toe_joint
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_toe_joint
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:head_joint
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_02_joint
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_03_joint
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_indexfinger_01_joint
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_indexfinger_02_joint
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_indexfinger_03_joint
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_longfinger_01_joint
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_longfinger_02_joint
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_longfinger_03_joint
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_ringfinger_01_joint
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_ringfinger_02_joint
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_ringfinger_03_joint
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_pinkyfinger_01_joint
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_pinkyfinger_02_joint
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:L_pinkyfinger_03_joint
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_02_joint
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_03_joint
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_indexfinger_01_joint
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_indexfinger_02_joint
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_indexfinger_03_joint
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_longfinger_01_joint
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_longfinger_02_joint
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_longfinger_03_joint
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_ringfinger_01_joint
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_ringfinger_02_joint
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_ringfinger_03_joint
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_pinkyfinger_01_joint
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_pinkyfinger_02_joint
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: a12tobkr_A_Boy_Animations_Clothes3:R_pinkyfinger_03_joint
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: pojkis_kanskefixad2(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl
+      position: {x: .00471581845, y: 1.81478299e-05, z: 3.32538509}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2.27600002, y: 2.27600002, z: 2.27600002}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group
+      position: {x: -.00471581845, y: -1.81478299e-05, z: -.00182758237}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl
+      position: {x: .00664887484, y: .315974772, z: .028540628}
+      rotation: {x: .0895983055, y: .0398288928, z: -.00358590391, w: .995174825}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint
+      position: {x: .114759043, y: -.25194484, z: -1.45999503}
+      rotation: {x: .0608676001, y: .00576087832, z: -.699398339, w: .712112308}
+      scale: {x: .999999821, y: .999999762, z: .999999881}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_hip_joint
+      position: {x: .019067999, y: -.0305534378, z: .0107929837}
+      rotation: {x: -.128588885, y: -.180056438, z: .975166738, w: .00972047541}
+      scale: {x: 1.00000036, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_knee_joint
+      position: {x: -.147403553, y: -.000305598602, z: .000419486314}
+      rotation: {x: -.000397644937, y: -.0251918286, z: -.00803006347, w: .999650359}
+      scale: {x: .999999762, y: 1, z: 1.00000036}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_foot_joint
+      position: {x: -.134662807, y: 3.35620971e-05, z: -.000390121248}
+      rotation: {x: .176859245, y: .00165761227, z: -.00467614876, w: .984223604}
+      scale: {x: 1.00000012, y: 1.00000024, z: .99999994}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_ball_joint
+      position: {x: -.0173406173, y: .00569652673, z: .0406487621}
+      rotation: {x: 4.47034836e-08, y: 3.35276127e-08, z: 5.80912456e-08, w: 1}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_toe_joint
+      position: {x: .00184340868, y: -.000871374097, z: .0254923366}
+      rotation: {x: 0, y: 7.45057971e-09, z: -2.98023188e-08, w: 1}
+      scale: {x: 1, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_hip_joint
+      position: {x: .0190674029, y: .0305533707, z: .010792898}
+      rotation: {x: .97917366, y: .0121752527, z: .128271058, w: .156899393}
+      scale: {x: 1.00000036, y: .999999762, z: .999999821}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_knee_joint
+      position: {x: .147403628, y: .000313648023, z: -.000388924032}
+      rotation: {x: -.000397801312, y: -.0251918454, z: -.00802975707, w: .999650359}
+      scale: {x: .999999821, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_foot_joint
+      position: {x: .134661794, y: -4.16906478e-05, z: .000359599944}
+      rotation: {x: .153559342, y: .00143926765, z: -.00406008912, w: .988130093}
+      scale: {x: 1.00000048, y: 1.00000012, z: 1.00000036}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_ball_joint
+      position: {x: .0173406787, y: -.00569647504, z: -.0406487808}
+      rotation: {x: .0507597886, y: -.0438333228, z: -.00591957336, w: .99773097}
+      scale: {x: 1.00000012, y: 1, z: .999999881}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_toe_joint
+      position: {x: -.00420680782, y: -.00180293224, z: -.0260679126}
+      rotation: {x: -2.60770285e-08, y: 0, z: -5.96046377e-08, w: 1}
+      scale: {x: 1, y: .999999821, z: .99999994}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint
+      position: {x: -.0401102342, y: -2.63971742e-08, z: -.00900613051}
+      rotation: {x: 5.21540677e-08, y: -.284019619, z: 1.49011626e-07, w: .958818495}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint
+      position: {x: -.0335479714, y: -7.29840322e-09, z: .0143415835}
+      rotation: {x: -3.35276091e-08, y: .248758495, z: -9.45292271e-08, w: .968565583}
+      scale: {x: 1.00000024, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint
+      position: {x: -.0357108377, y: -5.31429833e-08, z: -.013343622}
+      rotation: {x: -.067340076, y: -.0673400909, z: .703893006, w: .703893006}
+      scale: {x: .999999881, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_collar_ctrl_group
+      position: {x: 1.91513461e-16, y: -1.42108544e-16, z: -1.110223e-18}
+      rotation: {x: -.00499597332, y: -7.214396e-17, z: 2.14335321e-16, w: .999987543}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_collar_ctrl
+      position: {x: -.023234915, y: .0232004467, z: .00631898828}
+      rotation: {x: 8.07933247e-06, y: -9.49827954e-05, z: .0847549513, w: .996401846}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint
+      position: {x: -.0232345946, y: .0232622251, z: .00608704472}
+      rotation: {x: -.0135268625, y: -.1314466, z: .101470277, w: .986023724}
+      scale: {x: 1.00000024, y: .99999994, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_ctrl_group
+      position: {x: -7.1054272e-17, y: 2.84217088e-16, z: 4.44089183e-17}
+      rotation: {x: -.034266144, y: .127715126, z: -.412397206, w: .901356339}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_ctrl
+      position: {x: -.0247966852, y: -.0290443935, z: -.0102192173}
+      rotation: {x: -.312631637, y: .0562418699, z: -.0462555028, w: .947079062}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint
+      position: {x: -.0395337194, y: 9.98843461e-08, z: 6.33299351e-08}
+      rotation: {x: -.673279166, y: .153144196, z: .0317567699, w: .722657263}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_elbow_ctrl_group
+      position: {x: -2.13162816e-16, y: -2.09832147e-15, z: 3.19744217e-16}
+      rotation: {x: .489072204, y: .473174751, z: -.533618093, w: .502161145}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_elbow_ctrl
+      position: {x: .00140957278, y: -.0814468265, z: .00381120294}
+      rotation: {x: -.465967566, y: .151875347, z: .261523128, w: .831512928}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint
+      position: {x: -.0815477967, y: -3.44589353e-08, z: 8.14907253e-08}
+      rotation: {x: .122142471, y: .0420526527, z: .00692182081, w: .991597116}
+      scale: {x: .999999881, y: .999999881, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint
+      position: {x: -.0391107015, y: 1.72178261e-07, z: 1.58790499e-07}
+      rotation: {x: .74172461, y: .0279749557, z: .0373615324, w: .669078588}
+      scale: {x: .999999881, y: 1.00000012, z: 1.00000024}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint
+      position: {x: -.0375191011, y: 1.13330316e-07, z: 2.81484972e-07}
+      rotation: {x: .0319283158, y: .0305669419, z: -.0377423465, w: .998309433}
+      scale: {x: .99999994, y: 1.00000024, z: .999999881}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint
+      position: {x: -.0171181448, y: -3.48023605e-07, z: 1.48662366e-07}
+      rotation: {x: .359162927, y: .625239074, z: -.170065805, w: .671681285}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_hand_ctrl_group
+      position: {x: -.154404029, y: -.290418953, z: .141852349}
+      rotation: {x: .122421093, y: .889857173, z: .0599006154, w: -.435406923}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_hand_ctrl
+      position: {x: -.172250301, y: .323826253, z: .0473069139}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_indexfinger_01_joint
+      position: {x: -.0116366912, y: -.0103095183, z: -.0101165287}
+      rotation: {x: -.396670192, y: -.582600117, z: .217403993, w: .675252199}
+      scale: {x: 1.0000006, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_indexfinger_02_joint
+      position: {x: -.0104412474, y: 1.28056854e-07, z: -9.81744961e-08}
+      rotation: {x: -.0529751964, y: -.00768105686, z: .0359888338, w: .997917533}
+      scale: {x: .999999583, y: .999999344, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_indexfinger_03_joint
+      position: {x: -.00641109515, y: -1.13472197e-07, z: 1.25728548e-08}
+      rotation: {x: .141283005, y: .0144468779, z: .0357485861, w: .989218116}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_indexfinger_04_joint
+      position: {x: -.0068227984, y: 2.437082e-07, z: -8.34406819e-08}
+      rotation: {x: -.767067969, y: .146697134, z: -.237621933, w: .577600598}
+      scale: {x: .999999821, y: 1.00000024, z: 1.00000024}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_longfinger_01_joint
+      position: {x: -.00602517277, y: -.00982413627, z: -.0119995726}
+      rotation: {x: -.420327783, y: -.587025106, z: .193863064, w: .66418612}
+      scale: {x: 1.00000012, y: .999999702, z: .999999881}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_longfinger_02_joint
+      position: {x: -.0121131297, y: 3.7252903e-08, z: 1.20257027e-07}
+      rotation: {x: -.0521712862, y: -.0104234628, z: .0379143246, w: .99786371}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_longfinger_03_joint
+      position: {x: -.00836734567, y: 1.50499545e-07, z: -6.25441317e-08}
+      rotation: {x: -.0846127421, y: -.0058010458, z: .0372416154, w: .995700777}
+      scale: {x: 1.00000012, y: 1, z: 1.00000024}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_longfinger_04_joint
+      position: {x: -.00739564607, y: 2.38804205e-07, z: 1.00648322e-07}
+      rotation: {x: -.589033425, y: .251746416, z: -.183588415, w: .74562639}
+      scale: {x: .999999762, y: .999999821, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_pinkyfinger_01_joint
+      position: {x: .00500625093, y: -.012765374, z: -.0114062391}
+      rotation: {x: -.400419116, y: -.571519077, z: .212318555, w: .684069633}
+      scale: {x: 1.00000012, y: .999999642, z: .999999881}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_pinkyfinger_02_joint
+      position: {x: -.00763942348, y: 2.93366611e-08, z: -6.20957508e-08}
+      rotation: {x: .0612197407, y: .00629568612, z: .0366256908, w: .997432232}
+      scale: {x: 1.00000012, y: 1.00000036, z: 1.00000024}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_pinkyfinger_03_joint
+      position: {x: -.00610043202, y: -2.20865331e-07, z: 3.3644028e-08}
+      rotation: {x: .968637288, y: .034955442, z: .00195696135, w: .24600029}
+      scale: {x: .99999994, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_pinkyfinger04_joint
+      position: {x: -.00567323575, y: -5.13813575e-07, z: 5.84695954e-08}
+      rotation: {x: -.715842307, y: -.269970089, z: -.31713146, w: -.560458422}
+      scale: {x: 1, y: .999999762, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_ringfinger_01_joint
+      position: {x: -.000354840886, y: -.0115757631, z: -.0112679936}
+      rotation: {x: -.40128231, y: -.573640406, z: .212355688, w: .681772888}
+      scale: {x: 1.00000024, y: .999999583, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_ringfinger_02_joint
+      position: {x: -.0106732938, y: 2.65426934e-08, z: -6.40684448e-08}
+      rotation: {x: -.110249363, y: -.0144007271, z: .034796726, w: .993190289}
+      scale: {x: .99999994, y: 1, z: .999999881}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_ringfinger_03_joint
+      position: {x: -.00658209901, y: -1.57691829e-07, z: 1.00786565e-07}
+      rotation: {x: .020390695, y: .00183576532, z: .0392906405, w: .999018133}
+      scale: {x: 1.00000024, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_ringfinger_04_joint
+      position: {x: -.00661081495, y: 5.95229039e-08, z: -9.60390025e-08}
+      rotation: {x: -.650359929, y: .224703074, z: -.204348341, w: .696263134}
+      scale: {x: .999999762, y: .999999762, z: .99999994}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint
+      position: {x: -.0151499547, y: -2.81725079e-07, z: -1.51689164e-07}
+      rotation: {x: -.179041311, y: -.326563805, z: -.0292382278, w: .927601933}
+      scale: {x: 1, y: .999999881, z: 1.00000024}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_02_joint
+      position: {x: -.0100908987, y: 3.34926881e-07, z: 2.00350769e-07}
+      rotation: {x: .0112758251, y: .00224914355, z: .0340864882, w: .999352813}
+      scale: {x: .999999702, y: .999999881, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_03_joint
+      position: {x: -.0109257754, y: -2.00321665e-07, z: -1.07669621e-07}
+      rotation: {x: -.841013908, y: -.362527937, z: -.39300704, w: -.0825512931}
+      scale: {x: 1.00000012, y: 1.00000024, z: .999999464}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_wrist_ctrl_group
+      position: {x: -.0764664263, y: -.00343284756, z: -.000674955372}
+      rotation: {x: .544612288, y: .541042447, z: -.387407452, w: .510476232}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_wrist_ctrl
+      position: {x: -0, y: 7.1054272e-17, z: 0}
+      rotation: {x: -.0123551656, y: -.469614893, z: -.0142843425, w: .88266933}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint
+      position: {x: 8.87674556e-09, y: .0417671315, z: .00242157001}
+      rotation: {x: -.0477808043, y: 2.08863629e-08, z: 2.8568655e-08, w: .998857915}
+      scale: {x: .999999881, y: 1, z: .999999762}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:Head_ctrl_group
+      position: {x: -.00471581845, y: -.483422309, z: -.0461059995}
+      rotation: {x: .0427899957, y: -8.23026909e-17, z: 2.10643422e-16, w: .999084115}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:head_ctrl
+      position: {x: .00471581845, y: .554197133, z: .00876265671}
+      rotation: {x: -.139970168, y: -.175429642, z: -.000125810562, w: .97449106}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:neck_02_joint
+      position: {x: 5.25272412e-08, y: .0235914662, z: -2.18627974e-07}
+      rotation: {x: -.441617757, y: .552244246, z: -.441617727, w: .552244306}
+      scale: {x: 1, y: .999999762, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:head_joint
+      position: {x: -.045518592, y: -1.61118805e-07, z: 1.02858984e-08}
+      rotation: {x: .467500031, y: -.530512571, z: .46750015, w: .53051281}
+      scale: {x: .999999523, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:Neck_ctrl_group
+      position: {x: -.00471581845, y: -.443848789, z: .00266980054}
+      rotation: {x: -.00499597332, y: -7.214396e-17, z: 2.14335321e-16, w: .999987543}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:neck_ctrl
+      position: {x: .00471581845, y: .509099483, z: .00258664507}
+      rotation: {x: -.0892942697, y: -.18132019, z: -.000121024459, w: .979361773}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_collar_ctrl_group
+      position: {x: 1.90403239e-16, y: -1.42108544e-16, z: -1.110223e-18}
+      rotation: {x: -.00499597332, y: -7.214396e-17, z: 2.14335321e-16, w: .999987543}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_collar_ctrl
+      position: {x: .0232348815, y: .023200674, z: .00631898921}
+      rotation: {x: 0, y: -0, z: -.0955275148, w: .995426774}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint
+      position: {x: .0232345648, y: .0232626311, z: .00608696742}
+      rotation: {x: .986023724, y: -.101470187, z: -.13144663, w: .0135269072}
+      scale: {x: 1.00000024, y: .999999464, z: .999999702}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_ctrl_group
+      position: {x: -0, y: -7.1054272e-17, z: -4.44089183e-17}
+      rotation: {x: .897056401, y: -.421668679, z: -.127355024, w: .0355811268}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_ctrl
+      position: {x: .0241923779, y: -.0295498371, z: -.0102192201}
+      rotation: {x: .380736768, y: -.133283943, z: -.0472338833, w: .913807392}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint
+      position: {x: .0395339504, y: 2.42085662e-07, z: -2.98023224e-08}
+      rotation: {x: -.673279762, y: .153142989, z: .0317563303, w: .722657084}
+      scale: {x: 1, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_elbow_ctrl_group
+      position: {x: -2.84217088e-16, y: 8.88178367e-17, z: 5.3290704e-17}
+      rotation: {x: -.516796112, y: .509520292, z: .543782115, w: .421440244}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_elbow_ctrl
+      position: {x: -.00902082957, y: -.0803235397, z: -.010812046}
+      rotation: {x: -.268615127, y: 0, z: -0, w: .963247597}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint
+      position: {x: .0815482289, y: 1.10827386e-07, z: -9.59262252e-08}
+      rotation: {x: .122142427, y: .0420542322, z: .00692396471, w: .991597116}
+      scale: {x: 1.0000006, y: .999999642, z: .999999702}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint
+      position: {x: .0391114354, y: -2.76369974e-07, z: -3.25962901e-08}
+      rotation: {x: .0513684601, y: -.00663728127, z: .0461998172, w: .997588456}
+      scale: {x: .99999994, y: .999999881, z: .999999762}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint
+      position: {x: .0375179127, y: 3.01231921e-07, z: 3.56812961e-08}
+      rotation: {x: .0319284461, y: .0377423093, z: .0305670425, w: .998309433}
+      scale: {x: .99999994, y: 1.00000048, z: 1.00000048}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint
+      position: {x: .0171182007, y: -1.11038389e-07, z: -1.83586963e-07}
+      rotation: {x: 1.11758682e-08, y: -5.58793403e-08, z: -8.94069458e-08, w: 1}
+      scale: {x: .99999994, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_hand_ctrl_group
+      position: {x: .114209458, y: .0700230598, z: .336710423}
+      rotation: {x: -.705157042, y: .452885449, z: .0524746403, w: .543042123}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_hand_ctrl
+      position: {x: .180448011, y: .323826253, z: .0467323288}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_indexfinger_01_joint
+      position: {x: .0161121655, y: .0088172527, z: .00258862623}
+      rotation: {x: -.00189217879, y: .0180870648, z: .00838300772, w: .99979949}
+      scale: {x: .999999404, y: .999999762, z: 1.00000036}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_indexfinger_02_joint
+      position: {x: .0102763847, y: .000224322212, z: .00183585589}
+      rotation: {x: -.00526436325, y: .0967136398, z: .0176585838, w: .995141745}
+      scale: {x: 1.00000048, y: 1.00000012, z: .999999881}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_indexfinger_03_joint
+      position: {x: .00578988157, y: -.000186283723, z: .00274653267}
+      rotation: {x: .0100874612, y: .0598763898, z: -.0172020048, w: .998006642}
+      scale: {x: .999999881, y: 1.00000012, z: 1.00000024}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_indexfinger_04_joint
+      position: {x: .00548509602, y: .000239216606, z: .00404974958}
+      rotation: {x: -1.84401799e-07, y: 1.45286265e-07, z: -5.96046235e-08, w: 1}
+      scale: {x: 1.00000024, y: .999999881, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_longfinger_01_joint
+      position: {x: .0162351578, y: .00362457661, z: -.000291015866}
+      rotation: {x: -.00880894717, y: .0837814286, z: .0338440165, w: .995870352}
+      scale: {x: .999999404, y: .999999762, z: 1.00000036}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_longfinger_02_joint
+      position: {x: .0115502253, y: -.000256963511, z: .00364247663}
+      rotation: {x: -.0015531393, y: .0459363349, z: .00816585589, w: .998909831}
+      scale: {x: 1.00000048, y: 1.00000012, z: .999999881}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_longfinger_03_joint
+      position: {x: .00743081793, y: -.000428170461, z: .0038217972}
+      rotation: {x: .00664443523, y: .0803785622, z: -.00391548965, w: .996734619}
+      scale: {x: .999999762, y: .999999821, z: 1.00000024}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_longfinger_04_joint
+      position: {x: .00559902657, y: -.000227811848, z: .00482610287}
+      rotation: {x: -1.84401799e-07, y: 1.45286265e-07, z: -5.96046235e-08, w: 1}
+      scale: {x: 1, y: .999999881, z: 1.00000024}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_pinkyfinger_01_joint
+      position: {x: .0160335433, y: -.00780590205, z: -.000300537446}
+      rotation: {x: -.00995408371, y: .093477428, z: .0233677533, w: .995297432}
+      scale: {x: .999999404, y: .999999762, z: 1.00000036}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_pinkyfinger_02_joint
+      position: {x: .00722260028, y: .000147649262, z: .00248675817}
+      rotation: {x: .000459695177, y: .0907239541, z: -.00671666348, w: .995853364}
+      scale: {x: 1.00000036, y: 1, z: .999999642}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_pinkyfinger_03_joint
+      position: {x: .00507297739, y: .000224384014, z: .00337973726}
+      rotation: {x: -.00238403468, y: .136071086, z: -.00545938965, w: .990681171}
+      scale: {x: 1, y: 1.00000012, z: 1.00000036}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_pinkyfinger04_joint
+      position: {x: .00338387699, y: .00024174343, z: .00454777339}
+      rotation: {x: -1.11758682e-08, y: 5.96046306e-08, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: .999999881}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_ringfinger_01_joint
+      position: {x: .0159881823, y: -.00233275769, z: .000165303951}
+      rotation: {x: -.00822763517, y: .0774801448, z: .0219934303, w: .996717393}
+      scale: {x: .999999404, y: .999999762, z: 1.00000036}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_ringfinger_02_joint
+      position: {x: .010196764, y: .000188783029, z: .00314913294}
+      rotation: {x: -.00867138896, y: .076980345, z: .0234636683, w: .996718824}
+      scale: {x: 1.00000048, y: 1.00000012, z: .999999881}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_ringfinger_03_joint
+      position: {x: .00568476692, y: -.000364537002, z: .00329671009}
+      rotation: {x: .00730732875, y: .045680102, z: -.00755032571, w: .99890089}
+      scale: {x: .999999881, y: 1.00000012, z: 1.00000024}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_ringfinger_04_joint
+      position: {x: .00508213881, y: -.000114275193, z: .00422691181}
+      rotation: {x: -1.84401799e-07, y: 1.45286265e-07, z: -5.96046235e-08, w: 1}
+      scale: {x: 1.00000024, y: .999999881, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint
+      position: {x: .00242815888, y: .014575717, z: .00334236375}
+      rotation: {x: -.142647505, y: -.176170886, z: -.420658112, w: -.878443062}
+      scale: {x: .999999702, y: .999999762, z: 1.00000024}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_02_joint
+      position: {x: .00982037093, y: -.000434402958, z: -.000104009639}
+      rotation: {x: .236344889, y: -.0338236466, z: -.0299788341, w: .970617533}
+      scale: {x: 1.0000006, y: 1, z: .999999523}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_03_joint
+      position: {x: .0109260185, y: -3.21539119e-07, z: 2.98954546e-07}
+      rotation: {x: 2.98023082e-08, y: -2.08616157e-07, z: -1.49011541e-07, w: 1}
+      scale: {x: .999999702, y: 1, z: .999999881}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_wrist_ctrl_group
+      position: {x: -3.55271347e-16, y: 3.55271347e-16, z: -2.6645352e-17}
+      rotation: {x: .766027987, y: -.634737968, z: -.0931100771, w: -.0404901057}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_wrist_ctrl
+      position: {x: .0100815548, y: -.0755536407, z: -.00701949932}
+      rotation: {x: -.0194323529, y: .1442305, z: -.131298125, w: .980602264}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_foot_ctrl_group
+      position: {x: -.00471581845, y: -1.81478299e-05, z: -.00182758237}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:L_foot_ctrl
+      position: {x: -.027131442, y: 1.06931438e-05, z: -.00870832987}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_foot_ctrl_group
+      position: {x: -.00471581845, y: -1.81478299e-05, z: -.00182758237}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:R_foot_ctrl
+      position: {x: .0401771143, y: .0643809363, z: .0365043841}
+      rotation: {x: -.106391832, y: .0152645512, z: .00163348834, w: .994205773}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:Boy
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:Clothes
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: a12tobkr_A_Boy_Animations_Clothes3:Hair
+      position: {x: .0161794201, y: -.0762617216, z: .20321247}
+      rotation: {x: .0439206101, y: -.00683830585, z: .00771430135, w: .998981833}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
     armTwist: .5
     foreArmTwist: .5
     upperLegTwist: .5
@@ -265,6 +1191,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   additionalBone: 0
   userData: 
