@@ -35,7 +35,10 @@ public class JumpingMan : MonoBehaviour {
 	RaycastHit _rayHit;
 	//AnimationMan _animan;
 
-
+	public float _slidingAngle = 45;
+	public float _fallingAngle = 70;
+	[Range(0.0f, 1.0f)]
+	public float _slidingFactor = 0.625f;
 
 
 
@@ -95,8 +98,14 @@ public class JumpingMan : MonoBehaviour {
 */
 		if(!_jump && Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f ,Vector3.down,out _rayHit,2.5f)){
 			if(Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f + _offsetY ,Vector3.down,out _rayHit, _rayLength)){
-				_animator.SetBool("Falling", false);
-				_mrHigh = transform.position.y;
+				if(Vector3.Angle(Vector3.up, _rayHit.normal) < _slidingAngle){
+					_animator.SetBool("Falling", false);
+					_mrHigh = transform.position.y;
+				}else{
+					Vector3 slide_vec = Vector3.RotateTowards(_rayHit.normal, Vector3.down, Mathf.PI/2.0f, 0).normalized;
+					slide_vec *= _gravity*-slide_vec.y*Time.deltaTime*_slidingFactor;
+					_charCon.Move(slide_vec);
+				}
 			}
 			//_animan.enabled = true;
 		} else{
@@ -113,7 +122,7 @@ public class JumpingMan : MonoBehaviour {
 
 		if(_jump){
 
-			if(Vector3.Angle(Vector3.up, _rayHit.normal) < 45){
+			if(Vector3.Angle(Vector3.up, _rayHit.normal) < _slidingAngle){
 
 				Vector3 latjo1 = (transform.forward * _jumpOffsetDistanceFuckers * Input.GetAxis ("Vertical"));
 				latjo1 += (transform.right * _jumpOffsetDistanceFuckers * Input.GetAxis ("Horizontal"));
@@ -130,7 +139,12 @@ public class JumpingMan : MonoBehaviour {
 
 				_jumpingMove.y -= _gravity*Time.deltaTime;
 				_charCon.Move(_jumpingMove*Time.deltaTime);
-			}
+			}/*else{
+				/* TODO SLIDE LIKE A MAESTRO *
+				Vector3 slide_vec = Vector3.RotateTowards(_rayHit.normal, Vector3.down, Mathf.PI/2.0f, 0).normalized;
+				slide_vec *= _gravity*-slide_vec.y*Time.deltaTime*_slidingFactor;
+				_charCon.Move(slide_vec);
+			}*/
 
 			Vector3 temp = new Vector3(_offsetX,_offsetY,_offsetZ);
 			if(Time.time - _clock > _maxTime){
@@ -143,7 +157,7 @@ public class JumpingMan : MonoBehaviour {
 			
 		
 
-					_animator.SetBool("Falling", false);
+					//_animator.SetBool("Falling", false);
 
 					//Debug.Log("Collided with "+ _rayHit.collider.name);
 					if(!_rayHit.collider.name.Equals(this.name)){
@@ -151,20 +165,34 @@ public class JumpingMan : MonoBehaviour {
 						//Debug.Log ("hit something"); 
 						//_startPosition = transform.position.y;
 						_animator.SetBool("Jump", false);
-						if(Vector3.Angle(Vector3.up, _rayHit.normal) < 45){
+						if(Vector3.Angle(Vector3.up, _rayHit.normal) < _slidingAngle){
+
+							_animator.SetBool("Falling", false);
 							_jump = false;
+
+							//_animator.SetBool("Jump", false);
+							_animator.applyRootMotion = true;
+
+							//rigidbody.constraints = ; 
+							//_animan.enabled = true;
+
+
+							/* TODO Plz ta bort desa två superdåliga rader kod, my bad */
+							//gameObject.GetComponent<CharacterController>().enabled = true;
+							//gameObject.GetComponent<CapsuleCollider>().enabled = false;
+						}else{
+
+							if(Vector3.Angle(Vector3.up, _rayHit.normal) < _fallingAngle){
+								_animator.SetBool("Falling", false);
+							}
+
+							_animator.SetBool("Jump", false);
+							
+							Vector3 slide_vec = Vector3.RotateTowards(_rayHit.normal, Vector3.down, Mathf.PI/2.0f, 0).normalized;
+							slide_vec *=  _gravity*-slide_vec.y*Time.deltaTime*_slidingFactor;
+							_charCon.Move(slide_vec);
+
 						}
-						//_animator.SetBool("Jump", false);
-						_animator.applyRootMotion = true;
-
-						//rigidbody.constraints = ; 
-						//_animan.enabled = true;
-
-
-						/* TODO Plz ta bort desa två superdåliga rader kod, my bad */
-						//gameObject.GetComponent<CharacterController>().enabled = true;
-						//gameObject.GetComponent<CapsuleCollider>().enabled = false;
-
 					}
 				}
 			}
