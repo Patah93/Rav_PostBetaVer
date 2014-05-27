@@ -101,17 +101,29 @@ public class JumpingMan : MonoBehaviour {
 				if(Vector3.Angle(Vector3.up, _rayHit.normal) < _slidingAngle){
 					_animator.SetBool("Falling", false);
 					_mrHigh = transform.position.y;
+
+					if(Time.time - _clock > _maxTime){
+						_jumpingMove = Vector3.zero;
+					}
 				}else{
 					Vector3 slide_vec = Vector3.RotateTowards(_rayHit.normal, Vector3.down, Mathf.PI/2.0f, 0).normalized;
 					slide_vec *= _gravity*-slide_vec.y*Time.deltaTime*_slidingFactor;
 					_charCon.Move(slide_vec);
 				}
+			}else{
+				//_jumpingMove = _charCon.velocity*_speedScale;
+				
+				_jumpingMove.y -= _gravity*Time.deltaTime;
+				_charCon.Move(_jumpingMove*Time.deltaTime);
+				//_animan.enabled = false;
 			}
 			//_animan.enabled = true;
 		} else{
 			//_jumpingMove = _charCon.velocity*_speedScale;
 			_animator.SetBool("Falling", true);
 
+			_jumpingMove.y -= _gravity*Time.deltaTime;
+			_charCon.Move(_jumpingMove*Time.deltaTime);
 			//_animan.enabled = false;
 		}
 
@@ -137,8 +149,8 @@ public class JumpingMan : MonoBehaviour {
 				}
 
 
-				_jumpingMove.y -= _gravity*Time.deltaTime;
-				_charCon.Move(_jumpingMove*Time.deltaTime);
+				//_jumpingMove.y -= _gravity*Time.deltaTime;
+				//_charCon.Move(_jumpingMove*Time.deltaTime);
 			}/*else{
 				/* TODO SLIDE LIKE A MAESTRO *
 				Vector3 slide_vec = Vector3.RotateTowards(_rayHit.normal, Vector3.down, Mathf.PI/2.0f, 0).normalized;
@@ -152,11 +164,6 @@ public class JumpingMan : MonoBehaviour {
 				if(Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f + temp.y ,Vector3.down,out _rayHit, _rayLength)){	//Nuddat marken och kan hoppa igen
 					Debug.DrawRay(transform.position + temp,Vector3.down,Color.blue,1 + temp.y,true);
 					Debug.DrawRay(transform.position, _rayHit.transform.position);
-
-
-			
-		
-
 					//_animator.SetBool("Falling", false);
 
 					//Debug.Log("Collided with "+ _rayHit.collider.name);
@@ -168,6 +175,7 @@ public class JumpingMan : MonoBehaviour {
 						if(Vector3.Angle(Vector3.up, _rayHit.normal) < _slidingAngle){
 
 							_animator.SetBool("Falling", false);
+							_jumpingMove = Vector3.zero;
 							_jump = false;
 
 							//_animator.SetBool("Jump", false);
@@ -184,6 +192,7 @@ public class JumpingMan : MonoBehaviour {
 
 							if(Vector3.Angle(Vector3.up, _rayHit.normal) < _fallingAngle){
 								_animator.SetBool("Falling", false);
+								_jumpingMove = Vector3.zero;
 							}
 
 							_animator.SetBool("Jump", false);
