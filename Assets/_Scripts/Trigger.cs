@@ -50,7 +50,7 @@ public class Trigger : MonoBehaviour {
 					_action[i].onActive();
 				}
 
-				if(_triggeredSound != null){
+				if(_triggeredSound != null && _audioSource != null){
 					_audioSource.Stop();
 					_audioSource.clip = _triggeredSound;
 					_audioSource.Play();
@@ -69,7 +69,7 @@ public class Trigger : MonoBehaviour {
 					}
 					//gameObject.renderer.material.color = Color.red;
 
-					if(_triggeredSound != null){
+					if(_triggeredSound != null && _audioSource != null){
 						_audioSource.Stop();
 						_audioSource.clip = _triggeredSound;
 						_audioSource.Play();
@@ -89,7 +89,7 @@ public class Trigger : MonoBehaviour {
 					_action[i].onInactive();
 				}
 
-				if(_unTriggeredSound != null){
+				if(_unTriggeredSound != null && _audioSource != null){
 					_audioSource.Stop();
 					_audioSource.clip = _unTriggeredSound;
 					_audioSource.Play();
@@ -107,7 +107,7 @@ public class Trigger : MonoBehaviour {
 						_action[j].onInactive();
 					}
 
-					if(_unTriggeredSound != null){
+					if(_unTriggeredSound != null && _audioSource != null){
 						_audioSource.Stop();
 						_audioSource.clip = _unTriggeredSound;
 						_audioSource.Play();

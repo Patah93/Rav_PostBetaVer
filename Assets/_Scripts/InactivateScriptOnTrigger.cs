@@ -6,6 +6,10 @@ public class InactivateScriptOnTrigger : TriggerAction {
 	public MonoBehaviour _theScript;
 
 	public bool _inactivateWhenActive = false;
+
+	public bool _onceAndOnlyOnce = true;
+
+	private bool _done = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -18,10 +22,22 @@ public class InactivateScriptOnTrigger : TriggerAction {
 	}
 	
 	public override void onActive(){
-		_theScript.enabled = !_inactivateWhenActive;
+		if (_onceAndOnlyOnce && !_done) {
+			_theScript.enabled = !_inactivateWhenActive;
+			_done = true;
+		}
+		else if(!_onceAndOnlyOnce){
+			_theScript.enabled = !_inactivateWhenActive;
+		}
 	}
 
 	public override void onInactive(){
-		_theScript.enabled = _inactivateWhenActive;
+		if (_onceAndOnlyOnce && !_done) {
+			_theScript.enabled = _inactivateWhenActive;
+			_done = true;
+		}
+		else if(!_onceAndOnlyOnce){
+			_theScript.enabled = _inactivateWhenActive;
+		}
 	}
 }
