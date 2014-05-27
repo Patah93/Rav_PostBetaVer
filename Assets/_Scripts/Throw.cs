@@ -114,6 +114,7 @@ public class Throw : MonoBehaviour {
 				throbject = Instantiate(throwObj, _spawnPosition.transform.position, Quaternion.identity) as Rigidbody;
 				throbject.GetComponent<BoxCollider>().enabled = false;
 				throbject.transform.parent = _spawnPosition.transform;
+				throbject.transform.position += transform.InverseTransformDirection(offSet);
 				throbject.rigidbody.useGravity = false;
 
 			}	
@@ -157,13 +158,13 @@ public class Throw : MonoBehaviour {
 	void UpdatePredictionLine()
 	{
 		arcLine.SetVertexCount(180);
-		Vector3 previousPosition = transform.position + transform.TransformDirection(new Vector3(-0.4f, 1.2f, 0.15f));
+		Vector3 previousPosition = transform.position + transform.TransformDirection(new Vector3(-0.4f, 1.2f, 0.15f) + transform.InverseTransformDirection(offSet));
 
 		highestPos = previousPosition;
 		
 		for(int i = 0; i < 180; i++)
 		{
-			Vector3 posN = GetTrajectoryPoint(transform.position + transform.TransformDirection(new Vector3(-0.4f, 1.2f, 0.15f)), force, i, Physics.gravity);
+			Vector3 posN = GetTrajectoryPoint(transform.position + transform.TransformDirection(new Vector3(-0.4f, 1.2f, 0.15f) + transform.InverseTransformDirection(offSet)), force, i, Physics.gravity);
 			Vector3 direction = posN - previousPosition;
 			direction.Normalize();
 			
