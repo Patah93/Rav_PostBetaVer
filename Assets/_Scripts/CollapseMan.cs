@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CollapseMan : MonoBehaviour {
+public class CollapseMan : TriggerAction {
 
-	public bool _boyTrigger = false;
-	public bool _foxTrigger = false;
-	public float _countDown = 5.0f;
+	public bool _triggered = false;
+	public float _countDown = 0.1f;
 
 	public GameObject[] _fallingThings;
 
@@ -20,7 +19,7 @@ public class CollapseMan : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if(_boyTrigger && _foxTrigger && _countDown > 0.0f){
+		if(_triggered && _countDown > 0.0f){
 			_countDown -= Time.deltaTime;
 		}
 
@@ -34,13 +33,12 @@ public class CollapseMan : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter(Collider thingy){
-		if(thingy.collider.CompareTag("Player")){
-			_boyTrigger = true;
-		}
-
-		else if(thingy.collider.CompareTag("Fox")){
-			_foxTrigger = true;
-		}
+	public override void onActive(){
+		_triggered = true;
+		
+	}
+	
+	public override void onInactive(){
+		_triggered = true;
 	}
 }
