@@ -251,9 +251,9 @@ public class ThirdPersonCamera : MonoBehaviour {
 			if(startMoving)
 			if(Vector3.Dot(playerObjects[0].transform.forward,this.transform.forward) < .8f)
 				if(Vector3.Angle(playerObjects[0].transform.right, this.transform.forward) < 90)
-						rotationAmountX += Time.deltaTime * autoMoveSmooth * ((InvertedX == true) ? -1 : 1);
+						rotationAmountX -= Time.deltaTime * autoMoveSmooth;
 				else if(Vector3.Angle(playerObjects[0].transform.right, this.transform.forward) > 90)
-						rotationAmountX -= Time.deltaTime * autoMoveSmooth * ((InvertedX == true) ? -1 : 1);
+						rotationAmountX += Time.deltaTime * autoMoveSmooth;
 
 			if ((Vector3.Dot(playerObjects[0].transform.forward, this.transform.forward) >= .8f))
 			{
