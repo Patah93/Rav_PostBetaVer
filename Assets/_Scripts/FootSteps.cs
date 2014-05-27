@@ -4,6 +4,9 @@ using System.Collections;
 public class FootSteps : MonoBehaviour {
 
 	public GameObject _audioSauce;
+
+	public Transform _spawnPos;
+
 	public AudioClip[][] _audios;
 	
 	public AudioClip[] _audioClips1, _audioClips2, _audioClips3, _audioClips4, _audioClips5, _audioClips6, _audioClips7, _audioClips8, _audioClips9;
@@ -80,7 +83,7 @@ public class FootSteps : MonoBehaviour {
 	void Footstep(int i){
 		int a = i;
 		if(tag == "Player"){
-			GameObject sauce = (GameObject)Instantiate (_audioSauce, GameObject.Find ("L_foot_joint").transform.position, Quaternion.identity);
+			GameObject sauce = (GameObject)Instantiate (_audioSauce, _spawnPos.position, Quaternion.identity);
 			RaycastHit outHit;
 			if(Physics.Raycast(transform.position + transform.up * 0.5f, Vector3.down, out outHit, 2f)){
 				GroundType ground = outHit.transform.GetComponent<GroundType>();
@@ -95,7 +98,7 @@ public class FootSteps : MonoBehaviour {
 		
 		else if(tag == "Fox"){
 			Debug.Log ("FOX STEPS");
-			GameObject sauce = (GameObject)Instantiate (_audioSauce, GameObject.Find ("R_front_foot_joint").transform.position, Quaternion.identity);
+			GameObject sauce = (GameObject)Instantiate (_audioSauce, _spawnPos.position, Quaternion.identity);
 			sauce.audio.clip = getRandomClip (a);
 			sauce.audio.Play ();
 		}
