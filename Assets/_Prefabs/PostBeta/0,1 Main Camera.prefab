@@ -11,7 +11,6 @@ GameObject:
   - 20: {fileID: 2000000}
   - 92: {fileID: 9200000}
   - 124: {fileID: 12400000}
-  - 81: {fileID: 8100000}
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: 0,1 Main Camera
@@ -27,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: .0262603778, y: .703416646, z: -.0260236431, w: .709815621}
-  m_LocalPosition: {x: 35.877449, y: 1.19930184, z: -6.9501977}
+  m_LocalPosition: {x: 42.0107765, y: 8.0593586, z: -4.66817713}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,13 +59,6 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
   m_OcclusionCulling: 1
---- !u!81 &8100000
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
 --- !u!92 &9200000
 Behaviour:
   m_ObjectHideFlags: 1
@@ -91,18 +83,18 @@ MonoBehaviour:
   ThrowCameraUp: 0
   ThrowCameraAway: 1.5
   ThrowCameraShoulderOffset: 1
-  camSmoothDampTme: .200000003
+  camSmoothDampTme: 10
   deadZoneX: .300000012
   deadZoneY: .300000012
-  RotationSpeedX: 200
+  RotationSpeedX: 150
   RotationSpeedY: 100
-  InvertedX: 0
+  InvertedX: 1
   InvertedY: 0
   cameraClampingY: {x: -40, y: 60}
   camState: 0
-  moveBehind: .880999982
-  autoMoveSmooth: 154.5
-  ScalingNormalCompenstation: .200000003
+  moveBehind: .5
+  autoMoveSmooth: 80
+  ScalingNormalCompenstation: .100000001
   ScalingComenstationUpMovement: 0
   _pushDistanceFactorY: 3
   _pushDistanceFactorXZ: 1.5
