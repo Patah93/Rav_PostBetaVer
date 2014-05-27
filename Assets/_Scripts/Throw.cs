@@ -234,4 +234,8 @@ public class Throw : MonoBehaviour {
 		clock = Time.time + 1f;
 	}
 
+	public bool ThrowState(){
+		return throwing;
+	}
+
 }
