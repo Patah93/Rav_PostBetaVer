@@ -175,10 +175,11 @@ MonoBehaviour:
   _screenTime: 1
   _loadPos:
     serializedVersion: 2
-    x: 3
-    y: 1.5
+    x: 1.5
+    y: 1.39999998
     width: 3.5
     height: 5
+  _intro: {fileID: 0}
   _loadingObjects:
   - {fileID: 64265096}
 --- !u!81 &1855724043
