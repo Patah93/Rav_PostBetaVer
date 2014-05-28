@@ -4220,12 +4220,12 @@ ModelImporter:
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl
       position: {x: .00471581845, y: 1.81478299e-05, z: .00182758237}
-      rotation: {x: 0, y: -0, z: 0, w: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 2.27600002, y: 2.27600002, z: 2.27600002}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl_group
       position: {x: -.00471581845, y: -1.81478299e-05, z: -.00182758237}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:Hip_ctrl
@@ -4234,74 +4234,74 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:pelvis_joint
-      position: {x: -.00193933246, y: .0179013778, z: -.0295998417}
-      rotation: {x: .0608674325, y: .00576070603, z: -.699398339, w: .712112367}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -.00193931931, y: .0179013778, z: -.0295998342}
+      rotation: {x: .0608674288, y: .0057607065, z: -.699398339, w: .712112308}
+      scale: {x: 1, y: 1, z: .999999881}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_hip_joint
-      position: {x: .0190679822, y: -.0305533484, z: .0107930927}
-      rotation: {x: -.128588647, y: -.180056468, z: .975166798, w: .00972064864}
-      scale: {x: 1, y: .999999762, z: .999999762}
+      position: {x: .0190678388, y: -.0305533577, z: .010793047}
+      rotation: {x: -.128588617, y: -.180056453, z: .975166798, w: .00972059369}
+      scale: {x: 1.00000012, y: .999999881, z: .99999994}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_knee_joint
-      position: {x: -.147403777, y: -.000305519032, z: .000419384771}
-      rotation: {x: -.000397524127, y: -.0251918416, z: -.00802987535, w: .999650359}
-      scale: {x: .999999762, y: .999999881, z: 1.00000048}
+      position: {x: -.147403851, y: -.000305513851, z: .000419415534}
+      rotation: {x: -.000397533178, y: -.0251918286, z: -.00802997034, w: .999650359}
+      scale: {x: .999999702, y: 1.00000024, z: 1.00000072}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_foot_joint
-      position: {x: -.134662539, y: 3.35787408e-05, z: -.000390110305}
-      rotation: {x: .176859185, y: .00165764114, z: -.00467626331, w: .984223723}
-      scale: {x: 1, y: 1.00000012, z: 1.00000012}
+      position: {x: -.134662598, y: 3.35551631e-05, z: -.000390109606}
+      rotation: {x: .17685917, y: .00165760494, z: -.00467615156, w: .984223723}
+      scale: {x: 1, y: 1.00000012, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_ball_joint
-      position: {x: -.0173406489, y: .00569649693, z: .040648777}
-      rotation: {x: 5.60230085e-09, y: -4.03768841e-09, z: 1.1857788e-07, w: 1}
-      scale: {x: 1, y: 1.00000012, z: .99999994}
+      position: {x: -.0173405875, y: .00569650158, z: .0406488068}
+      rotation: {x: 3.72528959e-08, y: 2.60770268e-08, z: 1.179869e-07, w: 1}
+      scale: {x: 1, y: 1.00000012, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_toe_joint
-      position: {x: .00184354465, y: -.00087136979, z: .0254923813}
-      rotation: {x: 1.35042288e-08, y: 8.19267587e-09, z: -9.69408198e-09, w: 1}
-      scale: {x: 1, y: .99999994, z: 1.00000012}
+      position: {x: .00184355897, y: -.000871371827, z: .0254923515}
+      rotation: {x: -1.86264471e-09, y: 5.58793412e-09, z: 1.16415294e-10, w: 1}
+      scale: {x: 1, y: 1.00000012, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_hip_joint
-      position: {x: .01906747, y: .030553408, z: .010793006}
-      rotation: {x: .979173601, y: .0121751511, z: .128270835, w: .156899318}
-      scale: {x: .999999821, y: 1.00000012, z: 1.00000012}
+      position: {x: .0190674383, y: .0305533931, z: .0107929949}
+      rotation: {x: .97917366, y: .0121752173, z: .128270835, w: .156899333}
+      scale: {x: 1.00000048, y: .999999881, z: 1.00000036}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_knee_joint
-      position: {x: .147403464, y: .000313564378, z: -.00038889976}
-      rotation: {x: -.000397571217, y: -.025191864, z: -.00802986324, w: .999650359}
-      scale: {x: .99999994, y: 1.00000036, z: 1.00000012}
+      position: {x: .147403434, y: .000313541852, z: -.000388912857}
+      rotation: {x: -.000397570431, y: -.0251918584, z: -.00802990794, w: .999650359}
+      scale: {x: .999999344, y: 1, z: .999999404}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_foot_joint
-      position: {x: .134661868, y: -4.16222465e-05, z: .000359647733}
-      rotation: {x: .153559059, y: .00143923517, z: -.00406014454, w: .988130093}
-      scale: {x: 1, y: .999999762, z: 1}
+      position: {x: .134661883, y: -4.1561354e-05, z: .000359641854}
+      rotation: {x: .153559074, y: .00143929012, z: -.00406000018, w: .988130152}
+      scale: {x: 1.00000024, y: 1, z: .99999994}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_ball_joint
-      position: {x: .0173406601, y: -.00569646247, z: -.0406488329}
-      rotation: {x: .0507597663, y: -.0438333377, z: -.00591962831, w: .99773103}
-      scale: {x: .99999994, y: .999999881, z: .999999583}
+      position: {x: .0173406061, y: -.00569648016, z: -.0406488478}
+      rotation: {x: .0507597737, y: -.0438333638, z: -.0059196637, w: .99773097}
+      scale: {x: .999999762, y: .99999994, z: .999999881}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_toe_joint
-      position: {x: -.00420685112, y: -.00180292199, z: -.0260678791}
-      rotation: {x: 1.01158726e-08, y: -4.31836966e-09, z: -4.80314242e-08, w: 1}
-      scale: {x: .999999821, y: 1, z: .999999881}
+      position: {x: -.0042068325, y: -.00180292781, z: -.0260678735}
+      rotation: {x: -1.49011594e-08, y: -9.31322486e-09, z: -2.98023188e-08, w: 1}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:spine_02_joint
-      position: {x: -.0401104949, y: -6.47439746e-09, z: -.00900596008}
-      rotation: {x: 6.34102504e-09, y: -.284019113, z: 4.16671107e-08, w: .958818614}
-      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      position: {x: -.0401103757, y: -7.42147677e-09, z: -.00900592655}
+      rotation: {x: 3.7252903e-08, y: -.284019113, z: 1.49942935e-07, w: .958818674}
+      scale: {x: 1.00000024, y: 1.00000024, z: .99999994}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:spine_05_joint
-      position: {x: -.0335478224, y: -3.9440522e-09, z: .0143412538}
-      rotation: {x: 2.23182273e-09, y: .248758465, z: 8.35989411e-08, w: .968565643}
-      scale: {x: .999999702, y: 1, z: 1.00000024}
+      position: {x: -.0335479081, y: 8.82491236e-09, z: .0143412491}
+      rotation: {x: -1.86264497e-08, y: .248758435, z: -9.35979045e-08, w: .968565583}
+      scale: {x: .999999821, y: .999999762, z: 1.00000036}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:spine_06_joint
-      position: {x: -.0357109867, y: 8.65806815e-10, z: -.0133434618}
-      rotation: {x: -.0673402026, y: -.0673402622, z: .703892946, w: .703893065}
-      scale: {x: .999999881, y: .999999881, z: .99999994}
+      position: {x: -.0357111022, y: -7.44242046e-09, z: -.0133434748}
+      rotation: {x: -.0673402175, y: -.0673402548, z: .703893006, w: .703893006}
+      scale: {x: .999999881, y: .999999881, z: .999999881}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_collar_ctrl_group
       position: {x: 1.91513461e-16, y: -1.42108544e-16, z: -1.110223e-18}
@@ -4314,9 +4314,9 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_collar_joint
-      position: {x: -.0232349224, y: .0232627019, z: .00608686358}
-      rotation: {x: -.0135269677, y: -.131446779, z: .101470292, w: .986023605}
-      scale: {x: .999999762, y: 1.00000012, z: 1.00000036}
+      position: {x: -.0232349057, y: .0232625362, z: .00608687522}
+      rotation: {x: -.0135269659, y: -.131446764, z: .101470299, w: .986023605}
+      scale: {x: 1.00000024, y: 1, z: 1.00000036}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_ctrl_group
       position: {x: -7.1054272e-17, y: 2.84217088e-16, z: 4.44089183e-17}
@@ -4329,9 +4329,9 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_shoulder_joint
-      position: {x: -.0395333692, y: -9.52420862e-08, z: 1.64156368e-08}
-      rotation: {x: -.673279166, y: .153143868, z: .0317564085, w: .722657323}
-      scale: {x: 1, y: .999999642, z: 1}
+      position: {x: -.0395333096, y: 1.12340786e-08, z: -3.25962901e-08}
+      rotation: {x: -.673279285, y: .153144181, z: .0317560025, w: .722657144}
+      scale: {x: .999999523, y: .999999642, z: .99999994}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_elbow_ctrl_group
       position: {x: -2.13162816e-16, y: -2.09832147e-15, z: 3.19744217e-16}
@@ -4344,24 +4344,24 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_elbow_joint
-      position: {x: -.081548132, y: 1.53633621e-08, z: 4.79673439e-08}
-      rotation: {x: .122142613, y: .042054113, z: .00692233071, w: .991597116}
-      scale: {x: 1, y: 1.00000024, z: 1.00000012}
+      position: {x: -.0815483183, y: 9.31322575e-10, z: -4.19095159e-09}
+      rotation: {x: .122142665, y: .0420534089, z: .00692222407, w: .991597056}
+      scale: {x: 1.00000024, y: .999999821, z: .99999994}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_forearm_joint
-      position: {x: -.0391107313, y: 3.72028346e-08, z: -5.17687511e-08}
-      rotation: {x: .741724551, y: .0279749241, z: .0373618379, w: .669078588}
-      scale: {x: .999999881, y: .99999994, z: .999999881}
+      position: {x: -.0391105637, y: 4.98257577e-08, z: 2.20257789e-07}
+      rotation: {x: .741724432, y: .0279750135, z: .037361905, w: .669078708}
+      scale: {x: 1.00000024, y: 1.00000048, z: 1.00000083}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_wrist_joint
-      position: {x: -.0375193059, y: -3.40732278e-08, z: 4.24389448e-08}
-      rotation: {x: .0319285877, y: .030566901, z: -.0377421156, w: .998309493}
-      scale: {x: 1.00000024, y: 1.00000012, z: 1.00000012}
+      position: {x: -.0375192873, y: -2.01223884e-07, z: 5.47006493e-08}
+      rotation: {x: .0319287032, y: .0305668488, z: -.0377420112, w: .998309493}
+      scale: {x: .999999821, y: 1.00000024, z: .999999642}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_hand_joint
-      position: {x: -.0171180479, y: 5.38983391e-09, z: 1.70669683e-08}
-      rotation: {x: .359163165, y: .625238955, z: -.170065925, w: .671681225}
-      scale: {x: .99999994, y: 1.00000012, z: .999999762}
+      position: {x: -.0171179865, y: 2.63156835e-07, z: -1.74622983e-08}
+      rotation: {x: .359163195, y: .625238895, z: -.170066029, w: .671681166}
+      scale: {x: 1.00000024, y: 1.0000006, z: 1.00000012}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_hand_ctrl_group
       position: {x: -.154404029, y: -.290418953, z: .141852349}
@@ -4370,103 +4370,103 @@ ModelImporter:
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_hand_ctrl
       position: {x: -.172250301, y: .323826253, z: .0473069139}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_indexfinger_01_joint
-      position: {x: -.0116369119, y: -.0103096236, z: -.0101165846}
-      rotation: {x: -.39666307, y: -.582602084, z: .217391327, w: .675258756}
-      scale: {x: 1.00000036, y: 1, z: 1.00000024}
+      position: {x: -.0116369715, y: -.0103097688, z: -.010116512}
+      rotation: {x: -.396662414, y: -.582602203, z: .217390776, w: .675259113}
+      scale: {x: 1.00000012, y: .999999642, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_indexfinger_02_joint
-      position: {x: -.0104413256, y: 2.95040916e-08, z: 1.75886647e-08}
-      rotation: {x: -.0529745147, y: -.00767567009, z: .0360060483, w: .997917056}
-      scale: {x: .999999523, y: 1.00000024, z: 1}
+      position: {x: -.0104413256, y: 1.72294676e-08, z: 6.13999873e-08}
+      rotation: {x: -.0529747456, y: -.00767620839, z: .0360100865, w: .997916877}
+      scale: {x: 1.00000024, y: 1.00000036, z: 1.00000012}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_indexfinger_03_joint
-      position: {x: -.00641087908, y: 3.03365901e-08, z: -8.03373439e-08}
-      rotation: {x: .141282693, y: .0144374492, z: .0357091688, w: .989219666}
-      scale: {x: 1.00000024, y: .999999523, z: 1.00000012}
+      position: {x: -.00641082041, y: 2.67627911e-08, z: -7.23812263e-08}
+      rotation: {x: .141282946, y: .014443608, z: .0357147455, w: .989219368}
+      scale: {x: .999999881, y: .999999821, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_indexfinger_04_joint
-      position: {x: -.00682240818, y: -1.61683307e-08, z: 7.56189991e-08}
-      rotation: {x: -.767068088, y: .146697462, z: -.237621993, w: .577600479}
-      scale: {x: 1.00000024, y: .999999821, z: 1.00000012}
+      position: {x: -.00682247896, y: 1.23982318e-08, z: 3.44007276e-08}
+      rotation: {x: -.767068267, y: .146697417, z: -.237621978, w: .577600241}
+      scale: {x: 1.00000012, y: 1.00000024, z: 1.00000012}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_longfinger_01_joint
-      position: {x: -.00602545077, y: -.00982385688, z: -.0119994627}
-      rotation: {x: -.420323461, y: -.587024689, z: .193854079, w: .664191782}
-      scale: {x: 1.00000024, y: 1.00000036, z: 1.00000024}
+      position: {x: -.00602557417, y: -.00982402917, z: -.0119994329}
+      rotation: {x: -.420321792, y: -.587024808, z: .193851054, w: .664193749}
+      scale: {x: .999999821, y: .999999702, z: .999999881}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_longfinger_02_joint
-      position: {x: -.0121135283, y: 9.20340923e-08, z: 3.68844177e-10}
-      rotation: {x: -.0521717221, y: -.0104274871, z: .0379056036, w: .997864068}
-      scale: {x: 1.00000012, y: .999999881, z: 1.00000012}
+      position: {x: -.0121135926, y: 6.51925802e-09, z: -1.26601662e-08}
+      rotation: {x: -.0521715097, y: -.010429333, z: .0379046313, w: .997864068}
+      scale: {x: 1.00000024, y: .99999994, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_longfinger_03_joint
-      position: {x: -.00836720504, y: -2.82712467e-08, z: 2.03829948e-08}
-      rotation: {x: -.0846121758, y: -.00578966551, z: .0372363999, w: .995701194}
-      scale: {x: .999999881, y: 1.00000036, z: .999999821}
+      position: {x: -.00836712122, y: -2.81397661e-08, z: 2.08674464e-08}
+      rotation: {x: -.0846119598, y: -.00578860519, z: .0372508019, w: .995700657}
+      scale: {x: .999999821, y: 1.00000048, z: 1.00000024}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_longfinger_04_joint
-      position: {x: -.00739535457, y: -1.19586883e-08, z: -1.68017689e-08}
-      rotation: {x: -.589033663, y: .251746505, z: -.183588386, w: .745626092}
-      scale: {x: 1.00000012, y: .99999994, z: .999999762}
+      position: {x: -.00739531685, y: 1.54066583e-07, z: -6.95581548e-09}
+      rotation: {x: -.589033663, y: .251746625, z: -.183588535, w: .745626152}
+      scale: {x: 1.00000012, y: .999999821, z: .999999881}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_pinkyfinger_01_joint
-      position: {x: .00500618061, y: -.0127649112, z: -.0114059588}
-      rotation: {x: -.400416404, y: -.571518838, z: .212312356, w: .684073389}
-      scale: {x: .999999881, y: .999999821, z: 1.00000024}
+      position: {x: .00500610564, y: -.0127651002, z: -.0114059094}
+      rotation: {x: -.400417, y: -.571516991, z: .212312847, w: .684074461}
+      scale: {x: .999999762, y: .999999642, z: .999999821}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_pinkyfinger_02_joint
-      position: {x: -.00764000462, y: 9.69065006e-09, z: -5.13884402e-08}
-      rotation: {x: .0612204894, y: .00631276285, z: .0366385169, w: .997431695}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -.00763998693, y: 6.47269189e-08, z: -8.1793587e-08}
+      rotation: {x: .0612202063, y: .00630315207, z: .0366296582, w: .997432053}
+      scale: {x: 1.00000024, y: .99999994, z: 1.00000012}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_pinkyfinger_03_joint
-      position: {x: -.00610023411, y: 1.78337469e-08, z: -1.90978291e-08}
-      rotation: {x: .968638539, y: .0349031612, z: .001997652, w: .246002585}
-      scale: {x: .99999994, y: 1.00000024, z: .999999583}
+      position: {x: -.00610019732, y: -1.34041329e-08, z: 6.72735041e-08}
+      rotation: {x: .968638241, y: .0349102467, z: .00199121935, w: .246002793}
+      scale: {x: 1.00000024, y: 1.00000012, z: 1.00000036}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_pinkyfinger04_joint
-      position: {x: -.00567331724, y: 3.69190687e-08, z: 2.86349122e-09}
-      rotation: {x: -.715842068, y: -.269969851, z: -.317131698, w: -.560458601}
-      scale: {x: 1.00000012, y: 1.00000024, z: 1.00000024}
+      position: {x: -.0056733666, y: -1.22236088e-08, z: 5.23868948e-08}
+      rotation: {x: -.715842128, y: -.26996997, z: -.317131609, w: -.56045872}
+      scale: {x: .99999994, y: .999999642, z: .999999702}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_ringfinger_01_joint
-      position: {x: -.000355123309, y: -.0115756383, z: -.0112677226}
-      rotation: {x: -.401276737, y: -.573643029, z: .212346315, w: .681776881}
-      scale: {x: 1.00000012, y: .99999994, z: .999999881}
+      position: {x: -.000355092576, y: -.011575643, z: -.0112676732}
+      rotation: {x: -.401275903, y: -.573643923, z: .212345377, w: .681776941}
+      scale: {x: .99999994, y: .999999762, z: .999999881}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_ringfinger_02_joint
-      position: {x: -.0106734689, y: -8.37184633e-09, z: -2.92324351e-08}
-      rotation: {x: -.110248297, y: -.0143930381, z: .0348044075, w: .993190229}
-      scale: {x: .999999881, y: 1.00000012, z: 1}
+      position: {x: -.0106735379, y: 4.19095159e-09, z: 7.99627742e-09}
+      rotation: {x: -.110248677, y: -.0143934339, z: .0348067768, w: .99319011}
+      scale: {x: 1.00000012, y: .999999881, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_ringfinger_03_joint
-      position: {x: -.00658196537, y: -1.76507342e-08, z: -3.29833796e-08}
-      rotation: {x: .0203911364, y: .00183369184, z: .0392719246, w: .999018848}
-      scale: {x: 1.00000012, y: 1.00000036, z: 1.00000024}
+      position: {x: -.00658203335, y: -4.00832505e-08, z: -3.14321369e-09}
+      rotation: {x: .0203911532, y: .00183408335, z: .0392640904, w: .999019146}
+      scale: {x: .999999702, y: 1.00000012, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_ringfinger_04_joint
-      position: {x: -.00661079632, y: 4.73442725e-08, z: -2.7346216e-08}
-      rotation: {x: -.650359988, y: .224703223, z: -.204348192, w: .696263015}
-      scale: {x: 1, y: .99999994, z: .999999881}
+      position: {x: -.00661096163, y: -7.79164111e-08, z: -4.00104909e-08}
+      rotation: {x: -.650359929, y: .224703267, z: -.204348281, w: .696263015}
+      scale: {x: 1.00000012, y: 1.00000024, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_01_joint
-      position: {x: -.0151500087, y: 5.29776258e-08, z: -6.21047107e-08}
-      rotation: {x: -.179035172, y: -.326559424, z: -.0292508155, w: .927604377}
-      scale: {x: 1, y: .99999994, z: .99999994}
+      position: {x: -.0151501521, y: -5.26197255e-08, z: 4.66243364e-08}
+      rotation: {x: -.179030001, y: -.32655701, z: -.0292559434, w: .927606046}
+      scale: {x: .999999881, y: .999999762, z: 1.00000036}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_02_joint
-      position: {x: -.0100910952, y: 4.18515356e-08, z: 2.47089034e-08}
-      rotation: {x: .0112752076, y: .00224094233, z: .0341196172, w: .99935168}
-      scale: {x: 1.00000024, y: 1.00000012, z: 1.00000048}
+      position: {x: -.0100910813, y: -5.00003807e-08, z: -7.46222213e-08}
+      rotation: {x: .0112750567, y: .00223776628, z: .0341220386, w: .999351561}
+      scale: {x: .999999762, y: .999999702, z: .999999523}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_thumbfinger_03_joint
-      position: {x: -.0109255947, y: 4.85944014e-08, z: 1.19688295e-08}
-      rotation: {x: -.84101373, y: -.362528354, z: -.393007159, w: -.0825507566}
-      scale: {x: .999999821, y: .999999285, z: .999999762}
+      position: {x: -.0109255603, y: 2.78250809e-08, z: 2.93803168e-08}
+      rotation: {x: -.84101373, y: -.362528294, z: -.39300704, w: -.0825505853}
+      scale: {x: 1, y: 1.00000048, z: .99999994}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_wrist_ctrl_group
       position: {x: -.0764664263, y: -.00343284756, z: -.000674955372}
@@ -4479,9 +4479,9 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:neck_01_joint
-      position: {x: 8.53691606e-09, y: .0417673029, z: .00242136442}
-      rotation: {x: -.0477808379, y: 1.57045843e-08, z: -4.19609902e-09, w: .998857856}
-      scale: {x: 1, y: 1.00000024, z: 1.00000012}
+      position: {x: 1.5972061e-08, y: .0417671725, z: .00242137769}
+      rotation: {x: -.0477808341, y: 4.11536618e-08, z: -1.27442235e-08, w: .998857915}
+      scale: {x: 1.00000012, y: 1.00000024, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:Head_ctrl_group
       position: {x: -.00471581845, y: -.483422309, z: -.0461059995}
@@ -4494,14 +4494,14 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:neck_02_joint
-      position: {x: -1.34747535e-09, y: .0235917158, z: -1.21573542e-08}
-      rotation: {x: -.441617697, y: .552244365, z: -.441617697, w: .552244306}
-      scale: {x: 1, y: .999999881, z: .999999881}
+      position: {x: -9.8119779e-09, y: .0235918146, z: 3.0733645e-08}
+      rotation: {x: -.441617697, y: .552244425, z: -.441617757, w: .552244246}
+      scale: {x: .999999821, y: .999999762, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:head_joint
-      position: {x: -.0455184989, y: -2.28046275e-08, z: -1.80236515e-09}
-      rotation: {x: .467500031, y: -.53051275, z: .467500091, w: .53051275}
-      scale: {x: .999999881, y: .999999642, z: .999999583}
+      position: {x: -.0455184579, y: -1.02445483e-08, z: -1.0080516e-08}
+      rotation: {x: .467500001, y: -.53051281, z: .467500091, w: .530512691}
+      scale: {x: .999999762, y: .999999762, z: 1.00000012}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:Neck_ctrl_group
       position: {x: -.00471581845, y: -.443848789, z: .00266980054}
@@ -4520,13 +4520,13 @@ ModelImporter:
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_collar_ctrl
       position: {x: .0232348815, y: .023200674, z: .00631898921}
-      rotation: {x: 0, y: 0, z: -.0955275223, w: .995426834}
+      rotation: {x: 0, y: 0, z: -.0955275148, w: .995426774}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_collar_joint
-      position: {x: .0232349206, y: .0232628249, z: .00608686358}
-      rotation: {x: .986023664, y: -.101470381, z: -.131446823, w: .0135270171}
-      scale: {x: .999999881, y: 1.00000036, z: 1}
+      position: {x: .0232348926, y: .0232628919, z: .00608685473}
+      rotation: {x: .986023605, y: -.101470269, z: -.131446779, w: .0135269957}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000024}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_ctrl_group
       position: {x: -0, y: -7.1054272e-17, z: -4.44089183e-17}
@@ -4539,9 +4539,9 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_shoulder_joint
-      position: {x: .0395334773, y: 2.68904273e-07, z: -4.2863018e-08}
-      rotation: {x: -.673279226, y: .153144851, z: .031756375, w: .722657204}
-      scale: {x: .999999702, y: .999999702, z: .999999642}
+      position: {x: .0395334624, y: 4.42145392e-07, z: -3.63215804e-08}
+      rotation: {x: -.673279345, y: .1531443, z: .0317566879, w: .722657144}
+      scale: {x: 1.00000012, y: 1.0000006, z: 1.00000024}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_elbow_ctrl_group
       position: {x: -2.84217088e-16, y: 8.88178367e-17, z: 5.3290704e-17}
@@ -4554,24 +4554,24 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_elbow_joint
-      position: {x: .0815485716, y: -3.60013424e-08, z: 1.62766725e-08}
-      rotation: {x: .12214265, y: .042052675, z: .00692061149, w: .991597116}
-      scale: {x: 1.00000036, y: 1.00000012, z: 1.00000012}
+      position: {x: .0815484524, y: -2.04890966e-08, z: -4.93600965e-08}
+      rotation: {x: .122142404, y: .0420524292, z: .00692101708, w: .991597176}
+      scale: {x: .999999642, y: .999999583, z: .999999881}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_forearm_joint
-      position: {x: .039110817, y: -1.2773792e-07, z: -8.38936387e-09}
-      rotation: {x: .051368311, y: -.00663750246, z: .0462001637, w: .997588456}
-      scale: {x: 1.00000012, y: 1.00000024, z: .999999821}
+      position: {x: .0391107686, y: -1.27940439e-07, z: -1.1222437e-07}
+      rotation: {x: .0513684377, y: -.00663752109, z: .0462000668, w: .997588456}
+      scale: {x: .999999821, y: 1, z: .999999642}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_wrist_joint
-      position: {x: .0375185646, y: 3.43230283e-07, z: -1.11138874e-07}
-      rotation: {x: .0319286697, y: .0377421379, z: .0305668376, w: .998309493}
-      scale: {x: .999999881, y: .99999994, z: 1}
+      position: {x: .0375185646, y: 2.91911419e-07, z: -9.4762072e-08}
+      rotation: {x: .031928435, y: .0377422161, z: .0305668637, w: .998309493}
+      scale: {x: .999999881, y: 1, z: 1.00000036}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_hand_joint
-      position: {x: .0171181168, y: -1.79645653e-07, z: -1.18041406e-07}
-      rotation: {x: -3.1970167e-08, y: -5.57451019e-09, z: 8.41528536e-09, w: 1}
-      scale: {x: .999999881, y: 1.00000012, z: 1.00000024}
+      position: {x: .0171181243, y: -1.67441613e-07, z: -1.51107088e-07}
+      rotation: {x: 1.41561031e-07, y: -4.84287739e-08, z: -5.96046448e-08, w: 1}
+      scale: {x: 1.00000024, y: 1, z: .999999881}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_hand_ctrl_group
       position: {x: .114209458, y: .0700230598, z: .336710423}
@@ -4580,103 +4580,103 @@ ModelImporter:
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_hand_ctrl
       position: {x: .180448011, y: .323826253, z: .0467323288}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_indexfinger_01_joint
-      position: {x: .0161122438, y: .00881718658, z: .00258874428}
-      rotation: {x: -.00189164048, y: .0180820338, z: .00838228967, w: .99979955}
-      scale: {x: .999999881, y: 1, z: .999999821}
+      position: {x: .0161123462, y: .00881723128, z: .00258906325}
+      rotation: {x: -.00189082115, y: .0180721786, z: .00837786123, w: .999799848}
+      scale: {x: 1, y: .99999994, z: 1.00000024}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_indexfinger_02_joint
-      position: {x: .0102762431, y: .000224077667, z: .0018358347}
-      rotation: {x: -.00526064541, y: .096709542, z: .017642118, w: .9951424}
-      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      position: {x: .0102762878, y: .00022412659, z: .00183572527}
+      rotation: {x: -.00526176067, y: .096707128, z: .0176478494, w: .99514246}
+      scale: {x: .999999881, y: 1, z: .999999762}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_indexfinger_03_joint
-      position: {x: .00578992302, y: -.000186082005, z: .00274653453}
-      rotation: {x: .0100789806, y: .0598980114, z: -.0171886552, w: .998005688}
-      scale: {x: 1.00000012, y: .999999881, z: .999999881}
+      position: {x: .00578991696, y: -.000186133984, z: .00274641509}
+      rotation: {x: .0100785308, y: .0598966852, z: -.017188333, w: .998005688}
+      scale: {x: 1.00000024, y: .999999881, z: .99999994}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_indexfinger_04_joint
-      position: {x: .00548502104, y: .000239183413, z: .00404981105}
-      rotation: {x: -2.69087685e-08, y: 2.30621588e-09, z: 1.4484236e-08, w: 1}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: .00548508996, y: .000239182671, z: .00404983526}
+      rotation: {x: 2.79396737e-08, y: 1.49011594e-08, z: -2.98023188e-08, w: 1}
+      scale: {x: .99999994, y: 1.00000012, z: 1.00000012}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_longfinger_01_joint
-      position: {x: .0162351225, y: .00362445251, z: -.000290853583}
-      rotation: {x: -.00880788267, y: .0837745592, z: .0338429362, w: .995871007}
-      scale: {x: .999999881, y: 1, z: .999999821}
+      position: {x: .0162352491, y: .0036244574, z: -.000290556141}
+      rotation: {x: -.00880687591, y: .0837608576, z: .0338402204, w: .995872259}
+      scale: {x: 1, y: .99999994, z: 1.00000024}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_longfinger_02_joint
-      position: {x: .0115502849, y: -.000257066044, z: .00364235975}
-      rotation: {x: -.00155110413, y: .0459466837, z: .00816142466, w: .998909414}
-      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      position: {x: .0115502039, y: -.000257040345, z: .00364214857}
+      rotation: {x: -.00155061588, y: .0459619276, z: .00816252828, w: .998908699}
+      scale: {x: .999999881, y: 1, z: .999999762}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_longfinger_03_joint
-      position: {x: .00743085006, y: -.000428028114, z: .00382187706}
-      rotation: {x: .0066409288, y: .0803730786, z: -.00391058018, w: .996735036}
-      scale: {x: 1.00000012, y: .999999881, z: .999999881}
+      position: {x: .00743087288, y: -.00042803018, z: .00382194528}
+      rotation: {x: .00664027501, y: .0803693756, z: -.00390996225, w: .996735394}
+      scale: {x: 1.00000024, y: .999999881, z: .99999994}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_longfinger_04_joint
-      position: {x: .00559905963, y: -.000227825847, z: .00482614385}
-      rotation: {x: -2.69087685e-08, y: 2.30621588e-09, z: 1.4484236e-08, w: 1}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: .00559903728, y: -.000227844313, z: .00482607633}
+      rotation: {x: 2.79396737e-08, y: 1.49011594e-08, z: -2.98023188e-08, w: 1}
+      scale: {x: .99999994, y: 1.00000012, z: 1.00000012}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_pinkyfinger_01_joint
-      position: {x: .016033588, y: -.00780615257, z: -.00030037589}
-      rotation: {x: -.00995212421, y: .0934630036, z: .0233579017, w: .995298982}
-      scale: {x: .999999881, y: 1, z: .999999821}
+      position: {x: .0160337817, y: -.0078061074, z: -.000300104293}
+      rotation: {x: -.00995214842, y: .0934591293, z: .0233547725, w: .995299459}
+      scale: {x: 1, y: .99999994, z: 1.00000024}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_pinkyfinger_02_joint
-      position: {x: .0072225593, y: .000147620813, z: .00248666713}
-      rotation: {x: .000454438152, y: .0907415822, z: -.00670651533, w: .995851755}
-      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      position: {x: .00722253742, y: .0001476693, z: .002486652}
+      rotation: {x: .000452887092, y: .0907429978, z: -.00670323242, w: .995851696}
+      scale: {x: .999999881, y: 1, z: .999999762}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_pinkyfinger_03_joint
-      position: {x: .00507289963, y: .000224370946, z: .00337968138}
-      rotation: {x: -.00237156404, y: .136056066, z: -.00547237974, w: .990683258}
-      scale: {x: 1.00000012, y: .999999881, z: .999999881}
+      position: {x: .00507284747, y: .000224340169, z: .00337965717}
+      rotation: {x: -.00237168954, y: .136042207, z: -.00547190756, w: .990685165}
+      scale: {x: 1.00000024, y: .999999881, z: .99999994}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_pinkyfinger04_joint
-      position: {x: .00338405953, y: .000241897622, z: .00454784743}
-      rotation: {x: -2.69087685e-08, y: 2.30621588e-09, z: 1.4484236e-08, w: 1}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: .00338400155, y: .000241919493, z: .00454770168}
+      rotation: {x: 2.79396737e-08, y: 1.49011594e-08, z: -2.98023188e-08, w: 1}
+      scale: {x: .99999994, y: 1.00000012, z: 1.00000012}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_ringfinger_01_joint
-      position: {x: .0159882475, y: -.00233282475, z: .000165326652}
-      rotation: {x: -.00822821353, y: .0774895027, z: .0220029168, w: .99671638}
-      scale: {x: .999999881, y: 1, z: .999999821}
+      position: {x: .0159883369, y: -.00233277073, z: .000165688849}
+      rotation: {x: -.00822739769, y: .0774779022, z: .0220005997, w: .996717334}
+      scale: {x: 1, y: .99999994, z: 1.00000024}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_ringfinger_02_joint
-      position: {x: .0101966299, y: .000188518854, z: .00314925774}
-      rotation: {x: -.00866635237, y: .0769667402, z: .0234527383, w: .996720135}
-      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      position: {x: .0101966718, y: .000188549908, z: .0031491355}
+      rotation: {x: -.00866729394, y: .0769657046, z: .0234558545, w: .996720135}
+      scale: {x: .999999881, y: 1, z: .999999762}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_ringfinger_03_joint
-      position: {x: .00568477297, y: -.000364407431, z: .00329659996}
-      rotation: {x: .00730447378, y: .0456811711, z: -.00754672103, w: .99890089}
-      scale: {x: 1.00000012, y: .999999881, z: .999999881}
+      position: {x: .00568478461, y: -.000364415202, z: .00329653849}
+      rotation: {x: .00730477087, y: .0456816703, z: -.00754677365, w: .99890089}
+      scale: {x: 1.00000024, y: .999999881, z: .99999994}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_ringfinger_04_joint
-      position: {x: .0050822054, y: -.00011432125, z: .00422703382}
-      rotation: {x: -2.69087685e-08, y: 2.30621588e-09, z: 1.4484236e-08, w: 1}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: .00508212345, y: -.000114352879, z: .00422692159}
+      rotation: {x: 2.79396737e-08, y: 1.49011594e-08, z: -2.98023188e-08, w: 1}
+      scale: {x: .99999994, y: 1.00000012, z: 1.00000012}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_01_joint
-      position: {x: .00242842198, y: .0145757515, z: .00334300823}
-      rotation: {x: -.14265193, y: -.176146001, z: -.420659125, w: -.878446877}
-      scale: {x: .999999881, y: 1, z: 1.00000024}
+      position: {x: .00242846319, y: .0145757534, z: .00334313978}
+      rotation: {x: -.142656401, y: -.176144004, z: -.420662612, w: -.87844497}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000048}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_02_joint
-      position: {x: .00981956348, y: -.000434379792, z: -.000104390652}
-      rotation: {x: .236345991, y: -.0338007882, z: -.0299834218, w: .97061795}
-      scale: {x: 1.00000024, y: 1, z: .99999994}
+      position: {x: .00981961191, y: -.000434478046, z: -.000104373321}
+      rotation: {x: .236346588, y: -.0338068381, z: -.0299932882, w: .970617175}
+      scale: {x: 1.00000012, y: 1, z: 1.00000036}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_thumbfinger_03_joint
-      position: {x: .0109261582, y: -2.47916745e-07, z: 2.75677735e-07}
-      rotation: {x: -6.11564559e-08, y: 8.76367512e-09, z: -1.89555536e-08, w: 1}
-      scale: {x: .999999583, y: .99999994, z: 1.00000012}
+      position: {x: .0109261116, y: -2.33529136e-07, z: 2.07219273e-07}
+      rotation: {x: 8.94069672e-08, y: 5.96046448e-08, z: -1.1920929e-07, w: 1}
+      scale: {x: 1, y: .99999994, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_wrist_ctrl_group
       position: {x: -3.55271347e-16, y: 3.55271347e-16, z: -2.6645352e-17}
@@ -4690,17 +4690,17 @@ ModelImporter:
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_foot_ctrl_group
       position: {x: -.00471581845, y: -1.81478299e-05, z: -.00182758237}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:L_foot_ctrl
       position: {x: -.0271314401, y: .0791557655, z: -.207578406}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_foot_ctrl_group
       position: {x: -.00471581845, y: -1.81478299e-05, z: -.00182758237}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:R_foot_ctrl
@@ -4710,18 +4710,18 @@ ModelImporter:
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:Boy
       position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: 0, w: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:Clothes
       position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: 0, w: 1}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: a12tobkr_A_Boy_Animations_Clothes3:Hair
       position: {x: .0366737507, y: -.0694748089, z: .0925462693}
       rotation: {x: .0439206101, y: -.00683830585, z: .00771430135, w: .998981833}
-      scale: {x: .99999994, y: 1.00000012, z: 1}
+      scale: {x: .99999994, y: 1, z: 1}
       transformModified: 1
     armTwist: .5
     foreArmTwist: .5
@@ -4730,7 +4730,7 @@ ModelImporter:
     armStretch: .0500000007
     legStretch: .0500000007
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: a12tobkr_A_Boy_Animations_Clothes3:Body_ctrl
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3
   additionalBone: 0

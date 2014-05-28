@@ -22,13 +22,29 @@ public class FoxSoundZone : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider c){
-
 		if(c.CompareTag("Player")){
 
 			for(int i = 0; i < _music.Length; i++){
 
 				_prevActivated[i] = _fade[i].GetBool();
-				_fade[i].ChangeState(false);
+
+			}
+
+		}
+
+	}
+
+	void OnTriggerStay(Collider c){
+
+		if(c.CompareTag("Player")){
+
+			Vector3 offset = Vector3.Normalize(c.transform.position - transform.position);
+
+			float distance = Mathf.Clamp((Vector3.Distance(c.transform.position - offset*2f, transform.position))/3,0,1);
+
+			for(int i = 0; i < _music.Length; i++){
+
+				_music[i].audio.volume = distance;
 
 			}
 

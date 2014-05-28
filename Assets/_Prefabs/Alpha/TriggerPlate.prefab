@@ -13,6 +13,7 @@ GameObject:
   - 54: {fileID: 5400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: TriggerPlate
   m_TagString: Untagged
@@ -27,8 +28,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: .0240845699, y: 0, z: 0, w: .999709964}
-  m_LocalPosition: {x: 45.7229614, y: .0352356732, z: 19.114109}
-  m_LocalScale: {x: 1.06979489, y: .211632013, z: 1.06979489}
+  m_LocalPosition: {x: -36.4176559, y: 3.98129606, z: -89.853714}
+  m_LocalScale: {x: 10.5153866, y: 7.54882622, z: 10.5153866}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!23 &2300000
@@ -37,13 +38,13 @@ Renderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: f77b2d0b1ee12084db08165ebf9ab833, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -92,14 +93,35 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46167d980d66f3a479ace0cc754846dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _actionObj: {fileID: 0}
-  _triggerableObjects: []
-  _activatedByInteractables: 1
+  _actionObj:
+  - {fileID: 0}
+  - {fileID: 100000}
+  _triggerableObjects:
+  - {fileID: 0}
+  _activatedByInteractables: 0
+  _activatedByThrowables: 0
+  _scriptNumber: 0
+  _triggeredSound: {fileID: 0}
+  _unTriggeredSound: {fileID: 0}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3544ef9eccf7ac04abd2400345fd6700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _theScript: {fileID: 11400000}
+  _inactivateWhenActive: 1
+  _onceAndOnlyOnce: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
