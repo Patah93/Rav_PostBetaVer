@@ -6,10 +6,14 @@ public class StartMenu : MonoBehaviour {
 	public Vector2 _position = new Vector2(0,0);
 	public Texture2D _startScreen;
 	public Rect _buttonSizes = new Rect(3,1.5f,3.5f,5);
-	public Texture2D _buttontexture;
+	public Material _buttontexture;
+	public int _nrOfSheetImages;
 	public string _firstSceneName;
 	public Texture2D _loadingScreen;
 	public float _fadeSpeed = 0.05f;
+	public float _nrOfRows;
+	public float _nrOfColumns;
+	public float _frameTime;
 
 	Texture2D _background;
 	bool _drawButtons;
@@ -22,10 +26,11 @@ public class StartMenu : MonoBehaviour {
 	//FadeCamera _fade;
 	Texture2D _fadeScreen;
 	AsyncOperation _load;
+	TextureAnimation _ani;
 
 	// Use this for initialization
 	void Start () {
-
+		
 		_startScene = false;
 		_disableClick = false;
 		_fadeFrom = false;
@@ -36,11 +41,15 @@ public class StartMenu : MonoBehaviour {
 		_background = _startScreen;
 		_drawButtons = true;
 		_loadlevel = false;
+		_ani = gameObject.GetComponent<TextureAnimation>();
+		_ani.setSheet(_buttontexture,_nrOfColumns,_nrOfRows,_frameTime);
+
 		//_buttonSizes = new Rect(Screen.width/_buttonSizes.x,Screen.height/_buttonSizes.y,Screen.width/_buttonSizes.width,Screen.height/_buttonSizes.height);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		//_buttontexture = _ani.getSheet;
 	}
 
 	IEnumerator wait(){
@@ -53,7 +62,8 @@ public class StartMenu : MonoBehaviour {
 	void OnGUI(){
 		GUI.DrawTexture(new Rect(_position.x,_position.y,Screen.width,Screen.height),_background,ScaleMode.StretchToFill,false,0);
 		if(_drawButtons){
-			GUI.DrawTexture(scaleRect(_buttonSizes),_buttontexture,ScaleMode.StretchToFill,false,0);
+			//GUI.DrawTexture(scaleRect(_buttonSizes),_buttontexture,ScaleMode.StretchToFill,false,0);
+			GUI.DrawTextureWithTexCoords(scaleRect(_buttonSizes),_buttontexture.mainTexture,_ani.horunge());
 			if(!_disableClick){
 				if(GUI.Button(scaleRect(_buttonSizes),"")){
 					_loadlevel = true;
