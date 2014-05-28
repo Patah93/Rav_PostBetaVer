@@ -43,7 +43,7 @@ public class Messages : TriggerAction {
 			tempStyle.alignment = TextAnchor.MiddleLeft;
 			tempStyle.wordWrap = true;
 
-			GUI.Box(scaleRect(_messageBox),_message,_boxTexture, tempStyle);
+			GUI.Box(scaleRect(_messageBox),_message, tempStyle);
 		}
 	}
 
