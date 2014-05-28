@@ -57,7 +57,7 @@ public class AnimationMan : MonoBehaviour {
 			
 			float lerpit = _lerpTime;
 
-			if(!_animator.GetBool("ThrowMode")){
+			if(!_animator.GetBool("ThrowMode") && (camera.camState != ThirdPersonCamera.CamStates.Focus)){
 				_length = Mathf.Sqrt(Mathf.Pow (Mathf.Abs(Input.GetAxis("Horizontal")),2) + Mathf.Pow (Mathf.Abs(Input.GetAxis("Vertical")),2));	
 			} else{
 				lerpit = _lerpThrowTime;
@@ -65,7 +65,7 @@ public class AnimationMan : MonoBehaviour {
 			}
 			
 			
-			if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0 || Mathf.Abs(Input.GetAxis("Vertical")) > 0){
+		if((Mathf.Abs(Input.GetAxis("Horizontal")) > 0 || Mathf.Abs(Input.GetAxis("Vertical")) > 0) && (camera.camState != ThirdPersonCamera.CamStates.Focus)){
 				if(!_animator.GetBool("Falling") && !_animator.GetBool("Jump") && !_animator.GetCurrentAnimatorStateInfo(0).IsName("Land") && !_animator.GetCurrentAnimatorStateInfo(0).IsName("Push Button")){
 
 							_angle = Vector2.Angle (_cameraRotationForward, _targetRotation) * Mathf.Sign(Input.GetAxis ("Horizontal"));
