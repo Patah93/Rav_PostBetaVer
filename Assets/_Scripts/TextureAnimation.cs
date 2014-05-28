@@ -11,7 +11,7 @@ public class TextureAnimation : MonoBehaviour {
 	public bool _startFromScript = false;
 	public Rect _aniRect = new Rect(4,5,6,7);
 	bool _activateOnGUI = false;
-	float _clock = 0;
+	public float _clock = 0;
 	float _currentFrameColumn;
 	float _currentFrameRow;
 
@@ -19,7 +19,6 @@ public class TextureAnimation : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
-		_clock = Time.time;
 		_currentFrameColumn = 0;
 		_currentFrameRow = 0;
 		//_sheet.SetTextureScale("_MainTex",new Vector2(1/_nrOfColumns,1/_nrOfRows));
@@ -63,6 +62,7 @@ public class TextureAnimation : MonoBehaviour {
 		_sheet.SetTextureScale("_MainTex",new Vector2(1/_nrOfColumns,1/_nrOfRows));
 		_sheet.SetTextureOffset("_MainTex",new Vector2(0,1 - (1/_nrOfRows)));
 		_currentFrameRow = _nrOfRows-1;
+		_clock = Time.time;
 	}
 
 	public Material getSheet(){
