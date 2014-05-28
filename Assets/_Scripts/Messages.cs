@@ -4,6 +4,7 @@ using System.Collections;
 public class Messages : TriggerAction {
 
 	public Rect _messageBox = new Rect(10,15,1.2f,5.5f);
+	public Texture2D _boxTexture; 
 	public string _message;
 	public int _fontSize = 24;
 	public bool _display = false;
@@ -37,12 +38,14 @@ public class Messages : TriggerAction {
 
 	void OnGUI(){
 		if (_display) {
+	
 			GUIStyle tempStyle =  new GUIStyle(GUI.skin.box);
+			tempStyle.normal.background = _boxTexture;
 			tempStyle.fontSize = Screen.width/_fontSize;
-			tempStyle.alignment = TextAnchor.MiddleLeft;
+			tempStyle.alignment = TextAnchor.MiddleCenter;
 			tempStyle.wordWrap = true;
 
-			GUI.Box(scaleRect(_messageBox),_message,tempStyle);
+			GUI.Box(scaleRect(_messageBox),_message, tempStyle);
 		}
 	}
 
