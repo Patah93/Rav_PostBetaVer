@@ -3,8 +3,8 @@ using System.Collections;
 
 public class FocusTarget : MonoBehaviour {
     #region Public variables
-	string FocusTag = "Focus";
-	float rayCastLength = 1.0f;
+	public string FocusTag = "Focus";
+	public float rayCastLength = 1.0f;
     #endregion
 
     #region Private variables
