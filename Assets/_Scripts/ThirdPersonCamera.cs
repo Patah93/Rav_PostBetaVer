@@ -26,7 +26,9 @@ public class ThirdPersonCamera : MonoBehaviour {
 	public float ThrowCameraAway = 1.5f;
 	[Range(0.0f, 5.0f)]
 	public float ThrowCameraShoulderOffset = 1.0f;
-	
+	[Range(0.0f, 5.0f)]
+	public float FocusCameraAway = 3.0f;
+
 	//Camera max movement delta (Low value to create a moothing effect)
 	[Range(1.0f, 20.0f)]
 	public float camSmoothDampTme = 10.0f;
@@ -123,6 +125,8 @@ public class ThirdPersonCamera : MonoBehaviour {
 
 	//bug fix for "clone" player objects
 	GameObject[] playerObjects;
+
+	private Transform focusTarget;
 	#endregion
 	
 	#region Structs
@@ -156,7 +160,8 @@ public class ThirdPersonCamera : MonoBehaviour {
 		Behind,
 		Throw,
 		Inside,
-		Push
+		Push,
+		Focus
 	}
 	#endregion
 	
@@ -338,6 +343,19 @@ public class ThirdPersonCamera : MonoBehaviour {
 				}			
 			}
 			break;
+		case CamStates.Focus:
+
+			currentLookDirection = Quaternion.Euler(0.0f, 0.0f, 0.0f) * Vector3.forward;
+
+			targetPosistion =
+				(focusTarget.position) + 
+				//move the target a bit back according to the CameraAway variable
+					(focusTarget.transform.forward * FocusCameraAway);
+
+			CompenstaForWalls(focusTarget.position, ref targetPosistion);
+			smoothPosistion(this.transform.position, targetPosistion);
+			transform.LookAt(focusTarget);		
+			break;
 		}
 		
 		
@@ -375,11 +393,25 @@ public class ThirdPersonCamera : MonoBehaviour {
 		_pushDir = PlayerXform.forward;	
 	}
 
-    public void setCameraState(string s)
+    public void setCameraState(string s,Transform o)
     {
-        if (s.Equals("Throw"))
-            camState = (camState != CamStates.Throw) ? CamStates.Throw : prevCamstate;
-    }
+        if (s.Equals("Throw")) {
+			if(camState != CamStates.Throw) {
+				prevCamstate = camState;
+				camState = CamStates.Throw;
+			}else {
+				camState = prevCamstate;
+			}
+		}else if(s.Equals("Focus")) {
+			if(camState != CamStates.Focus) {
+			prevCamstate = camState;
+			camState = CamStates.Focus;
+			focusTarget = o;
+			}else {
+				camState = prevCamstate;
+			}
+		}
+	}
 
 	#endregion
 }

@@ -2,12 +2,15 @@
 using System.Collections;
 
 public class TextureAnimation : MonoBehaviour {
-	
-	float _nrOfColumns = 4;
-	float _nrOfRows = 3;
-	float _frameTime = 0.1f;
 
-	Material _sheet;
+	public float _nrOfColumns;
+	public float _nrOfRows;
+	public float _frameTime;
+
+	public Material _sheet;
+	public bool _startFromScript = false;
+	public Rect _aniRect = new Rect(4,5,6,7);
+	bool _activateOnGUI = false;
 	float _clock = 0;
 	float _currentFrameColumn;
 	float _currentFrameRow;
@@ -44,7 +47,13 @@ public class TextureAnimation : MonoBehaviour {
 			_clock = Time.time;
 
 		}
+		if(_startFromScript){
+			setSheet(_sheet, _nrOfColumns, _nrOfRows, _frameTime);
+			_activateOnGUI = true;
+			_startFromScript = false;
+		}
 	}
+
 
 	public void setSheet(Material sheet,float nrOfColumns, float nrOfRows, float frameTime){
 		_sheet = sheet;
@@ -65,5 +74,15 @@ public class TextureAnimation : MonoBehaviour {
 		                _sheet.GetTextureOffset("_MainTex").y,
 		                _sheet.GetTextureScale("_MainTex").x,
 		                _sheet.GetTextureScale("_MainTex").y);
+	}
+
+	void OnGUI(){
+		if(_activateOnGUI){
+			GUI.DrawTextureWithTexCoords(scaleRect(_aniRect),_sheet.mainTexture,horunge());
+		}
+	}
+
+	Rect scaleRect(Rect r){
+		return new Rect(Screen.width/r.x,Screen.height/r.y,Screen.width/r.width,Screen.height/r.height);
 	}
 }
