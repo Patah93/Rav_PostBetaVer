@@ -44,67 +44,52 @@ public class Trigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		if(_activatedByInteractables && other.tag == "Interactive" || _activatedByThrowables && other.tag == "Throwable"){
-			if(_numberOfThings == 0){
-				for(int i = 0; i < _action.Length; i++){
-					_action[i].onActive();
-				}
-
-				if(_triggeredSound != null && _audioSource != null){
-					_audioSource.Stop();
-					_audioSource.clip = _triggeredSound;
-					_audioSource.Play();
-				}
-				//gameObject.renderer.material.color = Color.red;
-			}
-			_numberOfThings++;
-			return;
-		}
-
-		for(int i = 0 ; i < _triggerableObjects.Length; i++){
-			if(_triggerableObjects[i] == other.gameObject){
+		if(this.enabled){
+			if(_activatedByInteractables && other.tag == "Interactive" || _activatedByThrowables && other.tag == "Throwable"){
 				if(_numberOfThings == 0){
-					for(int j = 0; j < _action.Length; j++){
-						_action[j].onActive();
+					for(int i = 0; i < _action.Length; i++){
+						_action[i].onActive();
 					}
-					//gameObject.renderer.material.color = Color.red;
 
 					if(_triggeredSound != null && _audioSource != null){
 						_audioSource.Stop();
 						_audioSource.clip = _triggeredSound;
 						_audioSource.Play();
 					}
+					//gameObject.renderer.material.color = Color.red;
 				}
 				_numberOfThings++;
 				return;
+			}
+
+			for(int i = 0 ; i < _triggerableObjects.Length; i++){
+				if(_triggerableObjects[i] == other.gameObject){
+					if(_numberOfThings == 0){
+						for(int j = 0; j < _action.Length; j++){
+							_action[j].onActive();
+						}
+						//gameObject.renderer.material.color = Color.red;
+
+						if(_triggeredSound != null && _audioSource != null){
+							_audioSource.Stop();
+							_audioSource.clip = _triggeredSound;
+							_audioSource.Play();
+						}
+					}
+					_numberOfThings++;
+					return;
+				}
 			}
 		}
 	}
 
 	void OnTriggerExit(Collider other) {
-		if(_activatedByInteractables && other.tag == "Interactive" || _activatedByThrowables && other.tag == "Throwable"){
-			_numberOfThings--;
-			if(_numberOfThings <= 0){
-				for(int i = 0; i < _action.Length; i++){
-					_action[i].onInactive();
-				}
-
-				if(_unTriggeredSound != null && _audioSource != null){
-					_audioSource.Stop();
-					_audioSource.clip = _unTriggeredSound;
-					_audioSource.Play();
-				}
-				//gameObject.renderer.material.color = Color.green;
-				return;
-			}
-		}
-
-		for(int i = 0 ; i < _triggerableObjects.Length; i++){
-			if(_triggerableObjects[i] == other.gameObject){
+		if(this.enabled){
+			if(_activatedByInteractables && other.tag == "Interactive" || _activatedByThrowables && other.tag == "Throwable"){
 				_numberOfThings--;
 				if(_numberOfThings <= 0){
-					for(int j = 0; j < _action.Length; j++){
-						_action[j].onInactive();
+					for(int i = 0; i < _action.Length; i++){
+						_action[i].onInactive();
 					}
 
 					if(_unTriggeredSound != null && _audioSource != null){
@@ -114,6 +99,25 @@ public class Trigger : MonoBehaviour {
 					}
 					//gameObject.renderer.material.color = Color.green;
 					return;
+				}
+			}
+
+			for(int i = 0 ; i < _triggerableObjects.Length; i++){
+				if(_triggerableObjects[i] == other.gameObject){
+					_numberOfThings--;
+					if(_numberOfThings <= 0){
+						for(int j = 0; j < _action.Length; j++){
+							_action[j].onInactive();
+						}
+
+						if(_unTriggeredSound != null && _audioSource != null){
+							_audioSource.Stop();
+							_audioSource.clip = _unTriggeredSound;
+							_audioSource.Play();
+						}
+						//gameObject.renderer.material.color = Color.green;
+						return;
+					}
 				}
 			}
 		}
