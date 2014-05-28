@@ -40,10 +40,10 @@ public class Messages : TriggerAction {
 		if (_display) {
 			GUIStyle tempStyle =  new GUIStyle(GUI.skin.box);
 			tempStyle.fontSize = Screen.width/_fontSize;
-			tempStyle.alignment = TextAnchor.MiddleLeft;
+			tempStyle.alignment = TextAnchor.MiddleCenter;
 			tempStyle.wordWrap = true;
 
-			GUI.Box(scaleRect(_messageBox),_message,_boxTexture, tempStyle);
+			GUI.Box(scaleRect(_messageBox),_message, tempStyle);
 		}
 	}
 
