@@ -17,6 +17,7 @@ public class StartMenu : MonoBehaviour {
 	public float _screenTime;
 
 	public Rect _loadPos = new Rect(3,4,5,6);
+	public MovieTexture _intro;
 
 	Texture2D _background;
 	bool _drawButtons;
@@ -52,6 +53,7 @@ public class StartMenu : MonoBehaviour {
 			TextureAnimation _temp = i.gameObject.GetComponent<TextureAnimation> ();
 			_temp.setSheet (_temp._sheet, _temp._nrOfColumns, _temp._nrOfRows, _temp._frameTime);
 		}
+		_intro.Play ();
 
 		//_buttonSizes = new Rect(Screen.width/_buttonSizes.x,Screen.height/_buttonSizes.y,Screen.width/_buttonSizes.width,Screen.height/_buttonSizes.height);
 	}
