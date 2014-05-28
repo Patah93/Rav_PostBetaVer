@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e9d265298d9953143bbede6ceb054303
+guid: f022e5cee09460c49a1a56eab3d56b3d
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -55,18 +55,8 @@ ModelImporter:
     100098: a12tobkr_A_Boy_Run_07:Halsduk:Scarf_14_group
     100100: a12tobkr_A_Boy_Run_07:Halsduk:Scarf_15_group
     100102: //RootNode
-    100104: Body_ctrl
-    100106: Halsduk
-    100108: Halsduk_joint
-    100110: Hip_ctrl
-    100112: Hip_ctrl_group
-    100114: Lower_body_ctrl
-    100116: middle_body_ctrl
-    100118: pelvis_joint
-    100120: spine_02_joint
-    100122: spine_05_joint
-    100124: spine_06_joint
-    100126: upper_body_ctrl
+    100104: Halsduk
+    100106: Halsduk_joint
     400000: a12tobkr_A_Boy_Run_07:Halsduk:joint10
     400002: a12tobkr_A_Boy_Run_07:Halsduk:joint11
     400004: a12tobkr_A_Boy_Run_07:Halsduk:joint12
@@ -119,20 +109,9 @@ ModelImporter:
     400098: a12tobkr_A_Boy_Run_07:Halsduk:Scarf_14_group
     400100: a12tobkr_A_Boy_Run_07:Halsduk:Scarf_15_group
     400102: //RootNode
-    400104: Body_ctrl
-    400106: Halsduk
-    400108: Halsduk_joint
-    400110: Hip_ctrl
-    400112: Hip_ctrl_group
-    400114: Lower_body_ctrl
-    400116: middle_body_ctrl
-    400118: pelvis_joint
-    400120: spine_02_joint
-    400122: spine_05_joint
-    400124: spine_06_joint
-    400126: upper_body_ctrl
+    400104: Halsduk
+    400106: Halsduk_joint
     4300000: Halsduk
-    7400000: Take 001
     9500000: //RootNode
     13700000: Halsduk
   materials:
