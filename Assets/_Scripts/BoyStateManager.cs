@@ -70,7 +70,7 @@ public class BoyStateManager : MonoBehaviour {
 			
 			_throw.enabled = !_throw.enabled;
 			_ani.SetBool("ThrowMode", !_ani.GetBool("ThrowMode"));
-			cameroon.setCameraState("Throw");
+			cameroon.setCameraState("Throw", transform);
 		}
 		else{
 			ray1 = transform.position + transform.right * _rayXOffset;
