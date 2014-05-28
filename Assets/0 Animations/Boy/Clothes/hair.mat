@@ -17,7 +17,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 48abdaba82f5aaf4588e2376344c01c4, type: 3}
+          m_Texture: {fileID: 2800000, guid: c13671a4411a89c40996242ab7c9069f, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -27,7 +27,11 @@ Material:
           m_Texture: {fileID: 2800000, guid: 7c4271c14f8e6d646b9df5edf77ce18c, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-    m_Floats: {}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .5
     m_Colors:
       data:
         first:

@@ -42,7 +42,7 @@ public class Messages : TriggerAction {
 			GUIStyle tempStyle =  new GUIStyle(GUI.skin.box);
 			tempStyle.normal.background = _boxTexture;
 			tempStyle.fontSize = Screen.width/_fontSize;
-			tempStyle.alignment = TextAnchor.MiddleLeft;
+			tempStyle.alignment = TextAnchor.MiddleCenter;
 			tempStyle.wordWrap = true;
 
 			GUI.Box(scaleRect(_messageBox),_message, tempStyle);
