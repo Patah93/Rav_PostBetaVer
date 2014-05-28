@@ -200,10 +200,10 @@ public class ThirdPersonCamera : MonoBehaviour {
 		
 		//TODO : add more controller input grabs
 		//We need to grab the controller input values
-		rightX = Input.GetAxis("RightStickHorizontal");
-		rightY = Input.GetAxis("RightStickVertical");
-		leftX = Input.GetAxis("Horizontal");
-		leftY = Input.GetAxis("Vertical");
+		rightX = Mathf.Clamp(Input.GetAxis("RightStickHorizontal"), -1, 1);
+		rightY = Mathf.Clamp(Input.GetAxis("RightStickVertical"), -1, 1);
+		leftX = Mathf.Clamp(Input.GetAxis("Horizontal"), -1, 1);
+		leftY = Mathf.Clamp(Input.GetAxis("Vertical"), -1, 1);
 		
 		//check for inputs so the camera does not auto move if we've not used the right stick
 		//TODO Needs to check for all inputs!
