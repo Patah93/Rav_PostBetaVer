@@ -346,10 +346,9 @@ public class ThirdPersonCamera : MonoBehaviour {
 			currentLookDirection = Quaternion.Euler(0.0f, 0.0f, 0.0f) * Vector3.forward;
 
 			targetPosistion =
-				//moving target pos up according to CameraUp variable 
-				(focusTarget.position + (Vector3.Normalize(PlayerXform.up) * CameraUp)) -
-					//move the target a bit back according to the CameraAway variable
-					(Vector3.Normalize(currentLookDirection) * CameraAway);
+				(focusTarget.position) + 
+				//move the target a bit back according to the CameraAway variable
+				(focusTarget.transform.forward * 1);
 
 			CompenstaForWalls(focusTarget.position, ref targetPosistion);
 			smoothPosistion(this.transform.position, targetPosistion);
