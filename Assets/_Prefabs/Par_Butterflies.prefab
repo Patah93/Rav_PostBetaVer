@@ -11,12 +11,12 @@ GameObject:
   - 198: {fileID: 19800000}
   - 199: {fileID: 19900000}
   - 114: {fileID: 11400002}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Butterflies2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100002
 GameObject:
@@ -29,12 +29,12 @@ GameObject:
   - 198: {fileID: 19800002}
   - 199: {fileID: 19900002}
   - 114: {fileID: 11400004}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Butterflies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100004
 GameObject:
@@ -47,12 +47,12 @@ GameObject:
   - 198: {fileID: 19800004}
   - 199: {fileID: 19900004}
   - 114: {fileID: 11400006}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Butterflies2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100006
 GameObject:
@@ -65,12 +65,12 @@ GameObject:
   - 198: {fileID: 19800006}
   - 199: {fileID: 19900006}
   - 114: {fileID: 11400008}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Butterflies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100008
 GameObject:
@@ -83,12 +83,12 @@ GameObject:
   - 198: {fileID: 19800008}
   - 199: {fileID: 19900008}
   - 114: {fileID: 11400010}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Butterflies3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100010
 GameObject:
@@ -101,12 +101,12 @@ GameObject:
   - 198: {fileID: 19800010}
   - 199: {fileID: 19900010}
   - 114: {fileID: 11400012}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Butterflies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100012
 GameObject:
@@ -119,12 +119,12 @@ GameObject:
   - 198: {fileID: 19800012}
   - 199: {fileID: 19900012}
   - 114: {fileID: 11400014}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Butterflies3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100014
 GameObject:
@@ -137,12 +137,12 @@ GameObject:
   - 198: {fileID: 19800014}
   - 199: {fileID: 19900014}
   - 114: {fileID: 11400016}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Butterflies2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100016
 GameObject:
@@ -155,12 +155,12 @@ GameObject:
   - 33: {fileID: 3300000}
   - 65: {fileID: 6500000}
   - 23: {fileID: 2300000}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 6 Particleeffects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100018
 GameObject:
@@ -175,12 +175,16 @@ GameObject:
   - 23: {fileID: 2300002}
   - 114: {fileID: 11400018}
   - 114: {fileID: 11400000}
-  m_Layer: 0
+  - 114: {fileID: 11400032}
+  - 82: {fileID: 8200000}
+  - 114: {fileID: 11400024}
+  - 82: {fileID: 8200002}
+  m_Layer: 2
   m_Name: Par_Butterflies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100020
 GameObject:
@@ -194,12 +198,12 @@ GameObject:
   - 199: {fileID: 19900016}
   - 114: {fileID: 11400022}
   - 114: {fileID: 11400020}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PartickleTo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100022
 GameObject:
@@ -211,12 +215,12 @@ GameObject:
   - 4: {fileID: 400022}
   - 198: {fileID: 19800018}
   - 199: {fileID: 19900018}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100024
 GameObject:
@@ -228,14 +232,12 @@ GameObject:
   - 4: {fileID: 400024}
   - 198: {fileID: 19800020}
   - 199: {fileID: 19900020}
-  - 65: {fileID: 6500004}
-  - 114: {fileID: 11400024}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ParticleFrom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100026
 GameObject:
@@ -248,12 +250,12 @@ GameObject:
   - 198: {fileID: 19800022}
   - 199: {fileID: 19900022}
   - 114: {fileID: 11400026}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Butterflies2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100028
 GameObject:
@@ -266,12 +268,12 @@ GameObject:
   - 198: {fileID: 19800024}
   - 199: {fileID: 19900024}
   - 114: {fileID: 11400028}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Butterflies3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &100030
 GameObject:
@@ -284,12 +286,12 @@ GameObject:
   - 198: {fileID: 19800026}
   - 199: {fileID: 19900026}
   - 114: {fileID: 11400030}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Butterflies3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &400000
 Transform:
@@ -394,7 +396,7 @@ Transform:
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .73688972, y: .73688972, z: .73688972}
   m_Children:
   - {fileID: 400020}
   - {fileID: 400024}
@@ -406,8 +408,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.0249329, y: 2.23411942, z: -16.7324085}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400016}
   m_Father: {fileID: 0}
@@ -562,18 +564,132 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &6500004
-BoxCollider:
+--- !u!82 &8200000
+AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100024}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 2.88399982, y: 2.88400102, z: 2.88400102}
-  m_Center: {x: 0, y: 1.49011612e-08, z: 0}
+  m_GameObject: {fileID: 100018}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: ac560f49984966d40ab364466ad8481e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 8
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &8200002
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 61568b1040a8ac54eb7917deb7f9e9d9, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 1
+  MaxDistance: 8
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: .125
+      value: 1
+      inSlope: -8.00319958
+      outSlope: -8.00319958
+      tangentMode: 0
+    - time: .225369453
+      value: .486754954
+      inSlope: -2.89962363
+      outSlope: -2.89962363
+      tangentMode: 0
+    - time: .495073885
+      value: .0976821184
+      inSlope: -.585451782
+      outSlope: -.585451782
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -.125049993
+      outSlope: -.125049993
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -591,8 +707,8 @@ MonoBehaviour:
   - {fileID: 0}
   _activatedByInteractables: 0
   _activatedByThrowables: 0
-  _scriptNumber: 0
-  _triggeredSound: {fileID: 0}
+  _scriptNumber: 1
+  _triggeredSound: {fileID: 8300000, guid: f43dcd85fe3e020419e22529e791d5ce, type: 3}
   _unTriggeredSound: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -757,17 +873,15 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100024}
+  m_GameObject: {fileID: 100018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da9096d200441f5448938194978216bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 3544ef9eccf7ac04abd2400345fd6700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _countDown: 0
-  _counterStart: 0
-  _triggered: 0
-  _from: {fileID: 0}
-  _to: {fileID: 0}
+  _theScript: {fileID: 11400000}
+  _inactivateWhenActive: 1
+  _onceAndOnlyOnce: 1
 --- !u!114 &11400026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -810,6 +924,20 @@ MonoBehaviour:
   _rotationSpeed: 0
   _shakeSpeed: .0399999991
   _shakeDip: 12
+--- !u!114 &11400032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9bafe07aae5da419a90126eb87f4ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theScripts:
+  - {fileID: 11400018}
+  - {fileID: 11400024}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1979,7 +2107,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .200000003
+      scalar: .150000006
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5015,7 +5143,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .300000012
+      scalar: .100000001
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6027,7 +6155,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .200000003
+      scalar: .109999999
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -7039,7 +7167,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .300000012
+      scalar: .200000003
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -9063,7 +9191,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .200000003
+      scalar: .100000001
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -9370,7 +9498,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 1
-    tilesX: 2
+    tilesX: 4
     tilesY: 1
     animationType: 0
     rowIndex: 0
@@ -13151,7 +13279,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .300000012
+      scalar: .150000006
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -14163,7 +14291,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .300000012
+      scalar: .219999999
       maxCurve:
         serializedVersion: 2
         m_Curve:
