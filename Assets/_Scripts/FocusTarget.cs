@@ -45,14 +45,16 @@ public class FocusTarget : MonoBehaviour {
     //after Update every frame (2)
     void LateUpdate() {
 		//ray casting to check for focus targets
-
 			RaycastHit objectHit = new RaycastHit();
 
 			if(Physics.Linecast(PlayerXForm.position,PlayerXForm.position + PlayerXForm.forward * rayCastLength,out objectHit)) {
 			Debug.Log(objectHit.transform.tag);
-				if(objectHit.transform.tag == FocusTag && Input.GetKeyDown(KeyCode.Z)) {
+			if(objectHit.transform.tag == FocusTag && Input.GetButtonDown("Interact")) {
 					refToCamera.setCameraState("Focus",objectHit.transform);
-				}				                                        
+			}
+			if(objectHit.transform.tag == FocusTag && Input.GetButtonUp("Interact")) {
+				refToCamera.setCameraState("Focus",objectHit.transform);
+				}
 			}
 
     }
