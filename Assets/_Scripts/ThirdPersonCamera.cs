@@ -26,7 +26,9 @@ public class ThirdPersonCamera : MonoBehaviour {
 	public float ThrowCameraAway = 1.5f;
 	[Range(0.0f, 5.0f)]
 	public float ThrowCameraShoulderOffset = 1.0f;
-	
+	[Range(0.0f, 5.0f)]
+	public float FocusCameraAway = 3.0f;
+
 	//Camera max movement delta (Low value to create a moothing effect)
 	[Range(1.0f, 20.0f)]
 	public float camSmoothDampTme = 10.0f;
@@ -348,7 +350,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 			targetPosistion =
 				(focusTarget.position) + 
 				//move the target a bit back according to the CameraAway variable
-				(focusTarget.transform.forward * 1);
+					(focusTarget.transform.forward * FocusCameraAway);
 
 			CompenstaForWalls(focusTarget.position, ref targetPosistion);
 			smoothPosistion(this.transform.position, targetPosistion);
