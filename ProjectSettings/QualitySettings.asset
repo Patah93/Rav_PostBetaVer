@@ -115,9 +115,11 @@ QualitySettings:
     antiAliasing: 8
     softParticles: 1
     softVegetation: 1
-    vSyncCount: 1
+    vSyncCount: 0
     lodBias: 2
     maximumLODLevel: 0
     particleRaycastBudget: 400
     excludedTargetPlatforms: []
-  m_PerPlatformDefaultQuality: {}
+  m_PerPlatformDefaultQuality:
+    Standalone: 0
+    XboxOne: 0
