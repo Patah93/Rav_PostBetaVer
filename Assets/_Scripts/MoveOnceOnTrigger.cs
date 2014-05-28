@@ -8,6 +8,8 @@ public class MoveOnceOnTrigger : TriggerAction {
 	public Vector3 _offset = new Vector3(0, 5, 0);
 	
 	public float _moveTime = 0.02f;
+
+	private float clock;
 	
 	bool _isMoving = false;
 	
@@ -20,10 +22,11 @@ public class MoveOnceOnTrigger : TriggerAction {
 	void Update () {
 		
 		if(_isMoving){
-			transform.position = Vector3.Lerp(_originalPos, _offset + _originalPos, _moveTime += _moveTime * Time.deltaTime);
+			transform.position = Vector3.Lerp(transform.position, _offset + _originalPos, (Time.time - clock) * _moveTime);
 		}
 		if ((transform.position - (_offset + _originalPos)).sqrMagnitude < 0.1f) {
 			_isMoving = false;
+			transform.position = _offset + _originalPos;
 		}
 		
 	}
@@ -31,7 +34,7 @@ public class MoveOnceOnTrigger : TriggerAction {
 	public override void onActive(){
 		//_originalPos = transform.position;
 		_isMoving = true;
-		
+		clock = Time.time;
 	}
 	
 	public override void onInactive(){

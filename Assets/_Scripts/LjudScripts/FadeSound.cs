@@ -6,7 +6,7 @@ public class FadeSound : MonoBehaviour {
 	public bool _activated;
 
 	[Range(0f,1f)]
-	public float _fadeSpeed;
+	public float _fadeSpeed, _maxVolume, _minVolume;
 	
 	AudioSource _audio;
 
@@ -20,9 +20,9 @@ public class FadeSound : MonoBehaviour {
 	void Update () {
 	
 		if(_activated)
-			_audio.volume = Mathf.Lerp(_audio.volume, 1, Time.deltaTime * _fadeSpeed);
+			_audio.volume = Mathf.Lerp(_audio.volume, _maxVolume, Time.deltaTime * _fadeSpeed);
 		else 
-			_audio.volume = Mathf.Lerp(_audio.volume, 0, Time.deltaTime * _fadeSpeed);
+			_audio.volume = Mathf.Lerp(_audio.volume, _minVolume, Time.deltaTime * _fadeSpeed);
 	
 	}
 
@@ -33,4 +33,12 @@ public class FadeSound : MonoBehaviour {
 	public bool GetBool(){
 		return _activated;
 	} 
+
+	public void SetMinFade(float f){
+		_minVolume = f;
+	}
+
+	public void SetMaxFade(float f){
+		_maxVolume = f;
+	}
 }
