@@ -38,7 +38,9 @@ public class Messages : TriggerAction {
 
 	void OnGUI(){
 		if (_display) {
+	
 			GUIStyle tempStyle =  new GUIStyle(GUI.skin.box);
+			tempStyle.normal.background = _boxTexture;
 			tempStyle.fontSize = Screen.width/_fontSize;
 			tempStyle.alignment = TextAnchor.MiddleCenter;
 			tempStyle.wordWrap = true;
