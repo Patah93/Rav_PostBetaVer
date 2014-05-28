@@ -135,21 +135,23 @@ public class EpicCameraMovementOnTriggerMan : TriggerAction {
 	}
 	
 	public override void onActive(){
-		if(!_canIHasMoveTheBoy){
-			_animMan.enabled = false;
-			_jumpMan.enabled = false;
-			_boyState.enabled = false;
-			_throw.enabled = false;
+		if(this.enabled){
+			if(!_canIHasMoveTheBoy){
+				_animMan.enabled = false;
+				_jumpMan.enabled = false;
+				_boyState.enabled = false;
+				_throw.enabled = false;
 
-			GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetFloat("Speed", 0);
-			GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().applyRootMotion = false;
+				GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetFloat("Speed", 0);
+				GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().applyRootMotion = false;
+			}
+			_cameraMan.enabled = false;
+			_BEGIN = true;
+			_lerpStart = _camera.transform.position;
+			_lookAtStart = GameObject.FindGameObjectWithTag ("CameraFollow").transform.position;
+
+			_clock = Time.time;
 		}
-		_cameraMan.enabled = false;
-		_BEGIN = true;
-		_lerpStart = _camera.transform.position;
-		_lookAtStart = GameObject.FindGameObjectWithTag ("CameraFollow").transform.position;
-
-		_clock = Time.time;
 	}
 	
 	public override void onInactive(){
