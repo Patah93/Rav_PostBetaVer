@@ -123,6 +123,8 @@ public class ThirdPersonCamera : MonoBehaviour {
 
 	//bug fix for "clone" player objects
 	GameObject[] playerObjects;
+
+	private Transform focusTarget;
 	#endregion
 	
 	#region Structs
@@ -156,7 +158,8 @@ public class ThirdPersonCamera : MonoBehaviour {
 		Behind,
 		Throw,
 		Inside,
-		Push
+		Push,
+		Focus
 	}
 	#endregion
 	
@@ -338,6 +341,20 @@ public class ThirdPersonCamera : MonoBehaviour {
 				}			
 			}
 			break;
+		case CamStates.Focus:
+
+			currentLookDirection = Quaternion.Euler(0.0f, 0.0f, 0.0f) * Vector3.forward;
+
+			targetPosistion =
+				//moving target pos up according to CameraUp variable 
+				(focusTarget.position + (Vector3.Normalize(PlayerXform.up) * CameraUp)) -
+					//move the target a bit back according to the CameraAway variable
+					(Vector3.Normalize(currentLookDirection) * CameraAway);
+
+			CompenstaForWalls(focusTarget.position, ref targetPosistion);
+			smoothPosistion(this.transform.position, targetPosistion);
+			transform.LookAt(focusTarget);		
+			break;
 		}
 		
 		
@@ -375,11 +392,25 @@ public class ThirdPersonCamera : MonoBehaviour {
 		_pushDir = PlayerXform.forward;	
 	}
 
-    public void setCameraState(string s)
+    public void setCameraState(string s,Transform o)
     {
-        if (s.Equals("Throw"))
-            camState = (camState != CamStates.Throw) ? CamStates.Throw : prevCamstate;
-    }
+        if (s.Equals("Throw")) {
+			if(camState != CamStates.Throw) {
+				prevCamstate = camState;
+				camState = CamStates.Throw;
+			}else {
+				camState = prevCamstate;
+			}
+		}else if(s.Equals("Focus")) {
+			if(camState != CamStates.Focus) {
+			prevCamstate = camState;
+			camState = CamStates.Focus;
+			focusTarget = o;
+			}else {
+				camState = prevCamstate;
+			}
+		}
+	}
 
 	#endregion
 }
