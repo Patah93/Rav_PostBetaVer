@@ -61,7 +61,7 @@ public class ShadowDetection : MonoBehaviour {
 					// - etc... (Whatever we decide to do...)
 
 				//if(!temp_isLighted){
-					//Debug.Log("OH MY GOD THE LIGHT! IT IS SO BRIGHT! D:\n" + _numberLightedVertices + " vertices in the sun! D=");
+					////Debug.Log("OH MY GOD THE LIGHT! IT IS SO BRIGHT! D:\n" + _numberLightedVertices + " vertices in the sun! D=");
 					temp_isLighted = true;
 				//}
 			}
@@ -70,7 +70,7 @@ public class ShadowDetection : MonoBehaviour {
 		/* END *
 
 		if(temp_isLighted){
-			//Debug.Log("Mmm vad SKÖÖN SKUGGA MUMS");
+			////Debug.Log("Mmm vad SKÖÖN SKUGGA MUMS");
 			temp_isLighted = false;
 		}
 		}
@@ -353,7 +353,7 @@ public class ShadowDetection : MonoBehaviour {
 		/*
 		for(int i = 0; i < _pointsOfInterest.Length-1; i++){
 			for(int j = i+1; j < _pointsOfInterest.Length; j++){ 
-				Debug.DrawLine(_pointsOfInterest[i], _pointsOfInterest[j]);
+				//Debug.DrawLine(_pointsOfInterest[i], _pointsOfInterest[j]);
 			}
 		}
 		*/
@@ -372,7 +372,7 @@ public class ShadowDetection : MonoBehaviour {
 		/*
 		for(int i = 0; i < _moreSpreadPoints.Length-1; i++){
 			for(int j = i+1; j < _moreSpreadPoints.Length; j++){ 
-				Debug.DrawLine(_moreSpreadPoints[i], _moreSpreadPoints[j]);
+				//Debug.DrawLine(_moreSpreadPoints[i], _moreSpreadPoints[j]);
 			}
 		}
 		*/
@@ -396,7 +396,7 @@ public class ShadowDetection : MonoBehaviour {
 			if(isPointInLight(_pointsOfInterest[i], ref shadowCasters)){
 				return true;
 				//return_value = true;
-				////Debug.Log("OMG SOLEN");
+				//////Debug.Log("OMG SOLEN");
 				//_numberLightedVertices++;
 			}
 
@@ -404,7 +404,7 @@ public class ShadowDetection : MonoBehaviour {
 			else if(isPointInSpotLight(/*getLamps()*/ spotLights, _pointsOfInterest[i], ref shadowCasters)){
 				return true;
 				//return_value = true;
-				////Debug.Log("OMG SPOTLIGHT");
+				//////Debug.Log("OMG SPOTLIGHT");
 				//_numberLightedVertices++;
 			}
 
@@ -412,7 +412,7 @@ public class ShadowDetection : MonoBehaviour {
 			else if(isPointInLampLight(/*getLamps()*/ lamps, _pointsOfInterest[i], ref shadowCasters)){
 				return true;
 				//return_value = true;
-				////Debug.Log("OMG LAMPA");
+				//////Debug.Log("OMG LAMPA");
 				//_numberLightedVertices++;
 			}
 
@@ -439,7 +439,7 @@ public class ShadowDetection : MonoBehaviour {
 			if(isPointInLight(_moreSpreadPoints[i], ref shadowCasters)){
 				return true;
 				//return_value = true;
-				////Debug.Log("OMG SOLEN");
+				//////Debug.Log("OMG SOLEN");
 				//_numberLightedVertices++;
 			}
 			
@@ -447,7 +447,7 @@ public class ShadowDetection : MonoBehaviour {
 			else if(isPointInSpotLight(/*getLamps()*/ spotLights, _moreSpreadPoints[i], ref shadowCasters)){
 				return true;
 				//return_value = true;
-				////Debug.Log("OMG SPOTLIGHT");
+				//////Debug.Log("OMG SPOTLIGHT");
 				//_numberLightedVertices++;
 			}
 			
@@ -455,7 +455,7 @@ public class ShadowDetection : MonoBehaviour {
 			else if(isPointInLampLight(/*getLamps()*/ lamps, _moreSpreadPoints[i], ref shadowCasters)){
 				return true;
 				//return_value = true;
-				////Debug.Log("OMG LAMPA");
+				//////Debug.Log("OMG LAMPA");
 				//_numberLightedVertices++;
 			}
 			
@@ -469,16 +469,16 @@ public class ShadowDetection : MonoBehaviour {
 
 		Ray theRay = new Ray(point, _sunDirection);
 
-		//Debug.DrawRay (point, _sunDirection, Color.cyan, 100f);
-		//Debug.DrawLine (point, point + _sunDirection * 100, Color.cyan, 1);
+		////Debug.DrawRay (point, _sunDirection, Color.cyan, 100f);
+		////Debug.DrawLine (point, point + _sunDirection * 100, Color.cyan, 1);
 		/*
 		for(int i = 0; i < shadowCasters.Length; i++){
 			if(shadowCasters[i].collider.bounds.IntersectRay(theRay)){
-				////Debug.Log ("Blocked by: " + shadowCasters[i].name);
+				//////Debug.Log ("Blocked by: " + shadowCasters[i].name);
 				RaycastHit bajskorv;
 				Physics.Raycast(theRay, out bajskorv);
-				//Debug.DrawLine (point, shadowCasters[i].transform.position, Color.red, 1);
-				Debug.DrawLine (point, bajskorv.point, Color.red, 1);
+				////Debug.DrawLine (point, shadowCasters[i].transform.position, Color.red, 1);
+				//Debug.DrawLine (point, bajskorv.point, Color.red, 1);
 				return false;
 			}
 		}
@@ -510,7 +510,7 @@ public class ShadowDetection : MonoBehaviour {
 					float length;
 					if(shadowCasters[j].collider.bounds.IntersectRay(theRay, out length)){
 						if(length * length  <= (point - lamps[i].transform.position).sqrMagnitude){
-							////Debug.Log (shadowCasters[j].name + ": är ivägen! D:");
+							//////Debug.Log (shadowCasters[j].name + ": är ivägen! D:");
 							return_value = false;
 						}
 					}
@@ -540,13 +540,13 @@ public class ShadowDetection : MonoBehaviour {
 		for(int i = 0; i < spotLights.Length; i++){
 			
 			if(spotLights[i] != null && spotLights[i].light.enabled && (point - spotLights[i].transform.position).sqrMagnitude <= spotLights[i].light.range * spotLights[i].light.range){
-				////Debug.Log ("In range...");
+				//////Debug.Log ("In range...");
 				theRay.origin = point;
 				theRay.direction = (spotLights[i].transform.position - point).normalized;
 
 
 				if(Vector3.Angle(spotLights[i].transform.forward, (theRay.direction*-1)) <= spotLights[i].light.spotAngle/2.0f){
-					////Debug.Log ("In cone...");
+					//////Debug.Log ("In cone...");
 					return_value = true;
 
 					/*
@@ -554,7 +554,7 @@ public class ShadowDetection : MonoBehaviour {
 						float length;
 						if(shadowCasters[j].collider.bounds.IntersectRay(theRay, out length)){
 							if(length * length  <= (point - spotLights[i].transform.position).sqrMagnitude){
-								////Debug.Log (shadowCasters[j].name + ": är ivägen! D:");
+								//////Debug.Log (shadowCasters[j].name + ": är ivägen! D:");
 								return_value = false;
 							}
 						}
@@ -565,7 +565,7 @@ public class ShadowDetection : MonoBehaviour {
 					if(Physics.Raycast(theRay, (point - spotLights[i].transform.position).magnitude, layerMask)){
 						return_value = false;
 					}
-					//Debug.DrawLine(point, point + theRay.direction * (point - spotLights[i].transform.position).magnitude, Color.red, 1);
+					////Debug.DrawLine(point, point + theRay.direction * (point - spotLights[i].transform.position).magnitude, Color.red, 1);
 					
 					if(return_value){
 						return true;
@@ -591,7 +591,7 @@ public class ShadowDetection : MonoBehaviour {
 		for(int i = 0; i < lamps.Length; i++){
 			if((lamps[i].transform.position - gameObject.transform.position).sqrMagnitude < lamps[i].light.range * lamps[i].light.range){
 				nearbyLamps.Add(lamps[i]);
-				////Debug.Log("Distance to Lamp: " + (lamps[i].transform.position - gameObject.transform.position).sqrMagnitude
+				//////Debug.Log("Distance to Lamp: " + (lamps[i].transform.position - gameObject.transform.position).sqrMagnitude
 				         // + "\nMax Distance: " + lamps[i].light.range * lamps[i].light.range);
 			}
 		}

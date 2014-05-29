@@ -81,12 +81,12 @@ public class BoyStateManager : MonoBehaviour {
 			
 			if(_walk.enabled && _leavePush == false && !_ani.GetBool("ThrowMode")){ // If we currently are in walkmode
 				if(Physics.Raycast(ray1, transform.forward,out _rayHit,_raylength) || Physics.Raycast(ray2, transform.forward,out _rayHit, _raylength)){ //If we collided with something
-					//Debug.DrawRay(ray1,transform.forward,Color.red,_raylength,true);
-					//Debug.DrawRay(ray2,transform.forward,Color.red,_raylength,true);
+					////Debug.DrawRay(ray1,transform.forward,Color.red,_raylength,true);
+					////Debug.DrawRay(ray2,transform.forward,Color.red,_raylength,true);
 					if(_rayHit.collider.transform.tag == "Interactive"&& !_jump.isJumping()){ //If that object is Interactive
 						_drawInteract = true;
 						if(Input.GetButtonDown("Interact")){	//Enter pushmode	
-							//Debug.Log("du tryckte på e");
+							////Debug.Log("du tryckte på e");
 							enterPushMode();
 							if(_obj != null)
 							GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ThirdPersonCamera>().setPushMode( ref _obj);
@@ -180,7 +180,7 @@ public class BoyStateManager : MonoBehaviour {
 		_ani.applyRootMotion = false;
 
 		_wtpp.enabled = true;
-		//Debug.Log("Objside is "+_objside);
+		////Debug.Log("Objside is "+_objside);
 		_wtpp.setDestination(transform.position,_dudepos,_direction);
 	}
 	

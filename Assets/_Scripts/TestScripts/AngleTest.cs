@@ -19,13 +19,13 @@ public class AngleTest : MonoBehaviour {
 	void LateUpdate () {
 		if(Physics.Raycast(_playerTransform.position, Vector3.down, out _outHit[0], 1.0f) && Physics.Raycast(_playerTransform.position + _playerTransform.forward * _offset, Vector3.down, out _outHit[1], 1.0f)){
 
-			Debug.DrawRay(_outHit[0].point, Vector3.up, Color.blue);
-			Debug.DrawRay(_outHit[1].point, Vector3.up, Color.red);
-			Debug.DrawLine(_outHit[0].point + Vector3.up, _outHit[1].point + Vector3.up, Color.green);
+			//Debug.DrawRay(_outHit[0].point, Vector3.up, Color.blue);
+			//Debug.DrawRay(_outHit[1].point, Vector3.up, Color.red);
+			//Debug.DrawLine(_outHit[0].point + Vector3.up, _outHit[1].point + Vector3.up, Color.green);
 
 			Vector3 _targetForward = _outHit[1].point - _outHit[0].point;
 
-			Debug.Log(_targetForward.normalized);
+			//Debug.Log(_targetForward.normalized);
 			
 
 		}

@@ -72,7 +72,7 @@ public class EpicCameraMovementOnTriggerMan : TriggerAction {
 				_camera.transform.position = _targetPosition;
 				_camera.transform.LookAt(_targetLookAt);
 
-				//Debug.Log ("FINISHED MOVING CAMERA! =D");
+				////Debug.Log ("FINISHED MOVING CAMERA! =D");
 
 				_BEGIN = false;
 				_WAITSTATE = true;
@@ -84,11 +84,11 @@ public class EpicCameraMovementOnTriggerMan : TriggerAction {
 
 		if (_WAITSTATE) {
 
-			//Debug.Log ("WAITING...");
+			////Debug.Log ("WAITING...");
 
 			if(Time.time - _clock > _waitTime){
 
-				//Debug.Log ("FINISHED WAITING =D!");
+				////Debug.Log ("FINISHED WAITING =D!");
 
 				_WAITSTATE = false;
 				_GOBACK = true;

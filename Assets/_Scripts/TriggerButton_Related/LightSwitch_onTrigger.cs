@@ -15,11 +15,11 @@ public class LightSwitch_onTrigger : TriggerAction {
 
 	public override void onActive(){
 		gameObject.light.enabled = !gameObject.light.enabled;
-		Debug.Log("HERP");
+		//Debug.Log("HERP");
 	}
 	
 	public override void onInactive(){
 		gameObject.light.enabled = !gameObject.light.enabled;
-		Debug.Log("HERP");
+		//Debug.Log("HERP");
 	}
 }

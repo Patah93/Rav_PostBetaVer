@@ -10,7 +10,7 @@ public class FadeCamera : MonoBehaviour {
 
 	//public bool _fadeToWhite = false;
 
-	Color _fadeToColor;
+	Color _fadeToColor = Color.black;
 
 	Vector2 _screenSize;
 

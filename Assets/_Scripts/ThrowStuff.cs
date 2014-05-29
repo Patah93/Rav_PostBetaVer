@@ -26,12 +26,12 @@ public class ThrowStuff : MonoBehaviour {
 		
 		Rigidbody clone;
 		
-		//Debug.Log (throwpos.position.x + " " + throwpos.position.y + " " + throwpos.position.z);
+		////Debug.Log (throwpos.position.x + " " + throwpos.position.y + " " + throwpos.position.z);
 		
 		
 		//Quaternion rot = Quaternion.LookRotation(throwtar.position - throwpos.position);
-		//Debug.Log ("X:" + Mathf.Acos(rot.x) + " " + "Y:" + Mathf.Acos(rot.y) + " " + "Z:" + rot.z + "" + "W:" + rot.w);
-		//Debug.Log ("Start: " + throwpos.position + "To: " + throwtar.position);
+		////Debug.Log ("X:" + Mathf.Acos(rot.x) + " " + "Y:" + Mathf.Acos(rot.y) + " " + "Z:" + rot.z + "" + "W:" + rot.w);
+		////Debug.Log ("Start: " + throwpos.position + "To: " + throwtar.position);
 		
 		
 		

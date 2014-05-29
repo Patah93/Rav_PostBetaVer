@@ -51,7 +51,7 @@ public class FocusTarget : MonoBehaviour {
 		//raycasting several ray around there character to check for a focus target
 		//ray casting to check for focus targets
 		Collider[] col = Physics.OverlapSphere(PlayerXForm.position,rayCastLength,layerMask);
-		Debug.Log(col.Length);
+		//Debug.Log(col.Length);
 		if(col.Length == 1) {
 			if(col[0].gameObject.tag == FocusTag && Input.GetButtonDown("Interact")) {
 				refToCamera.setCameraState("Focus",col[0].transform);

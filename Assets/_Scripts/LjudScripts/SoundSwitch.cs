@@ -11,7 +11,7 @@ public class SoundSwitch : MonoBehaviour {
 
 	void OnTriggerExit(Collider c){
 
-		Debug.Log(c.tag);
+		//Debug.Log(c.tag);
 
 
 		if(c.CompareTag("Player")){

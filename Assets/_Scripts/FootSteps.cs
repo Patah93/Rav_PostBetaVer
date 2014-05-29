@@ -113,7 +113,7 @@ public class FootSteps : MonoBehaviour {
 		
 		else if(tag == "Fox" && i != _previousFoot){
 
-			//Debug.Log ("FOX STEPS");
+			////Debug.Log ("FOX STEPS");
 			RaycastHit outHit;
 			if(Physics.Raycast(transform.position + transform.up * 0.5f, Vector3.down, out outHit, 2f)){
 				GroundType ground = outHit.transform.GetComponent<GroundType>();

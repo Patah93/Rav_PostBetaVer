@@ -20,7 +20,7 @@ public class ParticleSwitch : TriggerAction {
 	// Update is called once per frame
 	void Update () {
 
-		//Debug.Log ("HEJ HEJ PARTIKELUPDATE");
+		////Debug.Log ("HEJ HEJ PARTIKELUPDATE");
 
 		if(_counterStart == true){
 			_countDown -= Time.deltaTime;
@@ -43,7 +43,7 @@ public class ParticleSwitch : TriggerAction {
 		}
 
 		if(_from && _triggered == false) {
-			//Debug.Log ("NEJ NEJ NU HÄNDER SAKER");
+			////Debug.Log ("NEJ NEJ NU HÄNDER SAKER");
 			_triggered = true;
 			//_from.particleSystem.loop = false;
 			_counterStart = true;

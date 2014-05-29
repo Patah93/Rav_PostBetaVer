@@ -71,7 +71,7 @@ public class StartMenu : MonoBehaviour {
 
 	IEnumerator wait(){
 
-		Debug.Log("waiting");
+		//Debug.Log("waiting");
 		yield return new WaitForSeconds (_screenTime);
 		_load.allowSceneActivation = true;
 
@@ -93,7 +93,7 @@ public class StartMenu : MonoBehaviour {
 					//_fade.FadeOut();
 
 				}
-				else if(Input.GetButtonUp("Enter")){
+				else if(Input.anyKeyDown){
 					_loadlevel = true;
 					_disableClick = true;
 					_playVideo = true;
@@ -116,23 +116,23 @@ public class StartMenu : MonoBehaviour {
 					//_fadeScreen.Apply();
 					_fadeTo = false;
 					_fadeFrom = true;
-					Debug.Log("I'm here");
+					//Debug.Log("I'm here");
 				}
 			}
 			else if(_fadeFrom){
-				Debug.Log ("Fading from");
+				//Debug.Log ("Fading from");
 				_drawButtons = false;
 				_fadeScreen.SetPixel(1,1,Color.Lerp((_fadeScreen.GetPixel(1,1)),Color.clear,Time.time*_fadeSpeed));
 				_fadeScreen.Apply();
-				Debug.Log("JAG KOM HIT!!");
+				//Debug.Log("JAG KOM HIT!!");
 				if(_fadeScreen.GetPixel(1,1).a <= 0.1f){
 					_fadeFrom = false;
 					//_playVideo = true;
 					_startScene = true;
 					_fadeSound.ChangeState(false);
-					Debug.Log("JAG ÄR TYP ÄNNU LÄNGRE");
+					//Debug.Log("JAG ÄR TYP ÄNNU LÄNGRE");
 					_load = Application.LoadLevelAsync(_firstSceneName);
-					Debug.Log("ah men nice fan hela funktionen gick");
+					//Debug.Log("ah men nice fan hela funktionen gick");
 				}
 			}
 			if(_playVideo){
@@ -168,7 +168,7 @@ public class StartMenu : MonoBehaviour {
 					TextureAnimation _temp = i.gameObject.GetComponent<TextureAnimation>();
 				//	_temp.setSheet(_temp._sheet,_temp._nrOfColumns,_temp._nrOfRows,_temp._frameTime);
 					GUI.DrawTextureWithTexCoords(scaleRect(_loadPos),_temp._sheet.mainTexture,_temp.horunge());
-					//Debug.Log(_temp._clock);
+					////Debug.Log(_temp._clock);
 			}
 				if(_load.progress > 0.8){
 
@@ -178,24 +178,24 @@ public class StartMenu : MonoBehaviour {
 						_yield = true;
 					}
 
-					Debug.Log("ey");
+					//Debug.Log("ey");
 					_fadeScreen.SetPixel(1,1,Color.Lerp((_fadeScreen.GetPixel(1,1)),Color.black,Time.time*_fadeSpeed));
 					_fadeScreen.Apply();
 
 				//	if(_fadeScreen.GetPixel(1,1).a <= 0.97f){
-						Debug.Log("if-sats");
+						//Debug.Log("if-sats");
 						
 					//	_yield = true;
-						Debug.Log("hallå");
+						//Debug.Log("hallå");
 					//	_yield = true;
 				//	}
 				}
-				Debug.Log(_load.progress);
+				//Debug.Log(_load.progress);
 			}
 			//_background = Color.Lerp(Color.white,Color.black,Time.deltaTime);
 		}
 
-		//Debug.Log("Load level is " + _loadlevel);
+		////Debug.Log("Load level is " + _loadlevel);
 
 		GUI.DrawTexture(new Rect(_position.x,_position.y,Screen.width,Screen.height),_fadeScreen);
 	//	GUILayout.EndArea();
