@@ -6,6 +6,8 @@ public class FadeCamera : MonoBehaviour {
 	public float _fadeSpeed = 1.0f;
 	public bool[] _fadeStates;
 
+	public float _fadeLimit;
+
 	//public bool _fadeToWhite = false;
 
 	Color _fadeToColor;
@@ -44,7 +46,7 @@ public class FadeCamera : MonoBehaviour {
 		guiTexture.enabled = true;
 		FadeIn ();
 		
-		if(guiTexture.color.a < 0.05f){
+		if(guiTexture.color.a < 1-_fadeLimit){
 			_fadeStates[1] = false;
 			guiTexture.color = Color.clear;
 			guiTexture.enabled = false;
@@ -56,7 +58,7 @@ public class FadeCamera : MonoBehaviour {
 		guiTexture.enabled = true;
 		FadeOut ();
 
-		if(guiTexture.color.a > 0.95f){
+		if(guiTexture.color.a > _fadeLimit){
 			_fadeStates[1] = true;
 			guiTexture.color = _fadeToColor;
 		}
@@ -76,6 +78,10 @@ public class FadeCamera : MonoBehaviour {
 
 	public bool FadeState(){
 		return _fadeStates[0] && _fadeStates[1];
+	}
+
+	public void SetFadeLimit(float f){
+		_fadeLimit = f;
 	}
 
 	public void SetFadeSpeed(float f){

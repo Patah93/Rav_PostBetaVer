@@ -25,6 +25,7 @@ Library/
 *.exe
 *.mb
 #*.meta
+*.mov
 Assets/Editor/
 Assets/Sample Assets/
 Assets/Standard Assets/
