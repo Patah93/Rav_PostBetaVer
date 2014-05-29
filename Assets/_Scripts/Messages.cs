@@ -10,6 +10,7 @@ public class Messages : TriggerAction {
 	public bool _display = false;
 	public bool _disableWithKey = false;
 	public string _disableKey;
+	public Color _fontColor = new Color(0,0,0,255);
 
 	// Use this for initialization
 	void Start () {
@@ -44,6 +45,7 @@ public class Messages : TriggerAction {
 			tempStyle.fontSize = Screen.width/_fontSize;
 			tempStyle.alignment = TextAnchor.MiddleCenter;
 			tempStyle.wordWrap = true;
+			tempStyle.normal.textColor = _fontColor;
 			GUI.Box(scaleRect(_messageBox),_message, tempStyle);
 		}
 	}
