@@ -11,6 +11,9 @@ public class FootSteps : MonoBehaviour {
 	
 	public AudioClip[] _audioClips1, _audioClips2, _audioClips3, _audioClips4, _audioClips5, _audioClips6, _audioClips7, _audioClips8, _audioClips9;
 
+	[Range(0,1)]
+	public float _boyVolume, _foxVolume;
+
 	int _previousFoot;
 	
 	void Awake () {
@@ -93,6 +96,7 @@ public class FootSteps : MonoBehaviour {
 					a += (ground.GetType());
 			}
 			sauce.audio.clip = getRandomClip (a);
+			sauce.audio.volume = _boyVolume;
 			sauce.audio.Play ();
 		}
 		
@@ -106,6 +110,7 @@ public class FootSteps : MonoBehaviour {
 					a += (ground.GetType());
 				GameObject sauce = (GameObject)Instantiate (_audioSauce, _spawnPos.position, Quaternion.identity);
 				sauce.audio.clip = getRandomClip (a);
+				sauce.audio.volume = _foxVolume;
 				sauce.audio.Play ();
 			}
 			_previousFoot = i;
