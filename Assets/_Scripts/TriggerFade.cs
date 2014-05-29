@@ -10,7 +10,7 @@ public class TriggerFade : TriggerAction {
 	FadeCamera _fade;
 
 	[Range(0,1)]
-	public float _newFadeSpeed = 0.5f;
+	public float _newFadeSpeed = 0.5f, _fadeLimit = 0.75f;
 
 	public bool _reversable = false; 
 
@@ -24,6 +24,7 @@ public class TriggerFade : TriggerAction {
 		_fade.SetFadeSpeed (_newFadeSpeed);
 		_fade.SetFadeColor (_fadeColor);
 		_fade.SetFadeTexture (_fadeTex);
+		_fade.SetFadeLimit (_fadeLimit);
 	
 	}
 
