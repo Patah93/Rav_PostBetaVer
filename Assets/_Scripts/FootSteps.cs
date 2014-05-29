@@ -10,6 +10,8 @@ public class FootSteps : MonoBehaviour {
 	public AudioClip[][] _audios;
 	
 	public AudioClip[] _audioClips1, _audioClips2, _audioClips3, _audioClips4, _audioClips5, _audioClips6, _audioClips7, _audioClips8, _audioClips9;
+
+	int _previousFoot;
 	
 	void Awake () {
 		int count = 0;
@@ -94,11 +96,19 @@ public class FootSteps : MonoBehaviour {
 			sauce.audio.Play ();
 		}
 		
-		else if(tag == "Fox"){
+		else if(tag == "Fox" && i != _previousFoot){
+
 			Debug.Log ("FOX STEPS");
-			GameObject sauce = (GameObject)Instantiate (_audioSauce, _spawnPos.position, Quaternion.identity);
-			sauce.audio.clip = getRandomClip (a);
-			sauce.audio.Play ();
+			RaycastHit outHit;
+			if(Physics.Raycast(transform.position + transform.up * 0.5f, Vector3.down, out outHit, 2f)){
+				GroundType ground = outHit.transform.GetComponent<GroundType>();
+				if(ground != null)
+					a += (ground.GetType());
+				GameObject sauce = (GameObject)Instantiate (_audioSauce, _spawnPos.position, Quaternion.identity);
+				sauce.audio.clip = getRandomClip (a);
+				sauce.audio.Play ();
+			}
+			_previousFoot = i;
 		}
 	}
 }
