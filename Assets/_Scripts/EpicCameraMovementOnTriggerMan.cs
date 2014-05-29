@@ -136,11 +136,19 @@ public class EpicCameraMovementOnTriggerMan : TriggerAction {
 	public override void onActive(){
 		if(this.enabled){
 			if(!_canIHasMoveTheBoy){
+
 				_animMan.enabled = false;
 				_jumpMan.enabled = false;
 				_boyState.enabled = false;
+				/*GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetBool("ThrowMode", false);
+				GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetBool("Throw", false);
+				//Camera.main.GetComponent<ThirdPersonCamera>().camState = Camera.main.GetComponent<ThirdPersonCamera>().PrevCamstate;
+				if(Camera.main.GetComponent<ThirdPersonCamera>().camState == ThirdPersonCamera.CamStates.Throw) {
+					Camera.main.GetComponent<ThirdPersonCamera>().setCameraState("Throw",null);
+				}
 				_throw.enabled = false;
 
+				*/
 				GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetFloat("Speed", 0);
 				GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().applyRootMotion = false;
 			}
