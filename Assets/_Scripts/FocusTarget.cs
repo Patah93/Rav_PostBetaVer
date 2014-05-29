@@ -11,6 +11,8 @@ public class FocusTarget : MonoBehaviour {
 	Transform focusObject;
 	ThirdPersonCamera refToCamera;
 	Transform PlayerXForm;
+	CharacterController charController;
+	int layerMask;
     #endregion
 
     #region Structs 
@@ -25,6 +27,11 @@ public class FocusTarget : MonoBehaviour {
     void Awake() {
 		//grabbing reference to camera
 		refToCamera = Camera.main.GetComponent<ThirdPersonCamera>();
+		//grabbing a reference to the players character controller.
+		charController = GameObject.FindWithTag("Player").GetComponent<CharacterController>();
+		//ignore all but what we want to hit
+		layerMask = (1<<LayerMask.NameToLayer("Focus"));
+
     }
     
     //Called if script component is enabled
@@ -45,10 +52,18 @@ public class FocusTarget : MonoBehaviour {
     //after Update every frame (2)
     void LateUpdate() {
 		//ray casting to check for focus targets
-			RaycastHit objectHit = new RaycastHit();
+		RaycastHit objectHit = new RaycastHit();
+		Vector3 p1 = PlayerXForm.position;
+		//we only want to hit object with the tag corrent layer mask.
+		layerMask = 1<<LayerMask.NameToLayer("Focus");
+		//raycasting several ray around there character to check for a focus target
+		if(Physics.SphereCast(p1,charController.height/2.0f,PlayerXForm.forward,out objectHit,rayCastLength,layerMask) || 
+		Physics.SphereCast(p1,charController.height/2.0f,-PlayerXForm.forward,out objectHit,rayCastLength,layerMask) ||
+		Physics.SphereCast(p1,charController.height/2.0f,PlayerXForm.right,out objectHit,rayCastLength,layerMask) ||
+		Physics.SphereCast(p1,charController.height/2.0f,-PlayerXForm.right,out objectHit,rayCastLength,layerMask) ||
+		Physics.SphereCast(p1,charController.height/2.0f,(PlayerXForm.forward+PlayerXForm.right).normalized,out objectHit,rayCastLength,layerMask) ||
+		Physics.SphereCast(p1,charController.height/2.0f,((-1*PlayerXForm.forward)+(-1*PlayerXForm.right).normalized ),out objectHit,rayCastLength,layerMask)) {
 
-			if(Physics.Linecast(PlayerXForm.position,PlayerXForm.position + PlayerXForm.forward * rayCastLength,out objectHit)) {
-			Debug.Log(objectHit.transform.tag);
 			if(objectHit.transform.tag == FocusTag && Input.GetButtonDown("Interact")) {
 					refToCamera.setCameraState("Focus",objectHit.transform);
 			}
