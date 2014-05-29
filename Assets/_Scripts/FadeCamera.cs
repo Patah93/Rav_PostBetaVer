@@ -6,6 +6,10 @@ public class FadeCamera : MonoBehaviour {
 	public float _fadeSpeed = 1.0f;
 	public bool[] _fadeStates;
 
+	//public bool _fadeToWhite = false;
+
+	Color _fadeToColor;
+
 	Vector2 _screenSize;
 
 	void Awake(){
@@ -31,6 +35,8 @@ public class FadeCamera : MonoBehaviour {
 
 		}
 
+		//_fadeToColor = (_fadeToWhite) ? Color.white : Color.black;
+
 	}
 
 	private void StartFadeIn(){
@@ -52,7 +58,7 @@ public class FadeCamera : MonoBehaviour {
 
 		if(guiTexture.color.a > 0.95f){
 			_fadeStates[1] = true;
-			guiTexture.color = Color.black;
+			guiTexture.color = _fadeToColor;
 		}
 	}
 	
@@ -61,7 +67,7 @@ public class FadeCamera : MonoBehaviour {
 	}
 	
 	public void FadeOut(){
-		guiTexture.color = Color.Lerp (guiTexture.color, Color.black, _fadeSpeed * Time.deltaTime);
+		guiTexture.color = Color.Lerp (guiTexture.color, _fadeToColor, _fadeSpeed * Time.deltaTime);
 	}
 
 	public void Fading(bool b){
@@ -70,5 +76,21 @@ public class FadeCamera : MonoBehaviour {
 
 	public bool FadeState(){
 		return _fadeStates[0] && _fadeStates[1];
+	}
+
+	public void SetFadeSpeed(float f){
+		_fadeSpeed = f;
+	}
+
+	public void SetFadeColor(Color c){
+
+		_fadeToColor = c;
+
+	}
+
+	public void SetFadeTexture(Texture tex){
+
+		GetComponent<GUITexture> ().texture = tex;
+
 	}
 }

@@ -44,7 +44,6 @@ public class Messages : TriggerAction {
 			tempStyle.fontSize = Screen.width/_fontSize;
 			tempStyle.alignment = TextAnchor.MiddleCenter;
 			tempStyle.wordWrap = true;
-
 			GUI.Box(scaleRect(_messageBox),_message, tempStyle);
 		}
 	}
