@@ -54,8 +54,8 @@ public class StartMenu : MonoBehaviour {
 		_background = _startScreen;
 		_drawButtons = true;
 		_loadlevel = false;
-		_ani = gameObject.GetComponent<TextureAnimation>();
-		_ani.setSheet (_buttontexture, _nrOfColumns, _nrOfRows, _frameTime);
+		//_ani = gameObject.GetComponent<TextureAnimation>();
+		//_ani.setSheet (_buttontexture, _nrOfColumns, _nrOfRows, _frameTime);
 		foreach (GameObject i in _loadingObjects) {
 			TextureAnimation _temp = i.gameObject.GetComponent<TextureAnimation> ();
 			_temp.setSheet (_temp._sheet, _temp._nrOfColumns, _temp._nrOfRows, _temp._frameTime);
@@ -83,15 +83,22 @@ public class StartMenu : MonoBehaviour {
 	void OnGUI(){
 		GUI.DrawTexture(new Rect(_position.x,_position.y,Screen.width,Screen.height),_background,ScaleMode.StretchToFill,false,0);
 		if(_drawButtons){
-			//GUI.DrawTexture(scaleRect(_buttonSizes),_buttontexture,ScaleMode.StretchToFill,false,0);
-			GUI.DrawTextureWithTexCoords(scaleRect(_buttonSizes),_buttonStatic,_ani.horunge());
+			GUI.DrawTexture(scaleRect(_buttonSizes),_buttonStatic,ScaleMode.StretchToFill,false,0);
+			//GUI.DrawTextureWithTexCoords(scaleRect(_buttonSizes),_buttonStatic,_ani.horunge());
 			if(!_disableClick){
-				if(GUI.Button(scaleRect(_buttonSizes2),"")){
+				if(GUI.Button(scaleRect(_buttonSizes2),"",GUIStyle.none)){
 					_loadlevel = true;
 					_disableClick = true;
 					_playVideo = true;
 					//_fade.FadeOut();
 
+				}
+				else if(Input.GetButtonUp("Enter")){
+					_loadlevel = true;
+					_disableClick = true;
+					_playVideo = true;
+					//_fade.FadeOut();
+					
 				}
 			}
 		} 
