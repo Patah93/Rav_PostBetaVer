@@ -3,7 +3,7 @@ using System.Collections;
 
 [RequireComponent(typeof(BoxCollider))]
 
-public class SoundSwitch : MonoBehaviour {
+public class SoundSwitchSmall : MonoBehaviour {
 
 	public GameObject[] _audioSourcesBlue, _audioSourcesBlueBack;
 
