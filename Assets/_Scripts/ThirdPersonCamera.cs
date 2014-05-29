@@ -376,7 +376,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 		Vector3 offset = Vector3.zero;
 		
 		if (Physics.Linecast(fromObject, toTarget, out wallHit)) {
-			toTarget = new Vector3(wallHit.point.x, wallHit.point.y, wallHit.point.z) + Vector3.up * ScalingComenstationUpMovement;
+			toTarget = new Vector3(wallHit.point.x, wallHit.point.y, wallHit.point.z) + Vector3.up * ScalingComenstationUpMovement + wallHit.normal * ScalingNormalCompenstation;
 			offset += wallHit.normal;
 		}
 	}
