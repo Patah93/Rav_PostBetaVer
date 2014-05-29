@@ -12,14 +12,14 @@ public class EnvironmentTrigger : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider c){
-		
-		_amb.enabled = true;
+		if(c.CompareTag("Player"))
+			_amb.enabled = true;
 		
 	}
 
 	void OnTriggerExit(Collider c){
-		
-		_amb.enabled = false;
+		if(c.CompareTag("Player"))
+			_amb.enabled = false;
 		
 	}
 
