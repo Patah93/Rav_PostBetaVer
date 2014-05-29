@@ -7,6 +7,8 @@ public class Throw : MonoBehaviour {
 	private Rigidbody throwObj;
 	[SerializeField]
 	private Vector3 offSet = Vector3.zero;
+	[SerializeField]
+	private Vector3 offSetRotation;
 
 	//reference to the camera so we can get camState!
 	private ThirdPersonCamera camera;
@@ -114,7 +116,8 @@ public class Throw : MonoBehaviour {
 				throbject = Instantiate(throwObj, _spawnPosition.transform.position, Quaternion.identity) as Rigidbody;
 				throbject.GetComponent<BoxCollider>().enabled = false;
 				throbject.transform.parent = _spawnPosition.transform;
-				throbject.transform.position += transform.InverseTransformDirection(offSet);
+				throbject.transform.localPosition = offSet;
+				throbject.transform.eulerAngles = offSetRotation;
 				throbject.rigidbody.useGravity = false;
 
 			}	
@@ -158,13 +161,13 @@ public class Throw : MonoBehaviour {
 	void UpdatePredictionLine()
 	{
 		arcLine.SetVertexCount(180);
-		Vector3 previousPosition = transform.position + transform.TransformDirection(new Vector3(-0.4f, 1.2f, 0.15f) + transform.InverseTransformDirection(offSet));
+		Vector3 previousPosition = transform.position + transform.TransformDirection(new Vector3(-0.4f, 1.2f, 0.15f) + offSet);
 
 		highestPos = previousPosition;
 		
 		for(int i = 0; i < 180; i++)
 		{
-			Vector3 posN = GetTrajectoryPoint(transform.position + transform.TransformDirection(new Vector3(-0.4f, 1.2f, 0.15f) + transform.InverseTransformDirection(offSet)), force, i, Physics.gravity);
+			Vector3 posN = GetTrajectoryPoint(transform.position + transform.TransformDirection(new Vector3(-0.4f, 1.2f, 0.15f) + offSet), force, i, Physics.gravity);
 			Vector3 direction = posN - previousPosition;
 			direction.Normalize();
 			

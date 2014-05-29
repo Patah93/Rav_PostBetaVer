@@ -16,6 +16,7 @@ GameObject:
   - 82: {fileID: 8200000}
   - 65: {fileID: 6500000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400006}
   m_Layer: 2
   m_Name: Stone_Small
   m_TagString: Throwable
@@ -158,9 +159,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af4d1e594c5b6342bb9edfc9ddf6537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audios:
+  _audios: []
+  _stoneSounds:
+  - {fileID: 8300000, guid: ff5cb803198fed44c9f5ab4744469b35, type: 3}
+  - {fileID: 8300000, guid: fe996080dd788eb41aca95be4e4fb4ef, type: 3}
+  - {fileID: 8300000, guid: ff4798895db94c0418f3d1448521fa7b, type: 3}
+  - {fileID: 8300000, guid: 21c2de7b5d065744e914246e81f1dd1e, type: 3}
+  _sandSounds:
+  - {fileID: 8300000, guid: 27896814708e4344387e1137782faeb2, type: 3}
+  - {fileID: 8300000, guid: ab09667ceaaaa554ca9194e8679416d0, type: 3}
+  - {fileID: 8300000, guid: 53beaafce732c7e43890d6c8059dca4d, type: 3}
+  _metalSounds:
   - {fileID: 8300000, guid: fc66b7149050c114eb3e1e62aebb822e, type: 3}
-  - {fileID: 8300000, guid: 6212c84a70643fd419e0a6c20bcd3936, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,6 +196,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireStrength: 500
   nextColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5c34c8f423d73248a96d1f19a7cd21f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClips: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

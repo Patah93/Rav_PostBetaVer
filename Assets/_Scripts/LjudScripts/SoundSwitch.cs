@@ -20,15 +20,15 @@ public class SoundSwitch : MonoBehaviour {
 			float angleRight = Vector3.Angle(transform.right,c.transform.forward);
 
 			if(angleForward < 45){
-				
-				for(int i = 0; i < _audioSourcesBlue.Length; i++)
-					_audioSourcesBlue[i].GetComponent<FadeSound>().ChangeState(true);
+
 				for(int i = 0; i < _audioSourcesBlueBack.Length; i++)
 					_audioSourcesBlueBack[i].GetComponent<FadeSound>().ChangeState(false);
 				for(int i = 0; i < _audioSourcesRedBack.Length; i++)
 					_audioSourcesRedBack[i].GetComponent<FadeSound>().ChangeState(false);
 				for(int i = 0; i < _audioSourcesRed.Length; i++)
 					_audioSourcesRed[i].GetComponent<FadeSound>().ChangeState(false);
+				for(int i = 0; i < _audioSourcesBlue.Length; i++)
+					_audioSourcesBlue[i].GetComponent<FadeSound>().ChangeState(true);
 				
 			} else if(angleForward > 45 && angleForward < 135){
 
@@ -46,22 +46,22 @@ public class SoundSwitch : MonoBehaviour {
 						_audioSourcesBlue[i].GetComponent<FadeSound>().ChangeState(false);
 					for(int i = 0; i < _audioSourcesBlueBack.Length; i++)
 						_audioSourcesBlueBack[i].GetComponent<FadeSound>().ChangeState(false);
-					for(int i = 0; i < _audioSourcesRedBack.Length; i++)
-						_audioSourcesRedBack[i].GetComponent<FadeSound>().ChangeState(true);
 					for(int i = 0; i < _audioSourcesRed.Length; i++)
 						_audioSourcesRed[i].GetComponent<FadeSound>().ChangeState(false);
+					for(int i = 0; i < _audioSourcesRedBack.Length; i++)
+						_audioSourcesRedBack[i].GetComponent<FadeSound>().ChangeState(true);
 				}
 				
 			} else if(angleForward > 135){
 
 				for(int i = 0; i < _audioSourcesBlue.Length; i++)
 					_audioSourcesBlue[i].GetComponent<FadeSound>().ChangeState(false);
-				for(int i = 0; i < _audioSourcesBlueBack.Length; i++)
-					_audioSourcesBlueBack[i].GetComponent<FadeSound>().ChangeState(true);
 				for(int i = 0; i < _audioSourcesRedBack.Length; i++)
 					_audioSourcesRedBack[i].GetComponent<FadeSound>().ChangeState(false);
 				for(int i = 0; i < _audioSourcesRed.Length; i++)
 					_audioSourcesRed[i].GetComponent<FadeSound>().ChangeState(false);
+				for(int i = 0; i < _audioSourcesBlueBack.Length; i++)
+					_audioSourcesBlueBack[i].GetComponent<FadeSound>().ChangeState(true);
 
 			}
 			if(_destroyAfterSwitch)
