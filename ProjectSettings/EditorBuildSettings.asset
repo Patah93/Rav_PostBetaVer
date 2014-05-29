@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/StartmenuScene.unity
-  - enabled: 0
+  - enabled: 1
     path: "Assets/JessicaSceneSlutaR\xF6rDen.unity"
   - enabled: 1
     path: Assets/MAAAAIN.unity
