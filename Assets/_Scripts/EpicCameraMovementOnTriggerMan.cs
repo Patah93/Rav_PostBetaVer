@@ -119,7 +119,6 @@ public class EpicCameraMovementOnTriggerMan : TriggerAction {
 					_animMan.enabled = true;
 					_jumpMan.enabled = true;
 					_boyState.enabled = true;
-					_throw.enabled = true;
 				}
 
 				_cameraMan.enabled = true;
