@@ -12,7 +12,7 @@ public class FootSteps : MonoBehaviour {
 	public AudioClip[] _audioClips1, _audioClips2, _audioClips3, _audioClips4, _audioClips5, _audioClips6, _audioClips7, _audioClips8, _audioClips9;
 
 	[Range(0,1)]
-	public float _boyVolume, _foxVolume;
+	public float _boyVolumeStone, _boyVolumeSand, _boyVolumeMetal,  _foxVolumeStone, _foxVolumeSand, _foxVolumeMetal;
 
 	int _previousFoot;
 	
@@ -96,13 +96,24 @@ public class FootSteps : MonoBehaviour {
 					a += (ground.GetType());
 			}
 			sauce.audio.clip = getRandomClip (a);
-			sauce.audio.volume = _boyVolume;
+			//sauce.audio.volume = _boyVolume;
+			switch(a){
+			case 0:
+				sauce.audio.volume = _boyVolumeStone;
+				break;
+			case 1:
+				sauce.audio.volume = _boyVolumeSand;
+				break;
+			case 2:
+				sauce.audio.volume = _boyVolumeMetal;
+				break;
+			}
 			sauce.audio.Play ();
 		}
 		
 		else if(tag == "Fox" && i != _previousFoot){
 
-			Debug.Log ("FOX STEPS");
+			//Debug.Log ("FOX STEPS");
 			RaycastHit outHit;
 			if(Physics.Raycast(transform.position + transform.up * 0.5f, Vector3.down, out outHit, 2f)){
 				GroundType ground = outHit.transform.GetComponent<GroundType>();
@@ -110,7 +121,18 @@ public class FootSteps : MonoBehaviour {
 					a += (ground.GetType());
 				GameObject sauce = (GameObject)Instantiate (_audioSauce, _spawnPos.position, Quaternion.identity);
 				sauce.audio.clip = getRandomClip (a);
-				sauce.audio.volume = _foxVolume;
+				//sauce.audio.volume = _boyVolume;
+				switch(a){
+				case 0:
+					sauce.audio.volume = _foxVolumeStone;
+					break;
+				case 1:
+					sauce.audio.volume = _foxVolumeSand;
+					break;
+				case 2:
+					sauce.audio.volume = _foxVolumeMetal;
+					break;
+				}
 				sauce.audio.Play ();
 			}
 			_previousFoot = i;
