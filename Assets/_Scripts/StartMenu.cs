@@ -93,6 +93,9 @@ public class StartMenu : MonoBehaviour {
 					//_fade.FadeOut();
 
 				}
+				else if(Input.GetButtonDown("Reset")){
+					Application.Quit();
+				}
 				else if(Input.anyKeyDown){
 					_loadlevel = true;
 					_disableClick = true;

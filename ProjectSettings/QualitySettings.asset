@@ -120,6 +120,4 @@ QualitySettings:
     maximumLODLevel: 0
     particleRaycastBudget: 400
     excludedTargetPlatforms: []
-  m_PerPlatformDefaultQuality:
-    Standalone: 0
-    XboxOne: 0
+  m_PerPlatformDefaultQuality: {}

@@ -22,7 +22,7 @@ public class Credits : MonoBehaviour {
 		}
 		else {
 			if (Input.anyKeyDown) {
-				Application.Quit ();
+				Application.LoadLevel(0);
 			}
 		}
 	}
