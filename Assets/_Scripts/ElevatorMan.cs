@@ -70,7 +70,7 @@ public class ElevatorMan : TriggerAction {
 	
 	public override void onActive(){
 
-		//Debug.Log("ACTIVE?!");
+		////Debug.Log("ACTIVE?!");
 
 		_triggered = true;
 		_clock = Time.time;

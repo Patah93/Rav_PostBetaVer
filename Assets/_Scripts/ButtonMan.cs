@@ -20,11 +20,11 @@ public class ButtonMan : MonoBehaviour {
 		_pressedMode = true;
 		//c.GetComponent<Button>().setPressed(true);
 		//_button.setPressed(true);
-		Debug.Log("This happened");
+		//Debug.Log("This happened");
 	}
 
 	public bool isPressed(){
-		Debug.Log ("isPressed is " + _pressedMode);
+		//Debug.Log ("isPressed is " + _pressedMode);
 		return _pressedMode;
 	}
 

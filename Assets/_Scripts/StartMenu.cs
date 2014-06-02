@@ -54,8 +54,8 @@ public class StartMenu : MonoBehaviour {
 		_background = _startScreen;
 		_drawButtons = true;
 		_loadlevel = false;
-		_ani = gameObject.GetComponent<TextureAnimation>();
-		_ani.setSheet (_buttontexture, _nrOfColumns, _nrOfRows, _frameTime);
+		//_ani = gameObject.GetComponent<TextureAnimation>();
+		//_ani.setSheet (_buttontexture, _nrOfColumns, _nrOfRows, _frameTime);
 		foreach (GameObject i in _loadingObjects) {
 			TextureAnimation _temp = i.gameObject.GetComponent<TextureAnimation> ();
 			_temp.setSheet (_temp._sheet, _temp._nrOfColumns, _temp._nrOfRows, _temp._frameTime);
@@ -71,7 +71,7 @@ public class StartMenu : MonoBehaviour {
 
 	IEnumerator wait(){
 
-		Debug.Log("waiting");
+		//Debug.Log("waiting");
 		yield return new WaitForSeconds (_screenTime);
 		_load.allowSceneActivation = true;
 
@@ -83,15 +83,25 @@ public class StartMenu : MonoBehaviour {
 	void OnGUI(){
 		GUI.DrawTexture(new Rect(_position.x,_position.y,Screen.width,Screen.height),_background,ScaleMode.StretchToFill,false,0);
 		if(_drawButtons){
-			//GUI.DrawTexture(scaleRect(_buttonSizes),_buttontexture,ScaleMode.StretchToFill,false,0);
-			GUI.DrawTextureWithTexCoords(scaleRect(_buttonSizes),_buttonStatic,_ani.horunge());
+			GUI.DrawTexture(scaleRect(_buttonSizes),_buttonStatic,ScaleMode.StretchToFill,false,0);
+			//GUI.DrawTextureWithTexCoords(scaleRect(_buttonSizes),_buttonStatic,_ani.horunge());
 			if(!_disableClick){
-				if(GUI.Button(scaleRect(_buttonSizes2),"")){
+				if(GUI.Button(scaleRect(_buttonSizes2),"",GUIStyle.none)){
 					_loadlevel = true;
 					_disableClick = true;
 					_playVideo = true;
 					//_fade.FadeOut();
 
+				}
+				else if(Input.GetButtonDown("Reset")){
+					Application.Quit();
+				}
+				else if(Input.anyKeyDown){
+					_loadlevel = true;
+					_disableClick = true;
+					_playVideo = true;
+					//_fade.FadeOut();
+					
 				}
 			}
 		} 
@@ -109,23 +119,23 @@ public class StartMenu : MonoBehaviour {
 					//_fadeScreen.Apply();
 					_fadeTo = false;
 					_fadeFrom = true;
-					Debug.Log("I'm here");
+					//Debug.Log("I'm here");
 				}
 			}
 			else if(_fadeFrom){
-				Debug.Log ("Fading from");
+				//Debug.Log ("Fading from");
 				_drawButtons = false;
 				_fadeScreen.SetPixel(1,1,Color.Lerp((_fadeScreen.GetPixel(1,1)),Color.clear,Time.time*_fadeSpeed));
 				_fadeScreen.Apply();
-				Debug.Log("JAG KOM HIT!!");
+				//Debug.Log("JAG KOM HIT!!");
 				if(_fadeScreen.GetPixel(1,1).a <= 0.1f){
 					_fadeFrom = false;
 					//_playVideo = true;
 					_startScene = true;
 					_fadeSound.ChangeState(false);
-					Debug.Log("JAG ÄR TYP ÄNNU LÄNGRE");
+					//Debug.Log("JAG ÄR TYP ÄNNU LÄNGRE");
 					_load = Application.LoadLevelAsync(_firstSceneName);
-					Debug.Log("ah men nice fan hela funktionen gick");
+					//Debug.Log("ah men nice fan hela funktionen gick");
 				}
 			}
 			if(_playVideo){
@@ -161,7 +171,7 @@ public class StartMenu : MonoBehaviour {
 					TextureAnimation _temp = i.gameObject.GetComponent<TextureAnimation>();
 				//	_temp.setSheet(_temp._sheet,_temp._nrOfColumns,_temp._nrOfRows,_temp._frameTime);
 					GUI.DrawTextureWithTexCoords(scaleRect(_loadPos),_temp._sheet.mainTexture,_temp.horunge());
-					//Debug.Log(_temp._clock);
+					////Debug.Log(_temp._clock);
 			}
 				if(_load.progress > 0.8){
 
@@ -171,24 +181,24 @@ public class StartMenu : MonoBehaviour {
 						_yield = true;
 					}
 
-					Debug.Log("ey");
+					//Debug.Log("ey");
 					_fadeScreen.SetPixel(1,1,Color.Lerp((_fadeScreen.GetPixel(1,1)),Color.black,Time.time*_fadeSpeed));
 					_fadeScreen.Apply();
 
 				//	if(_fadeScreen.GetPixel(1,1).a <= 0.97f){
-						Debug.Log("if-sats");
+						//Debug.Log("if-sats");
 						
 					//	_yield = true;
-						Debug.Log("hallå");
+						//Debug.Log("hallå");
 					//	_yield = true;
 				//	}
 				}
-				Debug.Log(_load.progress);
+				//Debug.Log(_load.progress);
 			}
 			//_background = Color.Lerp(Color.white,Color.black,Time.deltaTime);
 		}
 
-		//Debug.Log("Load level is " + _loadlevel);
+		////Debug.Log("Load level is " + _loadlevel);
 
 		GUI.DrawTexture(new Rect(_position.x,_position.y,Screen.width,Screen.height),_fadeScreen);
 	//	GUILayout.EndArea();

@@ -27,18 +27,18 @@ public class WalkToPushPos : MonoBehaviour {
 		//	Vector3.Slerp(transform.forward,_startRot,_speed);
 			if(_doneRunning){
 				transform.rotation = Quaternion.Slerp (transform.rotation,_finishRotQ,_rotatetospeed);
-				//Debug.Log("Rotating");
+				////Debug.Log("Rotating");
 				if(Mathf.Abs(Quaternion.Angle(transform.rotation,_finishRotQ))<3){
 					_go = false;
 					_finished = true;
 					_doneRunning = false;
-					//Debug.Log("And done!");
+					////Debug.Log("And done!");
 				}
 			}
 			else{
 				if(Mathf.Abs((transform.position - _destination).magnitude)<0.1f){
 					_doneRunning = true;
-					//Debug.Log("Ska börja rotera nu");
+					////Debug.Log("Ska börja rotera nu");
 					float temp = Vector3.Angle(transform.forward,_finishRotV.normalized);
 					float rightVecAngle = Vector3.Angle(transform.right,_finishRotV.normalized);
 					if(rightVecAngle > 90){
@@ -47,10 +47,10 @@ public class WalkToPushPos : MonoBehaviour {
 					else{
 						_finishRotQ = Quaternion.Euler(transform.eulerAngles.x,transform.eulerAngles.y + temp,transform.eulerAngles.z);
 					}
-					//Debug.Log("Reached destination");
+					////Debug.Log("Reached destination");
 				}
 				else{
-					//Debug.Log("Running");
+					////Debug.Log("Running");
 					transform.rotation = Quaternion.Slerp(transform.rotation,_startRot,0.1f);
 					transform.position = Vector3.Lerp(transform.position,_destination,_runtospeed);
 
@@ -58,7 +58,7 @@ public class WalkToPushPos : MonoBehaviour {
 			}
 		}
 
-		//Debug.Log (Vector3.Distance(_startPos,_destination));
+		////Debug.Log (Vector3.Distance(_startPos,_destination));
 	}
 
 	public void setDestination(Vector3 currentpos,Vector3 destinationpos, Vector3 rotation){
@@ -74,7 +74,7 @@ public class WalkToPushPos : MonoBehaviour {
 		}else{
 			_startRot = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y + temp, transform.eulerAngles.z);
 		}
-		//Debug.Log("Ready");
+		////Debug.Log("Ready");
 	}
 
 	public bool hasFinished(){

@@ -65,7 +65,7 @@ public class JumpingMan : MonoBehaviour {
 		if(Camera.main.GetComponent<ThirdPersonCamera>().camState != ThirdPersonCamera.CamStates.Focus) {
         if (Input.GetButtonDown("Jump") && (_animator.GetCurrentAnimatorStateInfo(0).IsName("Run") || _animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")))
         {	//Aktiverar hoppet
-			////Debug.Log("you pressed jump)");
+			//////Debug.Log("you pressed jump)");
 			if(!_jump){
 
 
@@ -96,7 +96,7 @@ public class JumpingMan : MonoBehaviour {
 
 		//_animator.SetBool("Jump", false);
 	/*	if(_jump && transform.position.y - _startPosition > _jumpHeight){	//Hoppat så högt den klarar, kör en cooldown
-			//////Debug.Log("cooldown");
+			////////Debug.Log("cooldown");
 			_cooldown = true;
 		}
 		
@@ -147,11 +147,11 @@ public class JumpingMan : MonoBehaviour {
 
 				if(Mathf.Abs(_jumpingMove.x) < _jumpOffsetDistanceFuckers){
 					_jumpingMove.x = latjo1.x;
-					//Debug.Log("JUMPING FORWARD");
+					////Debug.Log("JUMPING FORWARD");
 				}
 				else if(Mathf.Abs(_jumpingMove.z) < _jumpOffsetDistanceFuckers){
 					_jumpingMove.z = latjo1.z;
-					//Debug.Log("JUMPING SIDEWAYS");
+					////Debug.Log("JUMPING SIDEWAYS");
 				}
 				*/
 
@@ -162,11 +162,11 @@ public class JumpingMan : MonoBehaviour {
 
 				//if(Mathf.Abs(_jumpingMove.x) < _jumpOffsetDistanceFuckers){
 				_jumpingMove.x += _airVelocity.x;
-					////Debug.Log("JUMPING FORWARD");
+					//////Debug.Log("JUMPING FORWARD");
 				//}
 				//if(Mathf.Abs(_jumpingMove.z) < _jumpOffsetDistanceFuckers){
 				_jumpingMove.z += _airVelocity.z;
-					////Debug.Log("JUMPING SIDEWAYS");
+					//////Debug.Log("JUMPING SIDEWAYS");
 				//}
 
 				Vector2 _currentAirSpeed = new Vector2(_jumpingMove.x, _jumpingMove.z);
@@ -190,16 +190,16 @@ public class JumpingMan : MonoBehaviour {
 
 			//Vector3 temp = new Vector3(_offsetX,_offsetY,_offsetZ);
 			if(Time.time - _clock > _maxTime){
-				//Debug.Log("NO LONGER FALLING");
+				////Debug.Log("NO LONGER FALLING");
 				if(Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f /*+ temp.y*/ ,Vector3.down,out _rayHit, _rayLength)){	//Nuddat marken och kan hoppa igen
-					//Debug.DrawRay(transform.position + temp,Vector3.down,Color.blue,1 + temp.y,true);
-					//Debug.DrawRay(transform.position, _rayHit.transform.position);
+					////Debug.DrawRay(transform.position + temp,Vector3.down,Color.blue,1 + temp.y,true);
+					////Debug.DrawRay(transform.position, _rayHit.transform.position);
 					//_animator.SetBool("Falling", false);
 
-					////Debug.Log("Collided with "+ _rayHit.collider.name);
+					//////Debug.Log("Collided with "+ _rayHit.collider.name);
 					if(!_rayHit.collider.name.Equals(this.name)){
 						//transform.rigidbody.constraints &= ~ RigidbodyConstraints.FreezeRotationX|~RigidbodyConstraints.FreezeRotationZ;
-						////Debug.Log ("hit something"); 
+						//////Debug.Log ("hit something"); 
 						//_startPosition = transform.position.y;
 						_animator.SetBool("Jump", false);
 						if(Vector3.Angle(Vector3.up, _rayHit.normal) < _slidingAngle){
@@ -237,7 +237,7 @@ public class JumpingMan : MonoBehaviour {
 			}
 
 		}
-		//////Debug.Log("cooldown is" + _cooldown);
+		////////Debug.Log("cooldown is" + _cooldown);
 		 
 
 	}

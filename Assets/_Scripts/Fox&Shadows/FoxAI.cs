@@ -96,8 +96,8 @@ public class FoxAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		////Debug.DrawLine(transform.position + transform.forward * 0.22f + Vector3.up * 0.5f, transform.position + transform.forward * 0.22f + Vector3.up * 0.5f + Vector3.down * 1, Color.red);
-		////Debug.DrawLine(transform.position - transform.forward * 0.22f + Vector3.up * 0.5f, transform.position - transform.forward * 0.22f + Vector3.up * 0.5f + Vector3.down * 1, Color.red);
+		//////Debug.DrawLine(transform.position + transform.forward * 0.22f + Vector3.up * 0.5f, transform.position + transform.forward * 0.22f + Vector3.up * 0.5f + Vector3.down * 1, Color.red);
+		//////Debug.DrawLine(transform.position - transform.forward * 0.22f + Vector3.up * 0.5f, transform.position - transform.forward * 0.22f + Vector3.up * 0.5f + Vector3.down * 1, Color.red);
 
 		if (_targetNode != null) {
 			if (reachedTarget()) {
@@ -126,11 +126,11 @@ public class FoxAI : MonoBehaviour {
 			} else {
 				if(!_pathSafe && _refuseMoveIfLight){
 					checkPathForShadows();
-					//Debug.Log ("Checking path for shadows!");
+					////Debug.Log ("Checking path for shadows!");
 				}
 				if(_pathSafe || !_refuseMoveIfLight){
 					move ();
-					//Debug.Log ("Moving!");
+					////Debug.Log ("Moving!");
 				}
 				else if(!_pathSafe){
 					/* TODO Hantera "Oh no mr Boy, me no can walk!" */
@@ -175,7 +175,7 @@ public class FoxAI : MonoBehaviour {
 			
 			if(!(frontCast || backCast)){
 				/* TODO HANDLE BOTH FEET IN DAT AIR! */
-				//////Debug.Log("I'M FLYYING :D");
+				////////Debug.Log("I'M FLYYING :D");
 				_fallVec += Vector3.down * _fallAcc;
 				transform.position += _fallVec;
 			}else{
@@ -202,7 +202,7 @@ public class FoxAI : MonoBehaviour {
 		if(_updateTick == 0 && !_testing){
 
 			if(_shadowDetect.isObjectInLightMorePoints()){
-				////Debug.Log("DIEDIEDIEDIE POOR FOXIE! >='[");
+				//////Debug.Log("DIEDIEDIEDIE POOR FOXIE! >='[");
 
 				if(!_fleeing){
 					if(_targetNode == null && _currentNode._prevNode != null){
@@ -283,18 +283,18 @@ public class FoxAI : MonoBehaviour {
 		transform.position = originalPos;
 		transform.rotation = originalRotation;
 		//_desiredRotation = originalRotation;
-		//////Debug.Log(count + ": lightchecks!"); 
+		////////Debug.Log(count + ": lightchecks!"); 
 
 		_pathSafe = true;
 		_ani.SetBool("Walking", true);
 		_testing = false;
 
-		//Debug.Log ("TESTAR VÄGEN EFTER SKUGGOR");
+		////Debug.Log ("TESTAR VÄGEN EFTER SKUGGOR");
 	}
 
 	void move(){
 
-		//////Debug.Log("HERP");
+		////////Debug.Log("HERP");
 
 		if ((_currentNode._isTeleportNode && !_fleeing) || (_fleeing && _targetNode._isTeleportNode)) {
 			transform.position = _targetNode.transform.position;
@@ -326,15 +326,15 @@ public class FoxAI : MonoBehaviour {
 				angle = Vector2.Angle (turnDir, toNextNode.normalized);
 			}
 
-			//Debug.DrawLine (transform.position, transform.position + new Vector3(turnDir.x, transform.position.y, turnDir.y), Color.red, 20.0f);
+			////Debug.DrawLine (transform.position, transform.position + new Vector3(turnDir.x, transform.position.y, turnDir.y), Color.red, 20.0f);
 
-			//Debug.DrawLine (transform.position, transform.position + new Vector3(toNextNode.x, transform.position.y, toNextNode.y), Color.cyan, 20.0f);
+			////Debug.DrawLine (transform.position, transform.position + new Vector3(toNextNode.x, transform.position.y, toNextNode.y), Color.cyan, 20.0f);
 
 			_distanceToTurnPoint = toNextNode.magnitude/(Mathf.Cos((angle * Mathf.PI)/180.0f))/2.0f;
 
 			_turnPoint = new Vector2(_currentNode.transform.position.x, _currentNode.transform.position.z) + turnDir * _distanceToTurnPoint;
 
-			//Debug.Log (_turnPoint + ": is turnpoint" );
+			////Debug.Log (_turnPoint + ": is turnpoint" );
 		} 
 
 		if (!_turning) {
@@ -385,7 +385,7 @@ public class FoxAI : MonoBehaviour {
 
 		if(!(frontCast || backCast)){
 				/* TODO HANDLE BOTH FEET IN DAT AIR! */
-				//////Debug.Log("I'M FLYYING :D");
+				////////Debug.Log("I'M FLYYING :D");
 
 			_fallVec += Vector3.down * _fallAcc;
 			transform.position += _fallVec;
@@ -395,7 +395,7 @@ public class FoxAI : MonoBehaviour {
 
 			_fallVec = Vector3.down * _fallAcc;
 
-			//////Debug.Log("I'M GROUNDED D:");
+			////////Debug.Log("I'M GROUNDED D:");
 
 			if(frontCast && backCast){
 
@@ -430,11 +430,11 @@ public class FoxAI : MonoBehaviour {
 
 				if(rayInfoFront.distance > rayInfoBack.distance){
 					transform.rotation = Quaternion.Euler(transform.localEulerAngles.x + angle, transform.localEulerAngles.y, transform.localEulerAngles.z);
-					//////Debug.Log("LUTNING! =D");
+					////////Debug.Log("LUTNING! =D");
 				}
 				else if(rayInfoFront.distance < rayInfoBack.distance){
 					transform.rotation = Quaternion.Euler(transform.localEulerAngles.x - angle, transform.localEulerAngles.y, transform.localEulerAngles.z);
-					//////Debug.Log("LUTNING! =D");
+					////////Debug.Log("LUTNING! =D");
 				}else{
 					transform.rotation = Quaternion.Euler(transform.localEulerAngles.x + angle, transform.localEulerAngles.y, transform.localEulerAngles.z);
 				}

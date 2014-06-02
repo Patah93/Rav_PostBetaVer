@@ -22,7 +22,7 @@ public class Messages : TriggerAction {
 		if (_disableWithKey) {
 			if(Input.GetButtonDown(_disableKey)){
 				_display = false;
-				Destroy(this);
+
 			}
 		}
 	}
@@ -32,9 +32,10 @@ public class Messages : TriggerAction {
 	}
 	
 	public override void onInactive(){
-		if (!_disableWithKey) {
+		//if (!_disableWithKey) {
 			_display = false;
-		}
+			Destroy(this);
+		//}
 	}
 
 	void OnGUI(){

@@ -19,7 +19,7 @@ public class FoxBoyDeathTriggerMan : TriggerAction {
 	void Update () {
 
 		if(_tick){
-			Debug.Log("INBOYKILLERCOUNTER");
+			//Debug.Log("INBOYKILLERCOUNTER");
 			_deathClock += Time.deltaTime;
 			if(_deathClock >= _maxTime){
 				_mrJump.setDead(true);
@@ -28,13 +28,13 @@ public class FoxBoyDeathTriggerMan : TriggerAction {
 	}
 	
 	public override void onActive(){
-		Debug.Log("WENT IN");
+		//Debug.Log("WENT IN");
 		_tick = false;
 		_deathClock = 0.0f;
 	}
 	
 	public override void onInactive(){
-		Debug.Log("WENT OUT");
+		//Debug.Log("WENT OUT");
 		_tick = true;
 	}
 }

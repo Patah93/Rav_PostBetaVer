@@ -52,7 +52,7 @@ public class PushAndPull : MonoBehaviour {
 				}
 				_collidedf = true;
 
-				//Debug.Log (_derp.transform.name + " har jag krockat med " + _derp.point + " är där jag krockade i saken. " + _derp.transform.position + " är objektets position");
+				////Debug.Log (_derp.transform.name + " har jag krockat med " + _derp.point + " är där jag krockade i saken. " + _derp.transform.position + " är objektets position");
 			}
 			else if(_obj.rigidbody.SweepTest(_direction, out _derp, 0.1f)){ //Box collided backwards
 				if(!_derp.collider.CompareTag("Player")){
@@ -69,7 +69,7 @@ public class PushAndPull : MonoBehaviour {
 					}
 					_collidedb = true;
 
-					//Debug.Log (_derp.transform.name + " har jag krockat med " + _derp.point + " är där jag krockade i saken. " + _derp.transform.position + " är objektets position");
+					////Debug.Log (_derp.transform.name + " har jag krockat med " + _derp.point + " är där jag krockade i saken. " + _derp.transform.position + " är objektets position");
 				}
 			}
 			else{	//Box didn't collide with anything
@@ -98,7 +98,7 @@ public class PushAndPull : MonoBehaviour {
 			_obj.position = new Vector3(transform.position.x,_objposy + 0.5f,transform.position.z) + _distance*_direction*-1;
 			//_obj.rigidbody.MovePosition(new Vector3(transform.position.x,_objposy + 0.5f,transform.position.z) + _distance*_direction*-1); //Moves box twice to make gravity work
 			if(!_obj.rigidbody.SweepTest(Vector3.down,out _derp,0.55f) || !rigidbody.SweepTest(Vector3.down,out _derp,0.55f)){																	//
-				Debug.Log ("HERPADERP");
+				//Debug.Log ("HERPADERP");
 				_boystate.enterWalkMode();																									//		
 			}
 

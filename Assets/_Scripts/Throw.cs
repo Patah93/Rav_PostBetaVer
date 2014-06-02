@@ -57,7 +57,7 @@ public class Throw : MonoBehaviour {
 		PlayerXForm = GameObject.FindWithTag ("Player").transform;
 		_anim = GetComponent<Animator>();
 		//if (PlayerXForm == null)
-						////Debug.Log ("Could not find player transform");
+						//////Debug.Log ("Could not find player transform");
 
 		//arcLine = new LineRenderer ();
 		arcLine.SetVertexCount (180);
@@ -66,7 +66,7 @@ public class Throw : MonoBehaviour {
 		camera = Camera.main.GetComponent<ThirdPersonCamera> ();
 
 		//if (arcLine == null)
-						////Debug.Log ("arcLine");
+						//////Debug.Log ("arcLine");
 
 		target = GameObject.CreatePrimitive (PrimitiveType.Sphere);
 		target.transform.localScale.Set (10f, 10f, 10f);
@@ -112,7 +112,7 @@ public class Throw : MonoBehaviour {
 		//if (camera.camState == ThirdPersonCamera.CamStates.FirstPerston) {
 		if (_anim.GetBool ("ThrowMode")) {
 			if(throbject == null && Time.time > clock){
-				//Debug.Log("BANAS: " + Time.deltaTime);
+				////Debug.Log("BANAS: " + Time.deltaTime);
 				throbject = Instantiate(throwObj, _spawnPosition.transform.position, Quaternion.identity) as Rigidbody;
 				throbject.GetComponent<BoxCollider>().enabled = false;
 				throbject.transform.parent = _spawnPosition.transform;
@@ -228,7 +228,7 @@ public class Throw : MonoBehaviour {
 	}
 
 	void ThrowThing(){
-		//Debug.Log ("SHIT");
+		////Debug.Log ("SHIT");
 		throbject.GetComponent<BoxCollider>().enabled = true;
 		throbject.rigidbody.useGravity = true;
 		throbject.transform.parent = null;

@@ -45,13 +45,13 @@ public class KillThrowObject : MonoBehaviour {
 
 	void OnCollisionEnter(Collision deadthing){
 		if(_isThrown){
-			//Debug.Log("Collided with:" + deadthing.transform.name);
+			////Debug.Log("Collided with:" + deadthing.transform.name);
 			if(deadthing.gameObject.tag == "Destructable" || deadthing.gameObject.light != null){
 				transform.audio.clip = gameObject.GetComponent<AudioClips>()._audios[1];
 				deadthing.gameObject.light.enabled = false;
 				transform.audio.Play();
 				Destroy(deadthing.gameObject,transform.audio.clip.length);
-				//Debug.Log("JAG DOG AV EN LAMPA");
+				////Debug.Log("JAG DOG AV EN LAMPA");
 			}
 
 			//audio.Play();
@@ -72,9 +72,9 @@ public class KillThrowObject : MonoBehaviour {
 					//transform.audio.clip.length;
 					//_JUSTDOITONCEFFS = false;
 				}
-				//Debug.Log("JAG DOG AV NÅGOT");
+				////Debug.Log("JAG DOG AV NÅGOT");
 				Destroy (transform.gameObject, transform.audio.clip.length);
-				//Debug.Log ("Kuben dog, gg");
+				////Debug.Log ("Kuben dog, gg");
 			}
 		}
 	}
