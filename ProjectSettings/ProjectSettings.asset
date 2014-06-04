@@ -76,7 +76,11 @@ PlayerSettings:
   iPhoneBundleIdentifier: com.Company.ProductName
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
+<<<<<<< HEAD
   productGUID: a682266d61962214a841167e09ec41fc
+=======
+  productGUID: 3a74e0c3c15d3484ca459722eced1270
+>>>>>>> b0ab91ce164ef19b30ee4fc13b04435903991955
   iPhoneBundleVersion: 1.0
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
@@ -146,6 +150,61 @@ PlayerSettings:
   ps3TrophyCommSig: 
   ps3SaveGameSlots: 1
   ps3TrialMode: 0
+<<<<<<< HEAD
+=======
+  ps4NPTrophyPackPath: 
+  ps4NPCommunicationsID: 
+  ps4NPCommsPassphrase: 
+  ps4NPCommsSig: 
+  ps4NPTitleSecret: 
+  ps4ParamSfxPath: 
+  ps4PronunciationXMLPath: 
+  ps4PronunciationSIGPath: 
+  ps4NPtitleDatPath: 
+  ps4VideoOutPixelFormat: 0
+  ps4PackagePassword: frAQBc8Wsa1xVPfvJcrgRYwTiizs2trQ
+  ps4ParentalLevel: 1
+  ps4ContentID: IV0000-NPXX51362_00-0123456789ABCDEF
+  ps4Category: 0
+  ps4MasterVersion: 01.00
+  ps4AppVersion: 01.00
+  psp2Splashimage: {fileID: 0}
+  psp2NPTrophyPackPath: 
+  psp2NPSupportGBMorGJP: 0
+  psp2NPCommsID: 
+  psp2NPCommunicationsID: 
+  psp2NPCommsPassphrase: 
+  psp2NPCommsSig: 
+  psp2ParamSfxPath: 
+  psp2ManualPath: 
+  psp2LiveAreaGatePath: 
+  psp2LiveAreaBackroundPath: 
+  psp2LiveAreaPath: 
+  psp2PatchChangeInfoPath: 
+  psp2PatchOriginalPackage: 
+  psp2PackagePassword: F69AzBlax3CF3EDNhm3soLBPh71Yexui
+  psp2DRMType: 0
+  psp2StorageType: 0
+  psp2MediaCapacity: 0
+  psp2DLCConfigPath: 
+  psp2ThumbnailPath: 
+  psp2BackgroundPath: 
+  psp2SoundPath: 
+  psp2TrophyCommId: 
+  psp2TrophyPackagePath: 
+  psp2PackagedResourcesPath: 
+  psp2SaveDataQuota: 10240
+  psp2ParentalLevel: 1
+  psp2ShortTitle: Not Set
+  psp2ContentID: IV0000-ABCD12345_00-0123456789ABCDEF
+  psp2Category: 0
+  psp2MasterVersion: 01.00
+  psp2AppVersion: 01.00
+  psp2TVBootMode: 0
+  psp2TVDisableEmu: 0
+  psp2AllowTwitterDialog: 1
+  psmSplashimage: {fileID: 0}
+>>>>>>> b0ab91ce164ef19b30ee4fc13b04435903991955
   flashStrippingLevel: 2
   spritePackerPolicy: 
   scriptingDefineSymbols: {}
