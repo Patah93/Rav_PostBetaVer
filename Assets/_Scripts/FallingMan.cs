@@ -19,6 +19,8 @@ public class FallingMan : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		////Sets the objects velocity in x- and z-axis to use when falling down, to simulate gravity without using rootmotion from the animations.
+
 		if(_ani.GetCurrentAnimatorStateInfo(0).IsName("Run")){
 			_fallVelocity.x = _controller.velocity.x;
 			_fallVelocity.z = _controller.velocity.z;

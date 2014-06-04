@@ -22,6 +22,8 @@ public class ParticleSwitch : TriggerAction {
 
 		////Debug.Log ("HEJ HEJ PARTIKELUPDATE");
 
+
+		////Starts a countdown when trigger is true. Then it colles one of the particlesystems
 		if(_counterStart == true){
 			_countDown -= Time.deltaTime;
 			if(_countDown <= 0){
@@ -32,7 +34,7 @@ public class ParticleSwitch : TriggerAction {
 
 	public override void onActive(){
 
-
+		////Triggers when character enters. Turns one of the particle systems on and one off and turns the countdown trigger true.
 
 		if (_to && _triggered == false) {
 

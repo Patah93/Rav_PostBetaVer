@@ -28,6 +28,7 @@ public class KillThrowObject : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
 		if(!_lock){
 			if(!_JUSTDOITONCEFFS){
 				if(_throw.ThrowState()){
@@ -37,6 +38,7 @@ public class KillThrowObject : MonoBehaviour {
 			}
 		}
 
+
 		if(transform.parent == null){
 			_isThrown = true;
 			Physics.IgnoreCollision (transform.collider, GameObject.FindWithTag("Player").collider, true); 
@@ -44,17 +46,21 @@ public class KillThrowObject : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision deadthing){
+
+		////Checks if object is thrown when it has collided with another object.
 		if(_isThrown){
-			////Debug.Log("Collided with:" + deadthing.transform.name);
+
+			////Checks if the object it collided with is destructable or if it has a lightsource.
+			/// If true, it sets the audio, turns of light, plays audio and then destroys the object.
 			if(deadthing.gameObject.tag == "Destructable" || deadthing.gameObject.light != null){
 				transform.audio.clip = gameObject.GetComponent<AudioClips>()._audios[1];
 				deadthing.gameObject.light.enabled = false;
 				transform.audio.Play();
 				Destroy(deadthing.gameObject,transform.audio.clip.length);
-				////Debug.Log("JAG DOG AV EN LAMPA");
 			}
 
-			//audio.Play();
+			////Checks so the other object isn't the same as itself. If it isn't, it checks what kind of object it collided with and plays audio corresponding to the type.
+			/// With type, is what kind of surface the other object has.
 			else if(!deadthing.gameObject.name.Equals(transform.name)){
 				//transform.audio.clip =  gameObject.GetComponent<AudioClips>()._audios[0];
 				if(deadthing.gameObject.GetComponent<GroundType>().GetType() == 0){
@@ -67,14 +73,15 @@ public class KillThrowObject : MonoBehaviour {
 					transform.audio.clip = _sounds._metalSounds[Random.Range(0, _sounds._metalSounds.Length)];
 				}
 
-				if(!transform.audio.isPlaying /*&& !deadthing.gameObject.name.Equals(_sandName) && _JUSTDOITONCEFFS*/){ //DEN HÄR FUNKAR INTE :(
+				////Plays audio if it's not playing
+				if(!transform.audio.isPlaying){
 					transform.audio.Play();
-					//transform.audio.clip.length;
-					//_JUSTDOITONCEFFS = false;
+
 				}
-				////Debug.Log("JAG DOG AV NÅGOT");
+
+				////Kills the object when the audioclip has finished playing
 				Destroy (transform.gameObject, transform.audio.clip.length);
-				////Debug.Log ("Kuben dog, gg");
+
 			}
 		}
 	}

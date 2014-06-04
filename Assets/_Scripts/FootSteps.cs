@@ -113,6 +113,8 @@ public class FootSteps : MonoBehaviour {
 		
 		else if(tag == "Fox" && i != _previousFoot){
 
+			////Handles the footsteps of the fox. Checkes what type of ground is under the fox, then selects a sound at random of the right type. This is run at an even that is sent from the animation of the object.
+
 			////Debug.Log ("FOX STEPS");
 			RaycastHit outHit;
 			if(Physics.Raycast(transform.position + transform.up * 0.5f, Vector3.down, out outHit, 2f)){

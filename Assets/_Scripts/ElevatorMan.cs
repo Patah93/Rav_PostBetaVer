@@ -31,9 +31,13 @@ public class ElevatorMan : TriggerAction {
 	// Update is called once per frame
 	void Update () {
 
+		///Counts up
 		_counter += Time.deltaTime;
 
+
+		////Active when trigger is true. Moves an object between two positions and waits at each position for n-seconds
 		if(_triggered){
+			////If it's going up and counter is max or more, then it's going to run
 			if(_goingUp && _counter >= _countMax){
 
 				//Vector3 targetMove = Vector3.Lerp(transform.position, _pos2.transform.position, _moveSpeed);
@@ -67,7 +71,9 @@ public class ElevatorMan : TriggerAction {
 			}
 		}
 	}
-	
+
+
+	//What happens when on the trigger area. Here the trigger turns true and the clock is set. The player also moves along
 	public override void onActive(){
 
 		////Debug.Log("ACTIVE?!");

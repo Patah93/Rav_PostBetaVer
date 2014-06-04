@@ -23,16 +23,17 @@ public class StickyMan : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		////If something is on the platform/trigger area, then move the thing with the same speed as the platform/trigger area.
 		if(_OnPlatform){
 			_Thing.transform.position += (transform.position - tempPlat);
-
-
 		}
 
+		////Sets a temp position of the current position of the platform/trigger area
 		tempPlat = transform.position;
 
 	}
-	
+
+	////When something is in the trigger area, set _OnPlatform to true and set _Thing as the object that's on.
 	void OnTriggerEnter(Collider other) {
 		_OnPlatform = true;
 		_Thing = other;

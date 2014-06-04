@@ -100,7 +100,9 @@ public class JumpingMan : MonoBehaviour {
 			_cooldown = true;
 		}
 		
-*/
+*/		////Makes two spherecasts, first one to make sure the object doesn't go into the falling animation when going over edges and falling short heights.
+		////Second one is to check if the object touches ground, and the raycast is smaller than the first. If it's true it checks the angle between the character and the ground. If it's to big the object starts to slide down.
+		////Also handles the falling gravity of the character when falling.
 		if(!_jump && Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f ,Vector3.down,out _rayHit,2.5f)){
 			if(Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f /*+ _offsetY*/ ,Vector3.down,out _rayHit, _rayLength)){
 				if(Vector3.Angle(Vector3.up, _rayHit.normal) < _slidingAngle){
@@ -132,11 +134,14 @@ public class JumpingMan : MonoBehaviour {
 			//_animan.enabled = false;
 		}
 
+		////If characters falls from to high pos he dies.
 		if(_mrHigh - transform.position.y >= _maxFallHigh){
 			_dead = true;
 			_mrHigh = transform.position.y;
 		}
 
+
+		////Handles the jump, how to move through the air when not grounded, how the gravity is handled and that controlling the character is based from the camera.
 		if(_jump){
 
 			if(Vector3.Angle(Vector3.up, _rayHit.normal) < _slidingAngle){
@@ -171,6 +176,8 @@ public class JumpingMan : MonoBehaviour {
 
 				Vector2 _currentAirSpeed = new Vector2(_jumpingMove.x, _jumpingMove.z);
 
+
+				////checks if the current speed in x- and z- axis while airborn. If it's to high, it sets to max.
 				if(_currentAirSpeed.sqrMagnitude > _MAX_AIRSPEED *_MAX_AIRSPEED){
 					_currentAirSpeed.Normalize();
 					_currentAirSpeed *= _MAX_AIRSPEED;
@@ -189,6 +196,9 @@ public class JumpingMan : MonoBehaviour {
 			}*/
 
 			//Vector3 temp = new Vector3(_offsetX,_offsetY,_offsetZ);
+
+
+			////Waits for a while before doing the raycast to check if character is touching ground.
 			if(Time.time - _clock > _maxTime){
 				////Debug.Log("NO LONGER FALLING");
 				if(Physics.SphereCast(transform.position + new Vector3(0,1,0), 0.3f /*+ temp.y*/ ,Vector3.down,out _rayHit, _rayLength)){	//Nuddat marken och kan hoppa igen
@@ -202,6 +212,8 @@ public class JumpingMan : MonoBehaviour {
 						//////Debug.Log ("hit something"); 
 						//_startPosition = transform.position.y;
 						_animator.SetBool("Jump", false);
+
+						////Checks angle between ground and ground. If to high, the char slides until touching a flat enough surface
 						if(Vector3.Angle(Vector3.up, _rayHit.normal) < _slidingAngle){
 
 							_animator.SetBool("Falling", false);

@@ -10,15 +10,15 @@ PlayerSettings:
   targetGlesGraphics: 1
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: FETA Games
-  productName: "R\xE4v"
+  companyName: DefaultCompany
+  productName: Rav_PostBetaVer
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
-  m_RenderingPath: 2
+  m_RenderingPath: 1
   m_MobileRenderingPath: 1
   m_ActiveColorSpace: 0
   m_MTRendering: 1
@@ -41,9 +41,9 @@ PlayerSettings:
   Override IPod Music: 0
   Prepare IOS For Recording: 0
   enableHWStatistics: 1
-  usePlayerLog: 0
+  usePlayerLog: 1
   stripPhysics: 0
-  forceSingleInstance: 1
+  forceSingleInstance: 0
   resizableWindow: 0
   useMacAppStoreValidation: 0
   gpuSkinning: 0
@@ -56,12 +56,17 @@ PlayerSettings:
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
-  videoMemoryForVertexBuffers: 0
-  videoMemoryForAudio: 0
-  psp2PowerMode: 0
-  psp2AcquireBGM: 1
-  enableVerbosePS3MemoryStats: 0
-  useSPUForUmbra: 0
+  wiiHio2Usage: -1
+  wiiLoadingScreenRectPlacement: 0
+  wiiLoadingScreenBackground: {r: 1, g: 1, b: 1, a: 1}
+  wiiLoadingScreenPeriod: 1000
+  wiiLoadingScreenFileName: 
+  wiiLoadingScreenRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   m_SupportedAspectRatios:
     4:3: 1
     5:4: 1
@@ -71,7 +76,7 @@ PlayerSettings:
   iPhoneBundleIdentifier: com.Company.ProductName
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
-  productGUID: 574f985c517d9f540800d2d178c8dff5
+  productGUID: a682266d61962214a841167e09ec41fc
   iPhoneBundleVersion: 1.0
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
@@ -84,7 +89,7 @@ PlayerSettings:
   ForceSDCardPermission: 0
   CreateWallpaper: 0
   APKExpansionFiles: 0
-  StripUnusedMeshComponents: 1
+  StripUnusedMeshComponents: 0
   iPhoneSdkVersion: 988
   iPhoneTargetOSVersion: 16
   uIPrerenderedIcon: 0
@@ -103,39 +108,22 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
-<<<<<<< HEAD
-  resolutionDialogBanner: {fileID: 2800000, guid: be4ab19b071f2fb49942d02bf282ac83,
-=======
-  resolutionDialogBanner: {fileID: 2800000, guid: 941b2411f0a1d6d449875ab97473cf92,
->>>>>>> a14c10f0314eb37f4ba22a91a493803c86923d88
-    type: 3}
-  m_BuildTargetIcons:
-  - m_BuildTarget: 
-    m_Icons:
-    - m_Icon: {fileID: 2800000, guid: d47d4bb7e8a867b4fa092516f6fd04ab, type: 3}
-      m_Size: 128
-  - m_BuildTarget: Standalone
-    m_Icons:
-    - m_Icon: {fileID: 2800000, guid: d47d4bb7e8a867b4fa092516f6fd04ab, type: 3}
-      m_Size: 1024
-    - m_Icon: {fileID: 2800000, guid: e78d10dafea9cda408c21a00aa8c7fd3, type: 3}
-      m_Size: 512
-    - m_Icon: {fileID: 2800000, guid: d221240d0311fd2499aee4a4515928d3, type: 3}
-      m_Size: 256
-    - m_Icon: {fileID: 2800000, guid: 0c5b78c2c908a2c4aa61b2d901b3706a, type: 3}
-      m_Size: 128
-    - m_Icon: {fileID: 2800000, guid: c22e6fc597df6ef43b4a704c197b34ad, type: 3}
-      m_Size: 48
-    - m_Icon: {fileID: 2800000, guid: 6c2bc398477cec34d86d0172b85c2070, type: 3}
-      m_Size: 32
-    - m_Icon: {fileID: 0}
-      m_Size: 16
-  m_BuildTargetBatching:
-  - m_BuildTarget: Standalone
-    m_StaticBatching: 1
-    m_DynamicBatching: 1
+  resolutionDialogBanner: {fileID: 0}
+  m_BuildTargetIcons: []
+  m_BuildTargetBatching: []
   webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
+  wiiRegion: 1
+  wiiGameCode: RABA
+  wiiGameVersion: 
+  wiiCompanyCode: ZZ
+  wiiSupportsNunchuk: 0
+  wiiSupportsClassicController: 0
+  wiiSupportsBalanceBoard: 0
+  wiiSupportsMotionPlus: 0
+  wiiControllerCount: 1
+  wiiFloatingPointExceptions: 0
+  wiiScreenCrashDumps: 1
   XboxTitleId: 
   XboxImageXexPath: 
   XboxSpaPath: 
@@ -158,68 +146,10 @@ PlayerSettings:
   ps3TrophyCommSig: 
   ps3SaveGameSlots: 1
   ps3TrialMode: 0
-  ps4NPTrophyPackPath: 
-  ps4NPCommunicationsID: 
-  ps4NPCommsPassphrase: 
-  ps4NPCommsSig: 
-  ps4NPTitleSecret: 
-  ps4ParamSfxPath: 
-  ps4PronunciationXMLPath: 
-  ps4PronunciationSIGPath: 
-  ps4NPtitleDatPath: 
-  ps4VideoOutPixelFormat: 0
-  ps4PackagePassword: eaoEiIgxIX4a2dREbbSqWy6yhKIDCdJO
-  ps4ParentalLevel: 1
-  ps4ContentID: IV0000-NPXX51362_00-0123456789ABCDEF
-  ps4Category: 0
-  ps4MasterVersion: 01.00
-  ps4AppVersion: 01.00
-  psp2Splashimage: {fileID: 0}
-  psp2NPTrophyPackPath: 
-  psp2NPSupportGBMorGJP: 0
-  psp2NPCommsID: 
-  psp2NPCommunicationsID: 
-  psp2NPCommsPassphrase: 
-  psp2NPCommsSig: 
-  psp2ParamSfxPath: 
-  psp2ManualPath: 
-  psp2LiveAreaGatePath: 
-  psp2LiveAreaBackroundPath: 
-  psp2LiveAreaPath: 
-  psp2PatchChangeInfoPath: 
-  psp2PatchOriginalPackage: 
-  psp2PackagePassword: yapnxrpMCARCr4zdGc81tBDKsMlaZTXC
-  psp2DRMType: 0
-  psp2StorageType: 0
-  psp2MediaCapacity: 0
-  psp2DLCConfigPath: 
-  psp2ThumbnailPath: 
-  psp2BackgroundPath: 
-  psp2SoundPath: 
-  psp2TrophyCommId: 
-  psp2TrophyPackagePath: 
-  psp2PackagedResourcesPath: 
-  psp2SaveDataQuota: 10240
-  psp2ParentalLevel: 1
-  psp2ShortTitle: Not Set
-  psp2ContentID: IV0000-ABCD12345_00-0123456789ABCDEF
-  psp2Category: 0
-  psp2MasterVersion: 01.00
-  psp2AppVersion: 01.00
-  psp2TVBootMode: 0
-  psp2TVDisableEmu: 0
-  psp2AllowTwitterDialog: 1
-  psmSplashimage: {fileID: 0}
   flashStrippingLevel: 2
   spritePackerPolicy: 
-  scriptingDefineSymbols:
-    1: CROSS_PLATFORM_INPUT
-    2: CROSS_PLATFORM_INPUT
-    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
-    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
-    15: CROSS_PLATFORM_INPUT;MOBILE_INPUT
-    16: CROSS_PLATFORM_INPUT;MOBILE_INPUT
-  metroPackageName: shopping plaza
+  scriptingDefineSymbols: {}
+  metroPackageName: Rav_PostBetaVer
   metroPackageLogo: 
   metroPackageVersion: 
   metroCertificatePath: 
@@ -227,7 +157,7 @@ PlayerSettings:
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: shopping plaza
+  metroApplicationDescription: Rav_PostBetaVer
   metroTileLogo: 
   metroTileWideLogo: 
   metroTileSmallLogo: 
@@ -267,15 +197,6 @@ PlayerSettings:
   tizenCertificatePath: 
   tizenCertificatePassword: 
   tizenSaveLogPath: 
-  XboxOneProductId: 
-  XboxOneUpdateKey: 
-  XboxOneSandboxId: 
-  XboxOneContentId: 
-  XboxOneGameOsOverridePath: 
-  XboxOnePackagingOverridePath: 
-  XboxOneAppManifestOverridePath: 
-  XboxOnePackageEncryption: 0
-  XboxOneEnableKinect: 1
   firstStreamedLevelWithResources: 0
   unityRebuildLibraryVersion: 9
   unityForwardCompatibleVersion: 39

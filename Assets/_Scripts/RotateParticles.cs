@@ -23,10 +23,13 @@ public class RotateParticles : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		////Checks a countdown, if it is 3 or bigger, then run code in if-statement.
 		if (_countdown >= 3) {
+
+				////Rotates object with deltatime times the rotationspeed. This one rotates around the z-axis.
 				transform.Rotate (new Vector3 (0, 0, Time.deltaTime * _rotationSpeed));
 
+				////Checks which way it's supposed to rotatate towards, as it's supposed to "shake". This one rotates around the y-axis.
 				if (_leftRot == false) {
 						transform.Rotate (new Vector3 (0, Time.deltaTime * (_shake % _shakeDip), 0));
 						_shake += _shakeSpeed;
